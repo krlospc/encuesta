@@ -1,0 +1,643 @@
+AppBundle\Entity\Form4validacionRegistro:
+    type: entity
+    table: form4validacion_registro
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        folio:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        institucioneducativa:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        nombres:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        paterno:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        materno:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        fechaRegistro:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: fecha_registro
+        antiguedad:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        cargo:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        telefono:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        promovidos20161:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: promovidos_2016_1
+        promovidos20162:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: promovidos_2016_2
+        promovidos20163:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: promovidos_2016_3
+        promovidos20164:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: promovidos_2016_4
+        promovidos20165:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: promovidos_2016_5
+        promovidos20166:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: promovidos_2016_6
+        promovidos2016Total:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: promovidos_2016_total
+        reprobados20162:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: reprobados_2016_2
+        reprobados20163:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: reprobados_2016_3
+        reprobados20164:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: reprobados_2016_4
+        reprobados20165:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: reprobados_2016_5
+        reprobados20166:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: reprobados_2016_6
+        reprobados2016Total:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: reprobados_2016_total
+        abandono20161:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: abandono_2016_1
+        abandono20162:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: abandono_2016_2
+        abandono20163:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: abandono_2016_3
+        abandono20164:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: abandono_2016_4
+        abandono20165:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: abandono_2016_5
+        abandono20166:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: abandono_2016_6
+        abandono2016Total:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: abandono_2016_total
+        traslado20161:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: traslado_2016_1
+        traslado20162:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: traslado_2016_2
+        traslado20163:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: traslado_2016_3
+        traslado20164:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: traslado_2016_4
+        traslado20165:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: traslado_2016_5
+        traslado20166:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: traslado_2016_6
+        traslado2016Total:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: traslado_2016_total
+        noincorporados20161:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: noincorporados_2016_1
+        noincorporados20162:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: noincorporados_2016_2
+        noincorporados20163:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: noincorporados_2016_3
+        noincorporados20164:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: noincorporados_2016_4
+        noincorporados20165:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: noincorporados_2016_5
+        noincorporados20166:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: noincorporados_2016_6
+        noincorporados2016Total:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: noincorporados_2016_total
+        matricula20161:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: matricula_2016_1
+        matricula20162:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: matricula_2016_2
+        matricula20163:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: matricula_2016_3
+        matricula20164:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: matricula_2016_4
+        matricula20165:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: matricula_2016_5
+        matricula20166:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: matricula_2016_6
+        matricula2016Total:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: matricula_2016_total
+        promovidos20171:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: promovidos_2017_1
+        promovidos20172:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: promovidos_2017_2
+        promovidos20173:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: promovidos_2017_3
+        promovidos20174:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: promovidos_2017_4
+        promovidos20175:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: promovidos_2017_5
+        promovidos20176:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: promovidos_2017_6
+        promovidos2017Total:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: promovidos_2017_total
+        reprobados20172:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: reprobados_2017_2
+        reprobados20173:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: reprobados_2017_3
+        reprobados20174:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: reprobados_2017_4
+        reprobados20175:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: reprobados_2017_5
+        reprobados20176:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: reprobados_2017_6
+        reprobados2017Total:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: reprobados_2017_total
+        abandono20171:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: abandono_2017_1
+        abandono20172:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: abandono_2017_2
+        abandono20173:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: abandono_2017_3
+        abandono20174:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: abandono_2017_4
+        abandono20175:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: abandono_2017_5
+        abandono20176:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: abandono_2017_6
+        abandono2017Total:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: abandono_2017_total
+        traslado20171:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: traslado_2017_1
+        traslado20172:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: traslado_2017_2
+        traslado20173:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: traslado_2017_3
+        traslado20174:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: traslado_2017_4
+        traslado20175:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: traslado_2017_5
+        traslado20176:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: traslado_2017_6
+        traslado2017Total:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: traslado_2017_total
+        noincorporados20171:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: noincorporados_2017_1
+        noincorporados20172:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: noincorporados_2017_2
+        noincorporados20173:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: noincorporados_2017_3
+        noincorporados20174:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: noincorporados_2017_4
+        noincorporados20175:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: noincorporados_2017_5
+        noincorporados20176:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: noincorporados_2017_6
+        noincorporados2017Total:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: noincorporados_2017_total
+        matricula20171:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: matricula_2017_1
+        matricula20172:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: matricula_2017_2
+        matricula20173:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: matricula_2017_3
+        matricula20174:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: matricula_2017_4
+        matricula20175:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: matricula_2017_5
+        matricula20176:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: matricula_2017_6
+        matricula2017Total:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: matricula_2017_total
+    lifecycleCallbacks: {  }
