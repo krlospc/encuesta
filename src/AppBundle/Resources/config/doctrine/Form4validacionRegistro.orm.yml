@@ -11,18 +11,32 @@ AppBundle\Entity\Form4validacionRegistro:
             generator:
                 strategy: IDENTITY
     fields:
-        folio:
+        dep:
             type: string
             nullable: true
-            length: 255
+            length: 5
             options:
                 fixed: false
-        institucioneducativa:
+        sie:
+            type: string
+            nullable: true
+            length: 15
+            options:
+                fixed: false
+        numBoleta:
+            type: string
+            nullable: true
+            length: 30
+            options:
+                fixed: false
+            column: num_boleta
+        nomInstitucioneducativa:
             type: string
             nullable: false
             length: 255
             options:
                 fixed: false
+            column: nom_institucioneducativa
         nombres:
             type: string
             nullable: false
@@ -115,6 +129,13 @@ AppBundle\Entity\Form4validacionRegistro:
             options:
                 fixed: false
             column: promovidos_2016_total
+        reprobados20161:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: reprobados_2016_1
         reprobados20162:
             type: string
             nullable: false
@@ -402,6 +423,13 @@ AppBundle\Entity\Form4validacionRegistro:
             options:
                 fixed: false
             column: promovidos_2017_total
+        reprobados20171:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: reprobados_2017_1
         reprobados20172:
             type: string
             nullable: false
