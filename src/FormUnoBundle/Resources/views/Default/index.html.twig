@@ -1,0 +1,82 @@
+<div class="header-content">
+    <h2><i class="glyphicon glyphicon-leaf"></i> Control de Formularios. <span>Se ha registrado a los siguientes docentes.</span></h2>    
+</div>
+
+<div class="body-content animated fadeIn">
+    <div class="row">
+        <div class="panel-body">
+            <div id="list">
+                {% if po %}
+                <div class="table-responsive">                
+                    <table class="table table-no-border table-middle table-lilac">
+                        <tbody>
+                            <tr>
+                                <td align="left" class="warning"><b class="text-block">No.</b></td>
+                                <td align="center" class="warning"><b class="text-block">...</b></td>                                
+                                <td align="left" class="warning"><b class="text-block">Categoria</b></td>
+                                <td align="left" class="warning"><b class="text-block">Detalle</b></td>
+                                <td align="left" class="warning"><b class="text-block">Cantidad</b></td>
+                            </tr>
+                           {#} {% if po %}    
+                                {% for data in po %}                                                                
+                                    <tr>
+                                        <td>
+                                            <b class="text-block">{{loop.index}}</b>
+                                        </td>
+                                        <td class="text-center">
+                                            <span><i class="icon-minus-sign"></i>
+                                                <button type="button" class="btn btn-circle btn-warning btn-stroke" onclick="getVerCasos({{ data.validacion_regla_tipo_id }})">
+                                                    <i class="fa fa-eye"></i>
+                                                </button>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            {{data.entidad}}
+                                        </td>
+                                        <td>
+                                            {{data.detalle}}
+                                        </td>
+                                        <td>  
+                                            {{data.count}}
+                                        </td>                                    
+                                    </tr>
+                                {% endfor %}
+                            {% endif %} #} 
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                {% else %}
+                    <a href="{{path('form_uno_new')}}">Nuevo registro</a>                    
+                {% endif %}
+            </div>    
+        </div>
+    </div>
+</div>
+<div id="new">
+
+</div>
+<script>
+    var getNuevo = function () {        
+        $.ajax({
+            type: 'get',                         
+            url: Routing.generate('form_uno_new'),
+            beforeSend: function () {
+                $("#new").empty();
+                $("#new").append('<div style="text-align:center"><img src="{{asset('img/loading.gif')}}" /></div>');
+            },
+            success: function (data) {
+                $("#new").empty();
+                $("#new").append(data);
+            },
+            statusCode: {
+                500: function () {
+
+                },
+                404: function () {
+
+                }
+            }
+        });
+    };
+</script>

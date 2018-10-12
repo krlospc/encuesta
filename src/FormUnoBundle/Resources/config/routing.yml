@@ -1,0 +1,9 @@
+form_uno_homepage:
+    path:     /formunoindex
+    defaults: { _controller: FormUnoBundle:Default:index }
+
+form_uno_new:
+    path:     /formunonew
+    defaults: { _controller: FormUnoBundle:Default:new }
+    options:
+        expose: true
