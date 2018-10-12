@@ -1,227 +1,37 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Form4validacionregistros list</h1>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Dep</th>
-                <th>Sie</th>
-                <th>Numboleta</th>
-                <th>Nominstitucioneducativa</th>
-                <th>Nombres</th>
-                <th>Paterno</th>
-                <th>Materno</th>
-                <th>Fecharegistro</th>
-                <th>Antiguedad</th>
-                <th>Cargo</th>
-                <th>Telefono</th>
-                <th>Promovidos20161</th>
-                <th>Promovidos20162</th>
-                <th>Promovidos20163</th>
-                <th>Promovidos20164</th>
-                <th>Promovidos20165</th>
-                <th>Promovidos20166</th>
-                <th>Promovidos2016total</th>
-                <th>Reprobados20161</th>
-                <th>Reprobados20162</th>
-                <th>Reprobados20163</th>
-                <th>Reprobados20164</th>
-                <th>Reprobados20165</th>
-                <th>Reprobados20166</th>
-                <th>Reprobados2016total</th>
-                <th>Abandono20161</th>
-                <th>Abandono20162</th>
-                <th>Abandono20163</th>
-                <th>Abandono20164</th>
-                <th>Abandono20165</th>
-                <th>Abandono20166</th>
-                <th>Abandono2016total</th>
-                <th>Traslado20161</th>
-                <th>Traslado20162</th>
-                <th>Traslado20163</th>
-                <th>Traslado20164</th>
-                <th>Traslado20165</th>
-                <th>Traslado20166</th>
-                <th>Traslado2016total</th>
-                <th>Noincorporados20161</th>
-                <th>Noincorporados20162</th>
-                <th>Noincorporados20163</th>
-                <th>Noincorporados20164</th>
-                <th>Noincorporados20165</th>
-                <th>Noincorporados20166</th>
-                <th>Noincorporados2016total</th>
-                <th>Matricula20161</th>
-                <th>Matricula20162</th>
-                <th>Matricula20163</th>
-                <th>Matricula20164</th>
-                <th>Matricula20165</th>
-                <th>Matricula20166</th>
-                <th>Matricula2016total</th>
-                <th>Promovidos20171</th>
-                <th>Promovidos20172</th>
-                <th>Promovidos20173</th>
-                <th>Promovidos20174</th>
-                <th>Promovidos20175</th>
-                <th>Promovidos20176</th>
-                <th>Promovidos2017total</th>
-                <th>Reprobados20171</th>
-                <th>Reprobados20172</th>
-                <th>Reprobados20173</th>
-                <th>Reprobados20174</th>
-                <th>Reprobados20175</th>
-                <th>Reprobados20176</th>
-                <th>Reprobados2017total</th>
-                <th>Abandono20171</th>
-                <th>Abandono20172</th>
-                <th>Abandono20173</th>
-                <th>Abandono20174</th>
-                <th>Abandono20175</th>
-                <th>Abandono20176</th>
-                <th>Abandono2017total</th>
-                <th>Traslado20171</th>
-                <th>Traslado20172</th>
-                <th>Traslado20173</th>
-                <th>Traslado20174</th>
-                <th>Traslado20175</th>
-                <th>Traslado20176</th>
-                <th>Traslado2017total</th>
-                <th>Noincorporados20171</th>
-                <th>Noincorporados20172</th>
-                <th>Noincorporados20173</th>
-                <th>Noincorporados20174</th>
-                <th>Noincorporados20175</th>
-                <th>Noincorporados20176</th>
-                <th>Noincorporados2017total</th>
-                <th>Matricula20171</th>
-                <th>Matricula20172</th>
-                <th>Matricula20173</th>
-                <th>Matricula20174</th>
-                <th>Matricula20175</th>
-                <th>Matricula20176</th>
-                <th>Matricula2017total</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for form4validacionRegistro in form4validacionRegistros %}
-            <tr>
-                <td><a href="{{ path('form4validacionregistro_show', { 'id': form4validacionRegistro.id }) }}">{{ form4validacionRegistro.id }}</a></td>
-                <td>{{ form4validacionRegistro.dep }}</td>
-                <td>{{ form4validacionRegistro.sie }}</td>
-                <td>{{ form4validacionRegistro.numBoleta }}</td>
-                <td>{{ form4validacionRegistro.nomInstitucioneducativa }}</td>
-                <td>{{ form4validacionRegistro.nombres }}</td>
-                <td>{{ form4validacionRegistro.paterno }}</td>
-                <td>{{ form4validacionRegistro.materno }}</td>
-                <td>{{ form4validacionRegistro.fechaRegistro }}</td>
-                <td>{{ form4validacionRegistro.antiguedad }}</td>
-                <td>{{ form4validacionRegistro.cargo }}</td>
-                <td>{{ form4validacionRegistro.telefono }}</td>
-                <td>{{ form4validacionRegistro.promovidos20161 }}</td>
-                <td>{{ form4validacionRegistro.promovidos20162 }}</td>
-                <td>{{ form4validacionRegistro.promovidos20163 }}</td>
-                <td>{{ form4validacionRegistro.promovidos20164 }}</td>
-                <td>{{ form4validacionRegistro.promovidos20165 }}</td>
-                <td>{{ form4validacionRegistro.promovidos20166 }}</td>
-                <td>{{ form4validacionRegistro.promovidos2016Total }}</td>
-                <td>{{ form4validacionRegistro.reprobados20161 }}</td>
-                <td>{{ form4validacionRegistro.reprobados20162 }}</td>
-                <td>{{ form4validacionRegistro.reprobados20163 }}</td>
-                <td>{{ form4validacionRegistro.reprobados20164 }}</td>
-                <td>{{ form4validacionRegistro.reprobados20165 }}</td>
-                <td>{{ form4validacionRegistro.reprobados20166 }}</td>
-                <td>{{ form4validacionRegistro.reprobados2016Total }}</td>
-                <td>{{ form4validacionRegistro.abandono20161 }}</td>
-                <td>{{ form4validacionRegistro.abandono20162 }}</td>
-                <td>{{ form4validacionRegistro.abandono20163 }}</td>
-                <td>{{ form4validacionRegistro.abandono20164 }}</td>
-                <td>{{ form4validacionRegistro.abandono20165 }}</td>
-                <td>{{ form4validacionRegistro.abandono20166 }}</td>
-                <td>{{ form4validacionRegistro.abandono2016Total }}</td>
-                <td>{{ form4validacionRegistro.traslado20161 }}</td>
-                <td>{{ form4validacionRegistro.traslado20162 }}</td>
-                <td>{{ form4validacionRegistro.traslado20163 }}</td>
-                <td>{{ form4validacionRegistro.traslado20164 }}</td>
-                <td>{{ form4validacionRegistro.traslado20165 }}</td>
-                <td>{{ form4validacionRegistro.traslado20166 }}</td>
-                <td>{{ form4validacionRegistro.traslado2016Total }}</td>
-                <td>{{ form4validacionRegistro.noincorporados20161 }}</td>
-                <td>{{ form4validacionRegistro.noincorporados20162 }}</td>
-                <td>{{ form4validacionRegistro.noincorporados20163 }}</td>
-                <td>{{ form4validacionRegistro.noincorporados20164 }}</td>
-                <td>{{ form4validacionRegistro.noincorporados20165 }}</td>
-                <td>{{ form4validacionRegistro.noincorporados20166 }}</td>
-                <td>{{ form4validacionRegistro.noincorporados2016Total }}</td>
-                <td>{{ form4validacionRegistro.matricula20161 }}</td>
-                <td>{{ form4validacionRegistro.matricula20162 }}</td>
-                <td>{{ form4validacionRegistro.matricula20163 }}</td>
-                <td>{{ form4validacionRegistro.matricula20164 }}</td>
-                <td>{{ form4validacionRegistro.matricula20165 }}</td>
-                <td>{{ form4validacionRegistro.matricula20166 }}</td>
-                <td>{{ form4validacionRegistro.matricula2016Total }}</td>
-                <td>{{ form4validacionRegistro.promovidos20171 }}</td>
-                <td>{{ form4validacionRegistro.promovidos20172 }}</td>
-                <td>{{ form4validacionRegistro.promovidos20173 }}</td>
-                <td>{{ form4validacionRegistro.promovidos20174 }}</td>
-                <td>{{ form4validacionRegistro.promovidos20175 }}</td>
-                <td>{{ form4validacionRegistro.promovidos20176 }}</td>
-                <td>{{ form4validacionRegistro.promovidos2017Total }}</td>
-                <td>{{ form4validacionRegistro.reprobados20171 }}</td>
-                <td>{{ form4validacionRegistro.reprobados20172 }}</td>
-                <td>{{ form4validacionRegistro.reprobados20173 }}</td>
-                <td>{{ form4validacionRegistro.reprobados20174 }}</td>
-                <td>{{ form4validacionRegistro.reprobados20175 }}</td>
-                <td>{{ form4validacionRegistro.reprobados20176 }}</td>
-                <td>{{ form4validacionRegistro.reprobados2017Total }}</td>
-                <td>{{ form4validacionRegistro.abandono20171 }}</td>
-                <td>{{ form4validacionRegistro.abandono20172 }}</td>
-                <td>{{ form4validacionRegistro.abandono20173 }}</td>
-                <td>{{ form4validacionRegistro.abandono20174 }}</td>
-                <td>{{ form4validacionRegistro.abandono20175 }}</td>
-                <td>{{ form4validacionRegistro.abandono20176 }}</td>
-                <td>{{ form4validacionRegistro.abandono2017Total }}</td>
-                <td>{{ form4validacionRegistro.traslado20171 }}</td>
-                <td>{{ form4validacionRegistro.traslado20172 }}</td>
-                <td>{{ form4validacionRegistro.traslado20173 }}</td>
-                <td>{{ form4validacionRegistro.traslado20174 }}</td>
-                <td>{{ form4validacionRegistro.traslado20175 }}</td>
-                <td>{{ form4validacionRegistro.traslado20176 }}</td>
-                <td>{{ form4validacionRegistro.traslado2017Total }}</td>
-                <td>{{ form4validacionRegistro.noincorporados20171 }}</td>
-                <td>{{ form4validacionRegistro.noincorporados20172 }}</td>
-                <td>{{ form4validacionRegistro.noincorporados20173 }}</td>
-                <td>{{ form4validacionRegistro.noincorporados20174 }}</td>
-                <td>{{ form4validacionRegistro.noincorporados20175 }}</td>
-                <td>{{ form4validacionRegistro.noincorporados20176 }}</td>
-                <td>{{ form4validacionRegistro.noincorporados2017Total }}</td>
-                <td>{{ form4validacionRegistro.matricula20171 }}</td>
-                <td>{{ form4validacionRegistro.matricula20172 }}</td>
-                <td>{{ form4validacionRegistro.matricula20173 }}</td>
-                <td>{{ form4validacionRegistro.matricula20174 }}</td>
-                <td>{{ form4validacionRegistro.matricula20175 }}</td>
-                <td>{{ form4validacionRegistro.matricula20176 }}</td>
-                <td>{{ form4validacionRegistro.matricula2017Total }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('form4validacionregistro_show', { 'id': form4validacionRegistro.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('form4validacionregistro_edit', { 'id': form4validacionRegistro.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('form4validacionregistro_new') }}">Create a new form4validacionRegistro</a>
-        </li>
-    </ul>
+    <div class="container">
+        <h1>FORMULARIO 4</h1>
+        <a href="{{path('form4validacionregistro_new')}}" class="btn btn-success">Nuevo formulario</a>
+            
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Dep</th>
+                    <th>Sie</th>
+                    <th>Numboleta</th>
+                    <th>Unidad Educativa</th>
+                    <th>Nombres</th>
+                    <th>Paterno</th>
+                    <th>Materno</th>
+                    <th>Fecha registro</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for form4validacionRegistro in form4validacionRegistros %}
+                <tr>
+                    <td>{{ form4validacionRegistro.dep }}</td>
+                    <td>{{ form4validacionRegistro.sie }}</td>
+                    <td>{{ form4validacionRegistro.numBoleta }}</td>
+                    <td>{{ form4validacionRegistro.nomInstitucioneducativa }}</td>
+                    <td>{{ form4validacionRegistro.nombres }}</td>
+                    <td>{{ form4validacionRegistro.paterno }}</td>
+                    <td>{{ form4validacionRegistro.materno }}</td>
+                    <td>{{ form4validacionRegistro.fechaRegistro }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
 {% endblock %}
