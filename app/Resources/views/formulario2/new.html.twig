@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Cuestionario 2</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<style type="text/css">
+		table{
+			width: 100%;
+		}
+		textarea{
+			width: 100%;
+		}
+		.bgoscuro{
+			background: #000000;
+			color: #FFFFFF;
+			text-align: center;
+			padding: 10px;
+			font-weight: bold;
+		}
+		.bggris{
+			background: #858383;
+			color: #FFFFFF;
+			text-align: center;
+			padding: 10px;
+			font-weight: bold;
+		}
+		.bggrisclaro{
+			background: #CCCCCC;
+			color: #000000;
+			text-align: center;
+			padding: 10px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<form action="{{path('formulario2_new')}}" method="post">
+			<br><br>
+			<div class="text-right">
+				<a href="{{path('formulario2_index')}}">Ver formularios registrados</a>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<h2>OPERATIVO ESCOLAR - 2018</h2>
+					<p>SUBSISTEMA DE EDUCACIÓN REGULAR - NIVEL SECUNDARIO</p>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<table>
+						<tr>
+							<td><input type="text" name="departamento" size="5"></td>
+							<td><input type="text" name="codigounidadeducativa" size="40"></td>
+							<td><input type="text" name="numeroboleta" size="10"></td>
+						</tr>
+						<tr>
+							<td>DEP</td>
+							<td>CÓDIGO UNIDAD EDUCATIVA</td>
+							<td>N BOLETA</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+
+			<div class="row">
+				<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+					<div class="row">
+						<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 bggris">
+							<h3>FORMULARIO 2</h3>
+						</div>
+						<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 bggrisclaro">
+							<h3>DOCENTE</h3>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bgoscuro">
+							ESCRIBE EN EL ESPACIO EN EL ESPACIO EN BLANCO O MARCA LA OPCIÓN QUE MEJOR SE ADECÚE A LA RESPUESTA DEL DOCENTE
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+					LOGO
+				</div>
+			</div>
+
+			<table class="table-bordered" width="100%">
+				<tr>
+					<th>P1. UNIDAD EDUCATIVA</th>
+					<td colspan="8"><input type="text" name="p1unidadeducativa"></td>
+				</tr>
+				<tr>
+					<th>P2. NOMBRES</th>
+					<td colspan="8"><input type="text" name="p2nombres"></td>
+				</tr>
+				<tr>
+					<th>P3. APELLIDO PATERNO</th>
+					<td><input type="text" name="p3paterno"></td>
+					<th colspan="3">P4. APELLIDO MATERNO</th>
+					<td colspan="4"><input type="text" name="p4materno"></td>
+				</tr>
+				<tr>
+					<th>P5. SEXO</th>
+					<td>
+						<input type="radio" name="p5sexo" value="1"> Hombre
+						<input type="radio" name="p5sexo" value="2"> Mujer
+					</td>
+					<th colspan="3">P6. TELÉFONO</th>
+					<td colspan="4"><input type="text" name="p6telefono"></td>
+				</tr>
+				<tr>
+					<th colspan="3">P7. AÑO(S) DE ESCOLARIDAD EN EL QUE TRABAJABA EN 2016</th>
+					<td><input type="checkbox" name="p7primero"></td>
+					<td><input type="checkbox" name="p7segundo"></td>
+					<td><input type="checkbox" name="p7tercero"></td>
+					<td><input type="checkbox" name="p7cuarto"></td>
+					<td><input type="checkbox" name="p7quinto"></td>
+					<td><input type="checkbox" name="p7sexto"></td>
+				</tr>
+				<tr>
+					<th colspan="3">P8. AÑO(S) DE ESCOLARIDAD EN EL(LOS) QUE ACTUALMENTE TRABAJA</th>
+					<td><input type="checkbox" name="p8primero"></td>
+					<td><input type="checkbox" name="p8segundo"></td>
+					<td><input type="checkbox" name="p8tercero"></td>
+					<td><input type="checkbox" name="p8cuarto"></td>
+					<td><input type="checkbox" name="p8quinto"></td>
+					<td><input type="checkbox" name="p8sexto"></td>
+				</tr>
+				<tr>
+					<th colspan="2">P9. ¿QUÉ MATERIA(S) DICTABA EL 2016?</th>
+					<td colspan="7"><textarea name="p9materias" id="" cols="30" rows="3"></textarea></td>
+				</tr>
+			</table>
+			<br>
+			<table>
+				<tr>
+					<th>DATOS GENERALES DE LOS ESTUDIANTES QUE NO SE INSCRIBIERON EN LA GESTIÓN 2017</th>
+					<th colspan="2">ESTUDIANTE 1</th>
+					<th colspan="2">ESTUDIANTE 2</th>
+					<th colspan="2">ESTUDIANTE 3</th>
+					<th colspan="2">ESTUDIANTE 4</th>
+				</tr>
+				<tr>
+					<th>P9. NOMBRE(S)</th>
+					<td colspan="2"><input type="text" name="p9nombres_1"></td>
+					<td colspan="2"><input type="text" name="p9nombres_2"></td>
+					<td colspan="2"><input type="text" name="p9nombres_3"></td>
+					<td colspan="2"><input type="text" name="p9nombres_4"></td>
+				</tr>
+				<tr>
+					<th>P10. APELLIDO PATERNO</th>
+					<td colspan="2"><input type="text" name="p10paterno_1"></td>
+					<td colspan="2"><input type="text" name="p10paterno_2"></td>
+					<td colspan="2"><input type="text" name="p10paterno_3"></td>
+					<td colspan="2"><input type="text" name="p10paterno_4"></td>
+				</tr>
+				<tr>
+					<th>P11. APELLIDO MATERNO</th>
+					<td colspan="2"><input type="text" name="p11materno_1"></td>
+					<td colspan="2"><input type="text" name="p11materno_2"></td>
+					<td colspan="2"><input type="text" name="p11materno_3"></td>
+					<td colspan="2"><input type="text" name="p11materno_4"></td>
+				</tr>
+				<tr>
+					<th>P12. SEXO</th>
+					<td colspan="2"><input type="text" name="p12sexo_1"></td>
+					<td colspan="2"><input type="text" name="p12sexo_2"></td>
+					<td colspan="2"><input type="text" name="p12sexo_3"></td>
+					<td colspan="2"><input type="text" name="p12sexo_4"></td>
+				</tr>
+				<tr>
+					<th>P13. AÑO DE ESCOLARIDAD (DE 1 A 6)</th>
+					<td colspan="2"><input type="text" name="p13anioescolaridad_1"></td>
+					<td colspan="2"><input type="text" name="p13anioescolaridad_2"></td>
+					<td colspan="2"><input type="text" name="p13anioescolaridad_3"></td>
+					<td colspan="2"><input type="text" name="p13anioescolaridad_4"></td>
+				</tr>
+				<tr>
+					<th>P14. SEGÚN SU CONOCIMIENTO, ¿CUÁLES FUERON LOS FACTORES DETERMINANTES PARA LOS ESTUDIANTES QUE CURSARON ES LA GESTIÓN 2016 EN EL NIVEL SECUNDARIO NO SE INSCRIBIERAN EN LA GESTION 2017? (MARQUE UNA O VARIAS OPCIONES SEGÚN CORRESPONDA)</th>
+					<th>EST.1</th>
+					<td>ORDEN IMPORTANCIA</td>
+					<th>EST.2</th>
+					<td>ORDEN IMPORTANCIA</td>
+					<th>EST.3</th>
+					<td>ORDEN IMPORTANCIA</td>
+					<th>EST.4</th>
+					<td>ORDEN IMPORTANCIA</td>
+				</tr>
+				<tr>
+					<td>1. Enfermedad</td>
+					<th><input type="checkbox" name="p141enfermedad_1"></th>
+					<td><input type="text" size="5" name="p141importancia_1"></td>
+					<th><input type="checkbox" name="p141enfermedad_2"></th>
+					<td><input type="text" size="5" name="p141importancia_2"></td>
+					<th><input type="checkbox" name="p141enfermedad_3"></th>
+					<td><input type="text" size="5" name="p141importancia_3"></td>
+					<th><input type="checkbox" name="p141enfermedad_4"></th>
+					<td><input type="text" size="5" name="p141importancia_4"></td>
+				</tr>
+				<tr>
+					<td>2. Accidente</td>
+					<th><input type="checkbox" name="p142accidente_1"></th>
+					<td><input type="text" size="5" name="p142importancia_1"></td>
+					<th><input type="checkbox" name="p142accidente_2"></th>
+					<td><input type="text" size="5" name="p142importancia_2"></td>
+					<th><input type="checkbox" name="p142accidente_3"></th>
+					<td><input type="text" size="5" name="p142importancia_3"></td>
+					<th><input type="checkbox" name="p142accidente_4"></th>
+					<td><input type="text" size="5" name="p142importancia_4"></td>
+				</tr>
+				<tr>
+					<td>3. Discapacidad</td>
+					<th><input type="checkbox" name="p143discapacidad_1"></th>
+					<td><input type="text" size="5" name="p143importancia_1"></td>
+					<th><input type="checkbox" name="p143discapacidad_2"></th>
+					<td><input type="text" size="5" name="p143importancia_2"></td>
+					<th><input type="checkbox" name="p143discapacidad_3"></th>
+					<td><input type="text" size="5" name="p143importancia_3"></td>
+					<th><input type="checkbox" name="p143discapacidad_4"></th>
+					<td><input type="text" size="5" name="p143importancia_4"></td>
+				</tr>
+				<tr>
+					<td>4. Sobre edad</td>
+					<th><input type="checkbox" name="p144edad_1"></th>
+					<td><input type="text" size="5" name="p144importancia_1"></td>
+					<th><input type="checkbox" name="p144edad_2"></th>
+					<td><input type="text" size="5" name="p144importancia_2"></td>
+					<th><input type="checkbox" name="p144edad_3"></th>
+					<td><input type="text" size="5" name="p144importancia_3"></td>
+					<th><input type="checkbox" name="p144edad_4"></th>
+					<td><input type="text" size="5" name="p144importancia_4"></td>
+				</tr>
+				<tr>
+					<td>5. Precocidad</td>
+					<th><input type="checkbox" name="p145precocidad_1"></th>
+					<td><input type="text" size="5" name="p145importancia_1"></td>
+					<th><input type="checkbox" name="p145precocidad_2"></th>
+					<td><input type="text" size="5" name="p145importancia_2"></td>
+					<th><input type="checkbox" name="p145precocidad_3"></th>
+					<td><input type="text" size="5" name="p145importancia_3"></td>
+					<th><input type="checkbox" name="p145precocidad_4"></th>
+					<td><input type="text" size="5" name="p145importancia_4"></td>
+				</tr>
+				<tr>
+					<td>6. Embarazo/Paternidad</td>
+					<th><input type="checkbox" name="p146embarazopaternidad_1"></th>
+					<td><input type="text" size="5" name="p146importancia_1"></td>
+					<th><input type="checkbox" name="p146embarazopaternidad_2"></th>
+					<td><input type="text" size="5" name="p146importancia_2"></td>
+					<th><input type="checkbox" name="p146embarazopaternidad_3"></th>
+					<td><input type="text" size="5" name="p146importancia_3"></td>
+					<th><input type="checkbox" name="p146embarazopaternidad_4"></th>
+					<td><input type="text" size="5" name="p146importancia_4"></td>
+				</tr>
+				<tr>
+					<td>7. El estudiante ya formó su propio hogar</td>
+					<th><input type="checkbox" name="p147formohogar_1"></th>
+					<td><input type="text" size="5" name="p147importancia_1"></td>
+					<th><input type="checkbox" name="p147formohogar_2"></th>
+					<td><input type="text" size="5" name="p147importancia_2"></td>
+					<th><input type="checkbox" name="p147formohogar_3"></th>
+					<td><input type="text" size="5" name="p147importancia_3"></td>
+					<th><input type="checkbox" name="p147formohogar_4"></th>
+					<td><input type="text" size="5" name="p147importancia_4"></td>
+				</tr>
+				<tr>
+					<td>8. Abandono en la gestion 2016</td>
+					<th><input type="checkbox" name="p148abandono2016_1"></th>
+					<td><input type="text" size="5" name="p148importancia_1"></td>
+					<th><input type="checkbox" name="p148abandono2016_2"></th>
+					<td><input type="text" size="5" name="p148importancia_2"></td>
+					<th><input type="checkbox" name="p148abandono2016_3"></th>
+					<td><input type="text" size="5" name="p148importancia_3"></td>
+					<th><input type="checkbox" name="p148abandono2016_4"></th>
+					<td><input type="text" size="5" name="p148importancia_4"></td>
+				</tr>
+				<tr>
+					<td>9. Reprobación en la gestion 2016</td>
+					<th><input type="checkbox" name="p149reprobacion2016_1"></th>
+					<td><input type="text" size="5" name="p149importancia_1"></td>
+					<th><input type="checkbox" name="p149reprobacion2016_2"></th>
+					<td><input type="text" size="5" name="p149importancia_2"></td>
+					<th><input type="checkbox" name="p149reprobacion2016_3"></th>
+					<td><input type="text" size="5" name="p149importancia_3"></td>
+					<th><input type="checkbox" name="p149reprobacion2016_4"></th>
+					<td><input type="text" size="5" name="p149importancia_4"></td>
+				</tr>
+				<tr>
+					<td>10. Se inscribió a un Centro de Educación Alternativa (CEA)</td>
+					<th><input type="checkbox" name="p1410inscriciocea_1"></th>
+					<td><input type="text" size="5" name="p1410importancia_1"></td>
+					<th><input type="checkbox" name="p1410inscriciocea_2"></th>
+					<td><input type="text" size="5" name="p1410importancia_2"></td>
+					<th><input type="checkbox" name="p1410inscriciocea_3"></th>
+					<td><input type="text" size="5" name="p1410importancia_3"></td>
+					<th><input type="checkbox" name="p1410inscriciocea_4"></th>
+					<td><input type="text" size="5" name="p1410importancia_4"></td>
+				</tr>
+				<tr>
+					<td>11. Bullyng</td>
+					<th><input type="checkbox" name="p1411bulling_1"></th>
+					<td><input type="text" size="5" name="p1411importancia_1"></td>
+					<th><input type="checkbox" name="p1411bulling_2"></th>
+					<td><input type="text" size="5" name="p1411importancia_2"></td>
+					<th><input type="checkbox" name="p1411bulling_3"></th>
+					<td><input type="text" size="5" name="p1411importancia_3"></td>
+					<th><input type="checkbox" name="p1411bulling_4"></th>
+					<td><input type="text" size="5" name="p1411importancia_4"></td>
+				</tr>
+				<tr>
+					<td>12. La Unidad Educativa es distante</td>
+					<th><input type="checkbox" name="p1412unidaddistante_1"></th>
+					<td><input type="text" size="5" name="p1412importancia_1"></td>
+					<th><input type="checkbox" name="p1412unidaddistante_2"></th>
+					<td><input type="text" size="5" name="p1412importancia_2"></td>
+					<th><input type="checkbox" name="p1412unidaddistante_3"></th>
+					<td><input type="text" size="5" name="p1412importancia_3"></td>
+					<th><input type="checkbox" name="p1412unidaddistante_4"></th>
+					<td><input type="text" size="5" name="p1412importancia_4"></td>
+				</tr>
+				<tr>
+					<td>13. La Unidad Educativa no oferta el turno requerido por algunos estudiantes</td>
+					<th><input type="checkbox" name="p1413unidadnooferta_1"></th>
+					<td><input type="text" size="5" name="p1413importancia_1"></td>
+					<th><input type="checkbox" name="p1413unidadnooferta_2"></th>
+					<td><input type="text" size="5" name="p1413importancia_2"></td>
+					<th><input type="checkbox" name="p1413unidadnooferta_3"></th>
+					<td><input type="text" size="5" name="p1413importancia_3"></td>
+					<th><input type="checkbox" name="p1413unidadnooferta_4"></th>
+					<td><input type="text" size="5" name="p1413importancia_4"></td>
+				</tr>
+				<tr>
+					<td>14. Responsabilidades en el hogar: Quehaceres domésticos (cocinar, lavar, planchar), atención a niños, a ancianos, a personas enfermas o con discapacidad</td>
+					<th><input type="checkbox" name="p1414responsabilidadeshogar_1"></th>
+					<td><input type="text" size="5" name="p1414importancia_1"></td>
+					<th><input type="checkbox" name="p1414responsabilidadeshogar_2"></th>
+					<td><input type="text" size="5" name="p1414importancia_2"></td>
+					<th><input type="checkbox" name="p1414responsabilidadeshogar_3"></th>
+					<td><input type="text" size="5" name="p1414importancia_3"></td>
+					<th><input type="checkbox" name="p1414responsabilidadeshogar_4"></th>
+					<td><input type="text" size="5" name="p1414importancia_4"></td>
+				</tr>
+				<tr>
+					<td>15. Traslado de la familia a otros: Departamentos, Provincias, Municipios, Barrios, Paises</td>
+					<th><input type="checkbox" name="p1415trasladofamilia_1"></th>
+					<td><input type="text" size="5" name="p1415importancia_1"></td>
+					<th><input type="checkbox" name="p1415trasladofamilia_2"></th>
+					<td><input type="text" size="5" name="p1415importancia_2"></td>
+					<th><input type="checkbox" name="p1415trasladofamilia_3"></th>
+					<td><input type="text" size="5" name="p1415importancia_3"></td>
+					<th><input type="checkbox" name="p1415trasladofamilia_4"></th>
+					<td><input type="text" size="5" name="p1415importancia_4"></td>
+				</tr>
+				<tr>
+					<td>16. Falta de apoyo de los familiares para la continuación de sus estudios</td>
+					<th><input type="checkbox" name="p1416faltaapoyo_1"></th>
+					<td><input type="text" size="5" name="p1416importancia_1"></td>
+					<th><input type="checkbox" name="p1416faltaapoyo_2"></th>
+					<td><input type="text" size="5" name="p1416importancia_2"></td>
+					<th><input type="checkbox" name="p1416faltaapoyo_3"></th>
+					<td><input type="text" size="5" name="p1416importancia_3"></td>
+					<th><input type="checkbox" name="p1416faltaapoyo_4"></th>
+					<td><input type="text" size="5" name="p1416importancia_4"></td>
+				</tr>
+				<tr>
+					<td>17. No vive en un hogar nuclear completo (Su Padre y/o su Madre no viven con el)</td>
+					<th><input type="checkbox" name="p1417novivehogarcompleto_1"></th>
+					<td><input type="text" size="5" name="p1417importancia_1"></td>
+					<th><input type="checkbox" name="p1417novivehogarcompleto_2"></th>
+					<td><input type="text" size="5" name="p1417importancia_2"></td>
+					<th><input type="checkbox" name="p1417novivehogarcompleto_3"></th>
+					<td><input type="text" size="5" name="p1417importancia_3"></td>
+					<th><input type="checkbox" name="p1417novivehogarcompleto_4"></th>
+					<td><input type="text" size="5" name="p1417importancia_4"></td>
+				</tr>
+				<tr>
+					<td>18. Separación de los miembros del hogar (Padres, hermanos, parientes cercanos, etc)</td>
+					<th><input type="checkbox" name="p1418separacionhogar_1"></th>
+					<td><input type="text" size="5" name="p1418importancia_1"></td>
+					<th><input type="checkbox" name="p1418separacionhogar_2"></th>
+					<td><input type="text" size="5" name="p1418importancia_2"></td>
+					<th><input type="checkbox" name="p1418separacionhogar_3"></th>
+					<td><input type="text" size="5" name="p1418importancia_3"></td>
+					<th><input type="checkbox" name="p1418separacionhogar_4"></th>
+					<td><input type="text" size="5" name="p1418importancia_4"></td>
+				</tr>
+				<tr>
+					<td>19. Violencia familiar</td>
+					<th><input type="checkbox" name="p1419violenciafamiliar_1"></th>
+					<td><input type="text" size="5" name="p1419importancia_1"></td>
+					<th><input type="checkbox" name="p1419violenciafamiliar_2"></th>
+					<td><input type="text" size="5" name="p1419importancia_2"></td>
+					<th><input type="checkbox" name="p1419violenciafamiliar_3"></th>
+					<td><input type="text" size="5" name="p1419importancia_3"></td>
+					<th><input type="checkbox" name="p1419violenciafamiliar_4"></th>
+					<td><input type="text" size="5" name="p1419importancia_4"></td>
+				</tr>
+				<tr>
+					<td>20. Fallecimiento o accidente de algún familiar</td>
+					<th><input type="checkbox" name="p1420fallecimientofamiliar_1"></th>
+					<td><input type="text" size="5" name="p1420importancia_1"></td>
+					<th><input type="checkbox" name="p1420fallecimientofamiliar_2"></th>
+					<td><input type="text" size="5" name="p1420importancia_2"></td>
+					<th><input type="checkbox" name="p1420fallecimientofamiliar_3"></th>
+					<td><input type="text" size="5" name="p1420importancia_3"></td>
+					<th><input type="checkbox" name="p1420fallecimientofamiliar_4"></th>
+					<td><input type="text" size="5" name="p1420importancia_4"></td>
+				</tr>
+				<tr>
+					<td>21. Falta de dinero</td>
+					<th><input type="checkbox" name="p1421faltadinero_1"></th>
+					<td><input type="text" size="5" name="p1421importancia_1"></td>
+					<th><input type="checkbox" name="p1421faltadinero_2"></th>
+					<td><input type="text" size="5" name="p1421importancia_2"></td>
+					<th><input type="checkbox" name="p1421faltadinero_3"></th>
+					<td><input type="text" size="5" name="p1421importancia_3"></td>
+					<th><input type="checkbox" name="p1421faltadinero_4"></th>
+					<td><input type="text" size="5" name="p1421importancia_4"></td>
+				</tr>
+				<tr>
+					<td>22. Trabajo de los estudiantes</td>
+					<th><input type="checkbox" name="p1422trabajo_1"></th>
+					<td><input type="text" size="5" name="p1422importancia_1"></td>
+					<th><input type="checkbox" name="p1422trabajo_2"></th>
+					<td><input type="text" size="5" name="p1422importancia_2"></td>
+					<th><input type="checkbox" name="p1422trabajo_3"></th>
+					<td><input type="text" size="5" name="p1422importancia_3"></td>
+					<th><input type="checkbox" name="p1422trabajo_4"></th>
+					<td><input type="text" size="5" name="p1422importancia_4"></td>
+				</tr>
+				<tr>
+					<td>23. Por trabajo de los padres</td>
+					<th><input type="checkbox" name="p1423trabajopadres_1"></th>
+					<td><input type="text" size="5" name="p1423importancia_1"></td>
+					<th><input type="checkbox" name="p1423trabajopadres_2"></th>
+					<td><input type="text" size="5" name="p1423importancia_2"></td>
+					<th><input type="checkbox" name="p1423trabajopadres_3"></th>
+					<td><input type="text" size="5" name="p1423importancia_3"></td>
+					<th><input type="checkbox" name="p1423trabajopadres_4"></th>
+					<td><input type="text" size="5" name="p1423importancia_4"></td>
+				</tr>
+				<tr>
+					<td>24. Pandillas</td>
+					<th><input type="checkbox" name="p1424pandillas_1"></th>
+					<td><input type="text" size="5" name="p1424importancia_1"></td>
+					<th><input type="checkbox" name="p1424pandillas_2"></th>
+					<td><input type="text" size="5" name="p1424importancia_2"></td>
+					<th><input type="checkbox" name="p1424pandillas_3"></th>
+					<td><input type="text" size="5" name="p1424importancia_3"></td>
+					<th><input type="checkbox" name="p1424pandillas_4"></th>
+					<td><input type="text" size="5" name="p1424importancia_4"></td>
+				</tr>
+				<tr>
+					<td>25. Drogas</td>
+					<th><input type="checkbox" name="p1425drogas_1"></th>
+					<td><input type="text" size="5" name="p1425importancia_1"></td>
+					<th><input type="checkbox" name="p1425drogas_2"></th>
+					<td><input type="text" size="5" name="p1425importancia_2"></td>
+					<th><input type="checkbox" name="p1425drogas_3"></th>
+					<td><input type="text" size="5" name="p1425importancia_3"></td>
+					<th><input type="checkbox" name="p1425drogas_4"></th>
+					<td><input type="text" size="5" name="p1425importancia_4"></td>
+				</tr>
+				<tr>
+					<td>26. Alcoholismo</td>
+					<th><input type="checkbox" name="p1426alcoholismo_1"></th>
+					<td><input type="text" size="5" name="p1426importancia_1"></td>
+					<th><input type="checkbox" name="p1426alcoholismo_2"></th>
+					<td><input type="text" size="5" name="p1426importancia_2"></td>
+					<th><input type="checkbox" name="p1426alcoholismo_3"></th>
+					<td><input type="text" size="5" name="p1426importancia_3"></td>
+					<th><input type="checkbox" name="p1426alcoholismo_4"></th>
+					<td><input type="text" size="5" name="p1426importancia_4"></td>
+				</tr>
+				<tr>
+					<td>27. Otra (especifique)</td>
+					<th><input type="checkbox" name="p1427otra_1"></th>
+					<td><input type="text" size="5" name="p1427importancia_1"></td>
+					<th><input type="checkbox" name="p1427otra_2"></th>
+					<td><input type="text" size="5" name="p1427importancia_2"></td>
+					<th><input type="checkbox" name="p1427otra_3"></th>
+					<td><input type="text" size="5" name="p1427importancia_3"></td>
+					<th><input type="checkbox" name="p1427otra_4"></th>
+					<td><input type="text" size="5" name="p1427importancia_4"></td>
+				</tr>
+				<tr>
+					<td>Especifique la razón de cada estudiante</td>
+					<td colspan="2"><input type="text" name="p1427razon_1"></td>
+					<td colspan="2"><input type="text" name="p1427razon_2"></td>
+					<td colspan="2"><input type="text" name="p1427razon_3"></td>
+					<td colspan="2"><input type="text" name="p1427razon_4"></td>
+				</tr>
+			</table>
+
+			<br>
+
+			<table>
+				<tr>
+					<th>P15. ANTE LA DISMINUCIÓN DE LA MATRÍCULA EN LA GESTIÓN 2017, ¿QUÉ MEDIDAS TOMARON EN LA UNIDAD EDUCATIVA EN LA GESTIÓN 2018 PARA QUE NO DISMINUYERA LA INSCRIPCIÓN DE LOS ESTUDIANTES EN EL NIVEL SECUNDARIO?</th>
+				</tr>
+				<tr>
+					<td>
+						<textarea name="p15medidasantedisminucion" id="" cols="30" rows="10"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th>P16. ¿QUÉ MEDIDAS TOMARÍA USTED PARA QUE NO DISMINUYERA LA INSCRIPCIÓN DE LOS ESTUDIANTES EN EL NIVEL SECUNDARIO EN LA GESTIÓN 2019?</th>
+				</tr>
+				<tr>
+					<td>
+						<textarea name="p16medidasquetomaria" id="" cols="30" rows="10"></textarea>
+					</td>
+				</tr>
+			</table>
+
+			<br>
+
+			<table>
+				<tr>
+					<td>CÓDIGO RUDE ESTUDIANTE 1</td>
+					<td><input type="text" name="codigorude_1"></td>
+				</tr>
+				<tr>
+					<td>CÓDIGO RUDE ESTUDIANTE 2</td>
+					<td><input type="text" name="codigorude_2"></td>
+				</tr>
+				<tr>
+					<td>CÓDIGO RUDE ESTUDIANTE 3</td>
+					<td><input type="text" name="codigorude_3"></td>
+				</tr>
+				<tr>
+					<td>CÓDIGO RUDE ESTUDIANTE 4</td>
+					<td><input type="text" name="codigorude_4"></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<br>
+						<button type="submit" class="btn btn-primary btn-block">Guardar</button>
+					</td>
+				</tr>
+			</table>
+			<br><br>
+		</form>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
