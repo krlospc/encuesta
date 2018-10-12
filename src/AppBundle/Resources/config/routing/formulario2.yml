@@ -1,0 +1,9 @@
+formulario2_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Formulario2:index" }
+    methods:  GET
+
+formulario2_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Formulario2:new" }
+    methods:  [GET, POST]
