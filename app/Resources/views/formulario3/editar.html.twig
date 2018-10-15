@@ -247,56 +247,56 @@
             </tr>
             <tr>
                 <td colspan="2">18. Separación de los miembros del hogar (Padres, hermanos, parientes cercanos, etc)</td>
-                <th><input type="checkbox" name="p1418separacionhogar_1" {% if entity.p1217NoViveHogarCompleto == 1 %} checked="checked" {% endif %}></th>
+                <th><input type="checkbox" name="p1418separacionhogar_1" {% if entity.p1218SeparacionHogar == 1 %} checked="checked" {% endif %}></th>
                 <td colspan="2" align="center"><input type="text" size="5" name="p1418separacionhogar" value={{entity.p1218Importancia}}></td>
 
             </tr>
             <tr>
                 <td colspan="2">19. Violencia familiar</td>
-                <th><input type="checkbox" name="p1419violenciafamiliar_1"></th>
+                <th><input type="checkbox" name="p1419violenciafamiliar_1" {% if entity.p1219ViolenciaFamiliar == 1 %} checked="checked" {% endif %}></th>
                 <td colspan="2" align="center"><input  type="text" size="5" name="p1419violenciafamiliar" value={{entity.p1219Importancia}}></td>
 
             </tr>
             <tr>
                 <td colspan="2">20. Fallecimiento o accidente de algún familiar</td>
-                <th><input type="checkbox" name="p1420fallecimientofamiliar_1"></th>
+                <th><input type="checkbox" name="p1420fallecimientofamiliar_1" {% if entity.p1220FallecimientoFamiliar == 1 %} checked="checked" {% endif %}></th>
                 <td colspan="2" align="center"><input  type="text" size="5" name="p1420fallecimientofamiliar" value={{entity.p1220Importancia}}></td>
             </tr>
             <tr>
                 <td rowspan="3">FUERA DE LA UNIDAD EDUCATIVA: FACTORES ECONÓMICOS</td>
                 <td colspan="2">21. Falta de dinero</td>
-                <th ><input type="checkbox"  name="p1420ffueradelaunidad_1"></th>
+                <th ><input type="checkbox"  name="p1420ffueradelaunidad_1" {% if entity.p1221FaltaDinero == 1 %} checked="checked" {% endif %}></th>
                 <td colspan="2" align="center"><input type="text" size="5" name="p1420ffueradelaunidad" value={{entity.p1221Importancia}}></td>
             </tr>
             <tr>
                 <td colspan="2">22. Trabajo de los estudiantes</td>
-                <th ><input type="checkbox"  name="p1422trabajodeloses_1"></th>
+                <th ><input type="checkbox"  name="p1422trabajodeloses_1" {% if entity.p1222Trabajo == 1 %} checked="checked" {% endif %}></th>
                 <td colspan="2" align="center"><input type="text" size="5" name="p1422trabajodeloses" value={{entity.p1222Importancia}}></td>
             </tr>
             <tr>
                 <td colspan="2">23. Por trabajo de los padres</td>
-                <th ><input type="checkbox"  name="pp1423trabajodepadres_1"></th>
+                <th ><input type="checkbox"  name="pp1423trabajodepadres_1" {% if entity.p1223TrabajoPadres == 1 %} checked="checked" {% endif %}></th>
                 <td colspan="2" align="center"><input type="text" size="5" name="pp1423trabajodepadres" value={{entity.p1223Importancia}}></td>
             </tr>
             <tr>
                 <td rowspan="4">FUERA DE LA UNIDAD EDUCATIVA: FACTORES SOCIALES</td>
                 <td colspan="2">24. Pandillas</td>
-                <th ><input type="checkbox"  name="p1424pandillas_1"></th>
+                <th ><input type="checkbox"  name="p1424pandillas_1" {% if entity.p1224Pandillas == 1 %} checked="checked" {% endif %}></th>
                 <td colspan="2" align="center"><input type="text" size="5" name="p1424pandillas" value={{entity.p1224Importancia}}></td>
             </tr>
             <tr>
                 <td colspan="2">25. Drogas</td>
-                <th ><input type="checkbox"  name="p1425drogas_1"></th>
+                <th ><input type="checkbox"  name="p1425drogas_1" {% if entity.p1225Drogas == 1 %} checked="checked" {% endif %}></th>
                 <td colspan="2" align="center"><input type="text" size="5" name="p1425drogas" value={{entity.p1225Importancia}}></td>
             </tr>
             <tr>
                 <td colspan="2">26. Alcoholismo</td>
-                <th ><input type="checkbox"  name="p1426alcoholismo_1"></th>
+                <th ><input type="checkbox"  name="p1426alcoholismo_1" {% if entity.p1226Alcoholismo == 1 %} checked="checked" {% endif %}></th>
                 <td colspan="2" align="center"><input type="text" size="5" name="p1426alcoholismo" value={{entity.p1226Importancia}}></td>
             </tr>
             <tr>
                 <td colspan="2">26. Otra (especifique)</td>
-                <th ><input type="checkbox"  name="p1426otra_1"></th>
+                <th ><input type="checkbox"  name="p1426otra_1" {% if entity.p1227Otra == 1 %} checked="checked" {% endif %}></th>
                 <td colspan="2" align="center"><input type="text" size="5" name="p1426otra" value={{entity.p1227Importancia}}></td>
             </tr>
             <tr>
@@ -315,49 +315,49 @@
             </tr>
             <tr>
                 <td>1. Trabajaba para otras personas a cambio de una remuneración en dinero o especie, </td>
-                <td><input type="checkbox" name="p131"></td>
+                <td><input type="checkbox" name="p131" {% if entity.p131TrabajaOtros == 1 %} checked="checked" {% endif %}></td>
             </tr>
             <tr>
                 <td>2. Trabajaba o ayudaba en alguna actividad propia o familiar sin remuneración (ayudaba en una actividad familiar que generaba ingresos) </td>
-                <td><input type="checkbox"  name="p132"></td>
+                <td><input type="checkbox"  name="p132" {% if entity.p132TrbajaPtopio == 1 %} checked="checked" {% endif %}></td>
             </tr>
             <tr>
                 <td>3. Trabajaba o ayudaba en actividades de agricultura, o de crianza de animales, o de caza, o de pesca</td>
-                <td><input type="checkbox"  name="p133"></td>
+                <td><input type="checkbox"  name="p133" {% if entity.p133Ayuda == 1 %} checked="checked" {% endif %}></td>
             </tr>
             <tr>
                 <td>4. Trabajaba o ayudaba en la preparación de alimentos, hilado, tejido, costura, artesanías, mecánica, carpintería, panadería, gastronomía</td>
-                <td><input type="checkbox"  name="p134"></td>
+                <td><input type="checkbox"  name="p134" {% if entity.p134Alimentos == 1 %} checked="checked" {% endif %}></td>
             </tr>
             <tr>
                 <td>5. Vendía en una tienda, en un puesto callejero, o como ambulante, u otras actividades para la venta,  </td>
-                <td><input type="checkbox"  name="p135"></td>
+                <td><input type="checkbox"  name="p135" {% if entity.p135Vende == 1 %} checked="checked" {% endif %}></td>
             </tr>
             <tr>
                 <td>6. Lavaba o cuidaba vehículos, voceaba en minibús, lustraba zapatos, cargaba bolsas en mercados o terminales, etc.</td>
-                <td><input type="checkbox"  name="p136"></td>
+                <td><input type="checkbox"  name="p136"  {% if entity.p136Lava == 1 %} checked="checked" {% endif %}></td>
             </tr>
             <tr>
                 <td>7. Trabajaba como trabajador (a) del hogar, cuidaba o atendía a niños, o ancianos, enfermos, o personas con discapacidad, fuera de su hogar </td>
-                <td><input type="checkbox"  name="p137"></td>
+                <td><input type="checkbox"  name="p137" {% if entity.p137Cuida == 1 %} checked="checked" {% endif %}></td>
             </tr>
             <tr>
                 <td>8. Trabajaba en actividades de minería o zafra o trabajo nocturno </td>
-                <td><input type="checkbox"  name="p138"></td>
+                <td><input type="checkbox"  name="p138" {% if entity.p138Mineria == 1 %} checked="checked" {% endif %}></td>
             </tr>
             <tr>
                 <td>9. Realizaba alguna otra actividad por la cual ganaba dinero (especifique) <input type="text" name="p1427razon_1"></td>
 
-                <td><input type="checkbox"  name="p139"></td>
+                <td><input type="checkbox"  name="p139" {% if entity.p139Otro == 1 %} checked="checked" {% endif %}></td>
             </tr>
         </table>
         <br>
         <table>
             <tr>
                 <th>p14. ¿EN QUÉ TURNO(S) TRABAJÓ EN LA GESTIÓN 2017? (puede marcar más de una opción) </th>
-                <td>1.-mañana <input type="checkbox"  name="p14manana"></td>
-                <td>2.-tarde <input type="checkbox"  name="p14tarde"></td>
-                <td>3.-noche <input type="checkbox"  name="p14noche"></td>
+                <td>1.-mañana <input type="checkbox"  name="p14manana" {% if entity.p141Maniana == 1 %} checked="checked" {% endif %}></td>
+                <td>2.-tarde <input type="checkbox"  name="p14tarde" {% if entity.p142Tarde == 1 %} checked="checked" {% endif %}></td>
+                <td>3.-noche <input type="checkbox"  name="p14noche" {% if entity.p143Noche == 1 %} checked="checked" {% endif %}></td>
             </tr>
             <br>
             <tr>
@@ -369,44 +369,44 @@
             <br>
             <tr>
                 <td>1. Trabajaba todo el día </td>
-                <td><input type="checkbox"  name="p151"></td>
+                <td><input type="checkbox"  name="p151" {% if entity.p151Trabaja == 1 %} checked="checked" {% endif %}></td>
             </tr>
             <tr>
                 <td>2. No había una Unidad Educativa que oferte el turno que necesitaba  </td>
-                <td><input type="checkbox"  name="p152"></td>
+                <td><input type="checkbox"  name="p152" {% if entity.p152Oferta == 1 %} checked="checked" {% endif %}></td>
             </tr>
             <tr>
                 <td>3. Era muy lejos la distancia de su trabajo a la Unidad Educativa  </td>
-                <td><input type="checkbox"  name="p153"></td>
+                <td><input type="checkbox"  name="p153" {% if entity.p153Lejos == 1 %} checked="checked" {% endif %}></td>
             </tr>
             <tr>
                 <td>4. Era muy lejos la distancia de su hogar a su trabajo </td>
-                <td><input type="checkbox"  name="p154"></td>
+                <td><input type="checkbox"  name="p154"{% if entity.p154LejosHogar == 1 %} checked="checked" {% endif %}></td>
             </tr>
             <tr>
                 <td>5. Era muy lejos la distancia de su hogar a la Unidad Educativa  </td>
-                <td><input type="checkbox"  name="p155"></td>
+                <td><input type="checkbox"  name="p155" {% if entity.p155LejosUe == 1 %} checked="checked" {% endif %}></td>
             </tr>
             <tr>
                 <td>6. El trabajo que realizaba lo dejaba muy cansado(a) </td>
-                <td><input type="checkbox"  name="p156"></td>
+                <td><input type="checkbox"  name="p156" {% if entity.p156Cansado == 1 %} checked="checked" {% endif %}></td>
             </tr>
             <tr>
                 <td>7. Luego de trabajar tenía que ir a ayudar a su casaa  </td>
-                <td><input type="checkbox"  name="p157"></td>
+                <td><input type="checkbox"  name="p157" {% if entity.p157Ayudar == 1 %} checked="checked" {% endif %}></td>
             </tr>
             <tr>
                 <td>8. Por falta de dinero para estudiar  </td>
-                <td><input type="checkbox"  name="p158"></td>
+                <td><input type="checkbox"  name="p158" {% if entity.p158Dinero == 1 %} checked="checked" {% endif %}></td>
             </tr>
             <tr>
                 <td>9. Por falta de apoyo de sus padres  </td>
-                <td><input type="checkbox"  name="p159"></td>
+                <td><input type="checkbox"  name="p159" {% if entity.p159Apoyo == 1 %} checked="checked" {% endif %}></td>
             </tr>
             <tr>
                 <td>10. Otro (especifique) <input type="text" name="p1427razon_1"> </td>
 
-                <td><input type="checkbox"  name="p1510"></td>
+                <td><input type="checkbox"  name="p1510" {% if entity.p1510Otro == 1 %} checked="checked" {% endif %}></td>
             </tr>
 
         </table>
@@ -434,7 +434,7 @@
                 <th>P18.- ¿SABES SI ALGUNO(S) DE TUS COMPAÑEROS DE TU CURSO EN LA GESTIÓN 2016 NO SE INSCRIBIERON EN LA GESTIÓN 2017?</th>
             </tr>
             <tr>
-                <td ALIGN="center">1. SI <input type="radio"  name="p18" value="1">2. NO <input type="radio"  name="p18" value="2"></td>
+                <td ALIGN="center">1. SI <input type="radio"  name="p18" value="1" {% if entity.p18Companeros == 1 %} checked="checked" {% endif %}>2. NO <input type="radio"  name="p18" value="2" {% if entity.p18Companeros == 2 %} checked="checked" {% endif %}></td>
 
             </tr>
         </table>
@@ -496,29 +496,12 @@
 </html>
 <script>
 var sexo={{entity.p5Sexo}}
-var p121Enfermedad  = {{entity.p121Enfermedad}}
+//var p121Enfermedad  = {{entity.p121Enfermedad}}
 
-//alert(p121Enfermedad);
+//alert(sexo);
 
         $(document).ready(function () {
-            alert({{entity.p7Inscrito2016}});
-            if(sexo=='1'){
-               // alert("masc");
-                 
-                $('#p5sexom').prop('checked',true)
-                //$("#p5sexom").attr('checked',true)
-            }
-            else{
-                
-               // $('#p5sexof').prop('checked',true)
-               $("#p5sexof").attr('checked',true)
-            }
-            if(p121Enfermedad==1){
-                
-                 
-                //$('#p5sexom').prop('checked',true)
-                $('#p121Enfermedad').attr('checked');
-            }
+            
             
         });
     
