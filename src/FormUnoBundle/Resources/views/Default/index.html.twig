@@ -51,19 +51,19 @@
                     {% if po %}
                     <div class="table-responsive">                
                         <table class="table table-striped table-hover">
-<thead>
-                <tr>
-                    <th>Dep</th>
-                    <th>Sie</th>
-                    <th>Numboleta</th>
-                    <th>Unidad Educativa</th>
-                    <th>Nombres</th>
-                    <th>Paterno</th>
-                    <th>Materno</th>
-                    
-                    <th>Acciones</th>
-                </tr>
-            </thead>
+                            <thead>
+                                <tr>
+                                    <th>Dep</th>
+                                    <th>Sie</th>
+                                    <th>Numboleta</th>
+                                    <th>Unidad Educativa</th>
+                                    <th>Nombres</th>
+                                    <th>Paterno</th>
+                                    <th>Materno</th>
+                                    
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
                             <tbody>
                                 {% if po %}    
                                     {% for data in po %}                                                                
@@ -88,12 +88,13 @@
                                             </td>
                                             <td>  
                                                 {{data.materno}}
-                                            </td>                                    
-                                            
+                                            </td>
                                             <td class="text-center">
+                                                {% if ((data.nombre == "") and (data.paterno == "") and (data.materno == "")) %}
+                                                    <p class="text-danger">Incompleto</p>
+                                                {% endif %}
                                                 <a href="{{ path('form_uno_update', { 'idfactor': data.id }) }}" class="btn btn-primary">Editar</a>
-                                                <a href="{{ path('form_uno_delete', { 'idfactor': data.id }) }}" class="btn btn-danger" onclick="return confirm('Esta seguro de que desea eliminar el registro?')">Eliminar</a>
-                                                
+                                                <a href="{{ path('form_uno_delete', { 'idfactor': data.id }) }}" class="btn btn-danger" onclick="return confirm('Esta seguro de que desea eliminar el registro?')">Eliminar</a>                                                
                                             </td>
                                         </tr>
                                     {% endfor %}
@@ -103,36 +104,12 @@
                         </div>
                     </div>                
                     {% endif %}
-                    
                 </div>    
             </div>
         </div>
     </div>
 </div>
-{# <script>
-    var getNuevo = function () {        
-        $.ajax({
-            type: 'get',                         
-            url: Routing.generate('form_uno_new'),
-            beforeSend: function () {
-                $("#new").empty();
-                $("#new").append('<div style="text-align:center"><img src="{{asset('img/loading.gif')}}" /></div>');
-            },
-            success: function (data) {
-                $("#new").empty();
-                $("#new").append(data);
-            },
-            statusCode: {
-                500: function () {
 
-                },
-                404: function () {
-
-                }
-            }
-        });
-    };
-</script>#}
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
