@@ -92,7 +92,8 @@
                                             
                                             <td class="text-center">
                                                 <a href="{{ path('form_uno_update', { 'idfactor': data.id }) }}" class="btn btn-primary">Editar</a>
-                                                <a href="{{ path('form_uno_delete', { 'idfactor': data.id }) }}" class="btn btn-danger">Eliminar</a>
+                                                <a href="{{ path('form_uno_delete', { 'idfactor': data.id }) }}" class="btn btn-danger" onclick="return confirm('Esta seguro de que desea eliminar el registro?')">Eliminar</a>
+                                                
                                             </td>
                                         </tr>
                                     {% endfor %}
