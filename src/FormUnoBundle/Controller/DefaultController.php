@@ -94,7 +94,7 @@ class DefaultController extends Controller
             }
 
             $query = "INSERT INTO formulario_uno_factores (factor_tipo, factor, seleccion, orden_importancia, por_que, cod, formulario_uno_index_id) ";
-            $query = $query."VALUES ('".$factor_tipo_1."', '".$array[$i]."', false, 0, '' ,'".$i."','".$id."')";            
+            $query = $query."VALUES ('".$factor_tipo."', '".$array[$i]."', false, 0, '' ,'".$i."','".$id."')";            
             $stmt = $db->prepare($query);
             $params = array();
             $stmt->execute($params);            
@@ -119,14 +119,23 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();        
         $db = $em->getConnection();
+        $folio = $_REQUEST['folio'];
         $nombre = $_REQUEST['nombre'];
         $paterno = $_REQUEST['paterno'];  
         $materno = $_REQUEST['materno'];
-        $id = $_REQUEST['id_factor'];
+        $unidad_educativa = $_REQUEST['unidad_educativa'];
+        
+        $sexo = $_REQUEST['sexo'];
+        $telefono = $_REQUEST['telefono'];
+        $cargo = $_REQUEST['cargo'];
+        $p8 = $_REQUEST['p8'];
+        $p9 = $_REQUEST['p9'];
+        $p10 = $_REQUEST['p10'];
+        $p12 = $_REQUEST['p12'];
+        $p13 = $_REQUEST['p13'];
+        $id = $_REQUEST['id_principal'];
 
-        //dump($request);die;
-
-        $query = "UPDATE formulario_uno_index SET nombre = '".$nombre."', paterno = '".$paterno."', materno = '".$materno."' where id = ".$id;        
+        $query = "UPDATE formulario_uno_index SET nombre = '".$nombre."', paterno = '".$paterno."', materno = '".$materno."', unidad_educativa = '".$unidad_educativa."', telefono = '".$telefono."', p8 = '".$p8."', p9 = '".$p9."', p10 = '".$p10."', p12 = '".$p12."', p13 = '".$p13."', sexo = '".$sexo."', cargo = '".$cargo."' where id = ".$id;
         $stmt = $db->prepare($query);
         $params = array();
         $stmt->execute($params); 
@@ -140,7 +149,6 @@ class DefaultController extends Controller
                 $sel =  "0";
             }
             
-            //$sel = $_REQUEST['sel_'.$i];
             $orden = $_REQUEST['orden_'.$i];  
             $porque = $_REQUEST['porque_'.$i];
 

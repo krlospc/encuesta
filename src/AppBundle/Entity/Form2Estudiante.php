@@ -28,12 +28,12 @@ class Form2Estudiante
     private $p11Materno;
 
     /**
-     * @var bool|null
+     * @var int|null
      */
     private $p12Sexo;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p13AnioEscolaridad;
 
@@ -43,7 +43,7 @@ class Form2Estudiante
     private $p141Enfermedad;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p141Importancia;
 
@@ -53,7 +53,7 @@ class Form2Estudiante
     private $p142Accidente;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p142Importancia;
 
@@ -63,7 +63,7 @@ class Form2Estudiante
     private $p143Discapacidad;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p143Importancia;
 
@@ -73,7 +73,7 @@ class Form2Estudiante
     private $p144Edad;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p144Importancia;
 
@@ -83,7 +83,7 @@ class Form2Estudiante
     private $p145Precocidad;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p145Importancia;
 
@@ -93,7 +93,7 @@ class Form2Estudiante
     private $p146EmbarazoPaternidad;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p146Importancia;
 
@@ -103,7 +103,7 @@ class Form2Estudiante
     private $p147FormoHogar;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p147Importancia;
 
@@ -113,7 +113,7 @@ class Form2Estudiante
     private $p148Abandono2016;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p148Importancia;
 
@@ -123,7 +123,7 @@ class Form2Estudiante
     private $p149Reprobacion2016;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p149Importancia;
 
@@ -133,7 +133,7 @@ class Form2Estudiante
     private $p1410InscricioCea;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1410Importancia;
 
@@ -143,7 +143,7 @@ class Form2Estudiante
     private $p1411Bulling;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1411Importancia;
 
@@ -153,7 +153,7 @@ class Form2Estudiante
     private $p1412UnidadDistante;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1412Importancia;
 
@@ -163,7 +163,7 @@ class Form2Estudiante
     private $p1413UnidadNoOferta;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1413Importancia;
 
@@ -173,7 +173,7 @@ class Form2Estudiante
     private $p1414ResponsabilidadesHogar;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1414Importancia;
 
@@ -183,7 +183,7 @@ class Form2Estudiante
     private $p1415TrasladoFamilia;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1415Importancia;
 
@@ -193,7 +193,7 @@ class Form2Estudiante
     private $p1416FaltaApoyo;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1416Importancia;
 
@@ -203,7 +203,7 @@ class Form2Estudiante
     private $p1417NoViveHogarCompleto;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1417Importancia;
 
@@ -213,7 +213,7 @@ class Form2Estudiante
     private $p1418SeparacionHogar;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1418Importancia;
 
@@ -223,7 +223,7 @@ class Form2Estudiante
     private $p1419ViolenciaFamiliar;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1419Importancia;
 
@@ -233,7 +233,7 @@ class Form2Estudiante
     private $p1420FallecimientoFamiliar;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1420Importancia;
 
@@ -243,7 +243,7 @@ class Form2Estudiante
     private $p1421FaltaDinero;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1421Importancia;
 
@@ -253,7 +253,7 @@ class Form2Estudiante
     private $p1422Trabajo;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1422Importancia;
 
@@ -263,7 +263,7 @@ class Form2Estudiante
     private $p1423TrabajoPadres;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1423Importancia;
 
@@ -273,7 +273,7 @@ class Form2Estudiante
     private $p1424Pandillas;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1424Importancia;
 
@@ -283,7 +283,7 @@ class Form2Estudiante
     private $p1425Drogas;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1425Importancia;
 
@@ -293,7 +293,7 @@ class Form2Estudiante
     private $p1426Alcoholismo;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1426Importancia;
 
@@ -303,7 +303,7 @@ class Form2Estudiante
     private $p1427Otra;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1427Importancia;
 
@@ -408,7 +408,7 @@ class Form2Estudiante
     /**
      * Set p12Sexo.
      *
-     * @param bool|null $p12Sexo
+     * @param int|null $p12Sexo
      *
      * @return Form2Estudiante
      */
@@ -422,7 +422,7 @@ class Form2Estudiante
     /**
      * Get p12Sexo.
      *
-     * @return bool|null
+     * @return int|null
      */
     public function getP12Sexo()
     {
@@ -432,7 +432,7 @@ class Form2Estudiante
     /**
      * Set p13AnioEscolaridad.
      *
-     * @param int|null $p13AnioEscolaridad
+     * @param string|null $p13AnioEscolaridad
      *
      * @return Form2Estudiante
      */
@@ -446,7 +446,7 @@ class Form2Estudiante
     /**
      * Get p13AnioEscolaridad.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP13AnioEscolaridad()
     {
@@ -480,7 +480,7 @@ class Form2Estudiante
     /**
      * Set p141Importancia.
      *
-     * @param int|null $p141Importancia
+     * @param string|null $p141Importancia
      *
      * @return Form2Estudiante
      */
@@ -494,7 +494,7 @@ class Form2Estudiante
     /**
      * Get p141Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP141Importancia()
     {
@@ -528,7 +528,7 @@ class Form2Estudiante
     /**
      * Set p142Importancia.
      *
-     * @param int|null $p142Importancia
+     * @param string|null $p142Importancia
      *
      * @return Form2Estudiante
      */
@@ -542,7 +542,7 @@ class Form2Estudiante
     /**
      * Get p142Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP142Importancia()
     {
@@ -576,7 +576,7 @@ class Form2Estudiante
     /**
      * Set p143Importancia.
      *
-     * @param int|null $p143Importancia
+     * @param string|null $p143Importancia
      *
      * @return Form2Estudiante
      */
@@ -590,7 +590,7 @@ class Form2Estudiante
     /**
      * Get p143Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP143Importancia()
     {
@@ -624,7 +624,7 @@ class Form2Estudiante
     /**
      * Set p144Importancia.
      *
-     * @param int|null $p144Importancia
+     * @param string|null $p144Importancia
      *
      * @return Form2Estudiante
      */
@@ -638,7 +638,7 @@ class Form2Estudiante
     /**
      * Get p144Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP144Importancia()
     {
@@ -672,7 +672,7 @@ class Form2Estudiante
     /**
      * Set p145Importancia.
      *
-     * @param int|null $p145Importancia
+     * @param string|null $p145Importancia
      *
      * @return Form2Estudiante
      */
@@ -686,7 +686,7 @@ class Form2Estudiante
     /**
      * Get p145Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP145Importancia()
     {
@@ -720,7 +720,7 @@ class Form2Estudiante
     /**
      * Set p146Importancia.
      *
-     * @param int|null $p146Importancia
+     * @param string|null $p146Importancia
      *
      * @return Form2Estudiante
      */
@@ -734,7 +734,7 @@ class Form2Estudiante
     /**
      * Get p146Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP146Importancia()
     {
@@ -768,7 +768,7 @@ class Form2Estudiante
     /**
      * Set p147Importancia.
      *
-     * @param int|null $p147Importancia
+     * @param string|null $p147Importancia
      *
      * @return Form2Estudiante
      */
@@ -782,7 +782,7 @@ class Form2Estudiante
     /**
      * Get p147Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP147Importancia()
     {
@@ -816,7 +816,7 @@ class Form2Estudiante
     /**
      * Set p148Importancia.
      *
-     * @param int|null $p148Importancia
+     * @param string|null $p148Importancia
      *
      * @return Form2Estudiante
      */
@@ -830,7 +830,7 @@ class Form2Estudiante
     /**
      * Get p148Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP148Importancia()
     {
@@ -864,7 +864,7 @@ class Form2Estudiante
     /**
      * Set p149Importancia.
      *
-     * @param int|null $p149Importancia
+     * @param string|null $p149Importancia
      *
      * @return Form2Estudiante
      */
@@ -878,7 +878,7 @@ class Form2Estudiante
     /**
      * Get p149Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP149Importancia()
     {
@@ -912,7 +912,7 @@ class Form2Estudiante
     /**
      * Set p1410Importancia.
      *
-     * @param int|null $p1410Importancia
+     * @param string|null $p1410Importancia
      *
      * @return Form2Estudiante
      */
@@ -926,7 +926,7 @@ class Form2Estudiante
     /**
      * Get p1410Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1410Importancia()
     {
@@ -960,7 +960,7 @@ class Form2Estudiante
     /**
      * Set p1411Importancia.
      *
-     * @param int|null $p1411Importancia
+     * @param string|null $p1411Importancia
      *
      * @return Form2Estudiante
      */
@@ -974,7 +974,7 @@ class Form2Estudiante
     /**
      * Get p1411Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1411Importancia()
     {
@@ -1008,7 +1008,7 @@ class Form2Estudiante
     /**
      * Set p1412Importancia.
      *
-     * @param int|null $p1412Importancia
+     * @param string|null $p1412Importancia
      *
      * @return Form2Estudiante
      */
@@ -1022,7 +1022,7 @@ class Form2Estudiante
     /**
      * Get p1412Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1412Importancia()
     {
@@ -1056,7 +1056,7 @@ class Form2Estudiante
     /**
      * Set p1413Importancia.
      *
-     * @param int|null $p1413Importancia
+     * @param string|null $p1413Importancia
      *
      * @return Form2Estudiante
      */
@@ -1070,7 +1070,7 @@ class Form2Estudiante
     /**
      * Get p1413Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1413Importancia()
     {
@@ -1104,7 +1104,7 @@ class Form2Estudiante
     /**
      * Set p1414Importancia.
      *
-     * @param int|null $p1414Importancia
+     * @param string|null $p1414Importancia
      *
      * @return Form2Estudiante
      */
@@ -1118,7 +1118,7 @@ class Form2Estudiante
     /**
      * Get p1414Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1414Importancia()
     {
@@ -1152,7 +1152,7 @@ class Form2Estudiante
     /**
      * Set p1415Importancia.
      *
-     * @param int|null $p1415Importancia
+     * @param string|null $p1415Importancia
      *
      * @return Form2Estudiante
      */
@@ -1166,7 +1166,7 @@ class Form2Estudiante
     /**
      * Get p1415Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1415Importancia()
     {
@@ -1200,7 +1200,7 @@ class Form2Estudiante
     /**
      * Set p1416Importancia.
      *
-     * @param int|null $p1416Importancia
+     * @param string|null $p1416Importancia
      *
      * @return Form2Estudiante
      */
@@ -1214,7 +1214,7 @@ class Form2Estudiante
     /**
      * Get p1416Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1416Importancia()
     {
@@ -1248,7 +1248,7 @@ class Form2Estudiante
     /**
      * Set p1417Importancia.
      *
-     * @param int|null $p1417Importancia
+     * @param string|null $p1417Importancia
      *
      * @return Form2Estudiante
      */
@@ -1262,7 +1262,7 @@ class Form2Estudiante
     /**
      * Get p1417Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1417Importancia()
     {
@@ -1296,7 +1296,7 @@ class Form2Estudiante
     /**
      * Set p1418Importancia.
      *
-     * @param int|null $p1418Importancia
+     * @param string|null $p1418Importancia
      *
      * @return Form2Estudiante
      */
@@ -1310,7 +1310,7 @@ class Form2Estudiante
     /**
      * Get p1418Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1418Importancia()
     {
@@ -1344,7 +1344,7 @@ class Form2Estudiante
     /**
      * Set p1419Importancia.
      *
-     * @param int|null $p1419Importancia
+     * @param string|null $p1419Importancia
      *
      * @return Form2Estudiante
      */
@@ -1358,7 +1358,7 @@ class Form2Estudiante
     /**
      * Get p1419Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1419Importancia()
     {
@@ -1392,7 +1392,7 @@ class Form2Estudiante
     /**
      * Set p1420Importancia.
      *
-     * @param int|null $p1420Importancia
+     * @param string|null $p1420Importancia
      *
      * @return Form2Estudiante
      */
@@ -1406,7 +1406,7 @@ class Form2Estudiante
     /**
      * Get p1420Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1420Importancia()
     {
@@ -1440,7 +1440,7 @@ class Form2Estudiante
     /**
      * Set p1421Importancia.
      *
-     * @param int|null $p1421Importancia
+     * @param string|null $p1421Importancia
      *
      * @return Form2Estudiante
      */
@@ -1454,7 +1454,7 @@ class Form2Estudiante
     /**
      * Get p1421Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1421Importancia()
     {
@@ -1488,7 +1488,7 @@ class Form2Estudiante
     /**
      * Set p1422Importancia.
      *
-     * @param int|null $p1422Importancia
+     * @param string|null $p1422Importancia
      *
      * @return Form2Estudiante
      */
@@ -1502,7 +1502,7 @@ class Form2Estudiante
     /**
      * Get p1422Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1422Importancia()
     {
@@ -1536,7 +1536,7 @@ class Form2Estudiante
     /**
      * Set p1423Importancia.
      *
-     * @param int|null $p1423Importancia
+     * @param string|null $p1423Importancia
      *
      * @return Form2Estudiante
      */
@@ -1550,7 +1550,7 @@ class Form2Estudiante
     /**
      * Get p1423Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1423Importancia()
     {
@@ -1584,7 +1584,7 @@ class Form2Estudiante
     /**
      * Set p1424Importancia.
      *
-     * @param int|null $p1424Importancia
+     * @param string|null $p1424Importancia
      *
      * @return Form2Estudiante
      */
@@ -1598,7 +1598,7 @@ class Form2Estudiante
     /**
      * Get p1424Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1424Importancia()
     {
@@ -1632,7 +1632,7 @@ class Form2Estudiante
     /**
      * Set p1425Importancia.
      *
-     * @param int|null $p1425Importancia
+     * @param string|null $p1425Importancia
      *
      * @return Form2Estudiante
      */
@@ -1646,7 +1646,7 @@ class Form2Estudiante
     /**
      * Get p1425Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1425Importancia()
     {
@@ -1680,7 +1680,7 @@ class Form2Estudiante
     /**
      * Set p1426Importancia.
      *
-     * @param int|null $p1426Importancia
+     * @param string|null $p1426Importancia
      *
      * @return Form2Estudiante
      */
@@ -1694,7 +1694,7 @@ class Form2Estudiante
     /**
      * Get p1426Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1426Importancia()
     {
@@ -1728,7 +1728,7 @@ class Form2Estudiante
     /**
      * Set p1427Importancia.
      *
-     * @param int|null $p1427Importancia
+     * @param string|null $p1427Importancia
      *
      * @return Form2Estudiante
      */
@@ -1742,7 +1742,7 @@ class Form2Estudiante
     /**
      * Get p1427Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1427Importancia()
     {

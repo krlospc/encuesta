@@ -48,7 +48,7 @@ class Form2Docente
     private $p4Materno;
 
     /**
-     * @var bool|null
+     * @var int|null
      */
     private $p5Sexo;
 
@@ -314,7 +314,7 @@ class Form2Docente
     /**
      * Set p5Sexo.
      *
-     * @param bool|null $p5Sexo
+     * @param int|null $p5Sexo
      *
      * @return Form2Docente
      */
@@ -328,7 +328,7 @@ class Form2Docente
     /**
      * Get p5Sexo.
      *
-     * @return bool|null
+     * @return int|null
      */
     public function getP5Sexo()
     {
