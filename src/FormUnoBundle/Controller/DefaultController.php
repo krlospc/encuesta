@@ -12,12 +12,31 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();        
         $db = $em->getConnection();
+        
         $query = "select * from  formulario_uno_index";
         $stmt = $db->prepare($query);
         $params = array();
         $stmt->execute($params);
-        $po = $stmt->fetchAll();                
-        return $this->render('FormUnoBundle:Default:index.html.twig', array('po' => $po));
+        $po = $stmt->fetchAll();
+
+        $query = "select * from (
+                    select dep, cod_unidad_educativa, nboleta, group_concat(id) as ids,  count(id) as cnt
+                    from  formulario_uno_index
+                    where dep <> 0 or cod_unidad_educativa <> 0 or nboleta <> 0 
+                    group by dep, cod_unidad_educativa, nboleta
+                    ) b where b.cnt > 1";
+        $stmt = $db->prepare($query);
+        $params = array();
+        $stmt->execute($params);
+        $val_unique = $stmt->fetchAll();
+        $idval = "--";
+        if (count($val_unique) > 0){
+            foreach ($val_unique as $a) {
+                $idval = $idval.$a['ids'].",";
+            }
+        }
+
+        return $this->render('FormUnoBundle:Default:index.html.twig', array('po' => $po, 'idval' => $idval));
     }
 
     public function newAction()
@@ -25,20 +44,26 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();        
         $db = $em->getConnection();
 
-        $query = 'SELECT * FROM formulario_uno_index a WHERE a.nombre = "" AND a.paterno = "" AND a.materno = ""';
+        $query = 'SELECT * FROM formulario_uno_index a WHERE a.nombre = "" OR a.dep = "" OR a.cod_unidad_educativa = "" OR a.nboleta = ""';
         $stmt = $db->prepare($query);
         $params = array();
         $stmt->execute($params);
         $po_fac = $stmt->fetchAll();
 
+        $query = "select * from (
+            select dep, cod_unidad_educativa, nboleta, group_concat(id) as ids,  count(id) as cnt
+            from  formulario_uno_index
+            where dep <> 0 or cod_unidad_educativa <> 0 or nboleta <> 0 
+            group by dep, cod_unidad_educativa, nboleta
+            ) b where b.cnt > 1";
+        $stmt = $db->prepare($query);
+        $params = array();
+        $stmt->execute($params);
+        $val_unique = $stmt->fetchAll();
+        
         //dump(count($po_fac));die;
-        if (count($po_fac) > 0){
-            $query = "select * from  formulario_uno_index";
-            $stmt = $db->prepare($query);
-            $params = array();
-            $stmt->execute($params);
-            $po = $stmt->fetchAll();                
-            return $this->render('FormUnoBundle:Default:index.html.twig', array('po' => $po));
+        if ((count($po_fac) > 0) || (count($val_unique) > 0)){
+            return $this->redirect($this->generateUrl('form_uno_homepage'));
         } else {
             $factor_tipo_1 = "Dentro de la unidad educativa: factores atribuidos al estudiante";
             $factor_tipo_2 = "Dentro de la unidad educativa: factores atribuidos a la unidad educativa";
@@ -78,8 +103,8 @@ class DefaultController extends Controller
                 "28" => "Otra (especifique)"            
             ];
 
-            $query = "INSERT INTO formulario_uno_index (dep, cod_unidad_educativa, nboleta, nombre, paterno, materno, unidad_educativa, sexo, telefono, cargo, p8, p9, p10, p12, p13) ";
-            $query = $query."VALUES ('', '', '', '', '', '', '', '', '', '', '', '', '', '', '')";          
+            $query = "INSERT INTO formulario_uno_index (dep, cod_unidad_educativa, nboleta, nombre, paterno, materno, unidad_educativa, sexo, telefono, cargo, p8, p9_1, p10, p12, p13, p9_2, p9_3, p9_4, p9_5, p9_6) ";
+            $query = $query."VALUES ('', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '')";          
             $stmt = $db->prepare($query);
             $params = array();
             $stmt->execute($params);
@@ -147,13 +172,38 @@ class DefaultController extends Controller
         $telefono = $_REQUEST['telefono'];
         $cargo = $_REQUEST['cargo'];
         $p8 = $_REQUEST['p8'];
-        $p9 = $_REQUEST['p9'];
+
+        $p9_1 = "0";
+        if (isset($_REQUEST['esc_1'])) {
+            $p9_1 = "1";
+        }
+        $p9_2 = "0";
+        if (isset($_REQUEST['esc_2'])) {
+            $p9_2 = "1";
+        }
+        $p9_3 = "0";
+        if (isset($_REQUEST['esc_3'])) {
+            $p9_3 = "1";
+        }
+        $p9_4 = "0";
+        if (isset($_REQUEST['esc_4'])) {
+            $p9_4 = "1";
+        }
+        $p9_5 = "0";
+        if (isset($_REQUEST['esc_5'])) {
+            $p9_5 = "1";
+        }
+        $p9_6 = "0";
+        if (isset($_REQUEST['esc_6'])) {
+            $p9_6 = "1";
+        }
+        
         $p10 = $_REQUEST['p10'];
         $p12 = $_REQUEST['p12'];
         $p13 = $_REQUEST['p13'];
         $id = $_REQUEST['id_principal'];
 
-        $query = "UPDATE formulario_uno_index SET nombre = '".$nombre."', paterno = '".$paterno."', materno = '".$materno."', unidad_educativa = '".$unidad_educativa."', telefono = '".$telefono."', p8 = '".$p8."', p9 = '".$p9."', p10 = '".$p10."', p12 = '".$p12."', p13 = '".$p13."', sexo = '".$sexo."', cargo = '".$cargo."', dep = '".$dep."', cod_unidad_educativa = '".$cod_unidad_educativa."', dep = '".$dep."' where id = ".$id;
+        $query = "UPDATE formulario_uno_index SET nombre = '".$nombre."', paterno = '".$paterno."', materno = '".$materno."', unidad_educativa = '".$unidad_educativa."', telefono = '".$telefono."', p8 = '".$p8."', p9_1 = '".$p9_1."', p10 = '".$p10."', p12 = '".$p12."', p13 = '".$p13."', sexo = '".$sexo."', cargo = '".$cargo."', dep = '".$dep."', cod_unidad_educativa = '".$cod_unidad_educativa."', nboleta = '".$nboleta."', p9_2 = '".$p9_2."', p9_3 = '".$p9_3."', p9_4 = '".$p9_4."', p9_5 = '".$p9_5."', p9_6 = '".$p9_6."' where id = ".$id;
         $stmt = $db->prepare($query);
         $params = array();
         $stmt->execute($params); 
@@ -176,20 +226,13 @@ class DefaultController extends Controller
             $stmt->execute($params);            
         }
         
-        
-        $query = "select * from  formulario_uno_index";
-        $stmt = $db->prepare($query);
-        $params = array();
-        $stmt->execute($params);
-        $po = $stmt->fetchAll();                
-        return $this->render('FormUnoBundle:Default:index.html.twig', array('po' => $po));
+        return $this->redirect($this->generateUrl('form_uno_homepage'));
     }
 
     public function updateAction($idfactor)
     {
         $em = $this->getDoctrine()->getManager();        
         $db = $em->getConnection();
-
 
         $query = "select * from  formulario_uno_index where id = ".$idfactor;
         $stmt = $db->prepare($query);
@@ -223,11 +266,6 @@ class DefaultController extends Controller
         $params = array();
         $stmt->execute($params); 
         
-        $query = "SELECT * FROM  formulario_uno_index";
-        $stmt = $db->prepare($query);
-        $params = array();
-        $stmt->execute($params);
-        $po = $stmt->fetchAll();                
-        return $this->render('FormUnoBundle:Default:index.html.twig', array('po' => $po));
+        return $this->redirect($this->generateUrl('form_uno_homepage'));
     }
 }

@@ -143,7 +143,47 @@
                     <th>P8. (SOLO PARA PERSONAL CON TRES O MÁS AÑOS DE ANTIGÜEDAD EN LA UNIDAD EDUCATIVA) ¿CUÁNTOS AÑOS USTED TRABAJA EN ESTA UNIDAD EDUCATIVA?</th>
                     <td colspan="8"><input type="text" name="p8" value="{{po_index[0].p8}}"></td>
                     <th>P9. (SI ES PROFESOR), AÑO(S) DE ESCOLARIDAD EN EL NIVEL SECUNDARIO EN LOS QUE TRABAJABA EN 2016 </th>
-                    <td colspan="8"><input type="text" name="p9" value="{{po_index[0].p9}}"></td>
+                    
+                    <td colspan="8">
+                        {% if (po_index[0].p9_1 == 1) %}
+                            <input type="checkbox" name="esc_1" id="esc_1" checked="checked"> 1
+                        {% else %}
+                            <input type="checkbox" name="esc_1" id="esc_1"> 1
+                        {% endif %}
+
+                        {% if (po_index[0].p9_2 == 1) %}
+                            <input type="checkbox" name="esc_2" id="esc_2" checked="checked"> 2
+                        {% else %}
+                            <input type="checkbox" name="esc_2" id="esc_2"> 2
+                        {% endif %}
+
+                        {% if (po_index[0].p9_3 == 1) %}
+                            <input type="checkbox" name="esc_3" id="esc_3" checked="checked"> 3
+                        {% else %}
+                            <input type="checkbox" name="esc_3" id="esc_3"> 3
+                        {% endif %}
+
+                        {% if (po_index[0].p9_4 == 1) %}
+                            <input type="checkbox" name="esc_4" id="esc_4" checked="checked"> 4
+                        {% else %}
+                            <input type="checkbox" name="esc_4" id="esc_4"> 4
+                        {% endif %}
+
+                        {% if (po_index[0].p9_5 == 1) %}
+                            <input type="checkbox" name="esc_5" id="esc_5" checked="checked"> 5
+                        {% else %}
+                            <input type="checkbox" name="esc_5" id="esc_5"> 5
+                        {% endif %}    
+
+                        {% if (po_index[0].p9_6 == 1) %}
+                            <input type="checkbox" name="esc_6" id="esc_6" checked="checked"> 6
+                        {% else %}
+                            <input type="checkbox" name="esc_6" id="esc_6"> 6
+                        {% endif %}    
+                        
+                    </td>
+
+                    <!--<td colspan="8"><input type="text" name="p9" value=""></td>-->
                     <th>P10. (SI ES PROFESOR), ¿QUÉ MATERIA(s) DICTABA EN 2016?</th>
                     <td colspan="8"><input type="text" name="p10" value="{{po_index[0].p10}}"></td>
                 </tr>
