@@ -18,26 +18,45 @@
 </head>
 <body>
 {% include 'AdmMaster/menuforms.html.twig' %}
-<div class="container">	
-	
-	<h1>FORMULARIO 2</h1>
-	<a href="{{path('formulario2_new')}}" class="btn btn-success">Nuevo formulario</a>
-	<table class="table-bordered" style="border:1px solid black;border-collapse:collapse; width:100%" >
-		<tr>
-			<th>Docente</th>
-			<th>Cod. UE</th>
-			<th>Unidad Educativa</th>
+<div class="container">
 
-			<th>Operaciones</th>
+	<h1>FORMULARIO 2</h1>
+	{% for flashMessage in app.session.flashbag.get('msg') %}
+        <div class="alert alert-warning" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <i class="glyphicon glyphicon-ok"></i> {{ flashMessage }}
+        </div>
+    {% endfor %}
+    {% for flashMessage in app.session.flashbag.get('msgok') %}
+        <div class="alert alert-success" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <i class="glyphicon glyphicon-ok"></i> {{ flashMessage }}
+        </div>
+    {% endfor %}
+    
+	<a href="{{path('formulario2_new')}}" class="btn btn-success">Nuevo formulario</a>
+	<table class="table-bordered table-stripped table-hover" style="border:1px solid black;border-collapse:collapse; width:100%" >
+		<tr>
+			<th rowspan="2">Folio</th>
+			<th rowspan="2">Unidad Educativa</th>
+			<th colspan="3">Docente</th>
+			<th rowspan="2">Operaciones</th>
+		</tr>
+		<tr>
+			<th>Nombre(s)</th>
+			<th>Paterno</th>
+			<th>Materno</th>
 		</tr>
 		{% for docente in docentes %}
 		<tr>
-				<td>{{docente.p2Nombres}}  {{docente.p3Paterno}}  {{docente.p4Materno}}</td>
-				<td>{{docente.codigoUnidadEducativa}}</td>
+				<td><b>{{docente.departamento}}-{{docente.codigoUnidadEducativa}}-{{docente.numeroBoleta}}</b></td>
 				<td>{{docente.p1Unidadeducativa}}</td>
+				<td>{{docente.p2Nombres}} </td>  
+				<td>{{docente.p3Paterno}} </td>
+				<td> {{docente.p4Materno}}</td>
 				<td>
-					<a href="{{ path('formulario2_edit', { 'id': docente.id }) }}" class="btn btn-primary">editar</a>
-					<a href="{{ path('formulario2_delete', { 'id': docente.id }) }}" class="btn btn-danger" onclick="return confirm('Esta seguro de que desea eliminar el registro?')">eliminar</a>
+					<a href="{{ path('formulario2_edit', { 'id': docente.id }) }}" class="btn btn-primary">Editar</a>
+					<a href="{{ path('formulario2_delete', { 'id': docente.id }) }}" class="btn btn-danger" onclick="return confirm('Esta seguro de que desea eliminar el registro?')">Eliminar</a>
 				</td>
 
 		</tr>

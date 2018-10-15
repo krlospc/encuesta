@@ -47,6 +47,7 @@
 	<div class="container">
 		<form action="{{path('formulario2_new')}}" method="post">
 			<br><br>
+			
 			<div class="text-right">
 				<a href="{{path('formulario2_index')}}">Ver formularios registrados</a>
 			</div>
@@ -58,9 +59,9 @@
 				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 					<table>
 						<tr>
-							<td><input type="text" name="departamento" size="5"></td>
-							<td><input type="text" name="codigounidadeducativa" size="40"></td>
-							<td><input type="text" name="numeroboleta" size="10"></td>
+							<td><input type="text" name="departamento" size="5" required></td>
+							<td><input type="text" name="codigounidadeducativa" size="40" required></td>
+							<td><input type="text" name="numeroboleta" size="10" required></td>
 						</tr>
 						<tr>
 							<td>DEP</td>
@@ -96,23 +97,23 @@
 			<table class="table-bordered" width="100%">
 				<tr>
 					<th>P1. UNIDAD EDUCATIVA</th>
-					<td colspan="8"><input type="text" name="p1unidadeducativa"></td>
+					<td colspan="8"><input type="text" name="p1unidadeducativa" required></td>
 				</tr>
 				<tr>
 					<th>P2. NOMBRES</th>
-					<td colspan="8"><input type="text" name="p2nombres"></td>
+					<td colspan="8"><input type="text" name="p2nombres" required></td>
 				</tr>
 				<tr>
 					<th>P3. APELLIDO PATERNO</th>
-					<td><input type="text" name="p3paterno"></td>
+					<td><input type="text" name="p3paterno" required></td>
 					<th colspan="3">P4. APELLIDO MATERNO</th>
-					<td colspan="4"><input type="text" name="p4materno"></td>
+					<td colspan="4"><input type="text" name="p4materno" required></td>
 				</tr>
 				<tr>
 					<th>P5. SEXO</th>
 					<td>
-						<label><input type="radio" name="p5sexo" value="1"> Hombre</label>
-						<label><input type="radio" name="p5sexo" value="2"> Mujer</label>
+						<label><input type="radio" name="p5sexo" value="1" required> Hombre</label>
+						<label><input type="radio" name="p5sexo" value="2" required> Mujer</label>
 					</td>
 					<th colspan="3">P6. TELÉFONO</th>
 					<td colspan="4"><input type="text" name="p6telefono"></td>
