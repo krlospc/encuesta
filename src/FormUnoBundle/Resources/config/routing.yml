@@ -4,6 +4,12 @@ form_uno_homepage:
 
 form_uno_new:
     path:     /formunonew
-    defaults: { _controller: FormUnoBundle:Default:new }
-    options:
-        expose: true
+    defaults: { _controller: FormUnoBundle:Default:new }    
+
+form_uno_insert:
+    path:     /formunoinsert
+    defaults: { _controller: FormUnoBundle:Default:insert }
+
+form_uno_update:
+    path:     /formunoupdate/{idfactor}
+    defaults: { _controller: FormUnoBundle:Default:update }

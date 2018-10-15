@@ -13,50 +13,43 @@
                             <tr>
                                 <td align="left" class="warning"><b class="text-block">No.</b></td>
                                 <td align="center" class="warning"><b class="text-block">...</b></td>                                
-                                <td align="left" class="warning"><b class="text-block">Categoria</b></td>
-                                <td align="left" class="warning"><b class="text-block">Detalle</b></td>
-                                <td align="left" class="warning"><b class="text-block">Cantidad</b></td>
+                                <td align="left" class="warning"><b class="text-block">Nombre</b></td>
+                                <td align="left" class="warning"><b class="text-block">Paterno</b></td>
+                                <td align="left" class="warning"><b class="text-block">Materno</b></td>
                             </tr>
-                           {#} {% if po %}    
+                            {% if po %}    
                                 {% for data in po %}                                                                
                                     <tr>
                                         <td>
                                             <b class="text-block">{{loop.index}}</b>
                                         </td>
                                         <td class="text-center">
-                                            <span><i class="icon-minus-sign"></i>
-                                                <button type="button" class="btn btn-circle btn-warning btn-stroke" onclick="getVerCasos({{ data.validacion_regla_tipo_id }})">
-                                                    <i class="fa fa-eye"></i>
-                                                </button>
-                                            </span>
+                                            <a href="{{path('form_uno_update', {idfactor: data.id})}}">Ver - editar</a>
                                         </td>
                                         <td>
-                                            {{data.entidad}}
+                                            {{data.nombre}}
                                         </td>
                                         <td>
-                                            {{data.detalle}}
+                                            {{data.paterno}}
                                         </td>
                                         <td>  
-                                            {{data.count}}
+                                            {{data.materno}}
                                         </td>                                    
                                     </tr>
                                 {% endfor %}
-                            {% endif %} #} 
+                            {% endif %}
                             </tbody>
                         </table>
                     </div>
-                </div>
-                {% else %}
-                    <a href="{{path('form_uno_new')}}">Nuevo registro</a>                    
+                </div>                
                 {% endif %}
+                <a href="{{path('form_uno_new')}}">Nuevo registro</a>  
             </div>    
         </div>
     </div>
 </div>
-<div id="new">
 
-</div>
-<script>
+{# <script>
     var getNuevo = function () {        
         $.ajax({
             type: 'get',                         
@@ -79,4 +72,4 @@
             }
         });
     };
-</script>
+</script>#}
