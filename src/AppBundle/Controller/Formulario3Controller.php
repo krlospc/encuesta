@@ -28,10 +28,19 @@ class Formulario3Controller extends Controller
         if ($request->isMethod('post')) {
             
             $em = $this->getDoctrine()->getManager();
+            $entity = $em->getRepository('AppBundle:Form3')->createQueryBuilder('f')
+                ->select('f')
+                ->where('f.folioDep =' . $request->get('departamento'))
+                ->andWhere('f.folioCodigoUe =' . $request->get('codigounidadeducativa'))
+                ->andWhere('f.folioBoleta =' . $request->get('numeroboleta'))
+                ->getQuery()
+                ->getResult();
+            //dump($entity);die;
+            if(!$entity){
             /**
              * REGISTRO DEL FORMULARIO
              */
-            $estudiante = new Form3();
+                $estudiante = new Form3();
                 $estudiante->setfolioDep($request->get('departamento'));
                 //dump($estudiante);die;
                 $estudiante->setfolioCodigoUe($request->get('codigounidadeducativa'));
@@ -140,10 +149,15 @@ class Formulario3Controller extends Controller
                 //dump($estudiante);die;
                 $em->persist($estudiante);
                 $em->flush();
-            
-
+                $request->getSession()
+                ->getFlashBag()
+                ->add('exito', 'Los datos se guardaron satisfactoriamente');
+            }else{
+                $request->getSession()
+                ->getFlashBag()
+                ->add('error', 'El número de folio ya existe');
+            }
             return $this->redirectToRoute('formulario3_index');
-            
         }
 
         return $this->render('formulario3/new.html.twig');
@@ -170,10 +184,18 @@ class Formulario3Controller extends Controller
         if ($request->isMethod('post')) {
             
             $em = $this->getDoctrine()->getManager();
+            $entity = $em->getRepository('AppBundle:Form3')->createQueryBuilder('f')
+            ->select('f')
+            ->where('f.folioDep =' . $request->get('departamento'))
+            ->andWhere('f.folioCodigoUe =' . $request->get('codigounidadeducativa'))
+            ->andWhere('f.folioBoleta =' . $request->get('numeroboleta'))
+            ->getQuery()
+            ->getResult();
+            if (!$entity){
             /**
              * REGISTRO DEL FORMULARIO
              */
-            $estudiante = $em->getRepository('AppBundle:Form3')->find($request->get('id'));
+                $estudiante = $em->getRepository('AppBundle:Form3')->find($request->get('id'));
             //dump($entity);die;
                 $estudiante->setfolioDep($request->get('departamento'));
                 //dump($estudiante);die;
@@ -282,9 +304,15 @@ class Formulario3Controller extends Controller
                 $estudiante->setp20Cargo($request->get('p20cargo'));
                 //dump($estudiante);die;
                 $em->flush();
-
+                $request->getSession()
+                ->getFlashBag()
+                ->add('exito', 'Los datos se modificaron satisfactoriamente');
                 //return $this->redirectToRoute('formulario3_index');
-            
+            }else{
+                $request->getSession()
+                ->getFlashBag()
+                ->add('error', 'El número de folio ya existe');
+            }
         }
 
         return $this->redirectToRoute('formulario3_index');

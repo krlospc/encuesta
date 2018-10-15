@@ -88,7 +88,7 @@ class Form3
     private $p121Enfermedad;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p121Importancia;
 
@@ -98,7 +98,7 @@ class Form3
     private $p122Accidente;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p122Importancia;
 
@@ -108,7 +108,7 @@ class Form3
     private $p123Discapacidad;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p123Importancia;
 
@@ -118,7 +118,7 @@ class Form3
     private $p124Edad;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p124Importancia;
 
@@ -128,7 +128,7 @@ class Form3
     private $p125Precocidad;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p125Importancia;
 
@@ -138,7 +138,7 @@ class Form3
     private $p126EmbarazoPaternidad;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p126Importancia;
 
@@ -148,7 +148,7 @@ class Form3
     private $p127FormoHogar;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p127Importancia;
 
@@ -158,7 +158,7 @@ class Form3
     private $p128Abandono2016;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p128Importancia;
 
@@ -168,7 +168,7 @@ class Form3
     private $p129Reprobacion2016;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p129Importancia;
 
@@ -178,7 +178,7 @@ class Form3
     private $p1210InscricioCea;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1210Importancia;
 
@@ -188,7 +188,7 @@ class Form3
     private $p1211Bulling;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1211Importancia;
 
@@ -198,7 +198,7 @@ class Form3
     private $p1212UnidadDistante;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1212Importancia;
 
@@ -208,7 +208,7 @@ class Form3
     private $p1213UnidadNoOferta;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1213Importancia;
 
@@ -218,7 +218,7 @@ class Form3
     private $p1214ResponsabilidadesHogar;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1214Importancia;
 
@@ -228,7 +228,7 @@ class Form3
     private $p1215TrasladoFamilia;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1215Importancia;
 
@@ -238,7 +238,7 @@ class Form3
     private $p1216FaltaApoyo;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1216Importancia;
 
@@ -248,7 +248,7 @@ class Form3
     private $p1217NoViveHogarCompleto;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1217Importancia;
 
@@ -258,7 +258,7 @@ class Form3
     private $p1218SeparacionHogar;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1218Importancia;
 
@@ -268,7 +268,7 @@ class Form3
     private $p1219ViolenciaFamiliar;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1219Importancia;
 
@@ -278,7 +278,7 @@ class Form3
     private $p1220FallecimientoFamiliar;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1220Importancia;
 
@@ -288,7 +288,7 @@ class Form3
     private $p1221FaltaDinero;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1221Importancia;
 
@@ -298,7 +298,7 @@ class Form3
     private $p1222Trabajo;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1222Importancia;
 
@@ -308,7 +308,7 @@ class Form3
     private $p1223TrabajoPadres;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1223Importancia;
 
@@ -318,7 +318,7 @@ class Form3
     private $p1224Pandillas;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1224Importancia;
 
@@ -328,7 +328,7 @@ class Form3
     private $p1225Drogas;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1225Importancia;
 
@@ -338,7 +338,7 @@ class Form3
     private $p1226Alcoholismo;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1226Importancia;
 
@@ -348,7 +348,7 @@ class Form3
     private $p1227Otra;
 
     /**
-     * @var int|null
+     * @var string|null
      */
     private $p1227Importancia;
 
@@ -714,7 +714,7 @@ class Form3
     /**
      * Set p5Sexo.
      *
-     * @param bool|null $p5Sexo
+     * @param string|null $p5Sexo
      *
      * @return Form3
      */
@@ -728,7 +728,7 @@ class Form3
     /**
      * Get p5Sexo.
      *
-     * @return bool|null
+     * @return string|null
      */
     public function getP5Sexo()
     {
@@ -906,7 +906,7 @@ class Form3
     /**
      * Set p121Importancia.
      *
-     * @param int|null $p121Importancia
+     * @param string|null $p121Importancia
      *
      * @return Form3
      */
@@ -920,7 +920,7 @@ class Form3
     /**
      * Get p121Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP121Importancia()
     {
@@ -954,7 +954,7 @@ class Form3
     /**
      * Set p122Importancia.
      *
-     * @param int|null $p122Importancia
+     * @param string|null $p122Importancia
      *
      * @return Form3
      */
@@ -968,7 +968,7 @@ class Form3
     /**
      * Get p122Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP122Importancia()
     {
@@ -1002,7 +1002,7 @@ class Form3
     /**
      * Set p123Importancia.
      *
-     * @param int|null $p123Importancia
+     * @param string|null $p123Importancia
      *
      * @return Form3
      */
@@ -1016,7 +1016,7 @@ class Form3
     /**
      * Get p123Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP123Importancia()
     {
@@ -1050,7 +1050,7 @@ class Form3
     /**
      * Set p124Importancia.
      *
-     * @param int|null $p124Importancia
+     * @param string|null $p124Importancia
      *
      * @return Form3
      */
@@ -1064,7 +1064,7 @@ class Form3
     /**
      * Get p124Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP124Importancia()
     {
@@ -1098,7 +1098,7 @@ class Form3
     /**
      * Set p125Importancia.
      *
-     * @param int|null $p125Importancia
+     * @param string|null $p125Importancia
      *
      * @return Form3
      */
@@ -1112,7 +1112,7 @@ class Form3
     /**
      * Get p125Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP125Importancia()
     {
@@ -1146,7 +1146,7 @@ class Form3
     /**
      * Set p126Importancia.
      *
-     * @param int|null $p126Importancia
+     * @param string|null $p126Importancia
      *
      * @return Form3
      */
@@ -1160,7 +1160,7 @@ class Form3
     /**
      * Get p126Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP126Importancia()
     {
@@ -1194,7 +1194,7 @@ class Form3
     /**
      * Set p127Importancia.
      *
-     * @param int|null $p127Importancia
+     * @param string|null $p127Importancia
      *
      * @return Form3
      */
@@ -1208,7 +1208,7 @@ class Form3
     /**
      * Get p127Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP127Importancia()
     {
@@ -1242,7 +1242,7 @@ class Form3
     /**
      * Set p128Importancia.
      *
-     * @param int|null $p128Importancia
+     * @param string|null $p128Importancia
      *
      * @return Form3
      */
@@ -1256,7 +1256,7 @@ class Form3
     /**
      * Get p128Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP128Importancia()
     {
@@ -1290,7 +1290,7 @@ class Form3
     /**
      * Set p129Importancia.
      *
-     * @param int|null $p129Importancia
+     * @param string|null $p129Importancia
      *
      * @return Form3
      */
@@ -1304,7 +1304,7 @@ class Form3
     /**
      * Get p129Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP129Importancia()
     {
@@ -1338,7 +1338,7 @@ class Form3
     /**
      * Set p1210Importancia.
      *
-     * @param int|null $p1210Importancia
+     * @param string|null $p1210Importancia
      *
      * @return Form3
      */
@@ -1352,7 +1352,7 @@ class Form3
     /**
      * Get p1210Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1210Importancia()
     {
@@ -1386,7 +1386,7 @@ class Form3
     /**
      * Set p1211Importancia.
      *
-     * @param int|null $p1211Importancia
+     * @param string|null $p1211Importancia
      *
      * @return Form3
      */
@@ -1400,7 +1400,7 @@ class Form3
     /**
      * Get p1211Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1211Importancia()
     {
@@ -1434,7 +1434,7 @@ class Form3
     /**
      * Set p1212Importancia.
      *
-     * @param int|null $p1212Importancia
+     * @param string|null $p1212Importancia
      *
      * @return Form3
      */
@@ -1448,7 +1448,7 @@ class Form3
     /**
      * Get p1212Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1212Importancia()
     {
@@ -1482,7 +1482,7 @@ class Form3
     /**
      * Set p1213Importancia.
      *
-     * @param int|null $p1213Importancia
+     * @param string|null $p1213Importancia
      *
      * @return Form3
      */
@@ -1496,7 +1496,7 @@ class Form3
     /**
      * Get p1213Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1213Importancia()
     {
@@ -1530,7 +1530,7 @@ class Form3
     /**
      * Set p1214Importancia.
      *
-     * @param int|null $p1214Importancia
+     * @param string|null $p1214Importancia
      *
      * @return Form3
      */
@@ -1544,7 +1544,7 @@ class Form3
     /**
      * Get p1214Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1214Importancia()
     {
@@ -1578,7 +1578,7 @@ class Form3
     /**
      * Set p1215Importancia.
      *
-     * @param int|null $p1215Importancia
+     * @param string|null $p1215Importancia
      *
      * @return Form3
      */
@@ -1592,7 +1592,7 @@ class Form3
     /**
      * Get p1215Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1215Importancia()
     {
@@ -1626,7 +1626,7 @@ class Form3
     /**
      * Set p1216Importancia.
      *
-     * @param int|null $p1216Importancia
+     * @param string|null $p1216Importancia
      *
      * @return Form3
      */
@@ -1640,7 +1640,7 @@ class Form3
     /**
      * Get p1216Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1216Importancia()
     {
@@ -1674,7 +1674,7 @@ class Form3
     /**
      * Set p1217Importancia.
      *
-     * @param int|null $p1217Importancia
+     * @param string|null $p1217Importancia
      *
      * @return Form3
      */
@@ -1688,7 +1688,7 @@ class Form3
     /**
      * Get p1217Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1217Importancia()
     {
@@ -1722,7 +1722,7 @@ class Form3
     /**
      * Set p1218Importancia.
      *
-     * @param int|null $p1218Importancia
+     * @param string|null $p1218Importancia
      *
      * @return Form3
      */
@@ -1736,7 +1736,7 @@ class Form3
     /**
      * Get p1218Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1218Importancia()
     {
@@ -1770,7 +1770,7 @@ class Form3
     /**
      * Set p1219Importancia.
      *
-     * @param int|null $p1219Importancia
+     * @param string|null $p1219Importancia
      *
      * @return Form3
      */
@@ -1784,7 +1784,7 @@ class Form3
     /**
      * Get p1219Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1219Importancia()
     {
@@ -1818,7 +1818,7 @@ class Form3
     /**
      * Set p1220Importancia.
      *
-     * @param int|null $p1220Importancia
+     * @param string|null $p1220Importancia
      *
      * @return Form3
      */
@@ -1832,7 +1832,7 @@ class Form3
     /**
      * Get p1220Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1220Importancia()
     {
@@ -1866,7 +1866,7 @@ class Form3
     /**
      * Set p1221Importancia.
      *
-     * @param int|null $p1221Importancia
+     * @param string|null $p1221Importancia
      *
      * @return Form3
      */
@@ -1880,7 +1880,7 @@ class Form3
     /**
      * Get p1221Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1221Importancia()
     {
@@ -1914,7 +1914,7 @@ class Form3
     /**
      * Set p1222Importancia.
      *
-     * @param int|null $p1222Importancia
+     * @param string|null $p1222Importancia
      *
      * @return Form3
      */
@@ -1928,7 +1928,7 @@ class Form3
     /**
      * Get p1222Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1222Importancia()
     {
@@ -1962,7 +1962,7 @@ class Form3
     /**
      * Set p1223Importancia.
      *
-     * @param int|null $p1223Importancia
+     * @param string|null $p1223Importancia
      *
      * @return Form3
      */
@@ -1976,7 +1976,7 @@ class Form3
     /**
      * Get p1223Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1223Importancia()
     {
@@ -2010,7 +2010,7 @@ class Form3
     /**
      * Set p1224Importancia.
      *
-     * @param int|null $p1224Importancia
+     * @param string|null $p1224Importancia
      *
      * @return Form3
      */
@@ -2024,7 +2024,7 @@ class Form3
     /**
      * Get p1224Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1224Importancia()
     {
@@ -2058,7 +2058,7 @@ class Form3
     /**
      * Set p1225Importancia.
      *
-     * @param int|null $p1225Importancia
+     * @param string|null $p1225Importancia
      *
      * @return Form3
      */
@@ -2072,7 +2072,7 @@ class Form3
     /**
      * Get p1225Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1225Importancia()
     {
@@ -2106,7 +2106,7 @@ class Form3
     /**
      * Set p1226Importancia.
      *
-     * @param int|null $p1226Importancia
+     * @param string|null $p1226Importancia
      *
      * @return Form3
      */
@@ -2120,7 +2120,7 @@ class Form3
     /**
      * Get p1226Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1226Importancia()
     {
@@ -2154,7 +2154,7 @@ class Form3
     /**
      * Set p1227Importancia.
      *
-     * @param int|null $p1227Importancia
+     * @param string|null $p1227Importancia
      *
      * @return Form3
      */
@@ -2168,7 +2168,7 @@ class Form3
     /**
      * Get p1227Importancia.
      *
-     * @return int|null
+     * @return string|null
      */
     public function getP1227Importancia()
     {
@@ -2826,7 +2826,7 @@ class Form3
     /**
      * Set p18Companeros.
      *
-     * @param bool|null $p18Companeros
+     * @param string|null $p18Companeros
      *
      * @return Form3
      */
@@ -2840,7 +2840,7 @@ class Form3
     /**
      * Get p18Companeros.
      *
-     * @return bool|null
+     * @return string|null
      */
     public function getP18Companeros()
     {
