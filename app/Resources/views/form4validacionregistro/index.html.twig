@@ -33,7 +33,7 @@
                     <td>{{ form4validacionRegistro.fechaRegistro }}</td>
                     <td>
                         <a href="{{ path('form4validacionregistro_edit', { 'id': form4validacionRegistro.id }) }}" class="btn btn-primary">Editar</a>
-                        <a href="{{ path('form4validacionregistro_delete', { 'id': form4validacionRegistro.id }) }}" class="btn btn-danger" onclick="return confirm('Está segura/o de que desea eliminar el registro?')">Eliminar</a>
+                        <a href="{{ path('form4validacionregistro_eliminar', { 'id': form4validacionRegistro.id }) }}" class="btn btn-danger" onclick="return confirm('Está segura/o de que desea eliminar el registro?')">Eliminar</a>
                     </td>
                 </tr>
             {% endfor %}
