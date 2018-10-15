@@ -1,0 +1,4 @@
+app_form4validacionregistro:
+    resource: "@AppBundle/Resources/config/routing/form4validacionregistro.yml"
+    prefix:   /form4validacionregistro
+

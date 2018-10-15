@@ -5,3 +5,10 @@ form_uno:
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
+# app:
+#     resource: '@AppBundle/Controller/'
+#     type: annotation
+web_encuesta:
+    resource: "@AppBundle/Resources/config/routing.yml"
+    prefix:   /
