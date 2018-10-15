@@ -28,7 +28,7 @@ class Form2Estudiante
     private $p11Materno;
 
     /**
-     * @var bool|null
+     * @var int|null
      */
     private $p12Sexo;
 
@@ -408,7 +408,7 @@ class Form2Estudiante
     /**
      * Set p12Sexo.
      *
-     * @param bool|null $p12Sexo
+     * @param int|null $p12Sexo
      *
      * @return Form2Estudiante
      */
@@ -422,7 +422,7 @@ class Form2Estudiante
     /**
      * Get p12Sexo.
      *
-     * @return bool|null
+     * @return int|null
      */
     public function getP12Sexo()
     {

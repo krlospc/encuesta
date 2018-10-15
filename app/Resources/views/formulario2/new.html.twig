@@ -33,6 +33,13 @@
 			padding: 10px;
 			font-weight: bold;
 		}
+		img{
+			border: 2px solid #000000;
+			border-radius: 7px;
+		}
+		.borbot{
+			border-bottom: 1px solid #CCCCCC;
+		}
 	</style>
 </head>
 <body>
@@ -66,23 +73,23 @@
 			
 
 			<div class="row">
-				<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+				<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
 					<div class="row">
-						<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 bggris">
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 bggris">
 							<h3>FORMULARIO 2</h3>
 						</div>
-						<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 bggrisclaro">
+						<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 bggrisclaro">
 							<h3>DOCENTE</h3>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bgoscuro">
-							ESCRIBE EN EL ESPACIO EN EL ESPACIO EN BLANCO O MARCA LA OPCIÓN QUE MEJOR SE ADECÚE A LA RESPUESTA DEL DOCENTE
+							ESCRIBE EN EL ESPACIO EN BLANCO O MARCA LA OPCIÓN QUE MEJOR SE ADECÚE A LA RESPUESTA DEL DOCENTE
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-					LOGO
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<img src="{{asset('logo.png')}}" alt="" class="img-fluid">
 				</div>
 			</div>
 
@@ -104,29 +111,29 @@
 				<tr>
 					<th>P5. SEXO</th>
 					<td>
-						<input type="radio" name="p5sexo" value="1"> Hombre
-						<input type="radio" name="p5sexo" value="2"> Mujer
+						<label><input type="radio" name="p5sexo" value="1"> Hombre</label>
+						<label><input type="radio" name="p5sexo" value="2"> Mujer</label>
 					</td>
 					<th colspan="3">P6. TELÉFONO</th>
 					<td colspan="4"><input type="text" name="p6telefono"></td>
 				</tr>
 				<tr>
 					<th colspan="3">P7. AÑO(S) DE ESCOLARIDAD EN EL QUE TRABAJABA EN 2016</th>
-					<td><input type="checkbox" name="p7primero"></td>
-					<td><input type="checkbox" name="p7segundo"></td>
-					<td><input type="checkbox" name="p7tercero"></td>
-					<td><input type="checkbox" name="p7cuarto"></td>
-					<td><input type="checkbox" name="p7quinto"></td>
-					<td><input type="checkbox" name="p7sexto"></td>
+					<td><label> <input type="checkbox" name="p7primero"> (1)</label></td>
+					<td><label><input type="checkbox" name="p7segundo"> (2)</label></td>
+					<td><label><input type="checkbox" name="p7tercero"> (3)</label></td>
+					<td><label><input type="checkbox" name="p7cuarto"> (4)</label></td>
+					<td><label><input type="checkbox" name="p7quinto"> (5)</label></td>
+					<td><label><input type="checkbox" name="p7sexto"> (6)</label></td>
 				</tr>
 				<tr>
 					<th colspan="3">P8. AÑO(S) DE ESCOLARIDAD EN EL(LOS) QUE ACTUALMENTE TRABAJA</th>
-					<td><input type="checkbox" name="p8primero"></td>
-					<td><input type="checkbox" name="p8segundo"></td>
-					<td><input type="checkbox" name="p8tercero"></td>
-					<td><input type="checkbox" name="p8cuarto"></td>
-					<td><input type="checkbox" name="p8quinto"></td>
-					<td><input type="checkbox" name="p8sexto"></td>
+					<td><label><input type="checkbox" name="p8primero"> (1)</label></td>
+					<td><label><input type="checkbox" name="p8segundo"> (2)</label></td>
+					<td><label><input type="checkbox" name="p8tercero"> (3)</label></td>
+					<td><label><input type="checkbox" name="p8cuarto"> (4)</label></td>
+					<td><label><input type="checkbox" name="p8quinto"> (5)</label></td>
+					<td><label><input type="checkbox" name="p8sexto"> (6)</label></td>
 				</tr>
 				<tr>
 					<th colspan="2">P9. ¿QUÉ MATERIA(S) DICTABA EL 2016?</th>
@@ -167,20 +174,20 @@
 					<th>P12. SEXO</th>
 
                     <td colspan="2">
-						<input type="radio" name="p12sexo_1" value="1"> Hombre
-						<input type="radio" name="p12sexo_1" value="2"> Mujer
+						<label><input type="radio" name="p12sexo_1" value="1"> Hombre</label>
+						<label><input type="radio" name="p12sexo_1" value="2"> Mujer</label>
 					</td>
 					<td colspan="2">
-						<input type="radio" name="p12sexo_2" value="1"> Hombre
-						<input type="radio" name="p12sexo_2" value="2"> Mujer
+						<label><input type="radio" name="p12sexo_2" value="1"> Hombre</label>
+						<label><input type="radio" name="p12sexo_2" value="2"> Mujer</label>
 					</td>
 					<td colspan="2">
-						<input type="radio" name="p12sexo_3" value="1"> Hombre
-						<input type="radio" name="p12sexo_3" value="2"> Mujer
+						<label><input type="radio" name="p12sexo_3" value="1"> Hombre</label>
+						<label><input type="radio" name="p12sexo_3" value="2"> Mujer</label>
 					</td>
 					<td colspan="2">
-						<input type="radio" name="p12sexo_4" value="1"> Hombre
-						<input type="radio" name="p12sexo_4" value="2"> Mujer
+						<label><input type="radio" name="p12sexo_4" value="1"> Hombre</label>
+						<label><input type="radio" name="p12sexo_4" value="2"> Mujer</label>
 					</td>
 					{#<td colspan="2"><input type="text" name="p12sexo_1"></td>#}
 					{#<td colspan="2"><input type="text" name="p12sexo_2"></td>#}
@@ -205,7 +212,7 @@
 					<th>EST.4</th>
 					<td>ORDEN IMPORTANCIA</td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>1. Enfermedad</td>
 					<th><input type="checkbox" name="p141enfermedad_1"></th>
 					<td><input type="text" size="5" name="p141importancia_1"></td>
@@ -216,7 +223,7 @@
 					<th><input type="checkbox" name="p141enfermedad_4"></th>
 					<td><input type="text" size="5" name="p141importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>2. Accidente</td>
 					<th><input type="checkbox" name="p142accidente_1"></th>
 					<td><input type="text" size="5" name="p142importancia_1"></td>
@@ -227,7 +234,7 @@
 					<th><input type="checkbox" name="p142accidente_4"></th>
 					<td><input type="text" size="5" name="p142importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>3. Discapacidad</td>
 					<th><input type="checkbox" name="p143discapacidad_1"></th>
 					<td><input type="text" size="5" name="p143importancia_1"></td>
@@ -238,7 +245,7 @@
 					<th><input type="checkbox" name="p143discapacidad_4"></th>
 					<td><input type="text" size="5" name="p143importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>4. Sobre edad</td>
 					<th><input type="checkbox" name="p144edad_1"></th>
 					<td><input type="text" size="5" name="p144importancia_1"></td>
@@ -249,7 +256,7 @@
 					<th><input type="checkbox" name="p144edad_4"></th>
 					<td><input type="text" size="5" name="p144importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>5. Precocidad</td>
 					<th><input type="checkbox" name="p145precocidad_1"></th>
 					<td><input type="text" size="5" name="p145importancia_1"></td>
@@ -260,7 +267,7 @@
 					<th><input type="checkbox" name="p145precocidad_4"></th>
 					<td><input type="text" size="5" name="p145importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>6. Embarazo/Paternidad</td>
 					<th><input type="checkbox" name="p146embarazopaternidad_1"></th>
 					<td><input type="text" size="5" name="p146importancia_1"></td>
@@ -271,7 +278,7 @@
 					<th><input type="checkbox" name="p146embarazopaternidad_4"></th>
 					<td><input type="text" size="5" name="p146importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>7. El estudiante ya formó su propio hogar</td>
 					<th><input type="checkbox" name="p147formohogar_1"></th>
 					<td><input type="text" size="5" name="p147importancia_1"></td>
@@ -282,7 +289,7 @@
 					<th><input type="checkbox" name="p147formohogar_4"></th>
 					<td><input type="text" size="5" name="p147importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>8. Abandono en la gestion 2016</td>
 					<th><input type="checkbox" name="p148abandono2016_1"></th>
 					<td><input type="text" size="5" name="p148importancia_1"></td>
@@ -293,7 +300,7 @@
 					<th><input type="checkbox" name="p148abandono2016_4"></th>
 					<td><input type="text" size="5" name="p148importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>9. Reprobación en la gestion 2016</td>
 					<th><input type="checkbox" name="p149reprobacion2016_1"></th>
 					<td><input type="text" size="5" name="p149importancia_1"></td>
@@ -304,7 +311,7 @@
 					<th><input type="checkbox" name="p149reprobacion2016_4"></th>
 					<td><input type="text" size="5" name="p149importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>10. Se inscribió a un Centro de Educación Alternativa (CEA)</td>
 					<th><input type="checkbox" name="p1410inscriciocea_1"></th>
 					<td><input type="text" size="5" name="p1410importancia_1"></td>
@@ -315,7 +322,7 @@
 					<th><input type="checkbox" name="p1410inscriciocea_4"></th>
 					<td><input type="text" size="5" name="p1410importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>11. Bullyng</td>
 					<th><input type="checkbox" name="p1411bulling_1"></th>
 					<td><input type="text" size="5" name="p1411importancia_1"></td>
@@ -326,7 +333,7 @@
 					<th><input type="checkbox" name="p1411bulling_4"></th>
 					<td><input type="text" size="5" name="p1411importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>12. La Unidad Educativa es distante</td>
 					<th><input type="checkbox" name="p1412unidaddistante_1"></th>
 					<td><input type="text" size="5" name="p1412importancia_1"></td>
@@ -337,7 +344,7 @@
 					<th><input type="checkbox" name="p1412unidaddistante_4"></th>
 					<td><input type="text" size="5" name="p1412importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>13. La Unidad Educativa no oferta el turno requerido por algunos estudiantes</td>
 					<th><input type="checkbox" name="p1413unidadnooferta_1"></th>
 					<td><input type="text" size="5" name="p1413importancia_1"></td>
@@ -348,7 +355,7 @@
 					<th><input type="checkbox" name="p1413unidadnooferta_4"></th>
 					<td><input type="text" size="5" name="p1413importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>14. Responsabilidades en el hogar: Quehaceres domésticos (cocinar, lavar, planchar), atención a niños, a ancianos, a personas enfermas o con discapacidad</td>
 					<th><input type="checkbox" name="p1414responsabilidadeshogar_1"></th>
 					<td><input type="text" size="5" name="p1414importancia_1"></td>
@@ -359,7 +366,7 @@
 					<th><input type="checkbox" name="p1414responsabilidadeshogar_4"></th>
 					<td><input type="text" size="5" name="p1414importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>15. Traslado de la familia a otros: Departamentos, Provincias, Municipios, Barrios, Paises</td>
 					<th><input type="checkbox" name="p1415trasladofamilia_1"></th>
 					<td><input type="text" size="5" name="p1415importancia_1"></td>
@@ -370,7 +377,7 @@
 					<th><input type="checkbox" name="p1415trasladofamilia_4"></th>
 					<td><input type="text" size="5" name="p1415importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>16. Falta de apoyo de los familiares para la continuación de sus estudios</td>
 					<th><input type="checkbox" name="p1416faltaapoyo_1"></th>
 					<td><input type="text" size="5" name="p1416importancia_1"></td>
@@ -381,7 +388,7 @@
 					<th><input type="checkbox" name="p1416faltaapoyo_4"></th>
 					<td><input type="text" size="5" name="p1416importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>17. No vive en un hogar nuclear completo (Su Padre y/o su Madre no viven con el)</td>
 					<th><input type="checkbox" name="p1417novivehogarcompleto_1"></th>
 					<td><input type="text" size="5" name="p1417importancia_1"></td>
@@ -392,7 +399,7 @@
 					<th><input type="checkbox" name="p1417novivehogarcompleto_4"></th>
 					<td><input type="text" size="5" name="p1417importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>18. Separación de los miembros del hogar (Padres, hermanos, parientes cercanos, etc)</td>
 					<th><input type="checkbox" name="p1418separacionhogar_1"></th>
 					<td><input type="text" size="5" name="p1418importancia_1"></td>
@@ -403,7 +410,7 @@
 					<th><input type="checkbox" name="p1418separacionhogar_4"></th>
 					<td><input type="text" size="5" name="p1418importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>19. Violencia familiar</td>
 					<th><input type="checkbox" name="p1419violenciafamiliar_1"></th>
 					<td><input type="text" size="5" name="p1419importancia_1"></td>
@@ -414,7 +421,7 @@
 					<th><input type="checkbox" name="p1419violenciafamiliar_4"></th>
 					<td><input type="text" size="5" name="p1419importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>20. Fallecimiento o accidente de algún familiar</td>
 					<th><input type="checkbox" name="p1420fallecimientofamiliar_1"></th>
 					<td><input type="text" size="5" name="p1420importancia_1"></td>
@@ -425,7 +432,7 @@
 					<th><input type="checkbox" name="p1420fallecimientofamiliar_4"></th>
 					<td><input type="text" size="5" name="p1420importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>21. Falta de dinero</td>
 					<th><input type="checkbox" name="p1421faltadinero_1"></th>
 					<td><input type="text" size="5" name="p1421importancia_1"></td>
@@ -436,7 +443,7 @@
 					<th><input type="checkbox" name="p1421faltadinero_4"></th>
 					<td><input type="text" size="5" name="p1421importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>22. Trabajo de los estudiantes</td>
 					<th><input type="checkbox" name="p1422trabajo_1"></th>
 					<td><input type="text" size="5" name="p1422importancia_1"></td>
@@ -447,7 +454,7 @@
 					<th><input type="checkbox" name="p1422trabajo_4"></th>
 					<td><input type="text" size="5" name="p1422importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>23. Por trabajo de los padres</td>
 					<th><input type="checkbox" name="p1423trabajopadres_1"></th>
 					<td><input type="text" size="5" name="p1423importancia_1"></td>
@@ -458,7 +465,7 @@
 					<th><input type="checkbox" name="p1423trabajopadres_4"></th>
 					<td><input type="text" size="5" name="p1423importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>24. Pandillas</td>
 					<th><input type="checkbox" name="p1424pandillas_1"></th>
 					<td><input type="text" size="5" name="p1424importancia_1"></td>
@@ -469,7 +476,7 @@
 					<th><input type="checkbox" name="p1424pandillas_4"></th>
 					<td><input type="text" size="5" name="p1424importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>25. Drogas</td>
 					<th><input type="checkbox" name="p1425drogas_1"></th>
 					<td><input type="text" size="5" name="p1425importancia_1"></td>
@@ -480,7 +487,7 @@
 					<th><input type="checkbox" name="p1425drogas_4"></th>
 					<td><input type="text" size="5" name="p1425importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>26. Alcoholismo</td>
 					<th><input type="checkbox" name="p1426alcoholismo_1"></th>
 					<td><input type="text" size="5" name="p1426importancia_1"></td>
@@ -491,7 +498,7 @@
 					<th><input type="checkbox" name="p1426alcoholismo_4"></th>
 					<td><input type="text" size="5" name="p1426importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>27. Otra (especifique)</td>
 					<th><input type="checkbox" name="p1427otra_1"></th>
 					<td><input type="text" size="5" name="p1427importancia_1"></td>
@@ -502,7 +509,7 @@
 					<th><input type="checkbox" name="p1427otra_4"></th>
 					<td><input type="text" size="5" name="p1427importancia_4"></td>
 				</tr>
-				<tr>
+				<tr class="borbot">
 					<td>Especifique la razón de cada estudiante</td>
 					<td colspan="2"><input type="text" name="p1427razon_1"></td>
 					<td colspan="2"><input type="text" name="p1427razon_2"></td>

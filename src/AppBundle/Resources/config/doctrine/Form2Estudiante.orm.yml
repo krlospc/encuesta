@@ -37,7 +37,7 @@ AppBundle\Entity\Form2Estudiante:
                 fixed: false
             column: p11_materno
         p12Sexo:
-            type: boolean
+            type: integer
             nullable: true
             column: p12_sexo
         p13AnioEscolaridad:

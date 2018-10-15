@@ -60,7 +60,7 @@ AppBundle\Entity\Form2Docente:
                 fixed: false
             column: p4_materno
         p5Sexo:
-            type: boolean
+            type: integer
             nullable: true
             column: p5_sexo
         p6Telefono:
