@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cuestionario 3</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style type="text/css">
+        table{
+            width: 100%;
+        }
+        textarea{
+            width: 100%;
+        }
+        .bgoscuro{
+            background: #000000;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .bggris{
+            background: #858383;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .bggrisclaro{
+            background: #CCCCCC;
+            color: #000000;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form action="{{path('formulario3_new')}}" method="post">
+        <br><br>
+        <div class="text-right">
+            <a href="{{path('formulario3_index')}}">Ver formularios registrados</a>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <h2>OPERATIVO ESCOLAR - 2018</h2>
+                <p>SUBSISTEMA DE EDUCACIÓN REGULAR - NIVEL SECUNDARIO</p>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <table>
+                    <tr>
+                        <td><input type="text" name="departamento" size="5"></td>
+                        <td><input type="text" name="codigounidadeducativa" size="40"></td>
+                        <td><input type="text" name="numeroboleta" size="10"></td>
+                    </tr>
+                    <tr>
+                        <td>DEP</td>
+                        <td>CÓDIGO UNIDAD EDUCATIVA</td>
+                        <td>N BOLETA</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 bggris">
+                        <h3>FORMULARIO 3</h3>
+                    </div>
+                    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 bggrisclaro">
+                        <h3>ESTUDIANTE</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bgoscuro">
+                        ESCRIBE EN EL ESPACIO EN BLANCO O MARCA LA OPCIÓN QUE MEJOR SE ADECÚE A
+                        LA RESPUESTA DEL ESTUDIANTE
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                LOGO
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bggris" aria-colspan="2" >
+                ESTAMOS DESARROLLANDO UN ESTUDIO PARA DETERMINAR LAS RAZONES DEL PORQUÉ ALGUNOS DE LO ESTUDIANTES NO SE INSCRIBIERON EN LA GESTIÓN 2017. TE PEDIMOS NOS AYUDES RESPONDIENDO LAS SIGUIENTES PREGUNTAS CON HONESTIDAD PARA QUE PODAMOS CONOCER LOS PROBLEMAS QUE TUVISTE EL AÑO PASADO Y TE OBLIGARON A NO INSCRIBIRTE. Y ASI, PODER AYUDARLES DE ALGUNA MANERA.
+            </div>
+        </div>
+
+        <table class="table-bordered" width="100%">
+            <tr>
+                <th>P1. UNIDAD EDUCATIVA</th>
+                <td colspan="8"><input type="text" name="p1unidadeducativa"></td>
+            </tr>
+            <tr>
+                <th>P2. NOMBRES</th>
+                <td colspan="8"><input type="text" name="p2nombres"></td>
+            </tr>
+            <tr>
+                <th>P3. APELLIDO PATERNO</th>
+                <td><input type="text" name="p3paterno"></td>
+                <th colspan="3">P4. APELLIDO MATERNO</th>
+                <td colspan="4"><input type="text" name="p4materno"></td>
+            </tr>
+            <tr>
+                <th>P5. SEXO</th>
+                <td>
+                    <input type="radio" name="p5sexo" value="1">1. Hombre
+                    <input type="radio" name="p5sexo" value="2">2. Mujer
+                </td>
+                <th colspan="3">P6. EDAD</th>
+                <td colspan="4"><input type="text" name="p6edad"></td>
+            </tr>
+            <tr>
+                <th >P7. EN EL AÑO 2016 ESTABAS INCRITO EN ESTA MISMA UNIDAD EDUCATIVA</th>
+                <td colspan="8">
+                    <input type="radio" name="p7si" value="1">1. SI
+                    <input type="radio" name="p7si" value="2">2. NO
+                </td>
+            </tr>
+            <tr>
+                <th >P8. SI ES NO, ¿CUÁL ES EL NOMBRE DE LA UNIDAD EDUCATIVA? </th>
+                 <td colspan="8"><input type="text" name="p8nomue"></td>
+
+            </tr>
+            <tr>
+                <th>P9. AÑO DE ESCOLARIDAD EN EL QUE ESTABA INSCRITO EL 2016</th>
+                <th colspan="8"><input type="text" name="p9añoesc2016"></th>
+            </tr>
+            <tr>
+                <th>P10. AÑO DE ESCOLARIDAD EN EL QUE ESTÁ INSCRITO EL 2018</th>
+                <th colspan="8"><input type="text" name="p10añoesc2018"></th>
+            </tr>
+            <tr>
+                <th>P11. CÓDIGO RUDE:</th>
+                <th colspan="8"><input type="text" name="p11codrue"></th>
+            </tr>
+
+        </table>
+        <br>
+        <table>
+            <tr>
+                <th align="center" class="bggris">P12. ¿POR QUÉ RAZONES NO TE INSCRIBISTE EL AÑO PASADO (2017)?</th>
+                <th colspan="3" align="center" class="bggrisclaro">MARQUE LAS OPCIONES QUE SE ADECUÉN A LA RESPUESTA DEL ESTUDIANTE</th>
+                <td colspan="2" align="center" class="bgoscuro"><b>ENUMERE POR ORDEN DE IMPORTANCIA</b> </td>
+            </tr>
+            <tr>
+                <td rowspan="10">DENTRO DE LA UNIDAD EDUCATIVA: FACTORES ATRIBUIDOS AL ESTUDIANTE</td>
+                <td colspan="2">1. Enfermedad</td>
+                <th ><input type="checkbox"  name="p121enfermedad_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p121enfermedad"></td>
+            </tr>
+            <tr>
+                <td colspan="2">2. Accidente</td>
+                <th ><input type="checkbox"  name="p122accidente_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p122accidente"></td>
+            </tr>
+            <tr>
+                <td colspan="2">3. Discapacidad</td>
+                <th ><input type="checkbox"  name="p123discapacidad_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p123discapacidad"></td>
+            </tr>
+            <tr>
+                <td colspan="2">4. Sobre edad</td>
+                <th ><input type="checkbox"  name="p124sobreedad_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p124sobreedad"></td>
+            </tr>
+            <tr>
+                <td colspan="2">5. Precocidad</td>
+                <th ><input type="checkbox"  name="p125precosidad_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p125precosidad"></td>
+            </tr>
+            <tr>
+                <td colspan="2">6. Embarazo/Paternidad</td>
+                <th ><input type="checkbox"  name="p126embarazo_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p126embarazo"></td>
+            </tr>
+            <tr>
+                <td colspan="2">7. El estudiante ya formo su propio hogar</td>
+                <th ><input type="checkbox"  name="p127hogar_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p127hogar"></td>
+            </tr>
+            <tr>
+                <td colspan="2">8. Abandono en la gestión 2016</td>
+                <th ><input type="checkbox"  name="p128abandono_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p128abandono"></td>
+            </tr>
+            <tr>
+                <td colspan="2">9. Reprobación en la gestión 2016</td>
+                <th ><input type="checkbox"  name="p129reprobacion_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p129reprobacion"></td>
+            </tr>
+            <tr>
+                <td colspan="2">10. Se inscribió a un Centro de Educación Alternativa (CEA)</td>
+                <th ><input type="checkbox"  name="p1210centro_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1210centro"></td>
+            </tr>
+
+            <tr>
+                <td rowspan="3">DENTRO DE LA UNIDAD EDUCATIVA:FACTORES ATRIBUIDOS A LA UNIDAD EDUCATIVA</td>
+                <td colspan="2">11. Bullying</td>
+                <th ><input type="checkbox"  name="p12bull_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p12bull"></td>
+            </tr>
+            <tr>
+                <td colspan="2">12. La Unidad Educativa es distante</td>
+                <th ><input type="checkbox"  name="p12distante_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p12distante"></td>
+            </tr>
+            <tr>
+                <td colspan="2">13. La Unidad Educativa no oferta el turno requerido por algunos estudiantes</td>
+                <th ><input type="checkbox"  name="p12oferta_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p12oferta"></td>
+            </tr>
+            <tr>
+                <td rowspan="7">FUERA DE LA UNIDAD EDUCATIVA: FACTORES FAMILIARES </td>
+                <td colspan="2">14. Responsabilidades en el hogar: Quehaceres domésticos (cocinar, lavar, planchar), atención a niños, a ancianos, a personas enfermas o con discapacidad</td>
+                <th ><input type="checkbox"  name="p141_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p141"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">15. Traslado de la familia a otros: Departamentos, Provincias, Municipios, Barrios, Paises</td>
+                <th><input type="checkbox" name="p15tralado_1"></th>
+                <td colspan="2" align="center"><input  type="text" size="5" name="p15tralado"></td>
+
+            </tr>
+
+            <tr>
+                <td colspan="2">16. Falta de apoyo de los familiares para la continuación de sus estudios</td>
+                <th><input type="checkbox" name="p1416faltaapoyo_1"></th>
+                <td colspan="2" align="center"><input  type="text" size="5" name="p1416faltaapoyo"></td>
+
+            </tr>
+            <tr>
+                <td colspan="2">17. No vive en un hogar nuclear completo (Su Padre y/o su Madre no viven con el)</td>
+                <th><input type="checkbox" name="p1417novivehogarcompleto_1"></th>
+                <td colspan="2" align="center"><input  type="text" size="5" name="p1417novivehogarcompleto"></td>
+
+            </tr>
+            <tr>
+                <td colspan="2">18. Separación de los miembros del hogar (Padres, hermanos, parientes cercanos, etc)</td>
+                <th><input type="checkbox" name="p1418separacionhogar_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1418separacionhogar"></td>
+
+            </tr>
+            <tr>
+                <td colspan="2">19. Violencia familiar</td>
+                <th><input type="checkbox" name="p1419violenciafamiliar_1"></th>
+                <td colspan="2" align="center"><input  type="text" size="5" name="p1419violenciafamiliar"></td>
+
+            </tr>
+            <tr>
+                <td colspan="2">20. Fallecimiento o accidente de algún familiar</td>
+                <th><input type="checkbox" name="p1420fallecimientofamiliar_1"></th>
+                <td colspan="2" align="center"><input  type="text" size="5" name="p1420fallecimientofamiliar"></td>
+            </tr>
+            <tr>
+                <td rowspan="3">FUERA DE LA UNIDAD EDUCATIVA: FACTORES ECONÓMICOS</td>
+                <td colspan="2">21. Falta de dinero</td>
+                <th ><input type="checkbox"  name="p1420ffueradelaunidad_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1420ffueradelaunidad"></td>
+            </tr>
+            <tr>
+                <td colspan="2">22. Trabajo de los estudiantes</td>
+                <th ><input type="checkbox"  name="p1422trabajodeloses_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1422trabajodeloses"></td>
+            </tr>
+            <tr>
+                <td colspan="2">23. Por trabajo de los padres</td>
+                <th ><input type="checkbox"  name="pp1423trabajodepadres_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="pp1423trabajodepadres"></td>
+            </tr>
+            <tr>
+                <td rowspan="4">FUERA DE LA UNIDAD EDUCATIVA: FACTORES SOCIALES</td>
+                <td colspan="2">24. Pandillas</td>
+                <th ><input type="checkbox"  name="p1424pandillas_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1424pandillas"></td>
+            </tr>
+            <tr>
+                <td colspan="2">25. Drogas</td>
+                <th ><input type="checkbox"  name="p1425drogas_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1425drogas"></td>
+            </tr>
+            <tr>
+                <td colspan="2">26. Alcoholismo</td>
+                <th ><input type="checkbox"  name="p1426alcoholismo_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1426alcoholismo"></td>
+            </tr>
+            <tr>
+                <td colspan="2">26. Otra (especifique)</td>
+                <th ><input type="checkbox"  name="p1426otra_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1426otra"></td>
+            </tr>
+            <tr>
+                <td>26. Otra (especifique)</td>
+                <td colspan="6"><input type="text" name="p1426otra_1_text"></td>
+            </tr>
+
+        </table>
+        <br>
+
+        <table>
+            <tr>
+                <th>(SÓLO PARA ESTUDIANTES QUE RESPONDIERON LA OPCIÓN 22)
+                    <br>P13. ¿QUÉ TIPO DE TRABAJO REALIZABAS EL AÑO PASADO (GESTIÓN 2017)? (puede marcar más de una opción)
+                </th>
+            </tr>
+            <tr>
+                <td>1. Trabajaba para otras personas a cambio de una remuneración en dinero o especie, </td>
+                <td><input type="checkbox"  name="p131"></td>
+            </tr>
+            <tr>
+                <td>2. Trabajaba o ayudaba en alguna actividad propia o familiar sin remuneración (ayudaba en una actividad familiar que generaba ingresos) </td>
+                <td><input type="checkbox"  name="p132"></td>
+            </tr>
+            <tr>
+                <td>3. Trabajaba o ayudaba en actividades de agricultura, o de crianza de animales, o de caza, o de pesca</td>
+                <td><input type="checkbox"  name="p133"></td>
+            </tr>
+            <tr>
+                <td>4. Trabajaba o ayudaba en la preparación de alimentos, hilado, tejido, costura, artesanías, mecánica, carpintería, panadería, gastronomía</td>
+                <td><input type="checkbox"  name="p134"></td>
+            </tr>
+            <tr>
+                <td>5. Vendía en una tienda, en un puesto callejero, o como ambulante, u otras actividades para la venta,  </td>
+                <td><input type="checkbox"  name="p135"></td>
+            </tr>
+            <tr>
+                <td>6. Lavaba o cuidaba vehículos, voceaba en minibús, lustraba zapatos, cargaba bolsas en mercados o terminales, etc.</td>
+                <td><input type="checkbox"  name="p136"></td>
+            </tr>
+            <tr>
+                <td>7. Trabajaba como trabajador (a) del hogar, cuidaba o atendía a niños, o ancianos, enfermos, o personas con discapacidad, fuera de su hogar </td>
+                <td><input type="checkbox"  name="p137"></td>
+            </tr>
+            <tr>
+                <td>8. Trabajaba en actividades de minería o zafra o trabajo nocturno </td>
+                <td><input type="checkbox"  name="p138"></td>
+            </tr>
+            <tr>
+                <td>9. Realizaba alguna otra actividad por la cual ganaba dinero (especifique) <input type="text" name="p1427razon_1"></td>
+
+                <td><input type="checkbox"  name="p139"></td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <th>p14. ¿EN QUÉ TURNO(S) TRABAJÓ EN LA GESTIÓN 2017? (puede marcar más de una opción) </th>
+                <td>1.-mañana <input type="checkbox"  name="p14manana"></td>
+                <td>2.-tarde <input type="checkbox"  name="p14tarde"></td>
+                <td>3.-noche <input type="checkbox"  name="p14noche"></td>
+            </tr>
+            <br>
+            <tr>
+                <th colspan="10" >P15. ¿PORQUÉ RAZONES CREES QUE NO PUDISTE TRABAJAR Y ESTUDIAR AL MISMO TIEMPO EL AÑO PASADO (GESTIÓN 2017)?
+                    (puede marcar más de una opción)
+                </th>
+
+            </tr>
+            <br>
+            <tr>
+                <td>1. Trabajaba todo el día </td>
+                <td><input type="checkbox"  name="p151"></td>
+            </tr>
+            <tr>
+                <td>2. No había una Unidad Educativa que oferte el turno que necesitaba  </td>
+                <td><input type="checkbox"  name="p152"></td>
+            </tr>
+            <tr>
+                <td>3. Era muy lejos la distancia de su trabajo a la Unidad Educativa  </td>
+                <td><input type="checkbox"  name="p153"></td>
+            </tr>
+            <tr>
+                <td>4. Era muy lejos la distancia de su hogar a su trabajo </td>
+                <td><input type="checkbox"  name="p154"></td>
+            </tr>
+            <tr>
+                <td>5. Era muy lejos la distancia de su hogar a la Unidad Educativa  </td>
+                <td><input type="checkbox"  name="p155"></td>
+            </tr>
+            <tr>
+                <td>6. El trabajo que realizaba lo dejaba muy cansado(a) </td>
+                <td><input type="checkbox"  name="p156"></td>
+            </tr>
+            <tr>
+                <td>7. Luego de trabajar tenía que ir a ayudar a su casaa  </td>
+                <td><input type="checkbox"  name="p157"></td>
+            </tr>
+            <tr>
+                <td>8. Por falta de dinero para estudiar  </td>
+                <td><input type="checkbox"  name="p158"></td>
+            </tr>
+            <tr>
+                <td>9. Por falta de apoyo de sus padres  </td>
+                <td><input type="checkbox"  name="p159"></td>
+            </tr>
+            <tr>
+                <td>10. Otro (especifique) <input type="text" name="p1427razon_1"> </td>
+
+                <td><input type="checkbox"  name="p1510"></td>
+            </tr>
+
+        </table>
+
+        <br>
+
+        <table>
+            <tr>
+                <th>P16.- ¿QUÉ TE DIJERON TUS PAPÁS/FAMILIARES CUANDO NO TE INSCRIBISTE EL AÑO PASADO (GESTIÓN 2017)?</th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea name="p161" id="" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>P17.- ¿PORQUÉ TE VOLVISTE A INSCRIBIR EN LA GESTIÓN 2018?</th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea name="p171" id="" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>P18.- ¿SABES SI ALGUNO(S) DE TUS COMPAÑEROS DE TU CURSO EN LA GESTIÓN 2016 NO SE INSCRIBIERON EN LA GESTIÓN 2017?</th>
+            </tr>
+            <tr>
+                <td ALIGN="center">1. SI <input type="radio"  name="p18" value="1">2. NO <input type="radio"  name="p18" value="2"></td>
+
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <b>P19.- SI RESPONDE SI, ¿SABES CUALES FUERON LOS MOTIVOS O RAZONES?</b>
+            </tr>
+            <tr>
+                (COLOCAR EL CÓDIGO QUE CORRESPONDA O SE ADECUE MEJOR A LAS OPCIONES DE LA PREGUNTA P12)
+            </tr>
+            <tr>
+                <td>Primera Razón</td>
+                <td>Segunda Razón</td>
+                <td>Tercera Razón</td>
+                <td>Cuarta Razón </td>
+                <td> Quinta Razón   </td>
+            </tr>
+            <tr>
+                <td><input type="text" name="p19primerarazon"></td>
+                <td><input type="text" name="p19segundarazon"></td>
+                <td><input type="text" name="p19tercerarazon"></td>
+                <td><input type="text" name="p19cuartarazon"> </td>
+                <td> <input type="text" name="p19quintarazon">  </td>
+            </tr>
+            <br>
+            <tr>
+                <th>OTRA (ESPECIFIQUE)</th>
+                <td> <input type="text" name="p19otra">  </td>
+            </tr>
+
+            <tr>
+                <th colspan="6">P20. PERSONA DE LA UNIDAD EDUCATIVA QUE ACOMPAÑÓ LA ENTREVISTA AL ESTUDIANTE:</th>
+
+            </tr>
+            <tr>
+                <td>NOMBRE COMPLETO</td>
+                <td> <input type="text" name="p20nombre">  </td>
+            </tr>
+            <tr>
+                <td>CARGO</td>
+                <td> <input type="text" name="p20cargo">  </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <br>
+                    <button type="submit" class="btn btn-primary btn-block">Guardar</button>
+                </td>
+            </tr>
+        </table>
+        <br><br>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+{#
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{parent()}}
+    <style type="text/css">
+        table{
+            width: 100%;
+        }
+        textarea{
+            width: 100%;
+        }
+        .bgoscuro{
+            background: #000000;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .bggris{
+            background: #858383;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .bggrisclaro{
+            background: #CCCCCC;
+            color: #000000;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .bloque{
+            display: block;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <br>
+    {{ form_start(form) }}
+    <div class="panel" align="center">
+          <div class="row">
+            <div class="col-md-4" bggris>
+               <h3> <b>OPERATIVO ESCOLAR - 2018</b></h3>
+            </div>
+
+            <div class="col-md-8">
+                DEP  {{form_widget(form.folioDep)}}
+                CÓDIGO UNIDAD EDUCATIVA   {{form_widget(form.folioCodUe)}}
+                N° BOLETA   {{form_widget(form.folioBoleta)}}
+            </div>
+          </div>
+        <div class="row">
+            <div class="col-md-12" align="left">
+            <b>SUBSISTEMA DE EDUCACIÓN REGULAR - NIVEL SECUNDARIO</b>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-content animated fadeIn">
+        <div class="row" align="center">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="panel">
+                    <div class="panel-body">
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><b>FORMULARIO 3</b></h3>
+                            </div><!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <table border="1" >
+                                    <tr>
+                                        <td align="center"> <b>FORMULARIO 3</b></td>
+                                        <td align="center"><b>ESTUDIANTE</b></td>
+                                        <td rowspan="2" align="center"><img src="{{ asset("images/juancito.jpg") }}"width="130" height="80"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" align="left"> <b>ESCRIBE EN EL ESPACIO EN BLANCO O MARCA LA OPCIÓN QUE MEJOR SE ADECÚE A LA RESPUESTA DEL ESTUDIANTE</b></td>
+                                    </tr>
+                                    <tr><td colspan="3" align="left"><b>ESTAMOS DESARROLLANDO UN ESTUDIO PARA DETERMINAR LAS RAZONES DEL PORQUÉ ALGUNOS DE LO ESTUDIANTES NO SE INSCRIBIERON EN LA GESTIÓN 2017. TE PEDIMOS NOS AYUDES RESPONDIENDO LAS SIGUIENTES PREGUNTAS CON HONESTIDAD PARA QUE PODAMOS CONOCER LOS PROBLEMAS QUE TUVISTE EL AÑO PASADO Y TE OBLIGARON A NO INSCRIBIRTE. Y ASI, PODER AYUDARLES DE ALGUNA MANERA.</b></td></tr>
+                                </table>
+
+                                <br>
+
+
+
+                                <div class="table-responsive">
+                                    <table id="myTable" class="table table-bordered table-hover cf dataTable table ">
+                                         <tr>
+                                            <th style="min-width: 10px"><strong>P1. UNIDAD EDUCATIVA</strong></th>
+                                            <th colspan="3">{{form_widget(form.p1Unidadeducativa)}}</th>
+                                         </tr>
+                                        <tr>
+                                            <th style="min-width: 10px"><strong>P2. NOMBRE(S)</strong></th>
+                                            <th colspan="3">{{form_widget(form.p2Nombre)}}</th>
+                                        </tr>
+                                        <tr>
+                                            <th>P3. APELLIDO PATERNO </th>
+                                            <th  >{{form_widget(form.p3Paterno)}} </th>
+                                            <th>P4. APELLIDO MATERNO </th>
+                                            <th >{{form_widget(form.p4Materno)}} </th>
+                                        </tr>
+                                        <tr>
+                                            <th> P5. SEXO </th>
+                                            <th> {{form_widget(form.p5Sexo)}} </th>
+                                            <th> P6. EDAD </th>
+                                            <th> {{form_widget(form.p6Edad)}} </th>
+                                        </tr>
+                                        <tr>
+                                            <th>P7. EN EL AÑO 2016 ESTABAS INCRITO EN ESTA MISMA UNIDAD EDUCATIVA </th>
+                                            <th colspan="3">{{form_widget(form.p72016mismaUe)}}</th>
+                                        </tr>
+                                        <tr>
+                                            <th>P8. SI ES NO, ¿CUÁL ES EL NOMBRE DE LA UNIDAD EDUCATIVA? </th>
+                                            <th colspan="3">{{form_widget(form.p8SinoUe)}}</th>
+                                        </tr>
+                                        <tr>
+                                            <th>P9. AÑO DE ESCOLARIDAD EN EL QUE ESTABA INSCRITO EL 2016 </th>
+                                            <th colspan="3">{{form_widget(form.p9Escolaridad2016)}}</th>
+                                        </tr>
+                                        <tr>
+                                            <th>P10. AÑO DE ESCOLARIDAD EN EL QUE ESTÁ INSCRITO EL 2018 </th>
+                                            <th colspan="3">{{form_widget(form.p10Escolaridad2018)}}</th>
+                                        </tr>
+                                        <tr>
+                                            <th>P11. CÓDIGO RUDE: </th>
+                                            <th colspan="3">{{form_widget(form.p11Rude)}}</th>
+                                        </tr>
+                                    </table>
+
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-4" align="center">
+                                        <b>P12. ¿POR QUÉ RAZONES NO TE INSCRIBISTE EL AÑO PASADO (2017)?</b>
+                                    </div>
+
+                                    <div class="col-md-4" align="center">
+                                        <b>MARQUE LAS OPCIONES QUE SE ADECUÉN A LA RESPUESTA DEL ESTUDIANTE</b>
+                                    </div>
+                                    <div class="col-md-4" align="center">
+                                        <b>ENUMERE POR ORDEN DE IMPORTANCIA</b>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-4" >
+                                        DENTRO DE LA UNIDAD EDUCATIVA: FACTORES ATRIBUIDOS AL ESTUDIANTE
+                                    </div>
+                                    <div class="col-md-4" align="left" style="display:block" id="pre1" >
+                                            {{form_widget(form.p12FactorEstudiante)}}
+                                    </div>
+                                    <div class="col-md-4" align="center">
+                                        {{form_widget(form.p12EnumereFactorEstudiante)}}
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-4" align="center">
+                                        DENTRO DE LA UNIDAD EDUCATIVA:FACTORES ATRIBUIDOS A LA UNIDAD EDUCATIVA
+                                    </div>
+                                    <div class="col-md-4" align="left">
+                                            {{form_widget(form.p12FactorUe)}}
+                                    </div>
+                                    <div class="col-md-4" align="center">
+                                        {{form_widget(form.p12EnumereFactorUe)}}
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-4" align="center">
+                                        FUERA DE LA UNIDAD EDUCATIVA: FACTORES FAMILIARES
+                                    </div>
+                                    <div class="col-md-4" align="left">
+                                        {{form_widget(form.p12FactorFamiliar)}}
+                                    </div>
+                                    <div class="col-md-4" align="center">
+                                        {{form_widget(form.p12EnumereFactorFamiliar)}}
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-4" align="center">
+                                        FUERA DE LA UNIDAD EDUCATIVA: FACTORES ECONÓMICOS
+                                    </div>
+                                    <div class="col-md-4" align="left">
+                                        {{form_widget(form.p12FactorEconomico)}}
+                                    </div>
+                                    <div class="col-md-4" align="center">
+                                        {{form_widget(form.p12EnumereFactorEconomico)}}
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-4" align="center">
+                                        FUERA DE LA UNIDAD EDUCATIVA: FACTORES SOCIALES
+                                    </div>
+                                    <div class="col-md-4" align="left">
+                                        {{form_widget(form.p12FactorSocial)}}
+                                    </div>
+                                    <div class="col-md-4" align="center">
+                                        {{form_widget(form.p12EnumereFactorSocial)}}
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-4" align="center">
+                                        Otra (especifique)
+                                    </div>
+
+                                    <div class="col-md-4" align="center" aria-colspan="3">
+                                        {{form_widget(form.p12Otros)}}
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row" >
+                                    <div class="col-md-12" align="left" >
+                                        <b>(SÓLO PARA ESTUDIANTES QUE RESPONDIERON LA OPCIÓN 22)</b>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-md-12" align="center">
+                                        P13. ¿QUÉ TIPO DE TRABAJO REALIZABAS EL AÑO PASADO (GESTIÓN 2017)? (puede marcar más de una opción)
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-8" align="left">
+                                        {{form_widget(form.p13TipoTrabajo2017)}}
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-8" align="left">
+                                        <b>p14. ¿EN QUÉ TURNO(S) TRABAJÓ EN LA GESTIÓN 2017?
+                                            (puede marcar más de una opción)</b>
+                                    </div>
+                                    <div class="col-md-4" align="center">
+                                        {{form_widget(form.p14TurnosTrabajo2017)}}
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-6" align="left">
+                                        <b>P15. ¿PORQUÉ RAZONES CREES QUE NO PUDISTE TRABAJAR Y ESTUDIAR AL MISMO TIEMPO EL AÑO PASADO (GESTIÓN 2017)?
+                                        (puede marcar más de una opción)</b>
+                                    </div>
+                                    <div class="col-md-6" align="center">
+                                        {{form_widget(form.p15Razon2017)}}
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-8" align="left" aria-colspan="3">
+                                       <b> P16.- ¿QUÉ TE DIJERON TUS PAPÁS/FAMILIARES CUANDO NO TE INSCRIBISTE EL AÑO PASADO (GESTIÓN 2017)?</b>
+                                    </div>
+                                    <div class="col-md-4" align="center">
+                                        {{form_widget(form.p16OpinionPapas)}}
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-8" align="left" aria-colspan="3">
+                                        <b>P17.- ¿PORQUÉ TE VOLVISTE A INSCRIBIR EN LA GESTIÓN 2018?</b>
+                                    </div>
+                                    <div class="col-md-4" align="center" aria-colspan="3">
+                                        {{form_widget(form.p17RazonInscripcion2018)}}
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-8" align="center">
+                                        <b>P18.- ¿SABES SI ALGUNO(S) DE TUS COMPAÑEROS DE TU CURSO EN LA GESTIÓN 2016 NO SE INSCRIBIERON EN LA GESTIÓN 2017?</b>
+                                    </div>
+                                    <div class="col-md-4" align="center">
+                                        {{form_widget(form.p18RazonSi2016No2017)}}
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-12"  align="left">
+                                        <b>P19.- SI RESPONDE SI, ¿SABES CUALES FUERON LOS MOTIVOS O RAZONES? <br>
+                                        (COLOCAR EL CÓDIGO QUE CORRESPONDA O SE ADECUE MEJOR A LAS OPCIONES DE LA PREGUNTA P12)</b>
+                                    </div>
+
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-2" align="center">
+                                        Primera Razón
+                                    </div>
+                                    <div class="col-md-2" align="center">
+                                        Primera Razón
+                                    </div>
+                                    <div class="col-md-2" align="center">
+                                        Primera Razón
+                                    </div>
+                                    <div class="col-md-2" align="center">
+                                        Primera Razón
+                                    </div>
+                                    <div class="col-md-2" align="center">
+                                        Primera Razón
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2" align="center">
+                                        {{form_widget(form.p19PrimeraRazon)}}
+                                    </div>
+                                    <div class="col-md-2" align="center">
+                                        {{form_widget(form.p19SegundaRazon)}}
+                                    </div>
+                                    <div class="col-md-2" align="center">
+                                        {{form_widget(form.p19TerceraRazon)}}
+                                    </div>
+                                    <div class="col-md-2" align="center">
+                                        {{form_widget(form.p19CuartaRazon)}}
+                                    </div>
+                                    <div class="col-md-2" align="center">
+                                        {{form_widget(form.p19QuintaRazon)}}
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-4" >
+                                        OTRA (ESPECIFIQUE)
+                                    </div>
+                                    <div class="col-md-4" aria-colspan="3">
+                                        {{form_widget(form.p19Otra)}}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12" align="left" >
+                                        <b>P20. PERSONA DE LA UNIDAD EDUCATIVA QUE ACOMPAÑÓ LA ENTREVISTA AL ESTUDIANTE:</b>
+                                    </div>
+
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-4"  align="left">
+                                        <b>NOMBRE COMPLETO</b>
+                                    </div>
+                                    <div class="col-md-4"  >
+                                        {{form_widget(form.p20Nombre)}}
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-4" align="left">
+                                        <b>CARGO</b>
+                                    </div>
+                                    <div class="col-md-4" >
+                                        {{form_widget(form.p20Cargo)}}
+                                    </div>
+                                </div>
+
+                                <input type="submit" value="Guardar" />
+
+
+                            </div><!-- /.panel-body -->
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {{ form_end(form) }}
+
+
+
+
+
+    #}
+{#<ul>
+        <li>
+            <a href="{{ path('formulario3_index') }}">Back to the list</a>
+        </li>
+    </ul>#}{#
+
+
+
+{% endblock %}
+
+
+
+
+#}
