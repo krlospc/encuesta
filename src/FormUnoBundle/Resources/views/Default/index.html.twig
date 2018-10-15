@@ -53,14 +53,11 @@
                         <table class="table table-striped table-hover">
                             <thead>
                                 <tr>
-                                    <th>Dep</th>
-                                    <th>Sie</th>
-                                    <th>Numboleta</th>
-                                    <th>Unidad Educativa</th>
+                                    <th></th>
+                                    <th>Folio</th>                                    
                                     <th>Nombres</th>
                                     <th>Paterno</th>
-                                    <th>Materno</th>
-                                    
+                                    <th>Materno</th>                                    
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
@@ -72,14 +69,8 @@
                                                 <b class="text-block">{{loop.index}}</b>
                                             </td>
                                             <td>
-                                                {{data.dep}}
-                                            </td>
-                                            <td>
-                                                {{data.nboleta}}
-                                            </td>
-                                            <td>
-                                                {{data.cod_unidad_educativa}}
-                                            </td>
+                                                {{data.dep}} - {{data.cod_unidad_educativa}} - {{data.nboleta}}
+                                            </td>                                            
                                             <td>
                                                 {{data.nombre}}
                                             </td>
@@ -90,8 +81,11 @@
                                                 {{data.materno}}
                                             </td>
                                             <td class="text-center">
-                                                {% if ((data.nombre == "") and (data.paterno == "") and (data.materno == "")) %}
-                                                    <p class="text-danger">Incompleto</p>
+                                                {% if ((data.dep == "") or (data.cod_unidad_educativa == "") or (data.nboleta == "") or (data.nombre == "") ) %}
+                                                    <p class="text-danger">Formulario incompleto</p>
+                                                {% endif %}
+                                                {% if (data.id in idval) %}
+                                                    <p class="text-danger">Folio duplicado</p>
                                                 {% endif %}
                                                 <a href="{{ path('form_uno_update', { 'idfactor': data.id }) }}" class="btn btn-primary">Editar</a>
                                                 <a href="{{ path('form_uno_delete', { 'idfactor': data.id }) }}" class="btn btn-danger" onclick="return confirm('Esta seguro de que desea eliminar el registro?')">Eliminar</a>                                                
