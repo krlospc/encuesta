@@ -60,8 +60,10 @@ AppBundle\Entity\Form2Docente:
                 fixed: false
             column: p4_materno
         p5Sexo:
-            type: boolean
+            type: integer
             nullable: true
+            options:
+                unsigned: false
             column: p5_sexo
         p6Telefono:
             type: string

@@ -62,7 +62,7 @@ AppBundle\Entity\Form3:
                 fixed: false
             column: p4_materno
         p5Sexo:
-            type: boolean
+            type: string
             nullable: true
             column: p5_sexo
         p6Edad:
@@ -500,7 +500,7 @@ AppBundle\Entity\Form3:
                 fixed: false
             column: p17_vuelve2018
         p18Companeros:
-            type: boolean
+            type: string
             nullable: true
             column: p18_companeros
         p19Primera:
