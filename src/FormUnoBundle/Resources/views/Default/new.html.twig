@@ -35,18 +35,12 @@
 	</style>
 </head>
 <body>
-<div class="header-content">
-    <h2><i class="glyphicon glyphicon-leaf"></i> Control de Formularios. <span>Se ha registrado a los siguientes docentes.</span></h2>    
-</div>
 
 <div class="row">
     <div class="col-lg-12 col-md-12">
         <form id="formnuevocurso" nombre="formnuevocurso" action={{path('form_uno_insert')}} method="post" style="">
         <div class="panel panel-danger">
-            <div class="panel-heading">
-                <div class="pull-left">
-                    <h3 class="panel-title"><i class="fa fa-outdent"></i> Datos del Maestro</h3>
-                </div>
+            <div class="panel-heading">                
                 <div class="pull-right">
                     <button class="btn btn-sm" data-action="collapse" data-toggle="tooltip" data-placement="top" data-title="Collapse"><i class="fa fa-angle-up"></i></button>
                 </div>
@@ -54,8 +48,40 @@
             </div>
             <div class="panel-body">
                 <div class="col-md-12">
-                    <small>                        
-                        <div class="form-body">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h2><i class="glyphicon glyphicon-leaf"></i> OPERATIVO ESCOLAR - 2018. </h2>                                     
+                                </div>
+                                <div class="col-md-6">
+                                    FOLIO <input type="text" name="folio" value="{{po_index[0].folio}}">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    Subsistema de educación regular - nivel secundario
+                                </div>
+                                <div class="col-md-6">
+                                    Dep - Código unidad educativa - n° Boleta
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h2> FORMULARIO 1 </h2>
+                                </div>
+                                <div class="col-md-6">
+                                    <h2> DIRECTOR / DOCENTE / ADMINISTRATIVO </h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
@@ -75,62 +101,99 @@
                                         <input type="text" name="materno" value="{{po_index[0].materno}}">
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-12">
+                            <div class="row">                            
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="control-label">P4. UNIDAD EDUCATIVA</label>
                                         <input type="text" name="unidad_educativa" value="{{po_index[0].unidad_educativa}}">
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="control-label">P5. SEXO</label>
-                                        <input type="radio" name="sexo" value="{{po_index[0].sexo}}"> Hombre
-						                <input type="radio" name="sexo" value="{{po_index[0].sexo}}"> Mujer
+                                        
+                                        {% if po_index[0].sexo == 1  %}
+                                            <input type="radio" name="sexo" value="1" checked="checked"> Hombre
+                                            <input type="radio" name="sexo" value="2" > Mujer
+                                        {% elseif po_index[0].sexo == 2 %}
+                                            <input type="radio" name="sexo" value="1"> Hombre
+                                            <input type="radio" name="sexo" value="2" checked="checked"> Mujer
+                                        {% else %}
+                                            <input type="radio" name="sexo" value="1"> Hombre
+                                            <input type="radio" name="sexo" value="2"> Mujer
+                                        {% endif %} 
+
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="control-label">P6. TELÉFONO</label>
                                         <input type="text" name="telefono" value="{{po_index[0].telefono}}">
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="control-label">P7. CARGO QUE DESEMPEÑA EN LA UNIDAD EDUCATIVA</label>
-                                        <input type="radio" name="cargo" value="{{po_index[0].cargo}}"> 1. Docente
-						                <input type="radio" name="cargo" value="{{po_index[0].cargo}}"> 2. Director
-                                        <input type="radio" name="cargo" value="{{po_index[0].cargo}}"> 3. Administrativo
-						            </div>
+                                        
+                                        {% if po_index[0].cargo == 1  %}
+                                            <input type="radio" name="cargo" value="1" checked="checked"> 1. Docente
+                                            <input type="radio" name="cargo" value="2"> 2. Director
+                                            <input type="radio" name="cargo" value="3"> 3. Administrativo
+                                        {% elseif po_index[0].cargo == 2 %}
+                                            <input type="radio" name="cargo" value="1"> 1. Docente
+                                            <input type="radio" name="cargo" value="2" checked="checked"> 2. Director
+                                            <input type="radio" name="cargo" value="3"> 3. Administrativo
+                                        {% elseif po_index[0].cargo == 3 %}
+                                            <input type="radio" name="cargo" value="1"> 1. Docente
+                                            <input type="radio" name="cargo" value="2"> 2. Director
+                                            <input type="radio" name="cargo" value="3" checked="checked"> 3. Administrativo
+                                        {% else %}
+                                            <input type="radio" name="cargo" value="1" checked="checked"> 1. Docente
+                                            <input type="radio" name="cargo" value="2"> 2. Director
+                                            <input type="radio" name="cargo" value="3"> 3. Administrativo                                            
+                                        {% endif %} 
+                                        
+                                    </div>
                                 </div>
+                            </div>    
+                        </div>
+                        
+                        <div class="col-md-12">
+                            <div class="row">                            
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="control-label">P8. (SOLO PARA PERSONAL CON TRES O MÁS AÑOS DE ANTIGÜEDAD EN LA UNIDAD EDUCATIVA) ¿CUÁNTOS AÑOS USTED TRABAJA EN ESTA UNIDAD EDUCATIVA?</label>
-                                        <input type="text" name="anho_ant" value="{{po_index[0].p8}}">
+                                        <input type="text" name="p8" value="{{po_index[0].p8}}">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="control-label">P9. (SI ES PROFESOR), AÑO(S) DE ESCOLARIDAD EN EL NIVEL SECUNDARIO EN LOS QUE TRABAJABA EN 2016 </label>
-                                        <input type="text" name="prof_anho" value="{{po_index[0].p9}}">
+                                        <input type="text" name="p9" value="{{po_index[0].p9}}">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="control-label">P10. (SI ES PROFESOR), ¿QUÉ MATERIA(s) DICTABA EN 2016?</label>
-                                        <input type="text" name="mat_prof" value="{{po_index[0].p10}}">
+                                        <input type="text" name="p10" value="{{po_index[0].p10}}">
                                     </div>
                                 </div>
-                            </div>
+                            </div>    
+                        </div>
+
+                        <div class="col-md-12" style="display: none">
                             <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label class="control-label">Id</label>
-                                        <input type="text" name="id_factor" value="{{po_index[0].id}}">
+                                <div class="col-md-12">
+                                    <div class="form-group">                                
+                                        <input type="text" name="id_principal" value="{{po_index[0].id}}">
                                     </div>
                                 </div>
                             </div>
-                        </div>                                                        
-                    </small>
+                        </div>                      
                 </div>  
             </div>
         </div>               
@@ -145,9 +208,8 @@
                         <td align="center" class="warning"><b class="text-block"> </b></td>                                
                         <td align="left" class="warning"><b class="text-block">MARQUE LAS QUE CORRESPONDA CON UNA “X”</b></td>
                         <td align="left" class="warning"><b class="text-block">ENUMERE POR ORDEN DE IMPORTANCIA</b></td>
-                        <td align="left" class="warning"><b class="text-block">¿POR QUÉ?</b></td>                            
-                        <td align="left" class="warning"><b class="text-block">Cod</b></td>
-                        <td align="left" class="warning"><b class="text-block">Id</b></td>
+                        <td align="left" class="warning"><b class="text-block">¿POR QUÉ?</b></td>                                                    
+                        <td align="left" class="warning" style="display:none;"><b class="text-block">Id</b></td>
                     </tr>
                     
                     {% for data in po_fac %}                                                                
@@ -170,11 +232,8 @@
                             </td>
                             <td>
                                 <input type="text" name="porque_{{loop.index}}" value="{{data.por_que}}">
-                            </td>                                
-                            <td>  
-                                {{data.cod}}
-                            </td>                                    
-                            <td>
+                            </td>                                                                                              
+                            <td style="display:none;">
                                 <input type="text" name="id_{{loop.index}}" value="{{data.id}}">
                             </td>
                         </tr>
@@ -187,6 +246,28 @@
     {% endif %}
 
 
+    <div class="col-md-12">
+        <div class="row">                            
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="control-label">P12. ANTE LA DISMINUCIÓN DE L MATRÍCULA EN LA GESTIÓN 2017, ¿QUÉ MEDIDAS TOMARON EN LA UNIDAD EDUCATIVA, EN LA GESTIÓN 2018 PARA QUE LNO DISMINUYERA LA INSCRIPCIÓN DE LOS ESTUDIANTES EN LE NIVEL SECUNDARIO?</label>
+                    <input type="text" name="p12" value="{{po_index[0].p12}}" size="250">
+                </div>
+            </div>
+        </div>
+    </div>        
+
+    <div class="col-md-12">
+        <div class="row">                            
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="control-label">P13. ¿QUÉ MEDIDAS TOMARIA USTED PARA QUE NO DISMINUYERA LA INSCRIPCIÓN DE LOS ESTUDIANTES EN EL NIVEL SECUNDARIO EN LA GESTIÓN 2019?</label>
+                    <input type="text" name="p13" value="{{po_index[0].p13}}" size="250">
+                </div>
+            </div>
+        </div>
+    </div>  
+    
     <div class="modal-footer">
         <div class="form-footer">
             <div class="col-sm-offset-5">                    
