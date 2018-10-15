@@ -35,61 +35,62 @@
 	</style>
 </head>
 <body>
-<center>
-<div class="header-content">
-    <h2><i class="glyphicon glyphicon-leaf"></i> Administración Formulario 1 <br/>Se han registrado a los siguientes docentes</span></h2>    
-    <br/>
-    <br/>
-
-</div>
-</center>
-<div class="body-content animated fadeIn">
-    <div class="row">
-        <div class="panel-body" style="width:900px; margin:0 auto;">
-            <div id="list">
-                {% if po %}
-                <div class="table-responsive">                
-                    <table class="table table-no-border table-middle table-lilac">
-                        <tbody>
-                            <tr>
-                                <td align="left" class="warning"><b class="text-block">No.</b></td>
-                                <td align="center" class="warning"><b class="text-block">...</b></td>                                
-                                <td align="left" class="warning"><b class="text-block">Nombre</b></td>
-                                <td align="left" class="warning"><b class="text-block">Paterno</b></td>
-                                <td align="left" class="warning"><b class="text-block">Materno</b></td>
-                            </tr>
-                            {% if po %}    
-                                {% for data in po %}                                                                
-                                    <tr>
-                                        <td>
-                                            <b class="text-block">{{loop.index}}</b>
-                                        </td>
-                                        <td class="text-center">
-                                            <a href="{{path('form_uno_update', {idfactor: data.id})}}">Ver - editar</a>
-                                        </td>
-                                        <td>
-                                            {{data.nombre}}
-                                        </td>
-                                        <td>
-                                            {{data.paterno}}
-                                        </td>
-                                        <td>  
-                                            {{data.materno}}
-                                        </td>                                    
-                                    </tr>
-                                {% endfor %}
-                            {% endif %}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>                
-                {% endif %}
-                <a href="{{path('form_uno_new')}}">Nuevo registro</a>  
-            </div>    
+<div class="container">
+    {% include 'AdmMaster/menuforms.html.twig' %}
+    <center>
+    <div class="header-content">
+        <h2><i class="glyphicon glyphicon-leaf"></i> Administración Formulario 1 <br/>Se han registrado a los siguientes docentes</span></h2>    
+        <br/>
+        <br/>
+    </div>
+    </center>
+    <div class="body-content animated fadeIn">
+        <div class="row">
+            <div class="panel-body" style="width:900px; margin:0 auto;">
+                <div id="list">
+                    {% if po %}
+                    <div class="table-responsive">                
+                        <table class="table table-no-border table-middle table-lilac">
+                            <tbody>
+                                <tr>
+                                    <td align="left" class="warning"><b class="text-block">No.</b></td>
+                                    <td align="center" class="warning"><b class="text-block">...</b></td>                                
+                                    <td align="left" class="warning"><b class="text-block">Nombre</b></td>
+                                    <td align="left" class="warning"><b class="text-block">Paterno</b></td>
+                                    <td align="left" class="warning"><b class="text-block">Materno</b></td>
+                                </tr>
+                                {% if po %}    
+                                    {% for data in po %}                                                                
+                                        <tr>
+                                            <td>
+                                                <b class="text-block">{{loop.index}}</b>
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="{{path('form_uno_update', {idfactor: data.id})}}">Ver - editar</a>
+                                            </td>
+                                            <td>
+                                                {{data.nombre}}
+                                            </td>
+                                            <td>
+                                                {{data.paterno}}
+                                            </td>
+                                            <td>  
+                                                {{data.materno}}
+                                            </td>                                    
+                                        </tr>
+                                    {% endfor %}
+                                {% endif %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>                
+                    {% endif %}
+                    <a href="{{path('form_uno_new')}}">Nuevo registro</a>  
+                </div>    
+            </div>
         </div>
     </div>
 </div>
-
 {# <script>
     var getNuevo = function () {        
         $.ajax({

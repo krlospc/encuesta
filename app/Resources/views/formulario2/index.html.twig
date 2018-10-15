@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-{% include 'AdmMaster/menuforms.html.twig' %}
 <head>
 	<style type="text/css">
 		table {
@@ -17,8 +16,10 @@
 	<title>Formulario 2</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
-<body>
-	<div class="container">
+<body>	
+<div class="container">
+	{% include 'AdmMaster/menuforms.html.twig' %}
+	<div class="row">
 		<h1>FORMULARIO 2</h1>
 		<a href="{{path('formulario2_new')}}" class="btn btn-success">Nuevo formulario</a>
 		<table class="table-bordered" style="border:1px solid black;border-collapse:collapse; width:100%" >
@@ -29,7 +30,7 @@
 
 				<th>Operaciones</th>
 			</tr>
-            {% for docente in docentes %}
+			{% for docente in docentes %}
 			<tr>
 					<td>{{docente.p2Nombres}}  {{docente.p3Paterno}}  {{docente.p4Materno}}</td>
 					<td>{{docente.codigoUnidadEducativa}}</td>
@@ -40,8 +41,9 @@
 					</td>
 
 			</tr>
-            {% endfor %}
+			{% endfor %}
 		</table>		
-	</div>
+	</div>	
+</div>
 </body>
 </html>
