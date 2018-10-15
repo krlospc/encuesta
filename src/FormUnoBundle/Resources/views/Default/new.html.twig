@@ -227,14 +227,16 @@
                                 </td>
                                 <td>
                                     {% if data.seleccion == 1 %}
-                                    <input type="checkbox" name="sel_{{loop.index}}" value="{{data.seleccion}}" checked="checked"> ({{loop.index}})<br> {% else %}
-                                    <input type="checkbox" name="sel_{{loop.index}}" value="{{data.seleccion}}"> ({{loop.index}})<br> {% endif %}
+                                        <input type="checkbox" class="escolaridad" name="sel_{{loop.index}}"  value="{{data.seleccion}}" checked="checked"> ({{loop.index}})<br>
+                                    {% else %}
+                                        <input type="checkbox" class="escolaridad" name="sel_{{loop.index}}" value="{{data.seleccion}}"> ({{loop.index}})<br> 
+                                    {% endif %}
                                 </td>
                                 <td>
-                                    <input type="text" name="orden_{{loop.index}}" value="{{data.orden_importancia}}">
+                                    <input type="text" name="orden_{{loop.index}}" id="orden_{{loop.index}}" value="{{data.orden_importancia}}">
                                 </td>
                                 <td>
-                                    <input type="text" name="porque_{{loop.index}}" value="{{data.por_que}}">
+                                    <input type="text" name="porque_{{loop.index}}" id="porque_{{loop.index}}" value="{{data.por_que}}">
                                 </td>
                                 <td style="display:none;">
                                     <input type="text" name="id_{{loop.index}}" value="{{data.id}}">
@@ -285,3 +287,24 @@
 </body>
 
 </html>
+
+<script>
+$(document).ready(function(){
+    $('.escolaridad').change(function(){
+        var name = this.name;
+        //var nameorden = name.toString();
+        var namefil = name.substring(4, name.length);
+        var nameorden = "orden_"+namefil;
+        var nameporque = "porque_"+namefil;
+        //alert(nameporque);
+        if (this.checked == true){   
+            document.getElementById(nameorden).disabled = false;         
+            document.getElementById(nameporque).disabled = false;                     
+        } else {
+            document.getElementById(nameorden).disabled = true;
+            document.getElementById(nameporque).disabled = true;
+        }
+        
+    });
+});
+</script>
