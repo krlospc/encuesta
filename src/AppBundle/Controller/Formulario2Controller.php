@@ -130,7 +130,7 @@ class Formulario2Controller extends Controller
                 $em->flush();
             }
 
-            return $this->redirectToRoute('formulario2_new');
+            return $this->redirectToRoute('formulario2_index');
             
         }
 
@@ -259,7 +259,7 @@ class Formulario2Controller extends Controller
                 $em->flush();
             }
 
-            return $this->redirectToRoute('formulario2_new');
+            return $this->redirectToRoute('formulario2_index');
 
         }
 
