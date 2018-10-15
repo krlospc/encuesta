@@ -1,0 +1,4 @@
+
+admmaster_index:
+    path:     /
+    defaults: { _controller: AppBundle:AdmMaster:index }

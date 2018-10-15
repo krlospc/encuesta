@@ -1,0 +1,24 @@
+formulario2_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Formulario2:index" }
+    methods:  GET
+
+formulario2_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Formulario2:new" }
+    methods:  [GET, POST]
+
+formulario2_edit:
+    path:     /edit
+    defaults: { _controller: "AppBundle:Formulario2:edit" }
+    methods:  [GET, POST]
+
+formulario2_update:
+    path:     /update
+    defaults: { _controller: "AppBundle:Formulario2:update" }
+    methods:  [GET, POST]
+
+formulario2_delete:
+    path:     /delete
+    defaults: { _controller: "AppBundle:Formulario2:delete" }
+    methods:  [GET, POST]

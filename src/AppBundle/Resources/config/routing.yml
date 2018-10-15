@@ -2,3 +2,12 @@ app_form4validacionregistro:
     resource: "@AppBundle/Resources/config/routing/form4validacionregistro.yml"
     prefix:   /form4validacionregistro
 
+app_admmaster:
+    resource: "@AppBundle/Resources/config/routing/admmaster.yml"
+    prefix:   /admmaster
+
+app_formulario2:
+    resource: "@AppBundle/Resources/config/routing/formulario2.yml"
+    prefix:   /formulario2
+
+

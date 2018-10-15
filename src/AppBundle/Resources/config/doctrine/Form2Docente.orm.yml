@@ -1,0 +1,142 @@
+AppBundle\Entity\Form2Docente:
+    type: entity
+    table: form2_docente
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        departamento:
+            type: string
+            nullable: true
+            length: 5
+            options:
+                fixed: false
+        codigoUnidadEducativa:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+            column: codigo_unidad_educativa
+        numeroBoleta:
+            type: string
+            nullable: true
+            length: 5
+            options:
+                fixed: false
+            column: numero_boleta
+        p1Unidadeducativa:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: p1_unidadeducativa
+        p2Nombres:
+            type: string
+            nullable: true
+            length: 30
+            options:
+                fixed: false
+            column: p2_nombres
+        p3Paterno:
+            type: string
+            nullable: true
+            length: 30
+            options:
+                fixed: false
+            column: p3_paterno
+        p4Materno:
+            type: string
+            nullable: true
+            length: 30
+            options:
+                fixed: false
+            column: p4_materno
+        p5Sexo:
+            type: boolean
+            nullable: true
+            column: p5_sexo
+        p6Telefono:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: p6_telefono
+        p7Primero:
+            type: boolean
+            nullable: true
+            column: p7_primero
+        p7Segundo:
+            type: boolean
+            nullable: true
+            column: p7_segundo
+        p7Tercero:
+            type: boolean
+            nullable: true
+            column: p7_tercero
+        p7Cuarto:
+            type: boolean
+            nullable: true
+            column: p7_cuarto
+        p7Quinto:
+            type: boolean
+            nullable: true
+            column: p7_quinto
+        p7Sexto:
+            type: boolean
+            nullable: true
+            column: p7_sexto
+        p8Primero:
+            type: boolean
+            nullable: true
+            column: p8_primero
+        p8Segundo:
+            type: boolean
+            nullable: true
+            column: p8_segundo
+        p8Tercero:
+            type: boolean
+            nullable: true
+            column: p8_tercero
+        p8Cuarto:
+            type: boolean
+            nullable: true
+            column: p8_cuarto
+        p8Quinto:
+            type: boolean
+            nullable: true
+            column: p8_quinto
+        p8Sexto:
+            type: boolean
+            nullable: true
+            column: p8_sexto
+        p9Materias:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: p9_materias
+        p15MedidasAnteDisminucion:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: p15_medidas_ante_disminucion
+        p16MedidasQueTomaria:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: p16_medidas_que_tomaria
+    lifecycleCallbacks: {  }

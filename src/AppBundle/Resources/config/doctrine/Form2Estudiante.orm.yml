@@ -1,0 +1,344 @@
+AppBundle\Entity\Form2Estudiante:
+    type: entity
+    table: form2_estudiante
+    indexes:
+        fk_form2_docente_id:
+            columns:
+                - form2_docente_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        p9Nombres:
+            type: string
+            nullable: true
+            length: 30
+            options:
+                fixed: false
+            column: p9_nombres
+        p10Paterno:
+            type: string
+            nullable: true
+            length: 30
+            options:
+                fixed: false
+            column: p10_paterno
+        p11Materno:
+            type: string
+            nullable: true
+            length: 30
+            options:
+                fixed: false
+            column: p11_materno
+        p12Sexo:
+            type: boolean
+            nullable: true
+            column: p12_sexo
+        p13AnioEscolaridad:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p13_anio_escolaridad
+        p141Enfermedad:
+            type: boolean
+            nullable: true
+            column: p141_enfermedad
+        p141Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p141_importancia
+        p142Accidente:
+            type: boolean
+            nullable: true
+            column: p142_accidente
+        p142Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p142_importancia
+        p143Discapacidad:
+            type: boolean
+            nullable: true
+            column: p143_discapacidad
+        p143Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p143_importancia
+        p144Edad:
+            type: boolean
+            nullable: true
+            column: p144_edad
+        p144Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p144_importancia
+        p145Precocidad:
+            type: boolean
+            nullable: true
+            column: p145_precocidad
+        p145Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p145_importancia
+        p146EmbarazoPaternidad:
+            type: boolean
+            nullable: true
+            column: p146_embarazo_paternidad
+        p146Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p146_importancia
+        p147FormoHogar:
+            type: boolean
+            nullable: true
+            column: p147_formo_hogar
+        p147Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p147_importancia
+        p148Abandono2016:
+            type: boolean
+            nullable: true
+            column: p148_abandono2016
+        p148Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p148_importancia
+        p149Reprobacion2016:
+            type: boolean
+            nullable: true
+            column: p149_reprobacion2016
+        p149Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p149_importancia
+        p1410InscricioCea:
+            type: boolean
+            nullable: true
+            column: p1410_inscricio_cea
+        p1410Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p1410_importancia
+        p1411Bulling:
+            type: boolean
+            nullable: true
+            column: p1411_bulling
+        p1411Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p1411_importancia
+        p1412UnidadDistante:
+            type: boolean
+            nullable: true
+            column: p1412_unidad_distante
+        p1412Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p1412_importancia
+        p1413UnidadNoOferta:
+            type: boolean
+            nullable: true
+            column: p1413_unidad_no_oferta
+        p1413Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p1413_importancia
+        p1414ResponsabilidadesHogar:
+            type: boolean
+            nullable: true
+            column: p1414_responsabilidades_hogar
+        p1414Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p1414_importancia
+        p1415TrasladoFamilia:
+            type: boolean
+            nullable: true
+            column: p1415_traslado_familia
+        p1415Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p1415_importancia
+        p1416FaltaApoyo:
+            type: boolean
+            nullable: true
+            column: p1416_falta_apoyo
+        p1416Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p1416_importancia
+        p1417NoViveHogarCompleto:
+            type: boolean
+            nullable: true
+            column: p1417_no_vive_hogar_completo
+        p1417Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p1417_importancia
+        p1418SeparacionHogar:
+            type: boolean
+            nullable: true
+            column: p1418_separacion_hogar
+        p1418Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p1418_importancia
+        p1419ViolenciaFamiliar:
+            type: boolean
+            nullable: true
+            column: p1419_violencia_familiar
+        p1419Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p1419_importancia
+        p1420FallecimientoFamiliar:
+            type: boolean
+            nullable: true
+            column: p1420_fallecimiento_familiar
+        p1420Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p1420_importancia
+        p1421FaltaDinero:
+            type: boolean
+            nullable: true
+            column: p1421_falta_dinero
+        p1421Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p1421_importancia
+        p1422Trabajo:
+            type: boolean
+            nullable: true
+            column: p1422_trabajo
+        p1422Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p1422_importancia
+        p1423TrabajoPadres:
+            type: boolean
+            nullable: true
+            column: p1423_trabajo_padres
+        p1423Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p1423_importancia
+        p1424Pandillas:
+            type: boolean
+            nullable: true
+            column: p1424_pandillas
+        p1424Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p1424_importancia
+        p1425Drogas:
+            type: boolean
+            nullable: true
+            column: p1425_drogas
+        p1425Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p1425_importancia
+        p1426Alcoholismo:
+            type: boolean
+            nullable: true
+            column: p1426_alcoholismo
+        p1426Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p1426_importancia
+        p1427Otra:
+            type: boolean
+            nullable: true
+            column: p1427_otra
+        p1427Importancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: p1427_importancia
+        p1427Razon:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: p1427_razon
+        codigoRude:
+            type: string
+            nullable: true
+            length: 30
+            options:
+                fixed: false
+            column: codigo_rude
+    manyToOne:
+        form2Docente:
+            targetEntity: Form2Docente
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                form2_docente_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }
