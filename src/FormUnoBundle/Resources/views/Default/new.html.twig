@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Cuestionario 1</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<style type="text/css">
+		table{
+			width: 100%;
+		}
+		textarea{
+			width: 100%;
+		}
+		.bgoscuro{
+			background: #000000;
+			color: #FFFFFF;
+			text-align: center;
+			padding: 10px;
+			font-weight: bold;
+		}
+		.bggris{
+			background: #858383;
+			color: #FFFFFF;
+			text-align: center;
+			padding: 10px;
+			font-weight: bold;
+		}
+		.bggrisclaro{
+			background: #CCCCCC;
+			color: #000000;
+			text-align: center;
+			padding: 10px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+<div class="header-content">
+    <h2><i class="glyphicon glyphicon-leaf"></i> Control de Formularios. <span>Se ha registrado a los siguientes docentes.</span></h2>    
+</div>
+
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <form id="formnuevocurso" nombre="formnuevocurso" action={{path('form_uno_insert')}} method="post" style="">
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <div class="pull-left">
+                    <h3 class="panel-title"><i class="fa fa-outdent"></i> Datos del Maestro</h3>
+                </div>
+                <div class="pull-right">
+                    <button class="btn btn-sm" data-action="collapse" data-toggle="tooltip" data-placement="top" data-title="Collapse"><i class="fa fa-angle-up"></i></button>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="panel-body">
+                <div class="col-md-12">
+                    <small>                        
+                        <div class="form-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label">P1.Nombre</label>
+                                        <input type="text" name="nombre" value="{{po_index[0].nombre}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label">P2.Paterno</label>
+                                        <input type="text" name="paterno" value="{{po_index[0].paterno}}">
+                                    </div>
+                                </div>                       
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label">P3.Materno</label>
+                                        <input type="text" name="materno" value="{{po_index[0].materno}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label">P4. UNIDAD EDUCATIVA</label>
+                                        <input type="text" name="unidad_educativa" value="{{po_index[0].unidad_educativa}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label">P5. SEXO</label>
+                                        <input type="radio" name="sexo" value="{{po_index[0].sexo}}"> Hombre
+						                <input type="radio" name="sexo" value="{{po_index[0].sexo}}"> Mujer
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label">P6. TELÉFONO</label>
+                                        <input type="text" name="telefono" value="{{po_index[0].telefono}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label">P7. CARGO QUE DESEMPEÑA EN LA UNIDAD EDUCATIVA</label>
+                                        <input type="radio" name="cargo" value="{{po_index[0].cargo}}"> 1. Docente
+						                <input type="radio" name="cargo" value="{{po_index[0].cargo}}"> 2. Director
+                                        <input type="radio" name="cargo" value="{{po_index[0].cargo}}"> 3. Administrativo
+						            </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label">P8. (SOLO PARA PERSONAL CON TRES O MÁS AÑOS DE ANTIGÜEDAD EN LA UNIDAD EDUCATIVA) ¿CUÁNTOS AÑOS USTED TRABAJA EN ESTA UNIDAD EDUCATIVA?</label>
+                                        <input type="text" name="anho_ant" value="{{po_index[0].p8}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label">P9. (SI ES PROFESOR), AÑO(S) DE ESCOLARIDAD EN EL NIVEL SECUNDARIO EN LOS QUE TRABAJABA EN 2016 </label>
+                                        <input type="text" name="prof_anho" value="{{po_index[0].p9}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label">P10. (SI ES PROFESOR), ¿QUÉ MATERIA(s) DICTABA EN 2016?</label>
+                                        <input type="text" name="mat_prof" value="{{po_index[0].p10}}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label">Id</label>
+                                        <input type="text" name="id_factor" value="{{po_index[0].id}}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                                        
+                    </small>
+                </div>  
+            </div>
+        </div>               
+    </div>
+
+    {% if po_fac %}
+        <div class="table-responsive">                
+            <table class="table table-no-border table-middle table-lilac">
+                <tbody>
+                    <tr>
+                        <td align="left" class="warning"><b class="text-block"> P11. SEGÚN SU PERCEPCIÓN, ¿CUÁLES FUERON LOS FACTORES DETERMINANTES PARA QUE LOS ESTUDIANTES QUE CURSARON EN LA GESTIÓN 2016 EN EL NIVEL SECUNDARIO NO SE INSCRIBIERAN EN LA GESTIÓN 2017?</b></td>
+                        <td align="center" class="warning"><b class="text-block"> </b></td>                                
+                        <td align="left" class="warning"><b class="text-block">MARQUE LAS QUE CORRESPONDA CON UNA “X”</b></td>
+                        <td align="left" class="warning"><b class="text-block">ENUMERE POR ORDEN DE IMPORTANCIA</b></td>
+                        <td align="left" class="warning"><b class="text-block">¿POR QUÉ?</b></td>                            
+                        <td align="left" class="warning"><b class="text-block">Cod</b></td>
+                        <td align="left" class="warning"><b class="text-block">Id</b></td>
+                    </tr>
+                    
+                    {% for data in po_fac %}                                                                
+                        <tr>
+                            <td>
+                                {{data.factor_tipo}}
+                            </td>
+                            <td>
+                                {{data.factor}}
+                            </td>
+                            <td>                                
+                                {% if data.seleccion == 1  %}
+                                    <input type="checkbox" name="sel_{{loop.index}}" value="{{data.seleccion}}" checked="checked"> ({{loop.index}})<br>
+                                {% else %}
+                                    <input type="checkbox" name="sel_{{loop.index}}" value="{{data.seleccion}}"> ({{loop.index}})<br>
+                                {% endif %}    
+                            </td>
+                            <td>                                
+                                <input type="text" name="orden_{{loop.index}}" value="{{data.orden_importancia}}">
+                            </td>
+                            <td>
+                                <input type="text" name="porque_{{loop.index}}" value="{{data.por_que}}">
+                            </td>                                
+                            <td>  
+                                {{data.cod}}
+                            </td>                                    
+                            <td>
+                                <input type="text" name="id_{{loop.index}}" value="{{data.id}}">
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    
+                    </tbody>
+                </table>
+            </div>
+        </div>                                 
+    {% endif %}
+
+
+    <div class="modal-footer">
+        <div class="form-footer">
+            <div class="col-sm-offset-5">                    
+                <button id="botonguardarmodulo" type="submit" class="btn btn-success btn-stroke">
+                    <i class="fa fa-floppy-o"></i> Guardar
+                </button>
+            </div>
+        </div>
+    </div>
+    </form> 
+</div>
+
+
+{#<div class="row">
+    <div class="panel-body">
+        <div id="list">
+            {% if po_index %}
+            <div class="table-responsive">                
+                <table class="table table-no-border table-middle table-lilac">
+                    <tbody>
+                        <tr>
+                            <td align="left" class="warning"><b class="text-block">Nombre</b></td>
+                            <td align="center" class="warning"><b class="text-block">Paterno</b></td>                                
+                            <td align="left" class="warning"><b class="text-block">Materno</b></td>
+                            <td align="left" class="warning"><b class="text-block">Unidad Educativa</b></td>
+                            <td align="left" class="warning"><b class="text-block">Telefono</b></td>
+                        </tr>                        
+                        {% for data in po_index %}                                                                
+                            <tr>
+                                <td>
+                                    {{data.nombre}}
+                                </td>
+                                <td>
+                                    {{data.paterno}}
+                                </td>
+                                <td>
+                                    {{data.materno}}
+                                </td>
+                                <td>
+                                    {{data.unidad_educativa}}
+                                </td>
+                                <td>  
+                                    {{data.telefono}}
+                                </td>                                    
+                            </tr>
+                        {% endfor %}                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>                                 
+            {% endif %}            
+        </div>    
+    </div>
+</div>#}
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

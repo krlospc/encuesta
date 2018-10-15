@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+{% include 'AdmMaster/menuforms.html.twig' %}
 <head>
 	<meta charset="UTF-8">
 	<title>Cuestionario 2</title>
@@ -164,10 +165,27 @@
 				</tr>
 				<tr>
 					<th>P12. SEXO</th>
-					<td colspan="2"><input type="text" name="p12sexo_1"></td>
-					<td colspan="2"><input type="text" name="p12sexo_2"></td>
-					<td colspan="2"><input type="text" name="p12sexo_3"></td>
-					<td colspan="2"><input type="text" name="p12sexo_4"></td>
+
+                    <td colspan="2">
+						<input type="radio" name="p12sexo_1" value="1"> Hombre
+						<input type="radio" name="p12sexo_1" value="2"> Mujer
+					</td>
+					<td colspan="2">
+						<input type="radio" name="p12sexo_2" value="1"> Hombre
+						<input type="radio" name="p12sexo_2" value="2"> Mujer
+					</td>
+					<td colspan="2">
+						<input type="radio" name="p12sexo_3" value="1"> Hombre
+						<input type="radio" name="p12sexo_3" value="2"> Mujer
+					</td>
+					<td colspan="2">
+						<input type="radio" name="p12sexo_4" value="1"> Hombre
+						<input type="radio" name="p12sexo_4" value="2"> Mujer
+					</td>
+					{#<td colspan="2"><input type="text" name="p12sexo_1"></td>#}
+					{#<td colspan="2"><input type="text" name="p12sexo_2"></td>#}
+					{#<td colspan="2"><input type="text" name="p12sexo_3"></td>#}
+					{#<td colspan="2"><input type="text" name="p12sexo_4"></td>#}
 				</tr>
 				<tr>
 					<th>P13. AÑO DE ESCOLARIDAD (DE 1 A 6)</th>

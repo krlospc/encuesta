@@ -1,0 +1,4 @@
+services:
+#    form_uno.example:
+#        class: FormUnoBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
