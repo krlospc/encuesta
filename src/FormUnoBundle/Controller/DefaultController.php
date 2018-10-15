@@ -124,7 +124,6 @@ class DefaultController extends Controller
         $paterno = $_REQUEST['paterno'];  
         $materno = $_REQUEST['materno'];
         $unidad_educativa = $_REQUEST['unidad_educativa'];
-        
         $sexo = $_REQUEST['sexo'];
         $telefono = $_REQUEST['telefono'];
         $cargo = $_REQUEST['cargo'];
