@@ -37,7 +37,28 @@
             <div class="text-right">
                     <a href="{{path('form4validacionregistro_index')}}">Ver formularios registrados</a>
                 </div>
-    {{ form_start(edit_form) }}
+                {{ form_start(edit_form) }}
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <h2>OPERATIVO ESCOLAR - 2018</h2>
+                        <p>SUBSISTEMA DE EDUCACIÓN REGULAR - NIVEL SECUNDARIO</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <table>
+                            <tr>
+                                <td>{{form_widget(edit_form.dep)}}</td>
+                                <td>{{form_widget(edit_form.sie)}}</td>
+                                <td>{{form_widget(edit_form.numBoleta)}}</td>
+                            </tr>
+                            <tr>
+                                <td>DEP</td>
+                                <td>CÓDIGO UNIDAD EDUCATIVA</td>
+                                <td>N BOLETA</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+   
         
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
