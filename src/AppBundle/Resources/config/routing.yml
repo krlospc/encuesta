@@ -10,4 +10,8 @@ app_formulario2:
     resource: "@AppBundle/Resources/config/routing/formulario2.yml"
     prefix:   /formulario2
 
+app_formulario3:
+    resource: "@AppBundle/Resources/config/routing/formulario3.yml"
+    prefix:   /formulario3
+
 
