@@ -42,7 +42,7 @@ class Form4validacionRegistroController extends Controller
             $em->persist($form4validacionRegistro);
             $em->flush();
 
-            return $this->redirectToRoute('form4validacionregistro_show', array('id' => $form4validacionRegistro->getId()));
+            return $this->redirectToRoute('form4validacionregistro_index');
         }
 
         return $this->render('form4validacionregistro/new.html.twig', array(
