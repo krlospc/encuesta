@@ -329,7 +329,7 @@ class Formulario3Controller extends Controller
             }else{
                 $em->remove($entity);
                 $em->flush();
-                $mensaje = 'La tarea se eliminó con éxito';
+                $mensaje = 'Los datos se eliminaron con éxito';
                 $request->getSession()
                     ->getFlashBag()
                     ->add('exito', $mensaje);           
