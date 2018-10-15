@@ -1,3 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+     {% include 'AdmMaster/menuforms.html.twig' %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -494,18 +498,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
-<script>
-var sexo={{entity.p5Sexo}}
-//var p121Enfermedad  = {{entity.p121Enfermedad}}
+{% endblock %}
 
-//alert(sexo);
-
-        $(document).ready(function () {
-            
-            
-        });
-    
-</script>  
 
 
 
