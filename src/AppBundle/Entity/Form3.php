@@ -48,7 +48,7 @@ class Form3
     private $p4Materno;
 
     /**
-     * @var bool|null
+     * @var string|null
      */
     private $p5Sexo;
 
@@ -488,7 +488,7 @@ class Form3
     private $p17Vuelve2018;
 
     /**
-     * @var bool|null
+     * @var string|null
      */
     private $p18Companeros;
 
