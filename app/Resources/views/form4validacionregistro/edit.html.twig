@@ -1,285 +1,323 @@
 {% extends 'base.html.twig' %}
-
+{% block stylesheets %}
+{{parent()}}
+<style type="text/css">
+    table{
+        width: 100%;
+    }
+    textarea{
+        width: 100%;
+    }
+    .bgoscuro{
+        background: #000000;
+        color: #FFFFFF;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+    }
+    .bggris{
+        background: #858383;
+        color: #FFFFFF;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+    }
+    .bggrisclaro{
+        background: #CCCCCC;
+        color: #000000;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+    }
+</style>
+{% endblock %}
 {% block body %}
-       <ul>
-        <li>
-            <a href="{{ path('form4validacionregistro_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <button type="submit" class="btn btn-warning">Delete</button>
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
-
-    <h1>Form4validacionregistro edit</h1>
-
-    {{ form_start(edit_form) }}
+    {% include 'AdmMaster/menuforms.html.twig' %}
+        <div class="container">
+            <div class="text-right">
+                    <a href="{{path('form4validacionregistro_index')}}">Ver formularios registrados</a>
+                </div>
+                {{ form_start(edit_form) }}
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <h2>OPERATIVO ESCOLAR - 2018</h2>
+                        <p>SUBSISTEMA DE EDUCACIÓN REGULAR - NIVEL SECUNDARIO</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <table>
+                            <tr>
+                                <td>{{form_widget(edit_form.dep)}}</td>
+                                <td>{{form_widget(edit_form.sie)}}</td>
+                                <td>{{form_widget(edit_form.numBoleta)}}</td>
+                            </tr>
+                            <tr>
+                                <td>DEP</td>
+                                <td>CÓDIGO UNIDAD EDUCATIVA</td>
+                                <td>N BOLETA</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+   
         
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 bggris">
+                        <h3>FORMULARIO 4</h3>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 bggrisclaro">
+                        <h3>REGISTROS ADMINISTRATIVOS</h3>
+                        <h3>REPORTE DE LA UNIDAD EDUCATIVA</h3>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <img src="{{asset('logo.png')}}" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bgoscuro">
+                        POR FAVOR COMPLETE LOS SIGUIENTES DATOS ACORDE A LOS DATOS OFICIALES DE LA UNIDAD EDUCATIVA
+                    </div>
+                </div>
+            </div>
+        </div>
 
-         <table border="0" class="table">
-            <tbody>
-                <tr>
-                    <td>OPERATIVO ESCOLAR - 2018</td>
-                    <td>FOLIO</td> 
-                    <td>{{form_widget(edit_form.dep)}}</td>
-                    <td>{{form_widget(edit_form.sie)}}</td>
-                    <td>{{form_widget(edit_form.numBoleta)}}</td>
-                
-                </tr>
-                
-                <tr>
-                    <td colspan="2"></td>
-                    <td>DEP.</td>
-                    <td>CODIGO UNIDAD EDUCATIVA</td>
-                    <td>No. BOLETA</td>
-                </tr>
-            </tbody>
-        </table>
-
-         <table border="0" class="table">
-            <tbody>
-                <tr>
-                    <td>FORMULARIO 4</td>
-                    <td>REGISTROS ADMINISTRATIVOS</td>                    
-                </tr>
-                <tr>
-                    <td colspan="2">REPORTE DE LA UNIDAD EDUCATIVA</td>
-                </tr>
-                <tr>
-                    <td colspan="2">POR FAVOR COMPLETE LOS SIGUIENTES DATOS ACORDE A LOS DATOS OFICIALES DE LA UNIDAD EDUCATIVA</td>
-                </tr>
-                 <tr>
-                    <td>P1. NOMBRE UNIDAD EDUCATIVA</td>
-                    <td>{{form_widget(edit_form.nomInstitucioneducativa)}}</td>                    
-                </tr>
-
-            </tbody>
-        </table>
-
-          <table border="1" class="table">
-            <tbody>
-                <tr>
-                    <td colspan="4">DATOS DEL INFORMANTE</td>
-                </tr>
-                <tr>
-                    <td>P2. NOMBRES</td>
-                    <td>{{form_widget(edit_form.nombres)}}</td>                    
-                </tr> 
-                 <tr>
-                    <td>P3. APELLIDO PATERNO</td>
-                    <td>{{form_widget(edit_form.paterno)}}</td>    
-                    <td>P5. ANTIGUEDAD EN LA UE</td>
-                    <td>{{form_widget(edit_form.antiguedad)}}</td>                 
-                </tr> 
-                 <tr>
-                    <td>P4. APELLIDO MATERNO</td>
-                    <td>{{form_widget(edit_form.materno)}}</td>    
-                    <td>P6. CARGO</td>
-                    <td>{{form_widget(edit_form.cargo)}}</td>                 
-                </tr> 
-                <tr>
-                    <td>P7. FECHA</td>
-                    <td>{{form_widget(edit_form.fechaRegistro)}}</td>    
-                    <td>P8. TELEFONO</td>
-                    <td>{{form_widget(edit_form.telefono)}}</td>                 
-                </tr> 
-            </tbody>
-        </table>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <td>P1. NOMBRE UNIDAD EDUCATIVA</td>
+                            <td colspan="8">{{form_widget(edit_form.nomInstitucioneducativa, {'attr': {'class': 'form-control'}})}}</td>                    
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="bggrisclaro">DATOS DEL INFORMANTE</td>
+                        </tr>
+                        <tr>
+                            <td>P2. NOMBRES</td>
+                            <td>{{form_widget(edit_form.nombres, {'attr': {'class': 'form-control'}})}}</td>                    
+                        </tr> 
+                        <tr>
+                            <td>P3. APELLIDO PATERNO</td>
+                            <td>{{form_widget(edit_form.paterno, {'attr': {'class': 'form-control'}})}}</td>    
+                            <td>P5. ANTIGUEDAD EN LA UE</td>
+                            <td>{{form_widget(edit_form.antiguedad, {'attr': {'class': 'form-control'}})}}</td>                 
+                        </tr> 
+                        <tr>
+                            <td>P4. APELLIDO MATERNO</td>
+                            <td>{{form_widget(edit_form.materno, {'attr': {'class': 'form-control'}})}}</td>    
+                            <td>P6. CARGO</td>
+                            <td>{{form_widget(edit_form.cargo, {'attr': {'class': 'form-control'}})}}</td>                 
+                        </tr> 
+                        <tr>
+                            <td>P7. FECHA</td>
+                            <td>{{form_widget(edit_form.fechaRegistro, {'attr': {'class': 'form-control'}})}}</td>    
+                            <td>P8. TELEFONO</td>
+                            <td>{{form_widget(edit_form.telefono, {'attr': {'class': 'form-control'}})}}</td>                 
+                        </tr> 
+                    </tbody>
+                </table>
 
 
-        <table border="1" class="table">
-            <p> NIVEL SECUNDARIO </p>
-            <tbody>
-                <thead>
-                    <th >2016</th>
-                    <th >PROMOVIDOS</th>
-                    <th >REPROBADOS</th>
-                    <th >RETIRADOS POR ABANDONO</th>
-                    <th >RETIRADOS POR TRASLADO</th>
-                    <th >NO INCORPORADOS</th>
-                    <th >MATRICULA</th>
-                </thead>
-                <tr>
-                    <td>1.</td>
-                    <td>{{form_widget(edit_form.promovidos20161)}}</td>                    
-                    <td>{{form_widget(edit_form.reprobados20161)}}</td>                    
-                    <td>{{form_widget(edit_form.abandono20161)}}</td>                    
-                    <td>{{form_widget(edit_form.traslado20161)}}</td>                    
-                    <td>{{form_widget(edit_form.noincorporados20161)}}</td>                    
-                    <td>{{form_widget(edit_form.matricula20161)}}</td>                    
-                    
-                    
-                </tr> 
-                <tr>
-                    <td>2.</td>
-                    <td>{{form_widget(edit_form.promovidos20162)}}</td>                    
-                    <td>{{form_widget(edit_form.reprobados20162)}}</td>                    
-                    <td>{{form_widget(edit_form.abandono20162)}}</td>                    
-                    <td>{{form_widget(edit_form.traslado20162)}}</td>                    
-                    <td>{{form_widget(edit_form.noincorporados20162)}}</td>                    
-                    <td>{{form_widget(edit_form.matricula20162)}}</td>                    
-                    
-                    
-                </tr> 
-                <tr>
-                    <td>3.</td>
-                    <td>{{form_widget(edit_form.promovidos20163)}}</td>                    
-                    <td>{{form_widget(edit_form.reprobados20163)}}</td>                    
-                    <td>{{form_widget(edit_form.abandono20163)}}</td>                    
-                    <td>{{form_widget(edit_form.traslado20163)}}</td>                    
-                    <td>{{form_widget(edit_form.noincorporados20163)}}</td>                    
-                    <td>{{form_widget(edit_form.matricula20163)}}</td>                    
-                    
-                    
-                </tr> 
-                <tr>
-                    <td>4.</td>
-                    <td>{{form_widget(edit_form.promovidos20164)}}</td>                    
-                    <td>{{form_widget(edit_form.reprobados20164)}}</td>                    
-                    <td>{{form_widget(edit_form.abandono20164)}}</td>                    
-                    <td>{{form_widget(edit_form.traslado20164)}}</td>                    
-                    <td>{{form_widget(edit_form.noincorporados20164)}}</td>                    
-                    <td>{{form_widget(edit_form.matricula20164)}}</td>                    
-                    
-                    
-                </tr> 
-                <tr>
-                    <td>5.</td>
-                    <td>{{form_widget(edit_form.promovidos20165)}}</td>                    
-                    <td>{{form_widget(edit_form.reprobados20165)}}</td>                    
-                    <td>{{form_widget(edit_form.abandono20165)}}</td>                    
-                    <td>{{form_widget(edit_form.traslado20165)}}</td>                    
-                    <td>{{form_widget(edit_form.noincorporados20165)}}</td>                    
-                    <td>{{form_widget(edit_form.matricula20165)}}</td>                    
-                    
-                    
-                </tr> 
-                <tr>
-                    <td>6.</td>
-                    <td>{{form_widget(edit_form.promovidos20166)}}</td>                    
-                    <td>{{form_widget(edit_form.reprobados20166)}}</td>                    
-                    <td>{{form_widget(edit_form.abandono20166)}}</td>                    
-                    <td>{{form_widget(edit_form.traslado20166)}}</td>                    
-                    <td>{{form_widget(edit_form.noincorporados20166)}}</td>                    
-                    <td>{{form_widget(edit_form.matricula20166)}}</td>                    
-                    
-                </tr> 
-                <tr>
-                    <td>1.</td>
-                    <td>{{form_widget(edit_form.promovidos2016Total)}}</td>                    
-                    <td>{{form_widget(edit_form.reprobados2016Total)}}</td>                    
-                    <td>{{form_widget(edit_form.abandono2016Total)}}</td>                    
-                    <td>{{form_widget(edit_form.traslado2016Total)}}</td>                    
-                    <td>{{form_widget(edit_form.noincorporados2016Total)}}</td>                    
-                    <td>{{form_widget(edit_form.matricula2016Total)}}</td>                    
-                   
-                   
-                </tr> 
+                <table class="table table-bordered table-striped text-center">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bgoscuro">
+                            NIVEL SECUNDARIO
+                        </div>
+                    </div>
+                    <thead>
+                        <th class="bgoscuro">2016</th>
+                        <th >PROMOVIDOS</th>
+                        <th >REPROBADOS</th>
+                        <th >RETIRADOS POR ABANDONO</th>
+                        <th >RETIRADOS POR TRASLADO</th>
+                        <th >NO INCORPORADOS</th>
+                        <th >MATRICULA</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1.</td>
+                            <td>{{form_widget(edit_form.promovidos20161, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.reprobados20161, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.abandono20161, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.traslado20161, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.noincorporados20161, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.matricula20161, {'attr': {'size': 4}})}}</td>                    
+                            
+                            
+                        </tr> 
+                        <tr>
+                            <td>2.</td>
+                            <td>{{form_widget(edit_form.promovidos20162, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.reprobados20162, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.abandono20162, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.traslado20162, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.noincorporados20162, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.matricula20162, {'attr': {'size': 4}})}}</td>                    
+                            
+                            
+                        </tr> 
+                        <tr>
+                            <td>3.</td>
+                            <td>{{form_widget(edit_form.promovidos20163, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.reprobados20163, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.abandono20163, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.traslado20163, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.noincorporados20163, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.matricula20163, {'attr': {'size': 4}})}}</td>                    
+                            
+                            
+                        </tr> 
+                        <tr>
+                            <td>4.</td>
+                            <td>{{form_widget(edit_form.promovidos20164, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.reprobados20164, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.abandono20164, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.traslado20164, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.noincorporados20164, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.matricula20164, {'attr': {'size': 4}})}}</td>                    
+                            
+                            
+                        </tr> 
+                        <tr>
+                            <td>5.</td>
+                            <td>{{form_widget(edit_form.promovidos20165, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.reprobados20165, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.abandono20165, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.traslado20165, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.noincorporados20165, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.matricula20165, {'attr': {'size': 4}})}}</td>                    
+                            
+                            
+                        </tr> 
+                        <tr>
+                            <td>6.</td>
+                            <td>{{form_widget(edit_form.promovidos20166, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.reprobados20166, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.abandono20166, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.traslado20166, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.noincorporados20166, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.matricula20166, {'attr': {'size': 4}})}}</td>                    
+                            
+                        </tr> 
+                        <tr>
+                            <td>1.</td>
+                            <td>{{form_widget(edit_form.promovidos2016Total, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.reprobados2016Total, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.abandono2016Total, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.traslado2016Total, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.noincorporados2016Total, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.matricula2016Total, {'attr': {'size': 4}})}}</td>                    
+                        
+                        
+                        </tr>
+                    </tbody>
+                </table>
 
-                 
-            </tbody>
-        </table>
-
-        <table border="1" class="table">
+                <table class="table table-bordered table-striped text-center">
             
-            <tbody>
-                <thead>
-                    <th >2017</th>
-                    <th >PROMOVIDOS</th>
-                    <th >REPROBADOS</th>
-                    <th >RETIRADOS POR ABANDONO</th>
-                    <th >RETIRADOS POR TRASLADO</th>
-                    <th >NO INCORPORADOS</th>
-                    <th >MATRICULA</th>
-                </thead>
-                <tr>
-                    <td>1.</td>
-                    <td>{{form_widget(edit_form.promovidos20171)}}</td>                    
-                    <td>{{form_widget(edit_form.reprobados20171)}}</td>                    
-                    <td>{{form_widget(edit_form.abandono20171)}}</td>                    
-                    <td>{{form_widget(edit_form.traslado20171)}}</td>                    
-                    <td>{{form_widget(edit_form.noincorporados20171)}}</td>                    
-                    <td>{{form_widget(edit_form.matricula20171)}}</td>                    
-                    
-                    
-                </tr> 
-                <tr>
-                    <td>2.</td>
-                    <td>{{form_widget(edit_form.promovidos20172)}}</td>                    
-                    <td>{{form_widget(edit_form.reprobados20172)}}</td>                    
-                    <td>{{form_widget(edit_form.abandono20172)}}</td>                    
-                    <td>{{form_widget(edit_form.traslado20172)}}</td>                    
-                    <td>{{form_widget(edit_form.noincorporados20172)}}</td>                    
-                    <td>{{form_widget(edit_form.matricula20172)}}</td>                    
-                    
-                    
-                </tr> 
-                <tr>
-                    <td>3.</td>
-                    <td>{{form_widget(edit_form.promovidos20173)}}</td>                    
-                    <td>{{form_widget(edit_form.reprobados20173)}}</td>                    
-                    <td>{{form_widget(edit_form.abandono20173)}}</td>                    
-                    <td>{{form_widget(edit_form.traslado20173)}}</td>                    
-                    <td>{{form_widget(edit_form.noincorporados20173)}}</td>                    
-                    <td>{{form_widget(edit_form.matricula20173)}}</td>                    
-                    
-                    
-                </tr> 
-                <tr>
-                    <td>4.</td>
-                    <td>{{form_widget(edit_form.promovidos20174)}}</td>                    
-                    <td>{{form_widget(edit_form.reprobados20174)}}</td>                    
-                    <td>{{form_widget(edit_form.abandono20174)}}</td>                    
-                    <td>{{form_widget(edit_form.traslado20174)}}</td>                    
-                    <td>{{form_widget(edit_form.noincorporados20174)}}</td>                    
-                    <td>{{form_widget(edit_form.matricula20174)}}</td>                    
-                    
-                    
-                </tr> 
-                <tr>
-                    <td>5.</td>
-                    <td>{{form_widget(edit_form.promovidos20175)}}</td>                    
-                    <td>{{form_widget(edit_form.reprobados20175)}}</td>                    
-                    <td>{{form_widget(edit_form.abandono20175)}}</td>                    
-                    <td>{{form_widget(edit_form.traslado20175)}}</td>                    
-                    <td>{{form_widget(edit_form.noincorporados20175)}}</td>                    
-                    <td>{{form_widget(edit_form.matricula20175)}}</td>                    
-                    
-                    
-                </tr> 
-                <tr>
-                    <td>6.</td>
-                    <td>{{form_widget(edit_form.promovidos20176)}}</td>                    
-                    <td>{{form_widget(edit_form.reprobados20176)}}</td>                    
-                    <td>{{form_widget(edit_form.abandono20176)}}</td>                    
-                    <td>{{form_widget(edit_form.traslado20176)}}</td>                    
-                    <td>{{form_widget(edit_form.noincorporados20176)}}</td>                    
-                    <td>{{form_widget(edit_form.matricula20176)}}</td>                    
-                    
-                </tr> 
-                <tr>
-                    <td>total.</td>
-                    <td>{{form_widget(edit_form.promovidos2017Total)}}</td>                    
-                    <td>{{form_widget(edit_form.reprobados2017Total)}}</td>                    
-                    <td>{{form_widget(edit_form.abandono2017Total)}}</td>                    
-                    <td>{{form_widget(edit_form.traslado2017Total)}}</td>                    
-                    <td>{{form_widget(edit_form.noincorporados2017Total)}}</td>                    
-                    <td>{{form_widget(edit_form.matricula2017Total)}}</td>                    
-                   
-                   
-                </tr> 
-
-                 
-            </tbody>
-        </table>
-
-        <button type="submit" class="btn btn-success">Editar</button>
+                    <thead>
+                        <th class="bgoscuro">2017</th>
+                        <th >PROMOVIDOS</th>
+                        <th >REPROBADOS</th>
+                        <th >RETIRADOS POR ABANDONO</th>
+                        <th >RETIRADOS POR TRASLADO</th>
+                        <th >NO INCORPORADOS</th>
+                        <th >MATRICULA</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1.</td>
+                            <td>{{form_widget(edit_form.promovidos20171, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.reprobados20171, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.abandono20171, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.traslado20171, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.noincorporados20171, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.matricula20171, {'attr': {'size': 4}})}}</td>                    
+                            
+                            
+                        </tr> 
+                        <tr>
+                            <td>2.</td>
+                            <td>{{form_widget(edit_form.promovidos20172, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.reprobados20172, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.abandono20172, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.traslado20172, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.noincorporados20172, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.matricula20172, {'attr': {'size': 4}})}}</td>                    
+                            
+                            
+                        </tr> 
+                        <tr>
+                            <td>3.</td>
+                            <td>{{form_widget(edit_form.promovidos20173, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.reprobados20173, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.abandono20173, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.traslado20173, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.noincorporados20173, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.matricula20173, {'attr': {'size': 4}})}}</td>                    
+                            
+                            
+                        </tr> 
+                        <tr>
+                            <td>4.</td>
+                            <td>{{form_widget(edit_form.promovidos20174, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.reprobados20174, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.abandono20174, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.traslado20174, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.noincorporados20174, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.matricula20174, {'attr': {'size': 4}})}}</td>                    
+                            
+                            
+                        </tr> 
+                        <tr>
+                            <td>5.</td>
+                            <td>{{form_widget(edit_form.promovidos20175, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.reprobados20175, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.abandono20175, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.traslado20175, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.noincorporados20175, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.matricula20175, {'attr': {'size': 4}})}}</td>                    
+                            
+                            
+                        </tr> 
+                        <tr>
+                            <td>6.</td>
+                            <td>{{form_widget(edit_form.promovidos20176, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.reprobados20176, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.abandono20176, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.traslado20176, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.noincorporados20176, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.matricula20176, {'attr': {'size': 4}})}}</td>                    
+                            
+                        </tr> 
+                        <tr>
+                            <td>total.</td>
+                            <td>{{form_widget(edit_form.promovidos2017Total, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.reprobados2017Total, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.abandono2017Total, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.traslado2017Total, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.noincorporados2017Total, {'attr': {'size': 4}})}}</td>                    
+                            <td>{{form_widget(edit_form.matricula2017Total, {'attr': {'size': 4}})}}</td>                    
+                        
+                        
+                        </tr> 
+                    </tbody>
+                </table>
+                <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <br>
+                            <button type="submit" class="btn btn-success btn-block">Actualizar</button>
+                        </td>
+                    </tr>
+            </div>
+            </div>
+        </div>
         
 
     {{ form_end(edit_form) }}
 
-
+    </div>
 
  
 {% endblock %}

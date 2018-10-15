@@ -63,8 +63,8 @@ class DefaultController extends Controller
             "28" => "Otra (especifique)"            
         ];
 
-        $query = "INSERT INTO formulario_uno_index (folio, nombre, paterno, materno, unidad_educativa, sexo, telefono, cargo, p8, p9, p10, p12, p13) ";
-        $query = $query."VALUES ('', '', '', '', '' ,'', '', '', '', '', '', '', '')";          
+        $query = "INSERT INTO formulario_uno_index (dep, cod_unidad_educativa, nboleta, nombre, paterno, materno, unidad_educativa, sexo, telefono, cargo, p8, p9, p10, p12, p13) ";
+        $query = $query."VALUES ('', '', '', '', '', '', '', '', '', '', '', '', '', '', '')";          
         $stmt = $db->prepare($query);
         $params = array();
         $stmt->execute($params);
@@ -119,12 +119,14 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();        
         $db = $em->getConnection();
-        $folio = $_REQUEST['folio'];
+        //$folio = $_REQUEST['dep'];
+        $cod_unidad_educativa = $_REQUEST['cod_unidad_educativa'];
+        $nboleta = $_REQUEST['nboleta'];
+        $dep = $_REQUEST['dep'];
         $nombre = $_REQUEST['nombre'];
         $paterno = $_REQUEST['paterno'];  
         $materno = $_REQUEST['materno'];
         $unidad_educativa = $_REQUEST['unidad_educativa'];
-        
         $sexo = $_REQUEST['sexo'];
         $telefono = $_REQUEST['telefono'];
         $cargo = $_REQUEST['cargo'];
@@ -135,7 +137,7 @@ class DefaultController extends Controller
         $p13 = $_REQUEST['p13'];
         $id = $_REQUEST['id_principal'];
 
-        $query = "UPDATE formulario_uno_index SET nombre = '".$nombre."', paterno = '".$paterno."', materno = '".$materno."', unidad_educativa = '".$unidad_educativa."', telefono = '".$telefono."', p8 = '".$p8."', p9 = '".$p9."', p10 = '".$p10."', p12 = '".$p12."', p13 = '".$p13."', sexo = '".$sexo."', cargo = '".$cargo."' where id = ".$id;
+        $query = "UPDATE formulario_uno_index SET nombre = '".$nombre."', paterno = '".$paterno."', materno = '".$materno."', unidad_educativa = '".$unidad_educativa."', telefono = '".$telefono."', p8 = '".$p8."', p9 = '".$p9."', p10 = '".$p10."', p12 = '".$p12."', p13 = '".$p13."', sexo = '".$sexo."', cargo = '".$cargo."', dep = '".$dep."', cod_unidad_educativa = '".$cod_unidad_educativa."', dep = '".$dep."' where id = ".$id;
         $stmt = $db->prepare($query);
         $params = array();
         $stmt->execute($params); 
