@@ -69,12 +69,12 @@
 
 
         <div class="row">
-            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
                 <div class="row">
-                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 bggris">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 bggris">
                         <h3>FORMULARIO 3</h3>
                     </div>
-                    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 bggrisclaro">
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 bggrisclaro">
                         <h3>ESTUDIANTE</h3>
                     </div>
                 </div>
@@ -84,18 +84,16 @@
                         LA RESPUESTA DEL ESTUDIANTE
                     </div>
                 </div>
-
             </div>
-            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                LOGO
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+			            <img src    ="{{asset('logo.png')}} "alt="" class="img-fluid">
+		            </div> 
             </div>
-
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bggris" aria-colspan="2" >
-                ESTAMOS DESARROLLANDO UN ESTUDIO PARA DETERMINAR LAS RAZONES DEL PORQUÉ ALGUNOS DE LO ESTUDIANTES NO SE INSCRIBIERON EN LA GESTIÓN 2017. TE PEDIMOS NOS AYUDES RESPONDIENDO LAS SIGUIENTES PREGUNTAS CON HONESTIDAD PARA QUE PODAMOS CONOCER LOS PROBLEMAS QUE TUVISTE EL AÑO PASADO Y TE OBLIGARON A NO INSCRIBIRTE. Y ASI, PODER AYUDARLES DE ALGUNA MANERA.
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bggris" aria-colspan="2" >
+                    ESTAMOS DESARROLLANDO UN ESTUDIO PARA DETERMINAR LAS RAZONES DEL PORQUÉ ALGUNOS DE LO ESTUDIANTES NO SE INSCRIBIERON EN LA GESTIÓN 2017. TE PEDIMOS NOS AYUDES RESPONDIENDO LAS SIGUIENTES PREGUNTAS CON HONESTIDAD PARA QUE PODAMOS CONOCER LOS PROBLEMAS QUE TUVISTE EL AÑO PASADO Y TE OBLIGARON A NO INSCRIBIRTE. Y ASI, PODER AYUDARLES DE ALGUNA MANERA.
+                </div>
             </div>
-        </div>
 
         <table class="table-bordered" width="100%">
             <tr>
@@ -154,7 +152,7 @@
                 <th colspan="3" align="center" class="bggrisclaro">MARQUE LAS OPCIONES QUE SE ADECUÉN A LA RESPUESTA DEL ESTUDIANTE</th>
                 <td colspan="2" align="center" class="bgoscuro"><b>ENUMERE POR ORDEN DE IMPORTANCIA</b> </td>
             </tr>
-            <tr>
+            <tr class="borbot">
                 <td rowspan="10">DENTRO DE LA UNIDAD EDUCATIVA: FACTORES ATRIBUIDOS AL ESTUDIANTE</td>
                 <td colspan="2">1. Enfermedad</td>
                 <th ><input type="checkbox"  name="p121enfermedad_1"></th>
@@ -205,7 +203,7 @@
                 <th ><input type="checkbox"  name="p1210centro_1"></th>
                 <td colspan="2" align="center"><input type="text" size="5" name="p1210centro"></td>
             </tr>
-
+            <tr class="bggrisclaro"><td colspan=5></td></tr>
             <tr>
                 <td rowspan="3">DENTRO DE LA UNIDAD EDUCATIVA:FACTORES ATRIBUIDOS A LA UNIDAD EDUCATIVA</td>
                 <td colspan="2">11. Bullying</td>
@@ -222,6 +220,7 @@
                 <th ><input type="checkbox"  name="p12oferta_1"></th>
                 <td colspan="2" align="center"><input type="text" size="5" name="p12oferta"></td>
             </tr>
+            <tr class="bggrisclaro"><td colspan=5></td></tr>
             <tr>
                 <td rowspan="7">FUERA DE LA UNIDAD EDUCATIVA: FACTORES FAMILIARES </td>
                 <td colspan="2">14. Responsabilidades en el hogar: Quehaceres domésticos (cocinar, lavar, planchar), atención a niños, a ancianos, a personas enfermas o con discapacidad</td>
@@ -265,6 +264,7 @@
                 <th><input type="checkbox" name="p1420fallecimientofamiliar_1"></th>
                 <td colspan="2" align="center"><input  type="text" size="5" name="p1420fallecimientofamiliar"></td>
             </tr>
+            <tr class="bggrisclaro"><td colspan=5></td></tr>
             <tr>
                 <td rowspan="3">FUERA DE LA UNIDAD EDUCATIVA: FACTORES ECONÓMICOS</td>
                 <td colspan="2">21. Falta de dinero</td>
@@ -356,8 +356,8 @@
         </table>
         <br>
         <table>
-            <tr>
-                <th>p14. ¿EN QUÉ TURNO(S) TRABAJÓ EN LA GESTIÓN 2017? (puede marcar más de una opción) </th>
+            <tr height="80px">
+                <th>P14. ¿EN QUÉ TURNO(S) TRABAJÓ EN LA GESTIÓN 2017? (puede marcar más de una opción) </th>
                 <td>1.-mañana <input type="checkbox"  name="p14manana"></td>
                 <td>2.-tarde <input type="checkbox"  name="p14tarde"></td>
                 <td>3.-noche <input type="checkbox"  name="p14noche"></td>
@@ -464,7 +464,7 @@
                 <td> <input type="text" name="p19quintarazon">  </td>
             </tr>
             <br>
-            <tr>
+            <tr height="80px">
                 <th>OTRA (ESPECIFIQUE)</th>
                 <td> <input type="text" name="p19otra">  </td>
             </tr>

@@ -70,12 +70,12 @@
 
 
         <div class="row">
-            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
                 <div class="row">
-                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 bggris">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 bggris">
                         <h3>FORMULARIO 3</h3>
                     </div>
-                    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 bggrisclaro">
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 bggrisclaro">
                         <h3>ESTUDIANTE</h3>
                     </div>
                 </div>
@@ -87,9 +87,9 @@
                 </div>
 
             </div>
-            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                LOGO
-            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<img src="{{asset('logo.png')}}" alt="" class="img-fluid">
+			</div>
 
         </div>
         <div class="row">
@@ -206,7 +206,7 @@
                 <th ><input type="checkbox"  name="p1210centro_1" {% if entity.p1210InscricioCea == 1 %} checked="checked" {% endif %}></th>
                 <td colspan="2" align="center"><input type="text" size="5" name="p1210centro" value={{entity.p1210Importancia}}></td>
             </tr>
-
+            <tr class="bggrisclaro"><td colspan=5></td></tr>
             <tr>
                 <td rowspan="3">DENTRO DE LA UNIDAD EDUCATIVA:FACTORES ATRIBUIDOS A LA UNIDAD EDUCATIVA</td>
                 <td colspan="2">11. Bullying</td>
@@ -223,6 +223,7 @@
                 <th ><input type="checkbox"  name="p12oferta_1" {% if entity.p1213UnidadNoOferta == 1 %} checked="checked" {% endif %}></th>
                 <td colspan="2" align="center"><input type="text" size="5" name="p12oferta" value={{entity.p1213Importancia}}></td>
             </tr>
+            <tr class="bggrisclaro"><td colspan=5></td></tr>
             <tr>
                 <td rowspan="7">FUERA DE LA UNIDAD EDUCATIVA: FACTORES FAMILIARES </td>
                 <td colspan="2">14. Responsabilidades en el hogar: Quehaceres domésticos (cocinar, lavar, planchar), atención a niños, a ancianos, a personas enfermas o con discapacidad</td>
@@ -266,6 +267,7 @@
                 <th><input type="checkbox" name="p1420fallecimientofamiliar_1" {% if entity.p1220FallecimientoFamiliar == 1 %} checked="checked" {% endif %}></th>
                 <td colspan="2" align="center"><input  type="text" size="5" name="p1420fallecimientofamiliar" value={{entity.p1220Importancia}}></td>
             </tr>
+            <tr class="bggrisclaro"><td colspan=5></td></tr>
             <tr>
                 <td rowspan="3">FUERA DE LA UNIDAD EDUCATIVA: FACTORES ECONÓMICOS</td>
                 <td colspan="2">21. Falta de dinero</td>
@@ -282,6 +284,7 @@
                 <th ><input type="checkbox"  name="pp1423trabajodepadres_1" {% if entity.p1223TrabajoPadres == 1 %} checked="checked" {% endif %}></th>
                 <td colspan="2" align="center"><input type="text" size="5" name="pp1423trabajodepadres" value={{entity.p1223Importancia}}></td>
             </tr>
+            <tr class="bggrisclaro"><td colspan=5></td></tr>
             <tr>
                 <td rowspan="4">FUERA DE LA UNIDAD EDUCATIVA: FACTORES SOCIALES</td>
                 <td colspan="2">24. Pandillas</td>
@@ -355,15 +358,15 @@
                 <td><input type="checkbox"  name="p139" {% if entity.p139Otro == 1 %} checked="checked" {% endif %}></td>
             </tr>
         </table>
-        <br>
-        <table>
-            <tr>
-                <th>p14. ¿EN QUÉ TURNO(S) TRABAJÓ EN LA GESTIÓN 2017? (puede marcar más de una opción) </th>
+                <table>
+            <tr height="80px">
+                <th>P14. ¿EN QUÉ TURNO(S) TRABAJÓ EN LA GESTIÓN 2017? (puede marcar más de una opción) </th>
                 <td>1.-mañana <input type="checkbox"  name="p14manana" {% if entity.p141Maniana == 1 %} checked="checked" {% endif %}></td>
                 <td>2.-tarde <input type="checkbox"  name="p14tarde" {% if entity.p142Tarde == 1 %} checked="checked" {% endif %}></td>
                 <td>3.-noche <input type="checkbox"  name="p14noche" {% if entity.p143Noche == 1 %} checked="checked" {% endif %}></td>
             </tr>
             <br>
+
             <tr>
                 <th colspan="10" >P15. ¿PORQUÉ RAZONES CREES QUE NO PUDISTE TRABAJAR Y ESTUDIAR AL MISMO TIEMPO EL AÑO PASADO (GESTIÓN 2017)?
                     (puede marcar más de una opción)
@@ -470,7 +473,7 @@
                 <td> <input type="text" name="p19otra" value="{{entity.p19Otra}}"   >  </td>
             </tr>
 
-            <tr>
+            <tr height="80px">
                 <th colspan="6">P20. PERSONA DE LA UNIDAD EDUCATIVA QUE ACOMPAÑÓ LA ENTREVISTA AL ESTUDIANTE:</th>
 
             </tr>
@@ -485,7 +488,7 @@
             <tr>
                 <td colspan="6">
                     <br>
-                    <button type="submit" class="btn btn-primary btn-block">Guardar</button>
+                    <button type="submit" class="btn btn-primary btn-block">Guardar cambios</button>
                 </td>
             </tr>
         </table>
