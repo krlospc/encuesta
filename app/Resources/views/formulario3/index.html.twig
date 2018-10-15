@@ -30,12 +30,14 @@
                     <td>{{ estudiante.p3Paterno }}</td>
                     <td>{{ estudiante.p4Materno }}</td>
                     <td>
-                        <a href="{{ path('formulario3_editar', { 'id': estudiante.id }) }}" class="btn btn-primary btn-xs text-primary" data-toggle="tooltip" data-placement="top" title="Editar">
-                            <i class="fa fa-pencil"></i>
+                        <a href="{{ path('formulario3_editar', { 'id': estudiante.id }) }}" class="btn btn-primary">editar</a>
+						<a href="{{ path('formulario3_editar', { 'id': estudiante.id }) }}" class="btn btn-danger" onclick="return confirm('Esta seguro de que desea eliminar el registro?')">eliminar</a>
+                        {#<a href="{{ path('formulario3_editar', { 'id': estudiante.id }) }}" class="btn btn-primary btn-xs text-primary" data-toggle="tooltip" data-placement="top" title="Editar">
+
                         </a>
-                        <a href="{{ path('formulario3_eliminar', { 'id': estudiante.id }) }}" class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" title="Eliminar" onclick="return confirm('¿Esta suguro de eliminar?')">
-                            <i class="fa fa-times"></i>
-                        </a>
+                        <a href="{{ path('formulario3_editar', { 'id': estudiante.id }) }}" class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" title="Eliminar" onclick="return confirm('¿Esta suguro de eliminar?')">
+
+                        </a>#}
                     </td>
                 </tr>
             {% endfor %}
