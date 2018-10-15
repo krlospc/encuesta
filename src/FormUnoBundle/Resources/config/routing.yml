@@ -13,3 +13,7 @@ form_uno_insert:
 form_uno_update:
     path:     /formunoupdate/{idfactor}
     defaults: { _controller: FormUnoBundle:Default:update }
+
+form_uno_delete:
+    path:     /formunodelete/{idfactor}
+    defaults: { _controller: FormUnoBundle:Default:delete }    

@@ -42,7 +42,7 @@ class Form4validacionRegistroController extends Controller
             $em->persist($form4validacionRegistro);
             $em->flush();
 
-            return $this->redirectToRoute('form4validacionregistro_show', array('id' => $form4validacionRegistro->getId()));
+            return $this->redirectToRoute('form4validacionregistro_index');
         }
 
         return $this->render('form4validacionregistro/new.html.twig', array(
@@ -120,5 +120,19 @@ class Form4validacionRegistroController extends Controller
             ->setMethod('DELETE')
             ->getForm()
         ;
+    }
+
+    /**
+     * Deletes a form4validacionRegistro entity.
+     *
+     */
+    public function eliminarAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $form4validacionRegistro = $em->getRepository('AppBundle:Form4validacionRegistro')->find($request->get('id'));
+        $em->remove($form4validacionRegistro);
+        $em->flush();
+        
+        return $this->redirectToRoute('form4validacionregistro_index');
     }
 }
