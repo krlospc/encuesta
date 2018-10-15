@@ -20,12 +20,10 @@
             </div>
         {% endfor %}
 
-        <table class="table table-striped table-hover">
+        <table class="table table-border table-striped table-hover">
             <thead>
                 <tr>
-                    <th>Dep</th>
-                    <th>Sie</th>
-                    <th>Numboleta</th>
+                    <th>Folio (Dep-SIE-N°Boleta)</th>
                     <th>Unidad Educativa</th>
                     <th>Nombres</th>
                     <th>Paterno</th>
@@ -37,9 +35,7 @@
             <tbody>
             {% for form4validacionRegistro in form4validacionRegistros %}
                 <tr>
-                    <td>{{ form4validacionRegistro.dep }}</td>
-                    <td>{{ form4validacionRegistro.sie }}</td>
-                    <td>{{ form4validacionRegistro.numBoleta }}</td>
+                    <td>{{ form4validacionRegistro.dep }} - {{ form4validacionRegistro.sie }} - {{ form4validacionRegistro.numBoleta }}</td>
                     <td>{{ form4validacionRegistro.nomInstitucioneducativa }}</td>
                     <td>{{ form4validacionRegistro.nombres }}</td>
                     <td>{{ form4validacionRegistro.paterno }}</td>
