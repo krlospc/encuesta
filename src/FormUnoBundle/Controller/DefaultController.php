@@ -191,4 +191,32 @@ class DefaultController extends Controller
         return $this->render('FormUnoBundle:Default:new.html.twig', array('po_index' => $po_index, 'po_fac' => $po_fac,));
 
     }  
+
+    public function deleteAction($idfactor)
+    {
+        $em = $this->getDoctrine()->getManager();        
+        $db = $em->getConnection();
+
+        //dump($idfactor);die();
+        
+        $query = "DELETE FROM formulario_uno_factores WHERE formulario_uno_index_id = ".$idfactor;
+
+        
+        //dump($query);die();
+        $stmt = $db->prepare($query);
+        $params = array();
+        $stmt->execute($params); 
+
+        $query = "DELETE FROM formulario_uno_index WHERE id = ".$idfactor;
+        $stmt = $db->prepare($query);
+        $params = array();
+        $stmt->execute($params); 
+        
+        $query = "SELECT * FROM  formulario_uno_index";
+        $stmt = $db->prepare($query);
+        $params = array();
+        $stmt->execute($params);
+        $po = $stmt->fetchAll();                
+        return $this->render('FormUnoBundle:Default:index.html.twig', array('po' => $po));
+    }
 }
