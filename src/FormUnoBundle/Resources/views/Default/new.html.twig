@@ -1,226 +1,183 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Cuestionario 1</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<style type="text/css">
-		table{
-			width: 100%;
-		}
-		textarea{
-			width: 100%;
-		}
-		.bgoscuro{
-			background: #000000;
-			color: #FFFFFF;
-			text-align: center;
-			padding: 10px;
-			font-weight: bold;
-		}
-		.bggris{
-			background: #858383;
-			color: #FFFFFF;
-			text-align: center;
-			padding: 10px;
-			font-weight: bold;
-		}
-		.bggrisclaro{
-			background: #CCCCCC;
-			color: #000000;
-			text-align: center;
-			padding: 10px;
-			font-weight: bold;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <title>Cuestionario 1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style type="text/css">
+        table{
+        			width: 100%;
+        		}
+        		textarea{
+        			width: 100%;
+        		}
+        		.bgoscuro{
+        			background: #000000;
+        			color: #FFFFFF;
+        			text-align: center;
+        			padding: 10px;
+        			font-weight: bold;
+        		}
+        		.bggris{
+        			background: #858383;
+        			color: #FFFFFF;
+        			text-align: center;
+        			padding: 10px;
+        			font-weight: bold;
+        		}
+        		.bggrisclaro{
+        			background: #CCCCCC;
+        			color: #000000;
+        			text-align: center;
+        			padding: 10px;
+        			font-weight: bold;
+        		}
+    </style>
 </head>
+
 <body>
-{% include 'AdmMaster/menuforms.html.twig' %}
-<div class="container">    
-    <div class="row">
-        <div class="col-lg-12 col-md-12">
-            <form id="formnuevocurso" nombre="formnuevocurso" action={{path('form_uno_insert')}} method="post" style="">
-            <div class="panel panel-danger">
-                <div class="panel-heading">                
-                    <div class="pull-right">
-                        <button class="btn btn-sm" data-action="collapse" data-toggle="tooltip" data-placement="top" data-title="Collapse"><i class="fa fa-angle-up"></i></button>
+    {% include 'AdmMaster/menuforms.html.twig' %}
+    <div class="container">
+        <div class="text-right">
+            <a href="{{path('form_uno_homepage')}}">Ver formularios registrados</a>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <form id="formnuevocurso" nombre="formnuevocurso" action={{path( 'form_uno_insert')}} method="post" style="">
+                    <div class="panel panel-danger">
+
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <h2>OPERATIVO ESCOLAR - 2018</h2>
+                                    <p>SUBSISTEMA DE EDUCACIÓN REGULAR - NIVEL SECUNDARIO</p>
+
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <table>
+                                        <tr>
+                                            <td><input type="text" name="dep" value="{{po_index[0].dep}}"></td>
+                                            <td><input type="text" name="cod_unidad_educativa" value="{{po_index[0].cod_unidad_educativa}}"></td>
+                                            <td><input type="text" name="nboleta" value="{{po_index[0].nboleta}}"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>DEP</td>
+                                            <td>CÓDIGO UNIDAD EDUCATIVA</td>
+                                            <td>N BOLETA</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 bggris">
+                        <h3>FORMULARIO 1</h3>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 bggrisclaro">
+                        <h3>DIRECTOR / DOCENTE / ADMINISTRATIVO </h3>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <img src="{{asset('logo.png')}}" alt="" class="img-fluid">
+                    </div>
                 </div>
-                <div class="panel-body">
-                    <div class="col-md-12">
-                            <div class="col-md-12">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h2><i class="glyphicon glyphicon-leaf"></i> OPERATIVO ESCOLAR - 2018. </h2>                                     
-                                    </div>
-                                    <div class="col-md-6 bggrisclaro">
-                                        FOLIO <input type="text" name="dep" value="{{po_index[0].dep}}"> <input type="text" name="cod_unidad_educativa" value="{{po_index[0].cod_unidad_educativa}}"> <input type="text" name="nboleta" value="{{po_index[0].nboleta}}">
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-12">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        Subsistema de educación regular - nivel secundario
-                                    </div>
-                                    <div class="col-md-6">
-                                        Dep - Código unidad educativa - n° Boleta
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-12">
-                                <div class="row">
-                                    <div class="col-md-6 bggris">
-                                        <h2> FORMULARIO 1 </h2>
-                                    </div>
-                                    <div class="col-md-6 bggrisclaro">
-                                        <h2> DIRECTOR / DOCENTE / ADMINISTRATIVO </h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="row">
-                                    <div class="col-md-12 bgoscuro">
-                                        <h6> POR FAVOR RESPONDA LAS SIGUIENTES PREGUNTAS</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <br/>
-                            <div class="col-md-12">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label class="control-label">P1.Nombre</label>
-                                            <input type="text" name="nombre" value="{{po_index[0].nombre}}">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label class="control-label">P2.Paterno</label>
-                                            <input type="text" name="paterno" value="{{po_index[0].paterno}}">
-                                        </div>
-                                    </div>                       
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label class="control-label">P3.Materno</label>
-                                            <input type="text" name="materno" value="{{po_index[0].materno}}">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-12">
-                                <div class="row">                            
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label class="control-label">P4. UNIDAD EDUCATIVA</label>
-                                            <input type="text" name="unidad_educativa" value="{{po_index[0].unidad_educativa}}">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label class="control-label">P5. SEXO</label>
-                                            
-                                            {% if po_index[0].sexo == 1  %}
-                                                <input type="radio" name="sexo" id="sexo" value="1" checked="checked"> Hombre
-                                                <input type="radio" name="sexo" id="sexo" value="2" > Mujer
-                                            {% elseif po_index[0].sexo == 2 %}
-                                                <input type="radio" name="sexo" id="sexo" value="1"> Hombre
-                                                <input type="radio" name="sexo" id="sexo" value="2" checked="checked"> Mujer
-                                            {% else %}
-                                                <input type="radio" name="sexo" id="sexo" value="1" checked="checked"> Hombre
-                                                <input type="radio" name="sexo" id="sexo" value="2"> Mujer
-                                            {% endif %} 
-
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label class="control-label">P6. TELÉFONO</label>
-                                            <input type="text" name="telefono" value="{{po_index[0].telefono}}">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label class="control-label">P7. CARGO QUE DESEMPEÑA EN LA UNIDAD EDUCATIVA</label>
-                                            
-                                            {% if po_index[0].cargo == 1  %}
-                                                <input type="radio" name="cargo" id="cargo" value="1" checked="checked"> 1. Docente
-                                                <input type="radio" name="cargo" id="cargo" value="2"> 2. Director
-                                                <input type="radio" name="cargo" id="cargo" value="3"> 3. Administrativo
-                                            {% elseif po_index[0].cargo == 2 %}
-                                                <input type="radio" name="cargo" id="cargo" value="1"> 1. Docente
-                                                <input type="radio" name="cargo" id="cargo" value="2" checked="checked"> 2. Director
-                                                <input type="radio" name="cargo" id="cargo" value="3"> 3. Administrativo
-                                            {% elseif po_index[0].cargo == 3 %}
-                                                <input type="radio" name="cargo" id="cargo" value="1"> 1. Docente
-                                                <input type="radio" name="cargo" id="cargo" value="2"> 2. Director
-                                                <input type="radio" name="cargo" id="cargo" value="3" checked="checked"> 3. Administrativo
-                                            {% else %}
-                                                <input type="radio" name="cargo" id="cargo" value="1" checked="checked"> 1. Docente
-                                                <input type="radio" name="cargo" id="cargo" value="2"> 2. Director
-                                                <input type="radio" name="cargo" id="cargo" value="3"> 3. Administrativo                                            
-                                            {% endif %} 
-                                            
-                                        </div>
-                                    </div>
-                                </div>    
-                            </div>
-                            
-                            <div class="col-md-12">
-                                <div class="row">                            
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label class="control-label">P8. (SOLO PARA PERSONAL CON TRES O MÁS AÑOS DE ANTIGÜEDAD EN LA UNIDAD EDUCATIVA) ¿CUÁNTOS AÑOS USTED TRABAJA EN ESTA UNIDAD EDUCATIVA?</label>
-                                            <input type="text" name="p8" value="{{po_index[0].p8}}">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label class="control-label">P9. (SI ES PROFESOR), AÑO(S) DE ESCOLARIDAD EN EL NIVEL SECUNDARIO EN LOS QUE TRABAJABA EN 2016 </label>
-                                            <input type="text" name="p9" value="{{po_index[0].p9}}">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label class="control-label">P10. (SI ES PROFESOR), ¿QUÉ MATERIA(s) DICTABA EN 2016?</label>
-                                            <input type="text" name="p10" value="{{po_index[0].p10}}">
-                                        </div>
-                                    </div>
-                                </div>    
-                            </div>
-
-                            <div class="col-md-12" style="display: none">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">                                
-                                            <input type="text" name="id_principal" value="{{po_index[0].id}}">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>                      
-                    </div>  
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bgoscuro">
+                        POR FAVOR COMPLETE LOS SIGUIENTES DATOS ACORDE A LOS DATOS OFICIALES DE LA UNIDAD EDUCATIVA
+                    </div>
                 </div>
-            </div>               
+            </div>
+        </div>
+        <br/>
+        <table class="table table-bordered table-striped">
+            <tbody>
+                <tr>
+                    <th>P1.NOMBRE</td>
+                        <td colspan="8"><input type="text" name="nombre" value="{{po_index[0].nombre}}"></td>
+                        <th>P2.PATERNO</td>
+                            <td colspan="8"><input type="text" name="paterno" value="{{po_index[0].paterno}}"></td>
+                            <th>P3.MATERNO</td>
+                                <td colspan="8"><input type="text" name="materno" value="{{po_index[0].materno}}"></td>
+                </tr>
+                <tr>
+                    <th>P4. UNIDAD EDUCATIVA</td>
+                        <td colspan="8"><input type="text" name="unidad_educativa" value="{{po_index[0].unidad_educativa}}"></td>
+                        <th>P5. SEXO</td>
+                            <td colspan="8">
+                                {% if po_index[0].sexo == 1 %}
+                                <input type="radio" name="sexo" id="sexo" value="1" checked="checked"> Hombre
+                                <input type="radio" name="sexo" id="sexo" value="2"> Mujer {% elseif po_index[0].sexo == 2 %}
+                                <input type="radio" name="sexo" id="sexo" value="1"> Hombre
+                                <input type="radio" name="sexo" id="sexo" value="2" checked="checked"> Mujer {% else %}
+                                <input type="radio" name="sexo" id="sexo" value="1" checked="checked"> Hombre
+                                <input type="radio" name="sexo" id="sexo" value="2"> Mujer {% endif %}
+                            </td>
+                            <th>P6. TELÉFONO</td>
+                                <td colspan="8"><input type="text" name="telefono" value="{{po_index[0].telefono}}"></td>
+
+                </tr>
+                <tr>
+                    <th>P7. CARGO QUE DESEMPEÑA EN LA UNIDAD EDUCATIVA</td>
+                        <td colspan="8">
+                            {% if po_index[0].cargo == 1 %}
+                            <input type="radio" name="cargo" id="cargo" value="1" checked="checked"> 1. Docente
+                            <input type="radio" name="cargo" id="cargo" value="2"> 2. Director
+                            <input type="radio" name="cargo" id="cargo" value="3"> 3. Administrativo {% elseif po_index[0].cargo == 2 %}
+                            <input type="radio" name="cargo" id="cargo" value="1"> 1. Docente
+                            <input type="radio" name="cargo" id="cargo" value="2" checked="checked"> 2. Director
+                            <input type="radio" name="cargo" id="cargo" value="3"> 3. Administrativo {% elseif po_index[0].cargo == 3 %}
+                            <input type="radio" name="cargo" id="cargo" value="1"> 1. Docente
+                            <input type="radio" name="cargo" id="cargo" value="2"> 2. Director
+                            <input type="radio" name="cargo" id="cargo" value="3" checked="checked"> 3. Administrativo {% else %}
+                            <input type="radio" name="cargo" id="cargo" value="1" checked="checked"> 1. Docente
+                            <input type="radio" name="cargo" id="cargo" value="2"> 2. Director
+                            <input type="radio" name="cargo" id="cargo" value="3"> 3. Administrativo {% endif %}
+                        </td>
+                </tr>
+                <tr>
+                    <th>P8. (SOLO PARA PERSONAL CON TRES O MÁS AÑOS DE ANTIGÜEDAD EN LA UNIDAD EDUCATIVA) ¿CUÁNTOS AÑOS USTED TRABAJA EN ESTA UNIDAD EDUCATIVA?</th>
+                    <td colspan="8"><input type="text" name="p8" value="{{po_index[0].p8}}"></td>
+                    <th>P9. (SI ES PROFESOR), AÑO(S) DE ESCOLARIDAD EN EL NIVEL SECUNDARIO EN LOS QUE TRABAJABA EN 2016 </th>
+                    <td colspan="8"><input type="text" name="p9" value="{{po_index[0].p9}}"></td>
+                    <th>P10. (SI ES PROFESOR), ¿QUÉ MATERIA(s) DICTABA EN 2016?</th>
+                    <td colspan="8"><input type="text" name="p10" value="{{po_index[0].p10}}"></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <br/>
+
+        <div class="col-md-12" style="display: none">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="text" name="id_principal" value="{{po_index[0].id}}">
+                    </div>
+                </div>
+            </div>
         </div>
 
-        {% if po_fac %}
-            <div class="table-responsive">                
-                <table class="table table-no-border table-middle table-lilac">
-                    <tbody>
-                        <tr>
-                            <td align="left" class="warning"><b class="text-block"> P11. SEGÚN SU PERCEPCIÓN, ¿CUÁLES FUERON LOS FACTORES DETERMINANTES PARA QUE LOS ESTUDIANTES QUE CURSARON EN LA GESTIÓN 2016 EN EL NIVEL SECUNDARIO NO SE INSCRIBIERAN EN LA GESTIÓN 2017?</b></td>
-                            <td align="center" class="warning"><b class="text-block"> </b></td>                                
-                            <td align="left" class="warning"><b class="text-block">MARQUE LAS QUE CORRESPONDA CON UNA “X”</b></td>
-                            <td align="left" class="warning"><b class="text-block">ENUMERE POR ORDEN DE IMPORTANCIA</b></td>
-                            <td align="left" class="warning"><b class="text-block">¿POR QUÉ?</b></td>                                                    
-                            <td align="left" class="warning" style="display:none;"><b class="text-block">Id</b></td>
-                        </tr>
-                        
-                        {% for data in po_fac %}                                                                
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                {% if po_fac %}
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <th colspan="2" class="bggrisclaro">P11. SEGÚN SU PERCEPCIÓN, ¿CUÁLES FUERON LOS FACTORES DETERMINANTES PARA QUE LOS ESTUDIANTES QUE CURSARON EN LA GESTIÓN 2016 EN EL NIVEL SECUNDARIO NO SE INSCRIBIERAN EN LA GESTIÓN 2017?</th>
+                            <th class="bggrisclaro">MARQUE LAS QUE CORRESPONDA CON UNA “X”</th>
+                            <th class="bggrisclaro">ENUMERE POR ORDEN DE IMPORTANCIA</th>
+                            <th class="bggrisclaro">¿POR QUÉ?</th>
+                        </thead>
+                        <tbody>
+
+                            {% for data in po_fac %}
                             <tr>
                                 <td>
                                     {{data.factor_tipo}}
@@ -228,44 +185,55 @@
                                 <td>
                                     {{data.factor}}
                                 </td>
-                                <td>                                
-                                    {% if data.seleccion == 1  %}
-                                        <input type="checkbox" name="sel_{{loop.index}}" value="{{data.seleccion}}" checked="checked"> ({{loop.index}})<br>
-                                    {% else %}
-                                        <input type="checkbox" name="sel_{{loop.index}}" value="{{data.seleccion}}"> ({{loop.index}})<br>
-                                    {% endif %}    
+                                <td>
+                                    {% if data.seleccion == 1 %}
+                                    <input type="checkbox" name="sel_{{loop.index}}" value="{{data.seleccion}}" checked="checked"> ({{loop.index}})<br> {% else %}
+                                    <input type="checkbox" name="sel_{{loop.index}}" value="{{data.seleccion}}"> ({{loop.index}})<br> {% endif %}
                                 </td>
-                                <td>                                
+                                <td>
                                     <input type="text" name="orden_{{loop.index}}" value="{{data.orden_importancia}}">
                                 </td>
                                 <td>
                                     <input type="text" name="porque_{{loop.index}}" value="{{data.por_que}}">
-                                </td>                                                                                              
+                                </td>
                                 <td style="display:none;">
                                     <input type="text" name="id_{{loop.index}}" value="{{data.id}}">
                                 </td>
                             </tr>
-                        {% endfor %}
-                        
+                            {% endfor %}
+
                         </tbody>
                     </table>
-                </div>
-            </div>                                 
-        {% endif %}
 
-        <div class="col-md-12">
-            <div class="row">                            
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label class="control-label">P12. ANTE LA DISMINUCIÓN DE L MATRÍCULA EN LA GESTIÓN 2017, ¿QUÉ MEDIDAS TOMARON EN LA UNIDAD EDUCATIVA, EN LA GESTIÓN 2018 PARA QUE LNO DISMINUYERA LA INSCRIPCIÓN DE LOS ESTUDIANTES EN LE NIVEL SECUNDARIO?</label>
-                        <input type="text" name="p12" value="{{po_index[0].p12}}" size="250">
-                    </div>
                 </div>
+                {% endif %}
             </div>
-        </div>        
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <table class="table table-bordered table-striped ">
+                    <tbody>
+                        <tr>
+                            <td>P12. ANTE LA DISMINUCIÓN DE L MATRÍCULA EN LA GESTIÓN 2017, ¿QUÉ MEDIDAS TOMARON EN LA UNIDAD EDUCATIVA, EN LA GESTIÓN 2018 PARA QUE LNO DISMINUYERA LA INSCRIPCIÓN DE LOS ESTUDIANTES EN LE NIVEL SECUNDARIO?</td>
+                        </tr>
+                        <tr>
+                            <td><input class="col-md-12" type="text" name="p12" value="{{po_index[0].p12}}"></td>
+                        </tr>
+                        <tr>
+                            <td>P13. ¿QUÉ MEDIDAS TOMARIA USTED PARA QUE NO DISMINUYERA LA INSCRIPCIÓN DE LOS ESTUDIANTES EN EL NIVEL SECUNDARIO EN LA GESTIÓN 2019?</td>
+                        </tr>
+                        <tr>
+                            <td><input class="col-md-12" type="text" name="p13" value="{{po_index[0].p13}}"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
+
+        {#
         <div class="col-md-12">
-            <div class="row">                            
+            <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
                         <label class="control-label">P13. ¿QUÉ MEDIDAS TOMARIA USTED PARA QUE NO DISMINUYERA LA INSCRIPCIÓN DE LOS ESTUDIANTES EN EL NIVEL SECUNDARIO EN LA GESTIÓN 2019?</label>
@@ -273,37 +241,46 @@
                     </div>
                 </div>
             </div>
-        </div>  
-        
+        </div> #} {#
         <div class="modal-footer">
             <div class="form-footer">
-                <div class="col-sm-offset-5">                    
+                <div class="col-sm-offset-5">
                     <button id="botonguardarmodulo" type="submit" class="btn btn-success btn-stroke">
                         <i class="fa fa-floppy-o"></i> Guardar
                     </button>
                 </div>
             </div>
+        </div> #}
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <br>
+                <button id="botonguardarmodulo" type="submit" class="btn btn-primary btn-block">Guardar</button>
+                </td>
+                </tr>
+            </div>
         </div>
-        </form> 
+
+        </form>
+
+
+
     </div>
-</div>
-
-
-{#<div class="row">
-    <div class="panel-body">
-        <div id="list">
-            {% if po_index %}
-            <div class="table-responsive">                
-                <table class="table table-no-border table-middle table-lilac">
-                    <tbody>
-                        <tr>
-                            <td align="left" class="warning"><b class="text-block">Nombre</b></td>
-                            <td align="center" class="warning"><b class="text-block">Paterno</b></td>                                
-                            <td align="left" class="warning"><b class="text-block">Materno</b></td>
-                            <td align="left" class="warning"><b class="text-block">Unidad Educativa</b></td>
-                            <td align="left" class="warning"><b class="text-block">Telefono</b></td>
-                        </tr>                        
-                        {% for data in po_index %}                                                                
+    {#
+    <div class="row">
+        <div class="panel-body">
+            <div id="list">
+                {% if po_index %}
+                <div class="table-responsive">
+                    <table class="table table-no-border table-middle table-lilac">
+                        <tbody>
+                            <tr>
+                                <td align="left" class="warning"><b class="text-block">Nombre</b></td>
+                                <td align="center" class="warning"><b class="text-block">Paterno</b></td>
+                                <td align="left" class="warning"><b class="text-block">Materno</b></td>
+                                <td align="left" class="warning"><b class="text-block">Unidad Educativa</b></td>
+                                <td align="left" class="warning"><b class="text-block">Telefono</b></td>
+                            </tr>
+                            {% for data in po_index %}
                             <tr>
                                 <td>
                                     {{data.nombre}}
@@ -317,22 +294,23 @@
                                 <td>
                                     {{data.unidad_educativa}}
                                 </td>
-                                <td>  
+                                <td>
                                     {{data.telefono}}
-                                </td>                                    
+                                </td>
                             </tr>
-                        {% endfor %}                        
+                            {% endfor %}
                         </tbody>
                     </table>
                 </div>
-            </div>                                 
-            {% endif %}            
-        </div>    
+            </div>
+            {% endif %}
+        </div>
     </div>
-</div>#}
+    </div>#}
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
+
 </html>
