@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+     {% include 'AdmMaster/menuforms.html.twig' %}
+    <div class="container">
+        <h1>FORMULARIO 3</h1>
+        <a href="{{path('formulario3_new')}}" class="btn btn-success">Nuevo formulario</a>
+            
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Dep</th>
+                    <th>Sie</th>
+                    <th>Numboleta</th>
+                    <th>Unidad Educativa</th>
+                    <th>Nombres</th>
+                    <th>Paterno</th>
+                    <th>Materno</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for estudiante in estudiantes %}
+                <tr>
+                    <td>{{ estudiante.folioDep }}</td>
+                    <td>{{ estudiante.folioCodigoUe }}</td>
+                    <td>{{ estudiante.folioBoleta }}</td>
+                    <td>{{ estudiante.p1Ue }}</td>
+                    <td>{{ estudiante.p2Nombres }}</td>
+                    <td>{{ estudiante.p3Paterno }}</td>
+                    <td>{{ estudiante.p4Materno }}</td>
+                    <td>
+                        <a href="{{ path('formulario3_editar', { 'id': estudiante.id }) }}" class="btn btn-primary btn-xs text-primary" data-toggle="tooltip" data-placement="top" title="Editar">
+                            <i class="fa fa-pencil"></i>
+                        </a>
+                        <a href="{{ path('formulario3_eliminar', { 'id': estudiante.id }) }}" class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" title="Eliminar" onclick="return confirm('¿Esta suguro de eliminar?')">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
+
+

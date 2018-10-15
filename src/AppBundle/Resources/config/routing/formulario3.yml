@@ -1,0 +1,24 @@
+formulario3_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Formulario3:index" }
+    methods:  GET
+
+formulario3_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Formulario3:new" }
+    methods:  [GET, POST]
+
+formulario3_editar:
+    path:     /{id}/editar
+    defaults: { _controller: "AppBundle:Formulario3:editar" }
+    methods:  [GET, POST]
+
+formulario3_update:
+    path:     /update
+    defaults: { _controller: "AppBundle:Formulario3:update" }
+    methods:  [POST]
+
+formulario3_eliminar:
+    path:     /{id}/eliminar
+    defaults: { _controller: "AppBundle:Formulario3:eliminar" }
+    methods:  [GET]

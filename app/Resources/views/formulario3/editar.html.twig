@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cuestionario 3</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style type="text/css">
+        table{
+            width: 100%;
+        }
+        textarea{
+            width: 100%;
+        }
+        .bgoscuro{
+            background: #000000;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .bggris{
+            background: #858383;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .bggrisclaro{
+            background: #CCCCCC;
+            color: #000000;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form action="{{path('formulario3_update')}}" method="post">
+        <br><br>
+        <div class="text-right">
+            <a href="{{path('formulario3_index')}}">Ver formularios registrados</a>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <h2>OPERATIVO ESCOLAR - 2018</h2>
+                <p>SUBSISTEMA DE EDUCACIÓN REGULAR - NIVEL SECUNDARIO</p>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <table>
+                    <tr>
+                        <input type="hidden" name="id" value={{entity.id}}>
+                        <td><input type="text" name="departamento" size="5" value={{entity.folioDep}}></td>
+                        <td><input type="text" name="codigounidadeducativa" value={{entity.folioCodigoUe}} size="40"></td>
+                        <td><input type="text" name="numeroboleta" value={{entity.folioBoleta}} size="10"></td>
+                    </tr>
+                    <tr>
+                        <td>DEP</td>
+                        <td>CÓDIGO UNIDAD EDUCATIVA</td>
+                        <td>N BOLETA</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 bggris">
+                        <h3>FORMULARIO 3</h3>
+                    </div>
+                    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 bggrisclaro">
+                        <h3>ESTUDIANTE</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bgoscuro">
+                        ESCRIBE EN EL ESPACIO EN BLANCO O MARCA LA OPCIÓN QUE MEJOR SE ADECÚE A
+                        LA RESPUESTA DEL ESTUDIANTE
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                LOGO
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bggris" aria-colspan="2" >
+                ESTAMOS DESARROLLANDO UN ESTUDIO PARA DETERMINAR LAS RAZONES DEL PORQUÉ ALGUNOS DE LO ESTUDIANTES NO SE INSCRIBIERON EN LA GESTIÓN 2017. TE PEDIMOS NOS AYUDES RESPONDIENDO LAS SIGUIENTES PREGUNTAS CON HONESTIDAD PARA QUE PODAMOS CONOCER LOS PROBLEMAS QUE TUVISTE EL AÑO PASADO Y TE OBLIGARON A NO INSCRIBIRTE. Y ASI, PODER AYUDARLES DE ALGUNA MANERA.
+            </div>
+        </div>
+
+        <table class="table-bordered" width="100%">
+            <tr>
+                <th>P1. UNIDAD EDUCATIVA</th>
+                <td colspan="8"><input type="text" name="p1unidadeducativa" value={{entity.p1Ue}}></td>
+            </tr>
+            <tr>
+                <th>P2. NOMBRES</th>
+                <td colspan="8"><input type="text" name="p2nombres" value={{entity.p2Nombres}}></td>
+            </tr>
+            <tr>
+                <th>P3. APELLIDO PATERNO</th>
+                <td><input type="text" name="p3paterno" value={{entity.p3Paterno}}></td>
+                <th colspan="3">P4. APELLIDO MATERNO</th>
+                <td colspan="4"><input type="text" name="p4materno" value={{entity.p4Materno}}></td>
+            </tr>
+            <tr>
+                <th>P5. SEXO</th>
+                <td>
+                    <input type="radio" name="p5sexo" id="p5Sexom" value="1" {% if entity.p5Sexo == 1 %} checked="checked" {% endif %}>1. Hombre
+                    <input type="radio" name="p5sexo" id="p5Sexof" value="2" {% if entity.p5Sexo == 2 %} checked="checked" {% endif %}>2. Mujer
+                </td>
+                <th colspan="3">P6. EDAD</th>
+                <td colspan="4"><input type="text" name="p6edad" value="{{entity.p6Edad}}"></td>
+            </tr>
+            <tr>
+                <th >P7. EN EL AÑO 2016 ESTABAS INCRITO EN ESTA MISMA UNIDAD EDUCATIVA</th>
+                <td colspan="8">
+                    <input type="radio" name="p7si" value="1" {% if entity.p7Inscrito2016 == 1 %} checked="checked" {% endif %}>1. SI
+                    <input type="radio" name="p7si" value="2" {% if entity.p7Inscrito2016 == 2 %} checked="checked" {% endif %}>2. NO
+                </td>
+            </tr>
+            <tr>
+                <th >P8. SI ES NO, ¿CUÁL ES EL NOMBRE DE LA UNIDAD EDUCATIVA? </th>
+                 <td colspan="8"><input type="text" name="p8nomue" value={{entity.p8noUe}}></td>
+
+            </tr>
+            <tr>
+                <th>P9. AÑO DE ESCOLARIDAD EN EL QUE ESTABA INSCRITO EL 2016</th>
+                <th colspan="8"><input type="text" name="p9añoesc2016" value={{entity.p9AnioEscolaridad2016}}></th>
+            </tr>
+            <tr>
+                <th>P10. AÑO DE ESCOLARIDAD EN EL QUE ESTÁ INSCRITO EL 2018</th>
+                <th colspan="8"><input type="text" name="p10añoesc2018" value={{entity.p10AnioEscolaridad2018}}></th>
+            </tr>
+            <tr>
+                <th>P11. CÓDIGO RUDE:</th>
+                <th colspan="8"><input type="text" name="p11codrue" value={{entity.p11Rude}}></th>
+            </tr>
+
+        </table>
+        <br>
+        <table>
+            <tr>
+                <th align="center" class="bggris">P12. ¿POR QUÉ RAZONES NO TE INSCRIBISTE EL AÑO PASADO (2017)?</th>
+                <th colspan="3" align="center" class="bggrisclaro">MARQUE LAS OPCIONES QUE SE ADECUÉN A LA RESPUESTA DEL ESTUDIANTE</th>
+                <td colspan="2" align="center" class="bgoscuro"><b>ENUMERE POR ORDEN DE IMPORTANCIA</b> </td>
+            </tr>
+            <tr>
+                <td rowspan="10">DENTRO DE LA UNIDAD EDUCATIVA: FACTORES ATRIBUIDOS AL ESTUDIANTE</td>
+                <td colspan="2">1. Enfermedad</td>
+                <th ><input type="checkbox"  name="p121enfermedad_1" {% if entity.p121Enfermedad == 1 %} checked="checked" {% endif %}></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p121enfermedad" value={{entity.p121Importancia}}></td>
+            </tr>
+            <tr>
+                <td colspan="2">2. Accidente</td>
+                <th ><input type="checkbox"  name="p122accidente_1" {% if entity.p122Accidente == 1 %} checked="checked" {% endif %} ></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p122accidente" value={{entity.p122Importancia}}></td>
+            </tr>
+            <tr>
+                <td colspan="2">3. Discapacidad</td>
+                <th ><input type="checkbox"  name="p123discapacidad_1" {% if entity.p123Discapacidad == 1 %} checked="checked" {% endif %}></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p123discapacidad" value={{entity.p123Importancia}} ></td>
+            </tr>
+            <tr>
+                <td colspan="2">4. Sobre edad</td>
+                <th ><input type="checkbox"  name="p124sobreedad_1" {% if entity.p124Edad == 1 %} checked="checked" {% endif %}></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p124sobreedad" value={{entity.p124Importancia}}></td>
+            </tr>
+            <tr>
+                <td colspan="2">5. Precocidad</td>
+                <th ><input type="checkbox"  name="p125precosidad_1" {% if entity.p125Precocidad == 1 %} checked="checked" {% endif %}></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p125precosidad" value={{entity.p125Importancia}}></td>
+            </tr>
+            <tr>
+                <td colspan="2">6. Embarazo/Paternidad</td>
+                <th ><input type="checkbox"  name="p126embarazo_1" {% if entity.p126EmbarazoPaternidad == 1 %} checked="checked" {% endif %}></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p126embarazo" value={{entity.p126Importancia}}></td>
+            </tr>
+            <tr>
+                <td colspan="2">7. El estudiante ya formo su propio hogar</td>
+                <th ><input type="checkbox"  name="p127hogar_1" {% if entity.p127FormoHogar == 1 %} checked="checked" {% endif %}></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p127hogar" value={{entity.p127Importancia}}></td>
+            </tr>
+            <tr>
+                <td colspan="2">8. Abandono en la gestión 2016</td>
+                <th ><input type="checkbox"  name="p128abandono_1" {% if entity.p128Abandono2016 == 1 %} checked="checked" {% endif %}></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p128abandono" value={{entity.p128Importancia}}></td>
+            </tr>
+            <tr>
+                <td colspan="2">9. Reprobación en la gestión 2016</td>
+                <th ><input type="checkbox"  name="p129reprobacion_1" {% if entity.p129Reprobacion2016 == 1 %} checked="checked" {% endif %}></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p129reprobacion" value={{entity.p129Importancia}}></td>
+            </tr>
+            <tr>
+                <td colspan="2">10. Se inscribió a un Centro de Educación Alternativa (CEA)</td>
+                <th ><input type="checkbox"  name="p1210centro_1" {% if entity.p1210InscricioCea == 1 %} checked="checked" {% endif %}></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1210centro" value={{entity.p1210Importancia}}></td>
+            </tr>
+
+            <tr>
+                <td rowspan="3">DENTRO DE LA UNIDAD EDUCATIVA:FACTORES ATRIBUIDOS A LA UNIDAD EDUCATIVA</td>
+                <td colspan="2">11. Bullying</td>
+                <th ><input type="checkbox"  name="p12bull_1" {% if entity.p1211Bulling == 1 %} checked="checked" {% endif %}></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p12bull" value={{entity.p1211Importancia}}></td>
+            </tr>
+            <tr>
+                <td colspan="2">12. La Unidad Educativa es distante</td>
+                <th ><input type="checkbox"  name="p12distante_1" {% if entity.p1212UnidadDistante == 1 %} checked="checked" {% endif %}></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p12distante" value={{entity.p1212Importancia}}></td>
+            </tr>
+            <tr>
+                <td colspan="2">13. La Unidad Educativa no oferta el turno requerido por algunos estudiantes</td>
+                <th ><input type="checkbox"  name="p12oferta_1" {% if entity.p1213UnidadNoOferta == 1 %} checked="checked" {% endif %}></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p12oferta" value={{entity.p1213Importancia}}></td>
+            </tr>
+            <tr>
+                <td rowspan="7">FUERA DE LA UNIDAD EDUCATIVA: FACTORES FAMILIARES </td>
+                <td colspan="2">14. Responsabilidades en el hogar: Quehaceres domésticos (cocinar, lavar, planchar), atención a niños, a ancianos, a personas enfermas o con discapacidad</td>
+                <th ><input type="checkbox"  name="p141_1" {% if entity.p1214ResponsabilidadesHogar == 1 %} checked="checked" {% endif %}></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p141" value={{entity.p1214Importancia}}></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">15. Traslado de la familia a otros: Departamentos, Provincias, Municipios, Barrios, Paises</td>
+                <th><input type="checkbox" name="p15tralado_1" {% if entity.p1215TrasladoFamilia == 1 %} checked="checked" {% endif %}></th>
+                <td colspan="2" align="center"><input  type="text" size="5" name="p15tralado" value={{entity.p1215Importancia}}}></td>
+
+            </tr>
+
+            <tr>
+                <td colspan="2">16. Falta de apoyo de los familiares para la continuación de sus estudios</td>
+                <th><input type="checkbox" name="p1416faltaapoyo_1" {% if entity.p1216FaltaApoyo == 1 %} checked="checked" {% endif %}></th>
+                <td colspan="2" align="center"><input  type="text" size="5" name="p1416faltaapoyo" value={{entity.p1216Importancia}}></td>
+
+            </tr>
+            <tr>
+                <td colspan="2">17. No vive en un hogar nuclear completo (Su Padre y/o su Madre no viven con el)</td>
+                <th><input type="checkbox" name="p1417novivehogarcompleto_1" {% if entity.p1217NoViveHogarCompleto == 1 %} checked="checked" {% endif %}></th>
+                <td colspan="2" align="center"><input  type="text" size="5" name="p1417novivehogarcompleto" value={{entity.p1217Importancia}}></td>
+
+            </tr>
+            <tr>
+                <td colspan="2">18. Separación de los miembros del hogar (Padres, hermanos, parientes cercanos, etc)</td>
+                <th><input type="checkbox" name="p1418separacionhogar_1" {% if entity.p1217NoViveHogarCompleto == 1 %} checked="checked" {% endif %}></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1418separacionhogar" value={{entity.p1218Importancia}}></td>
+
+            </tr>
+            <tr>
+                <td colspan="2">19. Violencia familiar</td>
+                <th><input type="checkbox" name="p1419violenciafamiliar_1"></th>
+                <td colspan="2" align="center"><input  type="text" size="5" name="p1419violenciafamiliar" value={{entity.p1219Importancia}}></td>
+
+            </tr>
+            <tr>
+                <td colspan="2">20. Fallecimiento o accidente de algún familiar</td>
+                <th><input type="checkbox" name="p1420fallecimientofamiliar_1"></th>
+                <td colspan="2" align="center"><input  type="text" size="5" name="p1420fallecimientofamiliar" value={{entity.p1220Importancia}}></td>
+            </tr>
+            <tr>
+                <td rowspan="3">FUERA DE LA UNIDAD EDUCATIVA: FACTORES ECONÓMICOS</td>
+                <td colspan="2">21. Falta de dinero</td>
+                <th ><input type="checkbox"  name="p1420ffueradelaunidad_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1420ffueradelaunidad" value={{entity.p1221Importancia}}></td>
+            </tr>
+            <tr>
+                <td colspan="2">22. Trabajo de los estudiantes</td>
+                <th ><input type="checkbox"  name="p1422trabajodeloses_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1422trabajodeloses" value={{entity.p1222Importancia}}></td>
+            </tr>
+            <tr>
+                <td colspan="2">23. Por trabajo de los padres</td>
+                <th ><input type="checkbox"  name="pp1423trabajodepadres_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="pp1423trabajodepadres" value={{entity.p1223Importancia}}></td>
+            </tr>
+            <tr>
+                <td rowspan="4">FUERA DE LA UNIDAD EDUCATIVA: FACTORES SOCIALES</td>
+                <td colspan="2">24. Pandillas</td>
+                <th ><input type="checkbox"  name="p1424pandillas_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1424pandillas" value={{entity.p1224Importancia}}></td>
+            </tr>
+            <tr>
+                <td colspan="2">25. Drogas</td>
+                <th ><input type="checkbox"  name="p1425drogas_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1425drogas" value={{entity.p1225Importancia}}></td>
+            </tr>
+            <tr>
+                <td colspan="2">26. Alcoholismo</td>
+                <th ><input type="checkbox"  name="p1426alcoholismo_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1426alcoholismo" value={{entity.p1226Importancia}}></td>
+            </tr>
+            <tr>
+                <td colspan="2">26. Otra (especifique)</td>
+                <th ><input type="checkbox"  name="p1426otra_1"></th>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1426otra" value={{entity.p1227Importancia}}></td>
+            </tr>
+            <tr>
+                <td>26. Otra (especifique)</td>
+                <td colspan="6"><input type="text" name="p1426otra_1_text" value={{entity.p1227Importancia}}></td>
+            </tr>
+
+        </table>
+        <br>
+
+        <table>
+            <tr>
+                <th>(SÓLO PARA ESTUDIANTES QUE RESPONDIERON LA OPCIÓN 22)
+                    <br>P13. ¿QUÉ TIPO DE TRABAJO REALIZABAS EL AÑO PASADO (GESTIÓN 2017)? (puede marcar más de una opción)
+                </th>
+            </tr>
+            <tr>
+                <td>1. Trabajaba para otras personas a cambio de una remuneración en dinero o especie, </td>
+                <td><input type="checkbox" name="p131"></td>
+            </tr>
+            <tr>
+                <td>2. Trabajaba o ayudaba en alguna actividad propia o familiar sin remuneración (ayudaba en una actividad familiar que generaba ingresos) </td>
+                <td><input type="checkbox"  name="p132"></td>
+            </tr>
+            <tr>
+                <td>3. Trabajaba o ayudaba en actividades de agricultura, o de crianza de animales, o de caza, o de pesca</td>
+                <td><input type="checkbox"  name="p133"></td>
+            </tr>
+            <tr>
+                <td>4. Trabajaba o ayudaba en la preparación de alimentos, hilado, tejido, costura, artesanías, mecánica, carpintería, panadería, gastronomía</td>
+                <td><input type="checkbox"  name="p134"></td>
+            </tr>
+            <tr>
+                <td>5. Vendía en una tienda, en un puesto callejero, o como ambulante, u otras actividades para la venta,  </td>
+                <td><input type="checkbox"  name="p135"></td>
+            </tr>
+            <tr>
+                <td>6. Lavaba o cuidaba vehículos, voceaba en minibús, lustraba zapatos, cargaba bolsas en mercados o terminales, etc.</td>
+                <td><input type="checkbox"  name="p136"></td>
+            </tr>
+            <tr>
+                <td>7. Trabajaba como trabajador (a) del hogar, cuidaba o atendía a niños, o ancianos, enfermos, o personas con discapacidad, fuera de su hogar </td>
+                <td><input type="checkbox"  name="p137"></td>
+            </tr>
+            <tr>
+                <td>8. Trabajaba en actividades de minería o zafra o trabajo nocturno </td>
+                <td><input type="checkbox"  name="p138"></td>
+            </tr>
+            <tr>
+                <td>9. Realizaba alguna otra actividad por la cual ganaba dinero (especifique) <input type="text" name="p1427razon_1"></td>
+
+                <td><input type="checkbox"  name="p139"></td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <th>p14. ¿EN QUÉ TURNO(S) TRABAJÓ EN LA GESTIÓN 2017? (puede marcar más de una opción) </th>
+                <td>1.-mañana <input type="checkbox"  name="p14manana"></td>
+                <td>2.-tarde <input type="checkbox"  name="p14tarde"></td>
+                <td>3.-noche <input type="checkbox"  name="p14noche"></td>
+            </tr>
+            <br>
+            <tr>
+                <th colspan="10" >P15. ¿PORQUÉ RAZONES CREES QUE NO PUDISTE TRABAJAR Y ESTUDIAR AL MISMO TIEMPO EL AÑO PASADO (GESTIÓN 2017)?
+                    (puede marcar más de una opción)
+                </th>
+
+            </tr>
+            <br>
+            <tr>
+                <td>1. Trabajaba todo el día </td>
+                <td><input type="checkbox"  name="p151"></td>
+            </tr>
+            <tr>
+                <td>2. No había una Unidad Educativa que oferte el turno que necesitaba  </td>
+                <td><input type="checkbox"  name="p152"></td>
+            </tr>
+            <tr>
+                <td>3. Era muy lejos la distancia de su trabajo a la Unidad Educativa  </td>
+                <td><input type="checkbox"  name="p153"></td>
+            </tr>
+            <tr>
+                <td>4. Era muy lejos la distancia de su hogar a su trabajo </td>
+                <td><input type="checkbox"  name="p154"></td>
+            </tr>
+            <tr>
+                <td>5. Era muy lejos la distancia de su hogar a la Unidad Educativa  </td>
+                <td><input type="checkbox"  name="p155"></td>
+            </tr>
+            <tr>
+                <td>6. El trabajo que realizaba lo dejaba muy cansado(a) </td>
+                <td><input type="checkbox"  name="p156"></td>
+            </tr>
+            <tr>
+                <td>7. Luego de trabajar tenía que ir a ayudar a su casaa  </td>
+                <td><input type="checkbox"  name="p157"></td>
+            </tr>
+            <tr>
+                <td>8. Por falta de dinero para estudiar  </td>
+                <td><input type="checkbox"  name="p158"></td>
+            </tr>
+            <tr>
+                <td>9. Por falta de apoyo de sus padres  </td>
+                <td><input type="checkbox"  name="p159"></td>
+            </tr>
+            <tr>
+                <td>10. Otro (especifique) <input type="text" name="p1427razon_1"> </td>
+
+                <td><input type="checkbox"  name="p1510"></td>
+            </tr>
+
+        </table>
+
+        <br>
+
+        <table>
+            <tr>
+                <th>P16.- ¿QUÉ TE DIJERON TUS PAPÁS/FAMILIARES CUANDO NO TE INSCRIBISTE EL AÑO PASADO (GESTIÓN 2017)?</th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea name="p161" id="" cols="30" rows="10" value={{entity.p16Papas}}>{{entity.p16Papas}}</textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>P17.- ¿PORQUÉ TE VOLVISTE A INSCRIBIR EN LA GESTIÓN 2018?</th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea name="p171" id="" cols="30" rows="10" value={{entity.p17Vuelve2018}}>{{entity.p17Vuelve2018}}</textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>P18.- ¿SABES SI ALGUNO(S) DE TUS COMPAÑEROS DE TU CURSO EN LA GESTIÓN 2016 NO SE INSCRIBIERON EN LA GESTIÓN 2017?</th>
+            </tr>
+            <tr>
+                <td ALIGN="center">1. SI <input type="radio"  name="p18" value="1">2. NO <input type="radio"  name="p18" value="2"></td>
+
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <b>P19.- SI RESPONDE SI, ¿SABES CUALES FUERON LOS MOTIVOS O RAZONES?</b>
+            </tr>
+            <tr>
+                (COLOCAR EL CÓDIGO QUE CORRESPONDA O SE ADECUE MEJOR A LAS OPCIONES DE LA PREGUNTA P12)
+            </tr>
+            <tr>
+                <td>Primera Razón</td>
+                <td>Segunda Razón</td>
+                <td>Tercera Razón</td>
+                <td>Cuarta Razón </td>
+                <td> Quinta Razón   </td>
+            </tr>
+            <tr>
+                <td><input type="text" name="p19primerarazon" value={{entity.p19Primera}}></td>
+                <td><input type="text" name="p19segundarazon" value={{entity.p19Segunda}}></td>
+                <td><input type="text" name="p19tercerarazon" value={{entity.p19Tercera}}></td>
+                <td><input type="text" name="p19cuartarazon" value={{entity.p19Cuarta}}> </td>
+                <td> <input type="text" name="p19quintarazon" value={{entity.p19Quinta}}>  </td>
+            </tr>
+            <br>
+            <tr>
+                <th>OTRA (ESPECIFIQUE)</th>
+                <td> <input type="text" name="p19otra" value="{{entity.p19Otra}}"   >  </td>
+            </tr>
+
+            <tr>
+                <th colspan="6">P20. PERSONA DE LA UNIDAD EDUCATIVA QUE ACOMPAÑÓ LA ENTREVISTA AL ESTUDIANTE:</th>
+
+            </tr>
+            <tr>
+                <td>NOMBRE COMPLETO</td>
+                <td> <input type="text" name="p20nombre" value={{entity.p20Nombre}}>  </td>
+            </tr>
+            <tr>
+                <td>CARGO</td>
+                <td> <input type="text" name="p20cargo" value={{entity.p20Cargo}}>  </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <br>
+                    <button type="submit" class="btn btn-primary btn-block">Guardar</button>
+                </td>
+            </tr>
+        </table>
+        <br><br>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
+<script>
+var sexo={{entity.p5Sexo}}
+var p121Enfermedad  = {{entity.p121Enfermedad}}
+
+//alert(p121Enfermedad);
+
+        $(document).ready(function () {
+            alert({{entity.p7Inscrito2016}});
+            if(sexo=='1'){
+               // alert("masc");
+                 
+                $('#p5sexom').prop('checked',true)
+                //$("#p5sexom").attr('checked',true)
+            }
+            else{
+                
+               // $('#p5sexof').prop('checked',true)
+               $("#p5sexof").attr('checked',true)
+            }
+            if(p121Enfermedad==1){
+                
+                 
+                //$('#p5sexom').prop('checked',true)
+                $('#p121Enfermedad').attr('checked');
+            }
+            
+        });
+    
+</script>  
+
+
+
