@@ -39,10 +39,23 @@ class Form4validacionRegistroController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+            $form4validacionRegistro_aux = $em->getRepository('AppBundle:Form4validacionRegistro')->findBy(array(
+                'dep' => $form4validacionRegistro->getDep(),
+                'sie' => $form4validacionRegistro->getSie(),
+                'numBoleta' => $form4validacionRegistro->getNumBoleta()
+            ));
+
+            if ($form4validacionRegistro_aux) {
+                $this->get('session')->getFlashBag()->add('registroError', 'Error, ya existe el número de folio.');
+                return $this->redirectToRoute('form4validacionregistro_index');
+            }
+
+            $em = $this->getDoctrine()->getManager();
             $em->persist($form4validacionRegistro);
             $em->flush();
 
-            return $this->redirectToRoute('form4validacionregistro_show', array('id' => $form4validacionRegistro->getId()));
+            $this->get('session')->getFlashBag()->add('registroOk', 'Registro exitoso.');
+            return $this->redirectToRoute('form4validacionregistro_index');
         }
 
         return $this->render('form4validacionregistro/new.html.twig', array(
@@ -76,9 +89,22 @@ class Form4validacionRegistroController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+            /*$em = $this->getDoctrine()->getManager();
+            $form4validacionRegistro_aux = $em->getRepository('AppBundle:Form4validacionRegistro')->findBy(array(
+                'dep' => $form4validacionRegistro->getDep(),
+                'sie' => $form4validacionRegistro->getSie(),
+                'numBoleta' => $form4validacionRegistro->getNumBoleta()
+            ));
+
+            if ($form4validacionRegistro_aux) {
+                $this->get('session')->getFlashBag()->add('registroError', 'Error, ya existe el número de folio.');
+                return $this->redirectToRoute('form4validacionregistro_index');
+            }*/
+
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('form4validacionregistro_edit', array('id' => $form4validacionRegistro->getId()));
+            $this->get('session')->getFlashBag()->add('registroOk', 'Registro exitoso.');
+            return $this->redirectToRoute('form4validacionregistro_index');
         }
 
         return $this->render('form4validacionregistro/edit.html.twig', array(
@@ -120,5 +146,19 @@ class Form4validacionRegistroController extends Controller
             ->setMethod('DELETE')
             ->getForm()
         ;
+    }
+
+    /**
+     * Deletes a form4validacionRegistro entity.
+     *
+     */
+    public function eliminarAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $form4validacionRegistro = $em->getRepository('AppBundle:Form4validacionRegistro')->find($request->get('id'));
+        $em->remove($form4validacionRegistro);
+        $em->flush();
+        
+        return $this->redirectToRoute('form4validacionregistro_index');
     }
 }

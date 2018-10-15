@@ -22,3 +22,7 @@ form4validacionregistro_delete:
     path:     /{id}/delete
     defaults: { _controller: "AppBundle:Form4validacionRegistro:delete" }
     methods:  DELETE
+
+form4validacionregistro_eliminar:
+    path:     /{id}/eliminar
+    defaults: { _controller: "AppBundle:Form4validacionRegistro:eliminar" }

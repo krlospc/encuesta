@@ -64,6 +64,9 @@ AppBundle\Entity\Form3:
         p5Sexo:
             type: string
             nullable: true
+            length: 1
+            options:
+                fixed: false
             column: p5_sexo
         p6Edad:
             type: integer
@@ -111,275 +114,302 @@ AppBundle\Entity\Form3:
             nullable: true
             column: p121_enfermedad
         p121Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p121_importancia
         p122Accidente:
             type: boolean
             nullable: true
             column: p122_accidente
         p122Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p122_importancia
         p123Discapacidad:
             type: boolean
             nullable: true
             column: p123_discapacidad
         p123Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p123_importancia
         p124Edad:
             type: boolean
             nullable: true
             column: p124_edad
         p124Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p124_importancia
         p125Precocidad:
             type: boolean
             nullable: true
             column: p125_precocidad
         p125Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p125_importancia
         p126EmbarazoPaternidad:
             type: boolean
             nullable: true
             column: p126_embarazo_paternidad
         p126Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p126_importancia
         p127FormoHogar:
             type: boolean
             nullable: true
             column: p127_formo_hogar
         p127Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p127_importancia
         p128Abandono2016:
             type: boolean
             nullable: true
             column: p128_abandono2016
         p128Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p128_importancia
         p129Reprobacion2016:
             type: boolean
             nullable: true
             column: p129_reprobacion2016
         p129Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p129_importancia
         p1210InscricioCea:
             type: boolean
             nullable: true
             column: p1210_inscricio_cea
         p1210Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p1210_importancia
         p1211Bulling:
             type: boolean
             nullable: true
             column: p1211_bulling
         p1211Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p1211_importancia
         p1212UnidadDistante:
             type: boolean
             nullable: true
             column: p1212_unidad_distante
         p1212Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p1212_importancia
         p1213UnidadNoOferta:
             type: boolean
             nullable: true
             column: p1213_unidad_no_oferta
         p1213Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p1213_importancia
         p1214ResponsabilidadesHogar:
             type: boolean
             nullable: true
             column: p1214_responsabilidades_hogar
         p1214Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p1214_importancia
         p1215TrasladoFamilia:
             type: boolean
             nullable: true
             column: p1215_traslado_familia
         p1215Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p1215_importancia
         p1216FaltaApoyo:
             type: boolean
             nullable: true
             column: p1216_falta_apoyo
         p1216Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p1216_importancia
         p1217NoViveHogarCompleto:
             type: boolean
             nullable: true
             column: p1217_no_vive_hogar_completo
         p1217Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p1217_importancia
         p1218SeparacionHogar:
             type: boolean
             nullable: true
             column: p1218_separacion_hogar
         p1218Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p1218_importancia
         p1219ViolenciaFamiliar:
             type: boolean
             nullable: true
             column: p1219_violencia_familiar
         p1219Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p1219_importancia
         p1220FallecimientoFamiliar:
             type: boolean
             nullable: true
             column: p1220_fallecimiento_familiar
         p1220Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p1220_importancia
         p1221FaltaDinero:
             type: boolean
             nullable: true
             column: p1221_falta_dinero
         p1221Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p1221_importancia
         p1222Trabajo:
             type: boolean
             nullable: true
             column: p1222_trabajo
         p1222Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p1222_importancia
         p1223TrabajoPadres:
             type: boolean
             nullable: true
             column: p1223_trabajo_padres
         p1223Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p1223_importancia
         p1224Pandillas:
             type: boolean
             nullable: true
             column: p1224_pandillas
         p1224Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p1224_importancia
         p1225Drogas:
             type: boolean
             nullable: true
             column: p1225_drogas
         p1225Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p1225_importancia
         p1226Alcoholismo:
             type: boolean
             nullable: true
             column: p1226_alcoholismo
         p1226Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p1226_importancia
         p1227Otra:
             type: boolean
             nullable: true
             column: p1227_otra
         p1227Importancia:
-            type: integer
+            type: string
             nullable: true
+            length: 2
             options:
-                unsigned: false
+                fixed: false
             column: p1227_importancia
         p1227Razon:
             type: string
             nullable: true
-            length: 100
+            length: 300
             options:
                 fixed: false
             column: p1227_razon
@@ -422,7 +452,7 @@ AppBundle\Entity\Form3:
         p139Razon:
             type: string
             nullable: true
-            length: 100
+            length: 300
             options:
                 fixed: false
             column: p139_razon
@@ -481,27 +511,30 @@ AppBundle\Entity\Form3:
         p15Razon:
             type: string
             nullable: true
-            length: 100
+            length: 300
             options:
                 fixed: false
             column: p15_razon
         p16Papas:
             type: string
             nullable: true
-            length: 100
+            length: 300
             options:
                 fixed: false
             column: p16_papas
         p17Vuelve2018:
             type: string
             nullable: true
-            length: 100
+            length: 300
             options:
                 fixed: false
             column: p17_vuelve2018
         p18Companeros:
             type: string
             nullable: true
+            length: 1
+            options:
+                fixed: false
             column: p18_companeros
         p19Primera:
             type: string
@@ -541,7 +574,7 @@ AppBundle\Entity\Form3:
         p19Otra:
             type: string
             nullable: true
-            length: 100
+            length: 300
             options:
                 fixed: false
             column: p19_otra
