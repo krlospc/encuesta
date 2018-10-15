@@ -17,6 +17,7 @@
                     <th>Paterno</th>
                     <th>Materno</th>
                     <th>Fecha registro</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -30,6 +31,10 @@
                     <td>{{ form4validacionRegistro.paterno }}</td>
                     <td>{{ form4validacionRegistro.materno }}</td>
                     <td>{{ form4validacionRegistro.fechaRegistro }}</td>
+                    <td>
+                        <a href="{{ path('form4validacionregistro_edit', { 'id': form4validacionRegistro.id }) }}" class="btn btn-primary">Editar</a>
+                        <a href="{{ path('form4validacionregistro_delete', { 'id': form4validacionRegistro.id }) }}" class="btn btn-danger" onclick="return confirm('Está segura/o de que desea eliminar el registro?')">Eliminar</a>
+                    </td>
                 </tr>
             {% endfor %}
             </tbody>
