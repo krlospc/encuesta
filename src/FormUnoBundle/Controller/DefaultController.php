@@ -30,7 +30,7 @@ class DefaultController extends Controller
         $stmt->execute($params);
         $val_unique = $stmt->fetchAll();
         $idval = "--";
-        if (count($val_unique)){
+        if (count($val_unique) > 0){
             foreach ($val_unique as $a) {
                 $idval = $idval.$a['ids'].",";
             }
@@ -50,8 +50,19 @@ class DefaultController extends Controller
         $stmt->execute($params);
         $po_fac = $stmt->fetchAll();
 
+        $query = "select * from (
+            select dep, cod_unidad_educativa, nboleta, group_concat(id) as ids,  count(id) as cnt
+            from  formulario_uno_index
+            where dep <> 0 or cod_unidad_educativa <> 0 or nboleta <> 0 
+            group by dep, cod_unidad_educativa, nboleta
+            ) b where b.cnt > 1";
+        $stmt = $db->prepare($query);
+        $params = array();
+        $stmt->execute($params);
+        $val_unique = $stmt->fetchAll();
+        
         //dump(count($po_fac));die;
-        if (count($po_fac) > 0){
+        if ((count($po_fac) > 0) || (count($val_unique) > 0)){
             return $this->redirect($this->generateUrl('form_uno_homepage'));
         } else {
             $factor_tipo_1 = "Dentro de la unidad educativa: factores atribuidos al estudiante";
