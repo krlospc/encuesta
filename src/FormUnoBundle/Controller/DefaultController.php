@@ -279,7 +279,7 @@ class DefaultController extends Controller
         $params = array($idfactor);
         $stmt->execute($params); 
 
-        $query = "DELETE FROM formulario_uno_index WHERE id = ";
+        $query = "DELETE FROM formulario_uno_index WHERE id = ?";
         $stmt = $db->prepare($query);
         $params = array($idfactor);
         $stmt->execute($params); 
