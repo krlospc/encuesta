@@ -191,23 +191,17 @@ class Formulario3Controller extends Controller
         if ($request->isMethod('post')) {
             
             $em = $this->getDoctrine()->getManager();
-            $entity = $em->getRepository('AppBundle:Form3')->createQueryBuilder('f')
-            ->select('f')
-            ->where('f.folioDep =' . $request->get('departamento'))
-            ->andWhere('f.folioCodigoUe =' . $request->get('codigounidadeducativa'))
-            ->andWhere('f.folioBoleta =' . $request->get('numeroboleta'))
-            ->getQuery()
-            ->getResult();
-            if (!$entity){
+            $estudiante = $em->getRepository('AppBundle:Form3')->find($request->get('id'));
+            if ($estudiante){
             /**
              * REGISTRO DEL FORMULARIO
              */
-                $estudiante = $em->getRepository('AppBundle:Form3')->find($request->get('id'));
-            //dump($entity);die;
-                $estudiante->setfolioDep($request->get('departamento'));
+                //$estudiante = $em->getRepository('AppBundle:Form3')->find($request->get('id'));
+                //dump($entity);die;
+                //$estudiante->setfolioDep($request->get('departamento'));
                 //dump($estudiante);die;
-                $estudiante->setfolioCodigoUe($request->get('codigounidadeducativa'));
-                $estudiante->setfolioBoleta($request->get('numeroboleta'));
+                //$estudiante->setfolioCodigoUe($request->get('codigounidadeducativa'));
+                //$estudiante->setfolioBoleta($request->get('numeroboleta'));
                 $estudiante->setp1Ue($request->get('p1unidadeducativa'));
                 $estudiante->setp2Nombres($request->get('p2nombres'));
                 $estudiante->setp3Paterno($request->get('p3paterno'));
@@ -315,13 +309,8 @@ class Formulario3Controller extends Controller
                 ->getFlashBag()
                 ->add('exito', 'Los datos se modificaron satisfactoriamente');
                 //return $this->redirectToRoute('formulario3_index');
-            }else{
-                $request->getSession()
-                ->getFlashBag()
-                ->add('error', 'El número de folio ya existe');
             }
         }
-
         return $this->redirectToRoute('formulario3_index');
     }
 
