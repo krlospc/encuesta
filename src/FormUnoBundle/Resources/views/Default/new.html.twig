@@ -322,7 +322,8 @@ $(document).ready(function(){
         var str = String.fromCharCode(!e.charCode ? e.which : e.charCode); 
         var key = e.keyCode || e.which;
         
-        if (key == 37 || key == 39 || key == 8 || key == 46 || key == 32 )  {
+        //alert(key);
+        if (key == 37 || key == 39 || key == 8 || key == 46 || key == 32 || key == 9 )  {
             return true;
         }
                 
@@ -340,7 +341,7 @@ $(document).ready(function(){
         var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);  
         var key = e.keyCode || e.which;
 
-        if (key == 37 || key == 39 || key == 8 || key == 46 || key == 32 )  {
+        if (key == 37 || key == 39 || key == 8 || key == 46 || key == 32 || key == 9 )  {
             return true;
         }
 
