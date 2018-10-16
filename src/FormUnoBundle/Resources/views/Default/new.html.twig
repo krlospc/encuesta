@@ -233,10 +233,20 @@
                                     {% endif %}
                                 </td>
                                 <td>
-                                    <input type="text" name="orden_{{loop.index}}" id="orden_{{loop.index}}" value="{{data.orden_importancia}}">
+                                    {% if data.seleccion == 1 %}
+                                        <input type="text" name="orden_{{loop.index}}" id="orden_{{loop.index}}" value="{{data.orden_importancia}}" >                                        
+                                    {% else %}
+                                        <input type="text" name="orden_{{loop.index}}" id="orden_{{loop.index}}" value="{{data.orden_importancia}}"  disabled>                                        
+                                    {% endif %}
+                                    
                                 </td>
                                 <td>
-                                    <input type="text" name="porque_{{loop.index}}" id="porque_{{loop.index}}" value="{{data.por_que}}">
+                                    {% if data.seleccion == 1 %}
+                                        <input type="text" name="porque_{{loop.index}}" id="porque_{{loop.index}}" value="{{data.por_que}}">
+                                    {% else %}
+                                        <input type="text" name="porque_{{loop.index}}" id="porque_{{loop.index}}" value="{{data.por_que}}" disabled>
+                                    {% endif %}
+                                    
                                 </td>
                                 <td style="display:none;">
                                     <input type="text" name="id_{{loop.index}}" value="{{data.id}}">

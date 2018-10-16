@@ -211,14 +211,29 @@ class DefaultController extends Controller
         for ($i = 1; $i <= 28; $i++) {
             $idfac = $_REQUEST['id_'.$i];
 
+            $sel =  "";
             if(isset($_REQUEST['sel_'.$i])){
                 $sel =  "1";
             } else {
-                $sel =  "0";
+                $sel =  "";
+            }
+
+            $orden =  "";
+            if(isset($_REQUEST['orden_'.$i])){
+                $orden =  $_REQUEST['orden_'.$i];
+            } else {
+                $orden =  "";
+            }
+
+            $porque =  "";
+            if(isset($_REQUEST['porque_'.$i])){
+                $porque =  $_REQUEST['porque_'.$i];
+            } else {
+                $porque =  "";
             }
             
-            $orden = $_REQUEST['orden_'.$i];  
-            $porque = $_REQUEST['porque_'.$i];
+            //$orden = $_REQUEST['orden_'.$i];  
+            //$porque = $_REQUEST['porque_'.$i];
 
             $query = "UPDATE formulario_uno_factores SET seleccion = '".$sel."', orden_importancia = '".$orden."', por_que = '".$porque."' where id = ".$idfac;            
             $stmt = $db->prepare($query);
