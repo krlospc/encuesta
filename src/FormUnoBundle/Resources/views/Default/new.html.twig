@@ -57,9 +57,9 @@
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                     <table>
                                         <tr>
-                                            <td><input type="text" name="dep" value="{{po_index[0].dep}}"></td>
-                                            <td><input type="text" name="cod_unidad_educativa" value="{{po_index[0].cod_unidad_educativa}}"></td>
-                                            <td><input type="text" name="nboleta" value="{{po_index[0].nboleta}}"></td>
+                                            <td><input type="text" class="textval" name="dep" value="{{po_index[0].dep}}"></td>
+                                            <td><input type="text" class="textval" name="cod_unidad_educativa" value="{{po_index[0].cod_unidad_educativa}}"></td>
+                                            <td><input type="text" class="numberval" name="nboleta" value="{{po_index[0].nboleta}}"></td>
                                         </tr>
                                         <tr>
                                             <td>DEP</td>
@@ -98,15 +98,15 @@
             <tbody>
                 <tr>
                     <th>P1.NOMBRE</td>
-                        <td colspan="8"><input type="text" name="nombre" value="{{po_index[0].nombre}}"></td>
+                        <td colspan="8"><input type="text" class="textval" name="nombre" value="{{po_index[0].nombre}}"></td>
                         <th>P2.PATERNO</td>
-                            <td colspan="8"><input type="text" name="paterno" value="{{po_index[0].paterno}}"></td>
+                            <td colspan="8"><input type="text" class="textval" name="paterno" value="{{po_index[0].paterno}}"></td>
                             <th>P3.MATERNO</td>
-                                <td colspan="8"><input type="text" name="materno" value="{{po_index[0].materno}}"></td>
+                                <td colspan="8"><input type="text" class="textval" name="materno" value="{{po_index[0].materno}}"></td>
                 </tr>
                 <tr>
                     <th>P4. UNIDAD EDUCATIVA</td>
-                        <td colspan="8"><input type="text" name="unidad_educativa" value="{{po_index[0].unidad_educativa}}"></td>
+                        <td colspan="8"><input type="text" class="textval" name="unidad_educativa" value="{{po_index[0].unidad_educativa}}"></td>
                         <th>P5. SEXO</td>
                             <td colspan="8">
                                 {% if po_index[0].sexo == 1 %}
@@ -118,7 +118,7 @@
                                 <input type="radio" name="sexo" id="sexo" value="2"> Mujer {% endif %}
                             </td>
                             <th>P6. TELÉFONO</td>
-                                <td colspan="8"><input type="text" name="telefono" value="{{po_index[0].telefono}}"></td>
+                                <td colspan="8"><input type="text" class="textval" name="telefono" value="{{po_index[0].telefono}}"></td>
 
                 </tr>
                 <tr>
@@ -141,7 +141,7 @@
                 </tr>
                 <tr>
                     <th>P8. (SOLO PARA PERSONAL CON TRES O MÁS AÑOS DE ANTIGÜEDAD EN LA UNIDAD EDUCATIVA) ¿CUÁNTOS AÑOS USTED TRABAJA EN ESTA UNIDAD EDUCATIVA?</th>
-                    <td colspan="8"><input type="text" name="p8" value="{{po_index[0].p8}}"></td>
+                    <td colspan="8"><input type="text" class="textval" name="p8" value="{{po_index[0].p8}}"></td>
                     <th>P9. (SI ES PROFESOR), AÑO(S) DE ESCOLARIDAD EN EL NIVEL SECUNDARIO EN LOS QUE TRABAJABA EN 2016 </th>
                     
                     <td colspan="8">
@@ -185,7 +185,7 @@
 
                     <!--<td colspan="8"><input type="text" name="p9" value=""></td>-->
                     <th>P10. (SI ES PROFESOR), ¿QUÉ MATERIA(s) DICTABA EN 2016?</th>
-                    <td colspan="8"><input type="text" name="p10" value="{{po_index[0].p10}}"></td>
+                    <td colspan="8"><input type="text" class="textval" name="p10" value="{{po_index[0].p10}}"></td>
                 </tr>
             </tbody>
         </table>
@@ -234,17 +234,17 @@
                                 </td>
                                 <td>
                                     {% if data.seleccion == 1 %}
-                                        <input type="text" name="orden_{{loop.index}}" id="orden_{{loop.index}}" value="{{data.orden_importancia}}" >                                        
+                                        <input type="text" class="numberval" name="orden_{{loop.index}}" id="orden_{{loop.index}}" value="{{data.orden_importancia}}" >                                        
                                     {% else %}
-                                        <input type="text" name="orden_{{loop.index}}" id="orden_{{loop.index}}" value="{{data.orden_importancia}}"  disabled>                                        
+                                        <input type="text" class="numberval" name="orden_{{loop.index}}" id="orden_{{loop.index}}" value="{{data.orden_importancia}}"  disabled>                                        
                                     {% endif %}
                                     
                                 </td>
                                 <td>
                                     {% if data.seleccion == 1 %}
-                                        <input type="text" name="porque_{{loop.index}}" id="porque_{{loop.index}}" value="{{data.por_que}}">
+                                        <input type="text" class="textval" name="porque_{{loop.index}}" id="porque_{{loop.index}}" value="{{data.por_que}}">
                                     {% else %}
-                                        <input type="text" name="porque_{{loop.index}}" id="porque_{{loop.index}}" value="{{data.por_que}}" disabled>
+                                        <input type="text" class="textval" name="porque_{{loop.index}}" id="porque_{{loop.index}}" value="{{data.por_que}}" disabled>
                                     {% endif %}
                                     
                                 </td>
@@ -270,7 +270,7 @@
                         </tr>
                         <tr>
                             {# <td><input class="col-md-12" type="text" name="p12" value="{{po_index[0].p12}}"></td> #}
-                            <td> <textarea name="p12" id="p12" cols="30" rows="10">{{po_index[0].p12}}</textarea></td>
+                            <td> <textarea class="textval" name="p12" id="p12" cols="30" rows="10">{{po_index[0].p12}}</textarea></td>
                            
                         </tr>
                         <tr>
@@ -278,7 +278,7 @@
                         </tr>
                         <tr>
                             {# <td><input class="col-md-12" type="text" name="p13" value="{{po_index[0].p13}}"></td> #}
-                            <td> <textarea name="p13" id="p13" cols="30" rows="10">{{po_index[0].p13}}</textarea></td>
+                            <td> <textarea class="textval" name="p13" id="p13" cols="30" rows="10">{{po_index[0].p13}}</textarea></td>
                         </tr>
                     </tbody>
                 </table>
@@ -313,8 +313,43 @@ $(document).ready(function(){
         } else {
             document.getElementById(nameorden).disabled = true;
             document.getElementById(nameporque).disabled = true;
-        }
-        
+        }        
     });
+
+    $('.textval').keypress (function(e){
+        var name = this.name;
+        var regex = new RegExp("^[a-zA-Z0-9 /. /á/Á/é/É/í/Í/ó/Ó/ú/U/ñ/Ñ]+$");
+        var str = String.fromCharCode(!e.charCode ? e.which : e.charCode); 
+        var key = e.keyCode || e.which;
+        
+        if (key == 37 || key == 39 || key == 8 || key == 46 || key == 32 )  {
+            return true;
+        }
+                
+        if (regex.test(str)) {
+            return true;
+        }
+        e.preventDefault();
+        return false;
+                
+    });
+
+    $('.numberval').keypress (function(e){
+        var name = this.name;
+        var regex = new RegExp("^[0-9 ]+$");
+        var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);  
+        var key = e.keyCode || e.which;
+
+        if (key == 37 || key == 39 || key == 8 || key == 46 || key == 32 )  {
+            return true;
+        }
+
+        if (regex.test(str)) {
+            return true;
+        }
+        e.preventDefault();
+        return false;
+    });
+
 });
 </script>
