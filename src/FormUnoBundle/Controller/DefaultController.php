@@ -140,15 +140,15 @@ class DefaultController extends Controller
                 $stmt->execute($params);            
             }
 
-            $query = "select * from  formulario_uno_index where id = ".$id;
+            $query = "select * from  formulario_uno_index where id = ?";
             $stmt = $db->prepare($query);
-            $params = array();
+            $params = array($id);
             $stmt->execute($params);
             $po_index = $stmt->fetchAll();
 
-            $query = "select * from  formulario_uno_factores where formulario_uno_index_id = ".$id;
+            $query = "select * from  formulario_uno_factores where formulario_uno_index_id = ?";
             $stmt = $db->prepare($query);
-            $params = array();
+            $params = array($id);
             $stmt->execute($params);
             $po_fac = $stmt->fetchAll();
 
@@ -163,15 +163,15 @@ class DefaultController extends Controller
         //$folio = $_REQUEST['dep'];
         $cod_unidad_educativa = $_REQUEST['cod_unidad_educativa'];
         $nboleta = $_REQUEST['nboleta'];
-        $dep = $_REQUEST['dep'];
-        $nombre = $_REQUEST['nombre'];
-        $paterno = $_REQUEST['paterno'];  
-        $materno = $_REQUEST['materno'];
-        $unidad_educativa = $_REQUEST['unidad_educativa'];
+        $dep = $_REQUEST['dep'];        
+        $nombre = strtoupper($_REQUEST['nombre']);
+        $paterno = strtoupper($_REQUEST['paterno']);  
+        $materno = strtoupper($_REQUEST['materno']);
+        $unidad_educativa = strtoupper($_REQUEST['unidad_educativa']);
         $sexo = $_REQUEST['sexo'];
         $telefono = $_REQUEST['telefono'];
-        $cargo = $_REQUEST['cargo'];
-        $p8 = $_REQUEST['p8'];
+        $cargo = strtoupper($_REQUEST['cargo']);
+        $p8 = strtoupper($_REQUEST['p8']);
 
         $p9_1 = "0";
         if (isset($_REQUEST['esc_1'])) {
@@ -198,14 +198,16 @@ class DefaultController extends Controller
             $p9_6 = "1";
         }
         
-        $p10 = $_REQUEST['p10'];
-        $p12 = $_REQUEST['p12'];
-        $p13 = $_REQUEST['p13'];
+        $p10 = strtoupper($_REQUEST['p10']);
+        $p12 = strtoupper($_REQUEST['p12']);
+        $p13 = strtoupper($_REQUEST['p13']);
+        //dump($p12);dump($p13);die;
         $id = $_REQUEST['id_principal'];
 
-        $query = "UPDATE formulario_uno_index SET nombre = '".$nombre."', paterno = '".$paterno."', materno = '".$materno."', unidad_educativa = '".$unidad_educativa."', telefono = '".$telefono."', p8 = '".$p8."', p9_1 = '".$p9_1."', p10 = '".$p10."', p12 = '".$p12."', p13 = '".$p13."', sexo = '".$sexo."', cargo = '".$cargo."', dep = '".$dep."', cod_unidad_educativa = '".$cod_unidad_educativa."', nboleta = '".$nboleta."', p9_2 = '".$p9_2."', p9_3 = '".$p9_3."', p9_4 = '".$p9_4."', p9_5 = '".$p9_5."', p9_6 = '".$p9_6."' where id = ".$id;
+        //$query = "UPDATE formulario_uno_index SET nombre = '".$nombre."', paterno = '".$paterno."', materno = '".$materno."', unidad_educativa = '".$unidad_educativa."', telefono = '".$telefono."', p8 = '".$p8."', p9_1 = '".$p9_1."', p10 = '".$p10."', p12 = '".$p12."', p13 = '".$p13."', sexo = '".$sexo."', cargo = '".$cargo."', dep = '".$dep."', cod_unidad_educativa = '".$cod_unidad_educativa."', nboleta = '".$nboleta."', p9_2 = '".$p9_2."', p9_3 = '".$p9_3."', p9_4 = '".$p9_4."', p9_5 = '".$p9_5."', p9_6 = '".$p9_6."' where id = ".$id;
+        $query = "UPDATE formulario_uno_index SET nombre = ?, paterno = ?, materno = ?, unidad_educativa = ?, telefono = ?, p8 = ?, p9_1 = ?, p10 = ?, p12 = ?, p13 = ?, sexo = ?, cargo = ?, dep = ?, cod_unidad_educativa = ?, nboleta = ?, p9_2 = ?, p9_3 = ?, p9_4 = ?, p9_5 = ?, p9_6 = ? where id = ?";
         $stmt = $db->prepare($query);
-        $params = array();
+        $params = array($nombre, $paterno, $materno, $unidad_educativa, $telefono, $p8, $p9_1, $p10, $p12, $p13, $sexo, $cargo, $dep, $cod_unidad_educativa, $nboleta, $p9_2, $p9_3, $p9_4, $p9_5, $p9_6, $id);
         $stmt->execute($params); 
 
         for ($i = 1; $i <= 28; $i++) {
@@ -227,7 +229,7 @@ class DefaultController extends Controller
 
             $porque =  "";
             if(isset($_REQUEST['porque_'.$i])){
-                $porque =  $_REQUEST['porque_'.$i];
+                $porque = strtoupper($_REQUEST['porque_'.$i]);
             } else {
                 $porque =  "";
             }
@@ -235,9 +237,10 @@ class DefaultController extends Controller
             //$orden = $_REQUEST['orden_'.$i];  
             //$porque = $_REQUEST['porque_'.$i];
 
-            $query = "UPDATE formulario_uno_factores SET seleccion = '".$sel."', orden_importancia = '".$orden."', por_que = '".$porque."' where id = ".$idfac;            
+            //$query = "UPDATE formulario_uno_factores SET seleccion = '".$sel."', orden_importancia = '".$orden."', por_que = '".$porque."' where id = ".$idfac;            
+            $query = "UPDATE formulario_uno_factores SET seleccion = ?, orden_importancia = ?, por_que = ? where id = ?";            
             $stmt = $db->prepare($query);
-            $params = array();
+            $params = array($sel, $orden, $porque, $idfac);
             $stmt->execute($params);            
         }
         
@@ -249,15 +252,15 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();        
         $db = $em->getConnection();
 
-        $query = "select * from  formulario_uno_index where id = ".$idfactor;
+        $query = "select * from  formulario_uno_index where id = ?";
         $stmt = $db->prepare($query);
-        $params = array();
+        $params = array($idfactor);
         $stmt->execute($params);
         $po_index = $stmt->fetchAll();
 
-        $query = "select * from  formulario_uno_factores where formulario_uno_index_id = ".$idfactor;
+        $query = "select * from  formulario_uno_factores where formulario_uno_index_id = ?";
         $stmt = $db->prepare($query);
-        $params = array();
+        $params = array($idfactor);
         $stmt->execute($params);
         $po_fac = $stmt->fetchAll();
 
@@ -270,15 +273,15 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();        
         $db = $em->getConnection();        
-
-        $query = "DELETE FROM formulario_uno_factores WHERE formulario_uno_index_id = ".$idfactor;
+                
+        $query = "DELETE FROM formulario_uno_factores WHERE formulario_uno_index_id = ?";
         $stmt = $db->prepare($query);
-        $params = array();
+        $params = array($idfactor);
         $stmt->execute($params); 
 
-        $query = "DELETE FROM formulario_uno_index WHERE id = ".$idfactor;
+        $query = "DELETE FROM formulario_uno_index WHERE id = ?";
         $stmt = $db->prepare($query);
-        $params = array();
+        $params = array($idfactor);
         $stmt->execute($params); 
         
         return $this->redirect($this->generateUrl('form_uno_homepage'));

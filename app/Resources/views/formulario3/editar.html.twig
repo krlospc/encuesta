@@ -55,9 +55,9 @@
                 <table>
                     <tr>
                         <input type="hidden" name="id" value={{entity.id}}>
-                        <td><input type="text" name="departamento" size="5" value={{entity.folioDep}}></td>
-                        <td><input type="text" name="codigounidadeducativa" value={{entity.folioCodigoUe}} size="40"></td>
-                        <td><input type="text" name="numeroboleta" value={{entity.folioBoleta}} size="10"></td>
+                        <td><input type="text" name="departamento" size="5" value={{entity.folioDep}} readonly></td>
+                        <td><input type="text" name="codigounidadeducativa" value={{entity.folioCodigoUe}} readonly size="40"></td>
+                        <td><input type="text" name="numeroboleta" value={{entity.folioBoleta}} readonly size="10"></td>
                     </tr>
                     <tr>
                         <td>DEP</td>
@@ -101,17 +101,17 @@
         <table class="table-bordered" width="100%">
             <tr>
                 <th>P1. UNIDAD EDUCATIVA</th>
-                <td colspan="8"><input type="text" name="p1unidadeducativa" value={{entity.p1Ue}}></td>
+                <td colspan="8"><input type="text" name="p1unidadeducativa" value="{{entity.p1Ue}}"></td>
             </tr>
             <tr>
                 <th>P2. NOMBRES</th>
-                <td colspan="8"><input type="text" name="p2nombres" value={{entity.p2Nombres}}></td>
+                <td colspan="8"><input type="text" name="p2nombres" value="{{entity.p2Nombres}}"></td>
             </tr>
             <tr>
                 <th>P3. APELLIDO PATERNO</th>
-                <td><input type="text" name="p3paterno" value={{entity.p3Paterno}}></td>
+                <td><input type="text" name="p3paterno" value="{{entity.p3Paterno}}"></td>
                 <th colspan="3">P4. APELLIDO MATERNO</th>
-                <td colspan="4"><input type="text" name="p4materno" value={{entity.p4Materno}}></td>
+                <td colspan="4"><input type="text" name="p4materno" value="{{entity.p4Materno}}"></td>
             </tr>
             <tr>
                 <th>P5. SEXO</th>
@@ -131,20 +131,20 @@
             </tr>
             <tr>
                 <th >P8. SI ES NO, ¿CUÁL ES EL NOMBRE DE LA UNIDAD EDUCATIVA? </th>
-                 <td colspan="8"><input type="text" name="p8nomue" value={{entity.p8noUe}}></td>
+                 <td colspan="8"><input type="text" name="p8nomue" value="{{entity.p8noUe}}"></td>
 
             </tr>
             <tr>
                 <th>P9. AÑO DE ESCOLARIDAD EN EL QUE ESTABA INSCRITO EL 2016</th>
-                <th colspan="8"><input type="text" name="p9añoesc2016" value={{entity.p9AnioEscolaridad2016}}></th>
+                <th colspan="8"><input type="text" name="p9añoesc2016" value="{{entity.p9AnioEscolaridad2016}}"></th>
             </tr>
             <tr>
                 <th>P10. AÑO DE ESCOLARIDAD EN EL QUE ESTÁ INSCRITO EL 2018</th>
-                <th colspan="8"><input type="text" name="p10añoesc2018" value={{entity.p10AnioEscolaridad2018}}></th>
+                <th colspan="8"><input type="text" name="p10añoesc2018" value="{{entity.p10AnioEscolaridad2018}}"></th>
             </tr>
             <tr>
                 <th>P11. CÓDIGO RUDE:</th>
-                <th colspan="8"><input type="text" name="p11codrue" value={{entity.p11Rude}}></th>
+                <th colspan="8"><input type="text" name="p11codrue" value="{{entity.p11Rude}}"></th>
             </tr>
 
         </table>
@@ -159,156 +159,156 @@
                 <td rowspan="10">DENTRO DE LA UNIDAD EDUCATIVA: FACTORES ATRIBUIDOS AL ESTUDIANTE</td>
                 <td colspan="2">1. Enfermedad</td>
                 <th ><input type="checkbox"  name="p121enfermedad_1" {% if entity.p121Enfermedad == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input type="text" size="5" name="p121enfermedad" value={{entity.p121Importancia}}></td>
+                <td colspan="2" align="center"><input type="text" size="5" name="p121enfermedad" value="{{entity.p121Importancia}}"></td>
             </tr>
             <tr>
                 <td colspan="2">2. Accidente</td>
                 <th ><input type="checkbox"  name="p122accidente_1" {% if entity.p122Accidente == 1 %} checked="checked" {% endif %} ></th>
-                <td colspan="2" align="center"><input type="text" size="5" name="p122accidente" value={{entity.p122Importancia}}></td>
+                <td colspan="2" align="center"><input type="text" size="5" name="p122accidente" value="{{entity.p122Importancia}}"></td>
             </tr>
             <tr>
                 <td colspan="2">3. Discapacidad</td>
                 <th ><input type="checkbox"  name="p123discapacidad_1" {% if entity.p123Discapacidad == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input type="text" size="5" name="p123discapacidad" value={{entity.p123Importancia}} ></td>
+                <td colspan="2" align="center"><input type="text" size="5" name="p123discapacidad" value="{{entity.p123Importancia}}"></td>
             </tr>
             <tr>
                 <td colspan="2">4. Sobre edad</td>
                 <th ><input type="checkbox"  name="p124sobreedad_1" {% if entity.p124Edad == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input type="text" size="5" name="p124sobreedad" value={{entity.p124Importancia}}></td>
+                <td colspan="2" align="center"><input type="text" size="5" name="p124sobreedad" value="{{entity.p124Importancia}}"></td>
             </tr>
             <tr>
                 <td colspan="2">5. Precocidad</td>
                 <th ><input type="checkbox"  name="p125precosidad_1" {% if entity.p125Precocidad == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input type="text" size="5" name="p125precosidad" value={{entity.p125Importancia}}></td>
+                <td colspan="2" align="center"><input type="text" size="5" name="p125precosidad" value="{{entity.p125Importancia}}"></td>
             </tr>
             <tr>
                 <td colspan="2">6. Embarazo/Paternidad</td>
                 <th ><input type="checkbox"  name="p126embarazo_1" {% if entity.p126EmbarazoPaternidad == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input type="text" size="5" name="p126embarazo" value={{entity.p126Importancia}}></td>
+                <td colspan="2" align="center"><input type="text" size="5" name="p126embarazo" value="{{entity.p126Importancia}}"></td>
             </tr>
             <tr>
                 <td colspan="2">7. El estudiante ya formo su propio hogar</td>
                 <th ><input type="checkbox"  name="p127hogar_1" {% if entity.p127FormoHogar == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input type="text" size="5" name="p127hogar" value={{entity.p127Importancia}}></td>
+                <td colspan="2" align="center"><input type="text" size="5" name="p127hogar" value="{{entity.p127Importancia}}"></td>
             </tr>
             <tr>
                 <td colspan="2">8. Abandono en la gestión 2016</td>
                 <th ><input type="checkbox"  name="p128abandono_1" {% if entity.p128Abandono2016 == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input type="text" size="5" name="p128abandono" value={{entity.p128Importancia}}></td>
+                <td colspan="2" align="center"><input type="text" size="5" name="p128abandono" value="{{entity.p128Importancia}}"></td>
             </tr>
             <tr>
                 <td colspan="2">9. Reprobación en la gestión 2016</td>
                 <th ><input type="checkbox"  name="p129reprobacion_1" {% if entity.p129Reprobacion2016 == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input type="text" size="5" name="p129reprobacion" value={{entity.p129Importancia}}></td>
+                <td colspan="2" align="center"><input type="text" size="5" name="p129reprobacion" value="{{entity.p129Importancia}}"></td>
             </tr>
             <tr>
                 <td colspan="2">10. Se inscribió a un Centro de Educación Alternativa (CEA)</td>
                 <th ><input type="checkbox"  name="p1210centro_1" {% if entity.p1210InscricioCea == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input type="text" size="5" name="p1210centro" value={{entity.p1210Importancia}}></td>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1210centro" value="{{entity.p1210Importancia}}"></td>
             </tr>
             <tr class="bggrisclaro"><td colspan=5></td></tr>
             <tr>
                 <td rowspan="3">DENTRO DE LA UNIDAD EDUCATIVA:FACTORES ATRIBUIDOS A LA UNIDAD EDUCATIVA</td>
                 <td colspan="2">11. Bullying</td>
                 <th ><input type="checkbox"  name="p12bull_1" {% if entity.p1211Bulling == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input type="text" size="5" name="p12bull" value={{entity.p1211Importancia}}></td>
+                <td colspan="2" align="center"><input type="text" size="5" name="p12bull" value="{{entity.p1211Importancia}}"></td>
             </tr>
             <tr>
                 <td colspan="2">12. La Unidad Educativa es distante</td>
                 <th ><input type="checkbox"  name="p12distante_1" {% if entity.p1212UnidadDistante == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input type="text" size="5" name="p12distante" value={{entity.p1212Importancia}}></td>
+                <td colspan="2" align="center"><input type="text" size="5" name="p12distante" value="{{entity.p1212Importancia}}"></td>
             </tr>
             <tr>
                 <td colspan="2">13. La Unidad Educativa no oferta el turno requerido por algunos estudiantes</td>
                 <th ><input type="checkbox"  name="p12oferta_1" {% if entity.p1213UnidadNoOferta == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input type="text" size="5" name="p12oferta" value={{entity.p1213Importancia}}></td>
+                <td colspan="2" align="center"><input type="text" size="5" name="p12oferta" value="{{entity.p1213Importancia}}"></td>
             </tr>
             <tr class="bggrisclaro"><td colspan=5></td></tr>
             <tr>
                 <td rowspan="7">FUERA DE LA UNIDAD EDUCATIVA: FACTORES FAMILIARES </td>
                 <td colspan="2">14. Responsabilidades en el hogar: Quehaceres domésticos (cocinar, lavar, planchar), atención a niños, a ancianos, a personas enfermas o con discapacidad</td>
                 <th ><input type="checkbox"  name="p141_1" {% if entity.p1214ResponsabilidadesHogar == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input type="text" size="5" name="p141" value={{entity.p1214Importancia}}></td>
+                <td colspan="2" align="center"><input type="text" size="5" name="p141" value="{{entity.p1214Importancia}}"></td>
             </tr>
 
             <tr>
                 <td colspan="2">15. Traslado de la familia a otros: Departamentos, Provincias, Municipios, Barrios, Paises</td>
                 <th><input type="checkbox" name="p15tralado_1" {% if entity.p1215TrasladoFamilia == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input  type="text" size="5" name="p15tralado" value={{entity.p1215Importancia}}></td>
+                <td colspan="2" align="center"><input  type="text" size="5" name="p15tralado" value="{{entity.p1215Importancia}}"></td>
 
             </tr>
 
             <tr>
                 <td colspan="2">16. Falta de apoyo de los familiares para la continuación de sus estudios</td>
                 <th><input type="checkbox" name="p1416faltaapoyo_1" {% if entity.p1216FaltaApoyo == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input  type="text" size="5" name="p1416faltaapoyo" value={{entity.p1216Importancia}}></td>
+                <td colspan="2" align="center"><input  type="text" size="5" name="p1416faltaapoyo" value="{{entity.p1216Importancia}}"></td>
 
             </tr>
             <tr>
                 <td colspan="2">17. No vive en un hogar nuclear completo (Su Padre y/o su Madre no viven con el)</td>
                 <th><input type="checkbox" name="p1417novivehogarcompleto_1" {% if entity.p1217NoViveHogarCompleto == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input  type="text" size="5" name="p1417novivehogarcompleto" value={{entity.p1217Importancia}}></td>
+                <td colspan="2" align="center"><input  type="text" size="5" name="p1417novivehogarcompleto" value="{{entity.p1217Importancia}}"></td>
 
             </tr>
             <tr>
                 <td colspan="2">18. Separación de los miembros del hogar (Padres, hermanos, parientes cercanos, etc)</td>
                 <th><input type="checkbox" name="p1418separacionhogar_1" {% if entity.p1218SeparacionHogar == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input type="text" size="5" name="p1418separacionhogar" value={{entity.p1218Importancia}}></td>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1418separacionhogar" value="{{entity.p1218Importancia}}"></td>
 
             </tr>
             <tr>
                 <td colspan="2">19. Violencia familiar</td>
                 <th><input type="checkbox" name="p1419violenciafamiliar_1" {% if entity.p1219ViolenciaFamiliar == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input  type="text" size="5" name="p1419violenciafamiliar" value={{entity.p1219Importancia}}></td>
+                <td colspan="2" align="center"><input  type="text" size="5" name="p1419violenciafamiliar" value="{{entity.p1219Importancia}}"></td>
 
             </tr>
             <tr>
                 <td colspan="2">20. Fallecimiento o accidente de algún familiar</td>
                 <th><input type="checkbox" name="p1420fallecimientofamiliar_1" {% if entity.p1220FallecimientoFamiliar == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input  type="text" size="5" name="p1420fallecimientofamiliar" value={{entity.p1220Importancia}}></td>
+                <td colspan="2" align="center"><input  type="text" size="5" name="p1420fallecimientofamiliar" value="{{entity.p1220Importancia}}"></td>
             </tr>
             <tr class="bggrisclaro"><td colspan=5></td></tr>
             <tr>
                 <td rowspan="3">FUERA DE LA UNIDAD EDUCATIVA: FACTORES ECONÓMICOS</td>
                 <td colspan="2">21. Falta de dinero</td>
                 <th ><input type="checkbox"  name="p1420ffueradelaunidad_1" {% if entity.p1221FaltaDinero == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input type="text" size="5" name="p1420ffueradelaunidad" value={{entity.p1221Importancia}}></td>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1420ffueradelaunidad" value="{{entity.p1221Importancia}}"></td>
             </tr>
             <tr>
                 <td colspan="2">22. Trabajo de los estudiantes</td>
                 <th ><input type="checkbox"  name="p1422trabajodeloses_1" {% if entity.p1222Trabajo == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input type="text" size="5" name="p1422trabajodeloses" value={{entity.p1222Importancia}}></td>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1422trabajodeloses" value="{{entity.p1222Importancia}}"></td>
             </tr>
             <tr>
                 <td colspan="2">23. Por trabajo de los padres</td>
                 <th ><input type="checkbox"  name="pp1423trabajodepadres_1" {% if entity.p1223TrabajoPadres == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input type="text" size="5" name="pp1423trabajodepadres" value={{entity.p1223Importancia}}></td>
+                <td colspan="2" align="center"><input type="text" size="5" name="pp1423trabajodepadres" value="{{entity.p1223Importancia}}"></td>
             </tr>
             <tr class="bggrisclaro"><td colspan=5></td></tr>
             <tr>
                 <td rowspan="4">FUERA DE LA UNIDAD EDUCATIVA: FACTORES SOCIALES</td>
                 <td colspan="2">24. Pandillas</td>
                 <th ><input type="checkbox"  name="p1424pandillas_1" {% if entity.p1224Pandillas == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input type="text" size="5" name="p1424pandillas" value={{entity.p1224Importancia}}></td>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1424pandillas" value="{{entity.p1224Importancia}}"></td>
             </tr>
             <tr>
                 <td colspan="2">25. Drogas</td>
                 <th ><input type="checkbox"  name="p1425drogas_1" {% if entity.p1225Drogas == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input type="text" size="5" name="p1425drogas" value={{entity.p1225Importancia}}></td>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1425drogas" value="{{entity.p1225Importancia}}"></td>
             </tr>
             <tr>
                 <td colspan="2">26. Alcoholismo</td>
                 <th ><input type="checkbox"  name="p1426alcoholismo_1" {% if entity.p1226Alcoholismo == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input type="text" size="5" name="p1426alcoholismo" value={{entity.p1226Importancia}}></td>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1426alcoholismo" value="{{entity.p1226Importancia}}"></td>
             </tr>
             <tr>
                 <td colspan="2">26. Otra (especifique)</td>
                 <th ><input type="checkbox"  name="p1426otra_1" {% if entity.p1227Otra == 1 %} checked="checked" {% endif %}></th>
-                <td colspan="2" align="center"><input type="text" size="5" name="p1426otra" value={{entity.p1227Importancia}}></td>
+                <td colspan="2" align="center"><input type="text" size="5" name="p1426otra" value="{{entity.p1227Importancia}}"></td>
             </tr>
             <tr>
                 <td>26. Otra (especifique)</td>
-                <td colspan="6"><input type="text" name="p1426otra_1_text" value={{entity.p1227Importancia}}></td>
+                <td colspan="6"><input type="text" name="p1426otra_1_text" value="{{entity.p1227Importancia}}"></td>
             </tr>
 
         </table>
@@ -411,7 +411,7 @@
                 <td><input type="checkbox"  name="p159" {% if entity.p159Apoyo == 1 %} checked="checked" {% endif %}></td>
             </tr>
             <tr>
-                <td>10. Otro (especifique) <input type="text" name="p1427razon_1"> </td>
+                <td>10. Otro (especifique) <input type="text" name="p1427razon_1" value="{{entity.p15Razon}}"> </td>
 
                 <td><input type="checkbox"  name="p1510" {% if entity.p1510Otro == 1 %} checked="checked" {% endif %}></td>
             </tr>
@@ -426,7 +426,7 @@
             </tr>
             <tr>
                 <td>
-                    <textarea name="p161" id="" cols="30" rows="10" value={{entity.p16Papas}}>{{entity.p16Papas}}</textarea>
+                    <textarea name="p161" id="" cols="30" rows="10" value="{{entity.p16Papas}}">{{entity.p16Papas}}</textarea>
                 </td>
             </tr>
             <tr>
@@ -434,7 +434,7 @@
             </tr>
             <tr>
                 <td>
-                    <textarea name="p171" id="" cols="30" rows="10" value={{entity.p17Vuelve2018}}>{{entity.p17Vuelve2018}}</textarea>
+                    <textarea name="p171" id="" cols="30" rows="10" value="{{entity.p17Vuelve2018}}">{{entity.p17Vuelve2018}}</textarea>
                 </td>
             </tr>
             <tr>
@@ -461,11 +461,11 @@
                 <td> Quinta Razón   </td>
             </tr>
             <tr>
-                <td><input type="text" name="p19primerarazon" value={{entity.p19Primera}}></td>
-                <td><input type="text" name="p19segundarazon" value={{entity.p19Segunda}}></td>
-                <td><input type="text" name="p19tercerarazon" value={{entity.p19Tercera}}></td>
-                <td><input type="text" name="p19cuartarazon" value={{entity.p19Cuarta}}> </td>
-                <td> <input type="text" name="p19quintarazon" value={{entity.p19Quinta}}>  </td>
+                <td><input type="text" name="p19primerarazon" value="{{entity.p19Primera}}"></td>
+                <td><input type="text" name="p19segundarazon" value="{{entity.p19Segunda}}"></td>
+                <td><input type="text" name="p19tercerarazon" value="{{entity.p19Tercera}}"></td>
+                <td><input type="text" name="p19cuartarazon" value="{{entity.p19Cuarta}}"></td>
+                <td> <input type="text" name="p19quintarazon" value="{{entity.p19Quinta}}"></td>
             </tr>
             <br>
             <tr>
@@ -479,11 +479,11 @@
             </tr>
             <tr>
                 <td>NOMBRE COMPLETO</td>
-                <td> <input type="text" name="p20nombre" value={{entity.p20Nombre}}>  </td>
+                <td> <input type="text" name="p20nombre" value="{{entity.p20Nombre}}"></td>
             </tr>
             <tr>
                 <td>CARGO</td>
-                <td> <input type="text" name="p20cargo" value={{entity.p20Cargo}}>  </td>
+                <td> <input type="text" name="p20cargo" value="{{entity.p20Cargo}}"></td>
             </tr>
             <tr>
                 <td colspan="6">
