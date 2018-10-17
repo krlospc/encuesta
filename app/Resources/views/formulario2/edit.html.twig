@@ -40,6 +40,9 @@
 		.borbot{
 			border-bottom: 1px solid #CCCCCC;
 		}
+		.jupper{
+			text-transform: uppercase;
+		}
 	</style>
 </head>
 <body>
@@ -96,17 +99,17 @@
 			<table class="table-bordered" width="100%">
 				<tr>
 					<th>P1. UNIDAD EDUCATIVA</th>
-					<td colspan="8"><input type="text" name="p1unidadeducativa" value="{{docentes.p1Unidadeducativa}}" required></td>
+					<td colspan="8"><input type="text" name="p1unidadeducativa" value="{{docentes.p1Unidadeducativa}}" required class="jupper"></td>
 				</tr>
 				<tr>
 					<th>P2. NOMBRES</th>
-					<td colspan="8"><input type="text" name="p2nombres" value="{{docentes.p2Nombres}}" required></td>
+					<td colspan="8"><input type="text" name="p2nombres" value="{{docentes.p2Nombres}}" required class="jupper"></td>
 				</tr>
 				<tr>
 					<th>P3. APELLIDO PATERNO</th>
-					<td><input type="text" name="p3paterno" value="{{docentes.p3Paterno}}" required></td>
+					<td><input type="text" name="p3paterno" value="{{docentes.p3Paterno}}" required class="jupper"></td>
 					<th colspan="3">P4. APELLIDO MATERNO</th>
-					<td colspan="4"><input type="text" name="p4materno" value="{{docentes.p4Materno}}" required></td>
+					<td colspan="4"><input type="text" name="p4materno" value="{{docentes.p4Materno}}" required class="jupper"></td>
 				</tr>
 				<tr>
 					<th>P5. SEXO</th>
@@ -207,7 +210,7 @@
 				</tr>
 				<tr>
 					<th colspan="2">P9. ¿QUÉ MATERIA(S) DICTABA EL 2016?</th>
-					<td colspan="7"><textarea name="p9materias" id="" cols="30" rows="3" >{{docentes.p9Materias}}</textarea></td>
+					<td colspan="7"><textarea name="p9materias" id="" cols="30" rows="3" class="jupper" >{{docentes.p9Materias}}</textarea></td>
 				</tr>
 			</table>
 			<br>
@@ -222,24 +225,24 @@
 				<tr>
 
 					<th>P9. NOMBRE(S)</th>
-					<td colspan="2"><input type="text" name="p9nombres_1" value={{estudiantes[0].p9Nombres}}></td>
-					<td colspan="2"><input type="text" name="p9nombres_2" value={{estudiantes[1].p9Nombres}}></td>
-					<td colspan="2"><input type="text" name="p9nombres_3" value={{estudiantes[2].p9Nombres}}></td>
-					<td colspan="2"><input type="text" name="p9nombres_4" value={{estudiantes[3].p9Nombres}}></td>
+					<td colspan="2"><input type="text" name="p9nombres_1" class="jupper" value={{estudiantes[0].p9Nombres}}></td>
+					<td colspan="2"><input type="text" name="p9nombres_2" class="jupper" value={{estudiantes[1].p9Nombres}}></td>
+					<td colspan="2"><input type="text" name="p9nombres_3" class="jupper" value={{estudiantes[2].p9Nombres}}></td>
+					<td colspan="2"><input type="text" name="p9nombres_4" class="jupper" value={{estudiantes[3].p9Nombres}}></td>
 				</tr>
 				<tr>
 					<th>P10. APELLIDO PATERNO</th>
-					<td colspan="2"><input type="text" name="p10paterno_1" value={{estudiantes[0].p10Paterno}}></td>
-					<td colspan="2"><input type="text" name="p10paterno_2" value={{estudiantes[1].p10Paterno}}></td>
-					<td colspan="2"><input type="text" name="p10paterno_3" value={{estudiantes[2].p10Paterno}}></td>
-					<td colspan="2"><input type="text" name="p10paterno_4" value={{estudiantes[3].p10Paterno}}></td>
+					<td colspan="2"><input type="text" name="p10paterno_1" class="jupper" value={{estudiantes[0].p10Paterno}}></td>
+					<td colspan="2"><input type="text" name="p10paterno_2" class="jupper" value={{estudiantes[1].p10Paterno}}></td>
+					<td colspan="2"><input type="text" name="p10paterno_3" class="jupper" value={{estudiantes[2].p10Paterno}}></td>
+					<td colspan="2"><input type="text" name="p10paterno_4" class="jupper" value={{estudiantes[3].p10Paterno}}></td>
 				</tr>
 				<tr>
 					<th>P11. APELLIDO MATERNO</th>
-					<td colspan="2"><input type="text" name="p11materno_1" value={{estudiantes[0].p11Materno }} ></td>
-					<td colspan="2"><input type="text" name="p11materno_2" value={{estudiantes[1].p11Materno }}></td>
-					<td colspan="2"><input type="text" name="p11materno_3" value={{estudiantes[2].p11Materno }}></td>
-					<td colspan="2"><input type="text" name="p11materno_4" value={{estudiantes[3].p11Materno }}></td>
+					<td colspan="2"><input type="text" name="p11materno_1" class="jupper" value={{estudiantes[0].p11Materno }} ></td>
+					<td colspan="2"><input type="text" name="p11materno_2" class="jupper" value={{estudiantes[1].p11Materno }}></td>
+					<td colspan="2"><input type="text" name="p11materno_3" class="jupper" value={{estudiantes[2].p11Materno }}></td>
+					<td colspan="2"><input type="text" name="p11materno_4" class="jupper" value={{estudiantes[3].p11Materno }}></td>
 				</tr>
 				<tr>
 					<th>P12. SEXO</th>
@@ -303,10 +306,10 @@
 				</tr>
 				<tr>
 					<th>P13. AÑO DE ESCOLARIDAD (DE 1 A 6)</th>
-					<td colspan="2"><input type="text" name="p13anioescolaridad_1" value={{estudiantes[0].p13AnioEscolaridad }}></td>
-					<td colspan="2"><input type="text" name="p13anioescolaridad_2" value={{estudiantes[1].p13AnioEscolaridad }}></td>
-					<td colspan="2"><input type="text" name="p13anioescolaridad_3" value={{estudiantes[2].p13AnioEscolaridad }}></td>
-					<td colspan="2"><input type="text" name="p13anioescolaridad_4" value={{estudiantes[3].p13AnioEscolaridad }}></td>
+					<td colspan="2"><input type="text" name="p13anioescolaridad_1" maxlength="1" value={{estudiantes[0].p13AnioEscolaridad }}></td>
+					<td colspan="2"><input type="text" name="p13anioescolaridad_2" maxlength="1" value={{estudiantes[1].p13AnioEscolaridad }}></td>
+					<td colspan="2"><input type="text" name="p13anioescolaridad_3" maxlength="1" value={{estudiantes[2].p13AnioEscolaridad }}></td>
+					<td colspan="2"><input type="text" name="p13anioescolaridad_4" maxlength="1" value={{estudiantes[3].p13AnioEscolaridad }}></td>
 				</tr>
 				<tr>
 					<th>P14. SEGÚN SU CONOCIMIENTO, ¿CUÁLES FUERON LOS FACTORES DETERMINANTES PARA LOS ESTUDIANTES QUE CURSARON ES LA GESTIÓN 2016 EN EL NIVEL SECUNDARIO NO SE INSCRIBIERAN EN LA GESTION 2017? (MARQUE UNA O VARIAS OPCIONES SEGÚN CORRESPONDA)</th>
@@ -1341,10 +1344,11 @@
 				</tr>
 				<tr class="borbot">
 					<td>Especifique la razón de cada estudiante</td>
-					<td colspan="2"><input type="text" name="p1427razon_1" value={{estudiantes[0].p1427Razon }}></td>
-					<td colspan="2"><input type="text" name="p1427razon_2" value={{estudiantes[1].p1427Razon }}></td>
-					<td colspan="2"><input type="text" name="p1427razon_3" value={{estudiantes[2].p1427Razon }}></td>
-					<td colspan="2"><input type="text" name="p1427razon_4" value={{estudiantes[3].p1427Razon }}></td>
+					<td colspan="2"><input type="text" name="p1427razon_1" class="jupper" value={{estudiantes[0].p1427Razon }}></td>
+					<td colspan="2"><input type="text" name="p1427razon_2" class="jupper" value={{estudiantes[1].p1427Razon }}></td>
+					<td colspan="2"><input type="text" name="p1427razon_3" class="jupper" value={{estudiantes[2].p1427Razon }}></td>
+					{# <td colspan="2"><input type="text" name="p1427razon_4" class="jupper" value={{estudiantes[3].p1427Razon }}></td> #}
+					<td colspan="2"><textarea name="p1427razon_4" id="" cols="30" rows="3" class="jupper">{{estudiantes[3].p1427Razon }}</textarea></td>
 				</tr>
 			</table>
 
@@ -1356,7 +1360,7 @@
 				</tr>
 				<tr>
 					<td>
-						<textarea name="p15medidasantedisminucion" id="" cols="30" rows="10">{{docentes.p15MedidasAnteDisminucion}}</textarea>
+						<textarea name="p15medidasantedisminucion" id="" cols="30" rows="10" class="jupper">{{docentes.p15MedidasAnteDisminucion}}</textarea>
 					</td>
 				</tr>
 				<tr>
@@ -1364,7 +1368,7 @@
 				</tr>
 				<tr>
 					<td>
-						<textarea name="p16medidasquetomaria" id="" cols="30" rows="10">{{docentes.p16MedidasQueTomaria}}</textarea>
+						<textarea name="p16medidasquetomaria" id="" cols="30" rows="10" class="jupper">{{docentes.p16MedidasQueTomaria}}</textarea>
 					</td>
 				</tr>
 			</table>
@@ -1374,19 +1378,19 @@
 			<table>
 				<tr>
 					<td>CÓDIGO RUDE ESTUDIANTE 1</td>
-					<td><input type="text" name="codigorude_1" value={{estudiantes[0].codigoRude}}></td>
+					<td><input type="text" name="codigorude_1" class="jupper" value={{estudiantes[0].codigoRude}}></td>
 				</tr>
 				<tr>
 					<td>CÓDIGO RUDE ESTUDIANTE 2</td>
-					<td><input type="text" name="codigorude_2" value={{estudiantes[1].codigoRude}}></td>
+					<td><input type="text" name="codigorude_2" class="jupper" value={{estudiantes[1].codigoRude}}></td>
 				</tr>
 				<tr>
 					<td>CÓDIGO RUDE ESTUDIANTE 3</td>
-					<td><input type="text" name="codigorude_3" value={{estudiantes[2].codigoRude}}></td>
+					<td><input type="text" name="codigorude_3" class="jupper" value={{estudiantes[2].codigoRude}}></td>
 				</tr>
 				<tr>
 					<td>CÓDIGO RUDE ESTUDIANTE 4</td>
-					<td><input type="text" name="codigorude_4" value={{estudiantes[3].codigoRude}}></td>
+					<td><input type="text" name="codigorude_4" class="jupper" value={{estudiantes[3].codigoRude}}></td>
 				</tr>
 				<tr>
 					<td colspan="2">
