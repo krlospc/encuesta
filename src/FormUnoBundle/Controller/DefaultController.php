@@ -163,15 +163,15 @@ class DefaultController extends Controller
         //$folio = $_REQUEST['dep'];
         $cod_unidad_educativa = $_REQUEST['cod_unidad_educativa'];
         $nboleta = $_REQUEST['nboleta'];
-        $dep = $_REQUEST['dep'];
-        $nombre = $_REQUEST['nombre'];
-        $paterno = $_REQUEST['paterno'];  
-        $materno = $_REQUEST['materno'];
-        $unidad_educativa = $_REQUEST['unidad_educativa'];
+        $dep = $_REQUEST['dep'];        
+        $nombre = strtoupper($_REQUEST['nombre']);
+        $paterno = strtoupper($_REQUEST['paterno']);  
+        $materno = strtoupper($_REQUEST['materno']);
+        $unidad_educativa = strtoupper($_REQUEST['unidad_educativa']);
         $sexo = $_REQUEST['sexo'];
         $telefono = $_REQUEST['telefono'];
-        $cargo = $_REQUEST['cargo'];
-        $p8 = $_REQUEST['p8'];
+        $cargo = strtoupper($_REQUEST['cargo']);
+        $p8 = strtoupper($_REQUEST['p8']);
 
         $p9_1 = "0";
         if (isset($_REQUEST['esc_1'])) {
@@ -198,9 +198,9 @@ class DefaultController extends Controller
             $p9_6 = "1";
         }
         
-        $p10 = $_REQUEST['p10'];
-        $p12 = $_REQUEST['p12'];
-        $p13 = $_REQUEST['p13'];
+        $p10 = strtoupper($_REQUEST['p10']);
+        $p12 = strtoupper($_REQUEST['p12']);
+        $p13 = strtoupper($_REQUEST['p13']);
         //dump($p12);dump($p13);die;
         $id = $_REQUEST['id_principal'];
 
@@ -229,7 +229,7 @@ class DefaultController extends Controller
 
             $porque =  "";
             if(isset($_REQUEST['porque_'.$i])){
-                $porque =  $_REQUEST['porque_'.$i];
+                $porque = strtoupper($_REQUEST['porque_'.$i]);
             } else {
                 $porque =  "";
             }
