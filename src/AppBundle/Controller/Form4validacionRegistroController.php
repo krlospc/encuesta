@@ -127,6 +127,7 @@ class Form4validacionRegistroController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->remove($form4validacionRegistro);
             $em->flush();
+            $this->get('session')->getFlashBag()->add('registroOk', 'Se eliminó el registro.');
         }
 
         return $this->redirectToRoute('form4validacionregistro_index');
