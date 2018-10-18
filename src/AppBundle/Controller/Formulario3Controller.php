@@ -133,7 +133,7 @@ class Formulario3Controller extends Controller
                         $estudiante->setp158Dinero($request->get('p158')?1:0);
                         $estudiante->setp159Apoyo($request->get('p159')?1:0);
                         $estudiante->setp1510Otro($request->get('p1510')?1:0);
-                        $estudiante->setp15Razon(strtoupper($request->get('p1427razon_1')));
+                        $estudiante->setp15Razon(strtoupper($request->get('p1427razon_2')));
                         $estudiante->setp16Papas(strtoupper($request->get('p161')));
                         $estudiante->setp17Vuelve2018(strtoupper($request->get('p171')));
                         $estudiante->setp18Companeros($request->get('p18'));
@@ -292,7 +292,7 @@ class Formulario3Controller extends Controller
                         $estudiante->setp158Dinero($request->get('p158')?1:0);
                         $estudiante->setp159Apoyo($request->get('p159')?1:0);
                         $estudiante->setp1510Otro($request->get('p1510')?1:0);
-                        $estudiante->setp15Razon(strtoupper($request->get('p1427razon_1')));
+                        $estudiante->setp15Razon(strtoupper($request->get('p1427razon_2')));
                         $estudiante->setp16Papas(strtoupper($request->get('p161')));
                         $estudiante->setp17Vuelve2018(strtoupper($request->get('p171')));
                         $estudiante->setp18Companeros($request->get('p18'));
