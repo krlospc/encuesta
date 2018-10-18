@@ -40,6 +40,9 @@
 		.borbot{
 			border-bottom: 1px solid #CCCCCC;
 		}
+		.jupper{
+			text-transform: uppercase;
+		}
 	</style>
 </head>
 <body>
@@ -58,9 +61,9 @@
 				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 					<table>
 						<tr>
-							<td><input type="text" name="departamento" size="5" value={{docentes.departamento}} required></td>
-							<td><input type="text" name="codigounidadeducativa" size="40" value={{docentes.codigoUnidadEducativa}}  required></td>
-							<td><input type="text" name="numeroboleta" size="10" value={{docentes.numeroBoleta}} required></td>
+							<td><input type="text" name="departamento" size="5" value="{{docentes.departamento}}" required maxlength="1" tabindex="1"></td>
+							<td><input type="text" name="codigounidadeducativa" size="40" value="{{docentes.codigoUnidadEducativa}}"  required maxlength="8" tabindex="2"></td>
+							<td><input type="text" name="numeroboleta" size="10" value="{{docentes.numeroBoleta}}" required maxlength="1" tabindex="3"></td>
 						</tr>
 						<tr>
 							<td>DEP</td>
@@ -96,72 +99,72 @@
 			<table class="table-bordered" width="100%">
 				<tr>
 					<th>P1. UNIDAD EDUCATIVA</th>
-					<td colspan="8"><input type="text" name="p1unidadeducativa" value="{{docentes.p1Unidadeducativa}}" required></td>
+					<td colspan="8"><input type="text" name="p1unidadeducativa" style="width:100%" value="{{docentes.p1Unidadeducativa}}" required class="jupper" tabindex="4"></td>
 				</tr>
 				<tr>
 					<th>P2. NOMBRES</th>
-					<td colspan="8"><input type="text" name="p2nombres" value="{{docentes.p2Nombres}}" required></td>
+					<td colspan="8"><input type="text" name="p2nombres" style="width:100%" value="{{docentes.p2Nombres}}" required class="jupper" tabindex="5"></td>
 				</tr>
 				<tr>
 					<th>P3. APELLIDO PATERNO</th>
-					<td><input type="text" name="p3paterno" value="{{docentes.p3Paterno}}" required></td>
+					<td><input type="text" name="p3paterno" value="{{docentes.p3Paterno}}" style="width:100%" required class="jupper" tabindex="6"></td>
 					<th colspan="3">P4. APELLIDO MATERNO</th>
-					<td colspan="4"><input type="text" name="p4materno" value="{{docentes.p4Materno}}" required></td>
+					<td colspan="4"><input type="text" name="p4materno" value="{{docentes.p4Materno}}" style="width:100%" required class="jupper" tabindex="7"></td>
 				</tr>
 				<tr>
 					<th>P5. SEXO</th>
 					<td>
                         {% if(docentes.p5Sexo == 1) %}
-							<label><input type="radio" name="p5sexo" value="1" checked="true" required> Hombre </label>
-							<label><input type="radio" name="p5sexo" value="2" required> Mujer </label>
+							<label><input type="radio" name="p5sexo" value="1" checked="true" required tabindex="8"> Hombre </label>
+							<label><input type="radio" name="p5sexo" value="2" required tabindex="9"> Mujer </label>
                         {% elseif (docentes.p5Sexo == 2)%}
-							<label><input type="radio" name="p5sexo" value="1" required> Hombre </label>
-							<label><input type="radio" name="p5sexo" value="2" checked="true" required> Mujer </label>
+							<label><input type="radio" name="p5sexo" value="1" required tabindex="8"> Hombre </label>
+							<label><input type="radio" name="p5sexo" value="2" checked="true" required tabindex="9"> Mujer </label>
                         {% elseif (docentes.p5Sexo != 1) and (docentes.p5Sexo != 2)%}
-							<label><input type="radio" name="p5sexo" value="1" required> Hombre </label>
-							<label><input type="radio" name="p5sexo" value="2" required> Mujer </label>
+							<label><input type="radio" name="p5sexo" value="1" required tabindex="8"> Hombre </label>
+							<label><input type="radio" name="p5sexo" value="2" required tabindex="9"> Mujer </label>
 						{% endif%}
 
 					</td>
 					<th colspan="3">P6. TELÉFONO</th>
-					<td colspan="4"><input type="text" name="p6telefono" value={{docentes.p6Telefono}}></td>
+					<td colspan="4"><input type="text" name="p6telefono" style="width:100%" value={{docentes.p6Telefono}} tabindex="10"></td>
 				</tr>
 				<tr>
 					<th colspan="3">P7. AÑO(S) DE ESCOLARIDAD EN EL QUE TRABAJABA EN 2016</th>
                     {% if(docentes.p7Primero==true) %}
-						<td><label><input type="checkbox" name="p7primero" checked="true"> (1) </label></td>
+						<td><label><input type="checkbox" name="p7primero" checked="true" tabindex="11"> (1) </label></td>
                     {% else%}
-						<td><label><input type="checkbox" name="p7primero"> (1) </label></td>
+						<td><label><input type="checkbox" name="p7primero" tabindex="11"> (1) </label></td>
                     {% endif%}
 
                     {% if(docentes.p7Segundo==true) %}
-						<td><label><input type="checkbox" name="p7segundo" checked="true"> (2) </label></td>
+						<td><label><input type="checkbox" name="p7segundo" checked="true" tabindex="12"> (2) </label></td>
                     {% else%}
-						<td><label><input type="checkbox" name="p7segundo"> (2) </label></td>
+						<td><label><input type="checkbox" name="p7segundo" tabindex="12"> (2) </label></td>
                     {% endif%}
 
                     {% if(docentes.p7Tercero==true) %}
-						<td><label><input type="checkbox" name="p7tercero" checked="true"> (3) </label></td>
+						<td><label><input type="checkbox" name="p7tercero" checked="true" tabindex="13"> (3) </label></td>
                     {% else%}
-						<td><label><input type="checkbox" name="p7tercero"> (3) </label></td>
+						<td><label><input type="checkbox" name="p7tercero" tabindex="13"> (3) </label></td>
                     {% endif%}
 
                     {% if(docentes.p7Cuarto==true) %}
-						<td><label><input type="checkbox" name="p7cuarto" checked="true"> (4) </label></td>
+						<td><label><input type="checkbox" name="p7cuarto" checked="true" tabindex="14"> (4) </label></td>
                     {% else%}
-						<td><label><input type="checkbox" name="p7cuarto"> (4) </label></td>
+						<td><label><input type="checkbox" name="p7cuarto" tabindex="14"> (4) </label></td>
                     {% endif%}
 
                     {% if(docentes.p7Quinto==true) %}
-						<td><label><input type="checkbox" name="p7quinto" checked="true"> (5) </label></td>
+						<td><label><input type="checkbox" name="p7quinto" checked="true" tabindex="15"> (5) </label></td>
                     {% else%}
-						<td><label><input type="checkbox" name="p7quinto"> (5) </label></td>
+						<td><label><input type="checkbox" name="p7quinto" tabindex="15"> (5) </label></td>
                     {% endif%}
 
                     {% if(docentes.p7Sexto==true) %}
-						<td><label><input type="checkbox" name="p7sexto" checked="true"> (6) </label></td>
+						<td><label><input type="checkbox" name="p7sexto" checked="true" tabindex="16"> (6) </label></td>
                     {% else%}
-						<td><label><input type="checkbox" name="p7sexto"> (6) </label></td>
+						<td><label><input type="checkbox" name="p7sexto" tabindex="16"> (6) </label></td>
                     {% endif%}
 
 				</tr>
@@ -169,45 +172,45 @@
 					<th colspan="3">P8. AÑO(S) DE ESCOLARIDAD EN EL(LOS) QUE ACTUALMENTE TRABAJA</th>
 
                     {% if(docentes.p8Primero==true) %}
-						<td><label><input type="checkbox" name="p8primero" checked="true"> (1) </label></td>
+						<td><label><input type="checkbox" name="p8primero" checked="true" tabindex="17"> (1) </label></td>
                     {% else%}
-						<td><label><input type="checkbox" name="p8primero"> (1) </label></td>
+						<td><label><input type="checkbox" name="p8primero" tabindex="17"> (1) </label></td>
                     {% endif%}
 
                     {% if(docentes.p8Segundo==true) %}
-						<td><label><input type="checkbox" name="p8segundo" checked="true"> (2) </label></td>
+						<td><label><input type="checkbox" name="p8segundo" checked="true" tabindex="18"> (2) </label></td>
                     {% else%}
-						<td><label><input type="checkbox" name="p8segundo"> (2) </label></td>
+						<td><label><input type="checkbox" name="p8segundo" tabindex="18"> (2) </label></td>
                     {% endif%}
 
                     {% if(docentes.p8Tercero==true) %}
-						<td><label><input type="checkbox" name="p8tercero" checked="true"> (3) </label></td>
+						<td><label><input type="checkbox" name="p8tercero" checked="true" tabindex="19"> (3) </label></td>
                     {% else%}
-						<td><label><input type="checkbox" name="p8tercero"> (3) </label></td>
+						<td><label><input type="checkbox" name="p8tercero" tabindex="19"> (3) </label></td>
                     {% endif%}
 
                     {% if(docentes.p8Cuarto==true) %}
-						<td><label><input type="checkbox" name="p8cuarto" checked="true"> (4) </label></td>
+						<td><label><input type="checkbox" name="p8cuarto" checked="true" tabindex="20"> (4) </label></td>
                     {% else%}
-						<td><label><input type="checkbox" name="p8cuarto"> (4) </label></td>
+						<td><label><input type="checkbox" name="p8cuarto" tabindex="20"> (4) </label></td>
                     {% endif%}
 
                     {% if(docentes.p8Quinto==true) %}
-						<td><label><input type="checkbox" name="p8quinto" checked="true"> (5) </label></td>
+						<td><label><input type="checkbox" name="p8quinto" checked="true" tabindex="21"> (5) </label></td>
                     {% else%}
-						<td><label><input type="checkbox" name="p8quinto"> (5) </label></td>
+						<td><label><input type="checkbox" name="p8quinto" tabindex="21"> (5) </label></td>
                     {% endif%}
 
                     {% if(docentes.p8Sexto==true) %}
-						<td><label><input type="checkbox" name="p8sexto" checked="true"> (6) </label></td>
+						<td><label><input type="checkbox" name="p8sexto" checked="true" tabindex="22"> (6) </label></td>
                     {% else%}
-						<td><label><input type="checkbox" name="p8sexto"> (6) </label></td>
+						<td><label><input type="checkbox" name="p8sexto" tabindex="22"> (6) </label></td>
                     {% endif%}
 
 				</tr>
 				<tr>
 					<th colspan="2">P9. ¿QUÉ MATERIA(S) DICTABA EL 2016?</th>
-					<td colspan="7"><textarea name="p9materias" id="" cols="30" rows="3" >{{docentes.p9Materias}}</textarea></td>
+					<td colspan="7"><textarea name="p9materias" id="" cols="30" rows="3" class="jupper" tabindex="23">{{docentes.p9Materias}}</textarea></td>
 				</tr>
 			</table>
 			<br>
@@ -222,77 +225,77 @@
 				<tr>
 
 					<th>P9. NOMBRE(S)</th>
-					<td colspan="2"><input type="text" name="p9nombres_1" value={{estudiantes[0].p9Nombres}}></td>
-					<td colspan="2"><input type="text" name="p9nombres_2" value={{estudiantes[1].p9Nombres}}></td>
-					<td colspan="2"><input type="text" name="p9nombres_3" value={{estudiantes[2].p9Nombres}}></td>
-					<td colspan="2"><input type="text" name="p9nombres_4" value={{estudiantes[3].p9Nombres}}></td>
+					<td colspan="2"><input type="text" name="p9nombres_1" class="jupper" tabindex="24" value={{estudiantes[0].p9Nombres}}></td>
+					<td colspan="2"><input type="text" name="p9nombres_2" class="jupper" tabindex="85" value={{estudiantes[1].p9Nombres}}></td>
+					<td colspan="2"><input type="text" name="p9nombres_3" class="jupper" tabindex="146" value={{estudiantes[2].p9Nombres}}></td>
+					<td colspan="2"><input type="text" name="p9nombres_4" class="jupper" tabindex="207" value={{estudiantes[3].p9Nombres}}></td>
 				</tr>
 				<tr>
 					<th>P10. APELLIDO PATERNO</th>
-					<td colspan="2"><input type="text" name="p10paterno_1" value={{estudiantes[0].p10Paterno}}></td>
-					<td colspan="2"><input type="text" name="p10paterno_2" value={{estudiantes[1].p10Paterno}}></td>
-					<td colspan="2"><input type="text" name="p10paterno_3" value={{estudiantes[2].p10Paterno}}></td>
-					<td colspan="2"><input type="text" name="p10paterno_4" value={{estudiantes[3].p10Paterno}}></td>
+					<td colspan="2"><input type="text" name="p10paterno_1" class="jupper" tabindex="25" value={{estudiantes[0].p10Paterno}}></td>
+					<td colspan="2"><input type="text" name="p10paterno_2" class="jupper" tabindex="86" value={{estudiantes[1].p10Paterno}}></td>
+					<td colspan="2"><input type="text" name="p10paterno_3" class="jupper" tabindex="147" value={{estudiantes[2].p10Paterno}}></td>
+					<td colspan="2"><input type="text" name="p10paterno_4" class="jupper" tabindex="208" value={{estudiantes[3].p10Paterno}}></td>
 				</tr>
 				<tr>
 					<th>P11. APELLIDO MATERNO</th>
-					<td colspan="2"><input type="text" name="p11materno_1" value={{estudiantes[0].p11Materno }} ></td>
-					<td colspan="2"><input type="text" name="p11materno_2" value={{estudiantes[1].p11Materno }}></td>
-					<td colspan="2"><input type="text" name="p11materno_3" value={{estudiantes[2].p11Materno }}></td>
-					<td colspan="2"><input type="text" name="p11materno_4" value={{estudiantes[3].p11Materno }}></td>
+					<td colspan="2"><input type="text" name="p11materno_1" class="jupper" tabindex="26" value={{estudiantes[0].p11Materno }} ></td>
+					<td colspan="2"><input type="text" name="p11materno_2" class="jupper" tabindex="87" value={{estudiantes[1].p11Materno }}></td>
+					<td colspan="2"><input type="text" name="p11materno_3" class="jupper" tabindex="148" value={{estudiantes[2].p11Materno }}></td>
+					<td colspan="2"><input type="text" name="p11materno_4" class="jupper" tabindex="209" value={{estudiantes[3].p11Materno }}></td>
 				</tr>
 				<tr>
 					<th>P12. SEXO</th>
 
                     <td colspan="2">
                         {% if(estudiantes[0].p12sexo==1) %}
-							<label><input type="radio" name="p12sexo_1" value="1" checked="true"> Hombre</label>
-							<label><input type="radio" name="p12sexo_1" value="2"> Mujer</label>
+							<label><input type="radio" name="p12sexo_1" value="1" checked="true" tabindex="27"> Hombre</label>
+							<label><input type="radio" name="p12sexo_1" value="2" tabindex="28"> Mujer</label>
                         {% elseif (estudiantes[0].p12sexo==2)%}
-							<label><input type="radio" name="p12sexo_1" value="1"> Hombre</label>
-							<label><input type="radio" name="p12sexo_1" value="2" checked="true"> Mujer</label>
+							<label><input type="radio" name="p12sexo_1" value="1" tabindex="27"> Hombre</label>
+							<label><input type="radio" name="p12sexo_1" value="2" checked="true" tabindex="28"> Mujer</label>
                         {% elseif (estudiantes[0].p12sexo!=1) and (estudiantes[0].p12sexo!=2)%}
-							<label><input type="radio" name="p12sexo_1" value="1"> Hombre</label>
-							<label><input type="radio" name="p12sexo_1" value="2"> Mujer</label>
+							<label><input type="radio" name="p12sexo_1" value="1" tabindex="27"> Hombre</label>
+							<label><input type="radio" name="p12sexo_1" value="2" tabindex="28"> Mujer</label>
                         {% endif%}
 					</td>
 
 					<td colspan="2">
                         {% if(estudiantes[1].p12sexo==1) %}
-							<label><input type="radio" name="p12sexo_2" value="1" checked="true"> Hombre</label>
-							<label><input type="radio" name="p12sexo_2" value="2"> Mujer</label>
+							<label><input type="radio" name="p12sexo_2" value="1" checked="true" tabindex="88"> Hombre</label>
+							<label><input type="radio" name="p12sexo_2" value="2" tabindex="89"> Mujer</label>
                         {% elseif (estudiantes[1].p12sexo==2)%}
-							<label><input type="radio" name="p12sexo_2" value="1"> Hombre</label>
-							<label><input type="radio" name="p12sexo_2" value="2" checked="true"> Mujer</label>
+							<label><input type="radio" name="p12sexo_2" value="1" tabindex="88"> Hombre</label>
+							<label><input type="radio" name="p12sexo_2" value="2" checked="true" tabindex="89"> Mujer</label>
                         {% elseif (estudiantes[1].p12sexo!=1) and (estudiantes[1].p12sexo!=2)%}
-							<label><input type="radio" name="p12sexo_2" value="1"> Hombre</label>
-							<label><input type="radio" name="p12sexo_2" value="2"> Mujer</label>
+							<label><input type="radio" name="p12sexo_2" value="1" tabindex="88"> Hombre</label>
+							<label><input type="radio" name="p12sexo_2" value="2" tabindex="89"> Mujer</label>
                         {% endif%}
 
 					</td>
 					<td colspan="2">
                         {% if(estudiantes[2].p12sexo==1) %}
-							<label><input type="radio" name="p12sexo_3" value="1" checked="true"> Hombre</label>
-							<label><input type="radio" name="p12sexo_3" value="2"> Mujer</label>
+							<label><input type="radio" name="p12sexo_3" value="1" checked="true" tabindex="149"> Hombre</label>
+							<label><input type="radio" name="p12sexo_3" value="2" tabindex="150"> Mujer</label>
                         {% elseif (estudiantes[2].p12sexo==2)%}
-							<label><input type="radio" name="p12sexo_3" value="1"> Hombre</label>
-							<label><input type="radio" name="p12sexo_3" value="2" checked="true"> Mujer</label>
+							<label><input type="radio" name="p12sexo_3" value="1" tabindex="149"> Hombre</label>
+							<label><input type="radio" name="p12sexo_3" value="2" checked="true" tabindex="150"> Mujer</label>
                         {% elseif (estudiantes[2].p12sexo!=1) and (estudiantes[2].p12sexo!=2)%}
-							<label><input type="radio" name="p12sexo_3" value="1"> Hombre</label>
-							<label><input type="radio" name="p12sexo_3" value="2"> Mujer</label>
+							<label><input type="radio" name="p12sexo_3" value="1" tabindex="149"> Hombre</label>
+							<label><input type="radio" name="p12sexo_3" value="2" tabindex="150"> Mujer</label>
                         {% endif%}
 
 					</td>
 					<td colspan="2">
                         {% if(estudiantes[3].p12sexo==1) %}
-							<label><input type="radio" name="p12sexo_4" value="1" checked="true"> Hombre</label>
-							<label><input type="radio" name="p12sexo_4" value="2"> Mujer</label>
+							<label><input type="radio" name="p12sexo_4" value="1" checked="true" tabindex="210"> Hombre</label>
+							<label><input type="radio" name="p12sexo_4" value="2" tabindex="211"> Mujer</label>
                         {% elseif (estudiantes[3].p12sexo==2)%}
-							<label><input type="radio" name="p12sexo_4" value="1"> Hombre</label>
-							<label><input type="radio" name="p12sexo_4" value="2" checked="true"> Mujer</label>
+							<label><input type="radio" name="p12sexo_4" value="1" tabindex="210"> Hombre</label>
+							<label><input type="radio" name="p12sexo_4" value="2" checked="true" tabindex="211"> Mujer</label>
                         {% elseif (estudiantes[3].p12sexo!=1) and (estudiantes[3].p12sexo!=2)%}
-							<label><input type="radio" name="p12sexo_4" value="1"> Hombre</label>
-							<label><input type="radio" name="p12sexo_4" value="2"> Mujer</label>
+							<label><input type="radio" name="p12sexo_4" value="1" tabindex="210"> Hombre</label>
+							<label><input type="radio" name="p12sexo_4" value="2" tabindex="211"> Mujer</label>
                         {% endif%}
 
 					</td>
@@ -303,13 +306,13 @@
 				</tr>
 				<tr>
 					<th>P13. AÑO DE ESCOLARIDAD (DE 1 A 6)</th>
-					<td colspan="2"><input type="text" name="p13anioescolaridad_1" value={{estudiantes[0].p13AnioEscolaridad }}></td>
-					<td colspan="2"><input type="text" name="p13anioescolaridad_2" value={{estudiantes[1].p13AnioEscolaridad }}></td>
-					<td colspan="2"><input type="text" name="p13anioescolaridad_3" value={{estudiantes[2].p13AnioEscolaridad }}></td>
-					<td colspan="2"><input type="text" name="p13anioescolaridad_4" value={{estudiantes[3].p13AnioEscolaridad }}></td>
+					<td colspan="2"><input type="text" name="p13anioescolaridad_1" maxlength="1" tabindex="29" value={{estudiantes[0].p13AnioEscolaridad }}></td>
+					<td colspan="2"><input type="text" name="p13anioescolaridad_2" maxlength="1" tabindex="90" value={{estudiantes[1].p13AnioEscolaridad }}></td>
+					<td colspan="2"><input type="text" name="p13anioescolaridad_3" maxlength="1" tabindex="151" value={{estudiantes[2].p13AnioEscolaridad }}></td>
+					<td colspan="2"><input type="text" name="p13anioescolaridad_4" maxlength="1" tabindex="212" value={{estudiantes[3].p13AnioEscolaridad }}></td>
 				</tr>
 				<tr>
-					<th>P14. SEGÚN SU CONOCIMIENTO, ¿CUÁLES FUERON LOS FACTORES DETERMINANTES PARA LOS ESTUDIANTES QUE CURSARON ES LA GESTIÓN 2016 EN EL NIVEL SECUNDARIO NO SE INSCRIBIERAN EN LA GESTION 2017? (MARQUE UNA O VARIAS OPCIONES SEGÚN CORRESPONDA)</th>
+					<th>P14. SEGÚN SU CONOCIMIENTO, ¿CUÁLES FUERON LOS FACTORES DETERMINANTES PARA LOS ESTUDIANTES QUE CURSARON ES LA GESTIÓN 2016 EN EL NIVEL SECUNDARIO NO SE INSCRIBIERAN EN LA GESTION 2017? (MARQUE UNA O VARIAS OPCIONES SEGÚN C91ORRESPONDA)</th>
 					<th>EST.1</th>
 					<td>ORDEN IMPORTANCIA</td>
 					<th>EST.2</th>
@@ -322,1029 +325,1033 @@
 				<tr class="borbot">
 					<td>1. Enfermedad</td>
                     {% if(estudiantes[0].p141Enfermedad==true) %}
-						<td><input type="checkbox" name="p141enfermedad_1" checked="true"></td>
+						<td><input type="checkbox" name="p141enfermedad_1" tabindex="30" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p141enfermedad_1"></th>
+						<th><input type="checkbox" name="p141enfermedad_1" tabindex="30"></th>
                     {% endif%}
+					<td><input type="text" size="5" name="p141importancia_1" tabindex="31"  value={{estudiantes[0].p141Importancia }}></td>
 
-					<td><input type="text" size="5" name="p141importancia_1"  value={{estudiantes[0].p141Importancia }}></td>
                     {% if(estudiantes[1].p141Enfermedad==true) %}
-						<td><input type="checkbox" name="p141enfermedad_2" checked="true"></td>
+						<td><input type="checkbox" name="p141enfermedad_2" tabindex="91" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p141enfermedad_2"></th>
+						<th><input type="checkbox" name="p141enfermedad_2" tabindex="91"></th>
                     {% endif%}
+					<td><input type="text" size="5" name="p141importancia_2" tabindex="92" value={{estudiantes[1].p141Importancia }}></td>
 
-					<td><input type="text" size="5" name="p141importancia_2" value={{estudiantes[1].p141Importancia }}></td>
                     {% if(estudiantes[2].p141Enfermedad==true) %}
-						<td><input type="checkbox" name="p141enfermedad_3" checked="true"></td>
+						<td><input type="checkbox" name="p141enfermedad_3" tabindex="152" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p141enfermedad_3"></th>
+						<th><input type="checkbox" name="p141enfermedad_3" tabindex="152"></th>
                     {% endif%}
+					<td><input type="text" size="5" name="p141importancia_3" tabindex="153" value={{estudiantes[2].p141Importancia }}></td>
 
-					<td><input type="text" size="5" name="p141importancia_3" value={{estudiantes[2].p141Importancia }}></td>
                     {% if(estudiantes[3].p141Enfermedad==true) %}
-						<td><input type="checkbox" name="p141enfermedad_4" checked="true"></td>
+						<td><input type="checkbox" name="p141enfermedad_4" tabindex="213" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p141enfermedad_4"></th>
+						<th><input type="checkbox" name="p141enfermedad_4" tabindex="213"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p141importancia_4" value={{estudiantes[3].p141Importancia }}></td>
+					<td><input type="text" size="5" name="p141importancia_4" tabindex="214" value={{estudiantes[3].p141Importancia }}></td>
 				</tr>
 				<tr class="borbot">
 					<td>2. Accidente</td>
                     {% if(estudiantes[0].p142Accidente==true) %}
-						<td><input type="checkbox" name="p142accidente_1" checked="true"></td>
+						<td><input type="checkbox" name="p142accidente_1" tabindex="32" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p142accidente_1"></th>
+						<th><input type="checkbox" name="p142accidente_1" tabindex="32"></th>
                     {% endif%}
+					<td><input type="text" size="5" name="p142importancia_1" tabindex="33"  value={{estudiantes[0].p142Importancia }}></td>
 
-					<td><input type="text" size="5" name="p142importancia_1"  value={{estudiantes[0].p142Importancia }}></td>
                     {% if(estudiantes[1].p142Accidente==true) %}
-						<td><input type="checkbox" name="p142accidente_2" checked="true"></td>
+						<td><input type="checkbox" name="p142accidente_2" tabindex="93" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p142accidente_2"></th>
+						<th><input type="checkbox" name="p142accidente_2" tabindex="93"></th>
                     {% endif%}
+					<td><input type="text" size="5" name="p142importancia_2" tabindex="94" value={{estudiantes[1].p142Importancia }}></td>
 
-					<td><input type="text" size="5" name="p142importancia_2" value={{estudiantes[1].p142Importancia }}></td>
                     {% if(estudiantes[2].p142Accidente==true) %}
-						<td><input type="checkbox" name="p142accidente_3" checked="true"></td>
+						<td><input type="checkbox" name="p142accidente_3" tabindex="154" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p142accidente_3"></th>
+						<th><input type="checkbox" name="p142accidente_3" tabindex="154"></th>
                     {% endif%}
+					<td><input type="text" size="5" name="p142importancia_3" tabindex="155" value={{estudiantes[2].p142Importancia }}></td>
 
-					<td><input type="text" size="5" name="p142importancia_3" value={{estudiantes[2].p142Importancia }}></td>
                     {% if(estudiantes[3].p142Accidente==true) %}
-						<td><input type="checkbox" name="p142accidente_4" checked="true"></td>
+						<td><input type="checkbox" name="p142accidente_4" tabindex="215" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p142accidente_4"></th>
+						<th><input type="checkbox" name="p142accidente_4" tabindex="215"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p142importancia_4" value={{estudiantes[3].p142Importancia }}></td>
-					{#<th><input type="checkbox" name="p142accidente_1"></th>#}
-					{#<td><input type="text" size="5" name="p142importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p142accidente_2"></th>#}
-					{#<td><input type="text" size="5" name="p142importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p142accidente_3"></th>#}
-					{#<td><input type="text" size="5" name="p142importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p142accidente_4"></th>#}
-					{#<td><input type="text" size="5" name="p142importancia_4"></td>#}
+					<td><input type="text" size="5" name="p142importancia_4" tabindex="216" value={{estudiantes[3].p142Importancia }}></td>
+					{#<th><input type="checkbox" name="p142accidente_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p142importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p142accidente_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p142importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p142accidente_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p142importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p142accidente_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p142importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>3. Discapacidad</td>
                     {% if(estudiantes[0].p143Discapacidad==true) %}
-						<td><input type="checkbox" name="p143discapacidad_1" checked="true"></td>
+						<td><input type="checkbox" name="p143discapacidad_1" tabindex="34" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p143discapacidad_1"></th>
+						<th><input type="checkbox" name="p143discapacidad_1" tabindex="34"></th>
                     {% endif%}
+					<td><input type="text" size="5" name="p143importancia_1" tabindex="35"  value={{estudiantes[0].p143Importancia }}></td>
 
-					<td><input type="text" size="5" name="p143importancia_1"  value={{estudiantes[0].p143Importancia }}></td>
                     {% if(estudiantes[1].p143Discapacidad==true) %}
-						<td><input type="checkbox" name="p143discapacidad_2" checked="true"></td>
+						<td><input type="checkbox" name="p143discapacidad_2" tabindex="95" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p143discapacidad_2"></th>
+						<th><input type="checkbox" name="p143discapacidad_2" tabindex="95"></th>
                     {% endif%}
+					<td><input type="text" size="5" name="p143importancia_2" tabindex="96" value={{estudiantes[1].p143Importancia }}></td>
 
-					<td><input type="text" size="5" name="p143importancia_2" value={{estudiantes[1].p143Importancia }}></td>
                     {% if(estudiantes[2].p143Discapacidad==true) %}
-						<td><input type="checkbox" name="p143discapacidad_3" checked="true"></td>
+						<td><input type="checkbox" name="p143discapacidad_3" tabindex="156" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p143discapacidad_3"></th>
+						<th><input type="checkbox" name="p143discapacidad_3" tabindex="156"></th>
                     {% endif%}
+					<td><input type="text" size="5" name="p143importancia_3" tabindex="157" value={{estudiantes[2].p143Importancia }}></td>
 
-					<td><input type="text" size="5" name="p143importancia_3" value={{estudiantes[2].p143Importancia }}></td>
                     {% if(estudiantes[3].p143Discapacidad==true) %}
-						<td><input type="checkbox" name="p143discapacidad_4" checked="true"></td>
+						<td><input type="checkbox" name="p143discapacidad_4" tabindex="217" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p143discapacidad_4"></th>
+						<th><input type="checkbox" name="p143discapacidad_4" tabindex="217"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p143importancia_4" value={{estudiantes[3].p143Importancia }}></td>
-					{#<th><input type="checkbox" name="p143discapacidad_1"></th>#}
-					{#<td><input type="text" size="5" name="p143importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p143discapacidad_2"></th>#}
-					{#<td><input type="text" size="5" name="p143importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p143discapacidad_3"></th>#}
-					{#<td><input type="text" size="5" name="p143importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p143discapacidad_4"></th>#}
-					{#<td><input type="text" size="5" name="p143importancia_4"></td>#}
+					<td><input type="text" size="5" name="p143importancia_4" tabindex="218" value={{estudiantes[3].p143Importancia }}></td>
+					{#<th><input type="checkbox" name="p143discapacidad_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p143importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p143discapacidad_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p143importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p143discapacidad_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p143importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p143discapacidad_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p143importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>4. Sobre edad</td>
                     {% if(estudiantes[0].p144Edad==true) %}
-						<td><input type="checkbox" name="p144edad_1" checked="true"></td>
+						<td><input type="checkbox" name="p144edad_1" tabindex="36" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p144edad_1"></th>
+						<th><input type="checkbox" name="p144edad_1" tabindex="36"></th>
                     {% endif%}
+					<td><input type="text" size="5" name="p144importancia_1" tabindex="37"  value={{estudiantes[0].p144Importancia }}></td>
 
-					<td><input type="text" size="5" name="p144importancia_1"  value={{estudiantes[0].p144Importancia }}></td>
                     {% if(estudiantes[1].p144Edad==true) %}
-						<td><input type="checkbox" name="p144edad_2" checked="true"></td>
+						<td><input type="checkbox" name="p144edad_2" tabindex="97" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p144edad_2"></th>
+						<th><input type="checkbox" name="p144edad_2" tabindex="97"></th>
                     {% endif%}
+					<td><input type="text" size="5" name="p144importancia_2" tabindex="9899" value={{estudiantes[1].p144Importancia }}></td>
 
-					<td><input type="text" size="5" name="p144importancia_2" value={{estudiantes[1].p144Importancia }}></td>
                     {% if(estudiantes[2].p144Edad==true) %}
-						<td><input type="checkbox" name="p144edad_3" checked="true"></td>
+						<td><input type="checkbox" name="p144edad_3" tabindex="158" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p144edad_3"></th>
+						<th><input type="checkbox" name="p144edad_3" tabindex="158"></th>
                     {% endif%}
+					<td><input type="text" size="5" name="p144importancia_3" tabindex="159" value={{estudiantes[2].p144Importancia }}></td>
 
-					<td><input type="text" size="5" name="p144importancia_3" value={{estudiantes[2].p144Importancia }}></td>
                     {% if(estudiantes[3].p144Edad==true) %}
-						<td><input type="checkbox" name="p144edad_4" checked="true"></td>
+						<td><input type="checkbox" name="p144edad_4" tabindex="219" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p144edad_4"></th>
+						<th><input type="checkbox" name="p144edad_4" tabindex="219"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p144importancia_4" value={{estudiantes[3].p144Importancia }}></td>
-					{#<th><input type="checkbox" name="p144edad_1"></th>#}
-					{#<td><input type="text" size="5" name="p144importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p144edad_2"></th>#}
-					{#<td><input type="text" size="5" name="p144importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p144edad_3"></th>#}
-					{#<td><input type="text" size="5" name="p144importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p144edad_4"></th>#}
-					{#<td><input type="text" size="5" name="p144importancia_4"></td>#}
+					<td><input type="text" size="5" name="p144importancia_4" tabindex="220" value={{estudiantes[3].p144Importancia }}></td>
+					{#<th><input type="checkbox" name="p144edad_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p144importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p144edad_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p144importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p144edad_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p144importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p144edad_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p144importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>5. Precocidad</td>
                     {% if(estudiantes[0].p145Precocidad==true) %}
-						<td><input type="checkbox" name="p145precocidad_1" checked="true"></td>
+						<td><input type="checkbox" name="p145precocidad_1" tabindex="38" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p145precocidad_1"></th>
+						<th><input type="checkbox" name="p145precocidad_1" tabindex="38"></th>
                     {% endif%}
+					<td><input type="text" size="5" name="p145importancia_1" tabindex="39"  value={{estudiantes[0].p145Importancia }}></td>
 
-					<td><input type="text" size="5" name="p145importancia_1"  value={{estudiantes[0].p145Importancia }}></td>
                     {% if(estudiantes[1].p145Precocidad==true) %}
-						<td><input type="checkbox" name="p145precocidad_2" checked="true"></td>
+						<td><input type="checkbox" name="p145precocidad_2" tabindex="99" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p145precocidad_2"></th>
+						<th><input type="checkbox" name="p145precocidad_2" tabindex="99"></th>
                     {% endif%}
+					<td><input type="text" size="5" name="p145importancia_2" tabindex="100" value={{estudiantes[1].p145Importancia }}></td>
 
-					<td><input type="text" size="5" name="p145importancia_2" value={{estudiantes[1].p145Importancia }}></td>
                     {% if(estudiantes[2].p145Precocidad==true) %}
-						<td><input type="checkbox" name="p145precocidad_3" checked="true"></td>
+						<td><input type="checkbox" name="p145precocidad_3" tabindex="160" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p145precocidad_3"></th>
+						<th><input type="checkbox" name="p145precocidad_3" tabindex="160"></th>
                     {% endif%}
+					<td><input type="text" size="5" name="p145importancia_3" tabindex="161" value={{estudiantes[2].p145Importancia }}></td>
 
-					<td><input type="text" size="5" name="p145importancia_3" value={{estudiantes[2].p145Importancia }}></td>
                     {% if(estudiantes[3].p145Precocidad==true) %}
-						<td><input type="checkbox" name="p145precocidad_4" checked="true"></td>
+						<td><input type="checkbox" name="p145precocidad_4" tabindex="221" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p145precocidad_4"></th>
+						<th><input type="checkbox" name="p145precocidad_4" tabindex="221"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p145importancia_4" value={{estudiantes[3].p145Importancia }}></td>
-					{#<th><input type="checkbox" name="p145precocidad_1"></th>#}
-					{#<td><input type="text" size="5" name="p145importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p145precocidad_2"></th>#}
-					{#<td><input type="text" size="5" name="p145importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p145precocidad_3"></th>#}
-					{#<td><input type="text" size="5" name="p145importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p145precocidad_4"></th>#}
-					{#<td><input type="text" size="5" name="p145importancia_4"></td>#}
+					<td><input type="text" size="5" name="p145importancia_4" tabindex="222" value={{estudiantes[3].p145Importancia }}></td>
+					{#<th><input type="checkbox" name="p145precocidad_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p145importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p145precocidad_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p145importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p145precocidad_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p145importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p145precocidad_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p145importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>6. Embarazo/Paternidad</td>
                     {% if(estudiantes[0].p146EmbarazoPaternidad==true) %}
-						<td><input type="checkbox" name="p146embarazopaternidad_1" checked="true"></td>
+						<td><input type="checkbox" name="p146embarazopaternidad_1" tabindex="40" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p146embarazopaternidad_1"></th>
+						<th><input type="checkbox" name="p146embarazopaternidad_1" tabindex="40"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p146importancia_1"  value={{estudiantes[0].p146Importancia }}></td>
+					<td><input type="text" size="5" name="p146importancia_1" tabindex="41"  value={{estudiantes[0].p146Importancia }}></td>
 
                     {% if(estudiantes[1].p146EmbarazoPaternidad==true) %}
-						<td><input type="checkbox" name="p146embarazopaternidad_2" checked="true"></td>
+						<td><input type="checkbox" name="p146embarazopaternidad_2" tabindex="101" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p146embarazopaternidad_2"></th>
+						<th><input type="checkbox" name="p146embarazopaternidad_2" tabindex="101"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p146importancia_2" value={{estudiantes[1].p146Importancia }}></td>
+					<td><input type="text" size="5" name="p146importancia_2" tabindex="102" value={{estudiantes[1].p146Importancia }}></td>
 
                     {% if(estudiantes[2].p146EmbarazoPaternidad==true) %}
-						<td><input type="checkbox" name="p146embarazopaternidad_3" checked="true"></td>
+						<td><input type="checkbox" name="p146embarazopaternidad_3" tabindex="162" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p146embarazopaternidad_3"></th>
+						<th><input type="checkbox" name="p146embarazopaternidad_3" tabindex="162"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p146importancia_3" value={{estudiantes[2].p146Importancia }}></td>
+					<td><input type="text" size="5" name="p146importancia_3" tabindex="163" value={{estudiantes[2].p146Importancia }}></td>
 
                     {% if(estudiantes[3].p146EmbarazoPaternidad==true) %}
-						<td><input type="checkbox" name="p146embarazopaternidad_4" checked="true"></td>
+						<td><input type="checkbox" name="p146embarazopaternidad_4" tabindex="223" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p146embarazopaternidad_4"></th>
+						<th><input type="checkbox" name="p146embarazopaternidad_4" tabindex="223"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p146importancia_4" value={{estudiantes[3].p146Importancia }}></td>
+					<td><input type="text" size="5" name="p146importancia_4" tabindex="224" value={{estudiantes[3].p146Importancia }}></td>
 
-					{#<th><input type="checkbox" name="p146embarazopaternidad_1"></th>#}
-					{#<td><input type="text" size="5" name="p146importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p146embarazopaternidad_2"></th>#}
-					{#<td><input type="text" size="5" name="p146importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p146embarazopaternidad_3"></th>#}
-					{#<td><input type="text" size="5" name="p146importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p146embarazopaternidad_4"></th>#}
-					{#<td><input type="text" size="5" name="p146importancia_4"></td>#}
+					{#<th><input type="checkbox" name="p146embarazopaternidad_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p146importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p146embarazopaternidad_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p146importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p146embarazopaternidad_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p146importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p146embarazopaternidad_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p146importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>7. El estudiante ya formó su propio hogar</td>
                     {% if(estudiantes[0].p147FormoHogar==true) %}
-						<td><input type="checkbox" name="p147formohogar_1" checked="true"></td>
+						<td><input type="checkbox" name="p147formohogar_1" tabindex="42" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p147formohogar_1"></th>
+						<th><input type="checkbox" name="p147formohogar_1" tabindex="42"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p147importancia_1"  value={{estudiantes[0].p147Importancia }}></td>
+					<td><input type="text" size="5" name="p147importancia_1" tabindex="43"  value={{estudiantes[0].p147Importancia }}></td>
 
                     {% if(estudiantes[1].p147FormoHogar==true) %}
-						<td><input type="checkbox" name="p147formohogar_2" checked="true"></td>
+						<td><input type="checkbox" name="p147formohogar_2" tabindex="103" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p147formohogar_2"></th>
+						<th><input type="checkbox" name="p147formohogar_2" tabindex="103"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p147importancia_2" value={{estudiantes[1].p147Importancia }}></td>
+					<td><input type="text" size="5" name="p147importancia_2" tabindex="104" value={{estudiantes[1].p147Importancia }}></td>
 
                     {% if(estudiantes[2].p147FormoHogar==true) %}
-						<td><input type="checkbox" name="p147formohogar_3" checked="true"></td>
+						<td><input type="checkbox" name="p147formohogar_3" tabindex="164" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p147formohogar_3"></th>
+						<th><input type="checkbox" name="p147formohogar_3" tabindex="164"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p147importancia_3" value={{estudiantes[2].p147Importancia }}></td>
+					<td><input type="text" size="5" name="p147importancia_3" tabindex="165" value={{estudiantes[2].p147Importancia }}></td>
 
                     {% if(estudiantes[3].p147FormoHogar==true) %}
-						<td><input type="checkbox" name="p147formohogar_4" checked="true"></td>
+						<td><input type="checkbox" name="p147formohogar_4" tabindex="225" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p147formohogar_4"></th>
+						<th><input type="checkbox" name="p147formohogar_4" tabindex="225"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p147importancia_4" value={{estudiantes[3].p147Importancia }}></td>
+					<td><input type="text" size="5" name="p147importancia_4" tabindex="226" value={{estudiantes[3].p147Importancia }}></td>
 
-                    {#<th><input type="checkbox" name="p147formohogar_1"></th>#}
-					{#<td><input type="text" size="5" name="p147importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p147formohogar_2"></th>#}
-					{#<td><input type="text" size="5" name="p147importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p147formohogar_3"></th>#}
-					{#<td><input type="text" size="5" name="p147importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p147formohogar_4"></th>#}
-					{#<td><input type="text" size="5" name="p147importancia_4"></td>#}
+                    {#<th><input type="checkbox" name="p147formohogar_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p147importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p147formohogar_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p147importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p147formohogar_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p147importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p147formohogar_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p147importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>8. Abandono en la gestion 2016</td>
                     {% if(estudiantes[0].p148Abandono2016==true) %}
-						<td><input type="checkbox" name="p148abandono2016_1" checked="true"></td>
+						<td><input type="checkbox" name="p148abandono2016_1" tabindex="44" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p148abandono2016_1"></th>
+						<th><input type="checkbox" name="p148abandono2016_1" tabindex="44"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p148importancia_1"  value={{estudiantes[0].p148Importancia }}></td>
+					<td><input type="text" size="5" name="p148importancia_1" tabindex="45"  value={{estudiantes[0].p148Importancia }}></td>
 
                     {% if(estudiantes[1].p148Abandono2016==true) %}
-						<td><input type="checkbox" name="p148abandono2016_2" checked="true"></td>
+						<td><input type="checkbox" name="p148abandono2016_2" tabindex="105" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p148abandono2016_2"></th>
+						<th><input type="checkbox" name="p148abandono2016_2" tabindex="105"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p148importancia_2" value={{estudiantes[1].p148Importancia }}></td>
+					<td><input type="text" size="5" name="p148importancia_2" tabindex="106" value={{estudiantes[1].p148Importancia }}></td>
 
                     {% if(estudiantes[2].p148Abandono2016==true) %}
-						<td><input type="checkbox" name="p148abandono2016_3" checked="true"></td>
+						<td><input type="checkbox" name="p148abandono2016_3" tabindex="166" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p148abandono2016_3"></th>
+						<th><input type="checkbox" name="p148abandono2016_3" tabindex="166"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p148importancia_3" value={{estudiantes[2].p148Importancia }}></td>
+					<td><input type="text" size="5" name="p148importancia_3" tabindex="167" value={{estudiantes[2].p148Importancia }}></td>
 
                     {% if(estudiantes[3].p148Abandono2016==true) %}
-						<td><input type="checkbox" name="p148abandono2016_4" checked="true"></td>
+						<td><input type="checkbox" name="p148abandono2016_4" tabindex="227" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p148abandono2016_4"></th>
+						<th><input type="checkbox" name="p148abandono2016_4" tabindex="227"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p148importancia_4" value={{estudiantes[3].p148Importancia }}></td>
-					{#<th><input type="checkbox" name="p148abandono2016_1"></th>#}
-					{#<td><input type="text" size="5" name="p148importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p148abandono2016_2"></th>#}
-					{#<td><input type="text" size="5" name="p148importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p148abandono2016_3"></th>#}
-					{#<td><input type="text" size="5" name="p148importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p148abandono2016_4"></th>#}
-					{#<td><input type="text" size="5" name="p148importancia_4"></td>#}
+					<td><input type="text" size="5" name="p148importancia_4" tabindex="228" value={{estudiantes[3].p148Importancia }}></td>
+					{#<th><input type="checkbox" name="p148abandono2016_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p148importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p148abandono2016_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p148importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p148abandono2016_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p148importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p148abandono2016_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p148importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>9. Reprobación en la gestion 2016</td>
                     {% if(estudiantes[0].p149Reprobacion2016==true) %}
-						<td><input type="checkbox" name="p149reprobacion2016_1" checked="true"></td>
+						<td><input type="checkbox" name="p149reprobacion2016_1" tabindex="46" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p149reprobacion2016_1"></th>
+						<th><input type="checkbox" name="p149reprobacion2016_1" tabindex="46"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p149importancia_1"  value={{estudiantes[0].p149Importancia }}></td>
+					<td><input type="text" size="5" name="p149importancia_1" tabindex="47"  value={{estudiantes[0].p149Importancia }}></td>
 
                     {% if(estudiantes[1].p149Reprobacion2016==true) %}
-						<td><input type="checkbox" name="p149reprobacion2016_2" checked="true"></td>
+						<td><input type="checkbox" name="p149reprobacion2016_2" tabindex="107" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p149reprobacion2016_2"></th>
+						<th><input type="checkbox" name="p149reprobacion2016_2" tabindex="107"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p149importancia_2" value={{estudiantes[1].p149Importancia }}></td>
+					<td><input type="text" size="5" name="p149importancia_2" tabindex="108" value={{estudiantes[1].p149Importancia }}></td>
 
                     {% if(estudiantes[2].p149Reprobacion2016==true) %}
-						<td><input type="checkbox" name="p149reprobacion2016_3" checked="true"></td>
+						<td><input type="checkbox" name="p149reprobacion2016_3" tabindex="168" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p149reprobacion2016_3"></th>
+						<th><input type="checkbox" name="p149reprobacion2016_3" tabindex="168"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p149importancia_3" value={{estudiantes[2].p149Importancia }}></td>
+					<td><input type="text" size="5" name="p149importancia_3" tabindex="169" value={{estudiantes[2].p149Importancia }}></td>
 
                     {% if(estudiantes[3].p149Reprobacion2016==true) %}
-						<td><input type="checkbox" name="p149reprobacion2016_4" checked="true"></td>
+						<td><input type="checkbox" name="p149reprobacion2016_4" tabindex="229" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p149reprobacion2016_4"></th>
+						<th><input type="checkbox" name="p149reprobacion2016_4" tabindex="229"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p149importancia_4" value={{estudiantes[3].p149Importancia }}></td>
-					{#<th><input type="checkbox" name="p149reprobacion2016_1"></th>#}
-					{#<td><input type="text" size="5" name="p149importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p149reprobacion2016_2"></th>#}
-					{#<td><input type="text" size="5" name="p149importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p149reprobacion2016_3"></th>#}
-					{#<td><input type="text" size="5" name="p149importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p149reprobacion2016_4"></th>#}
-					{#<td><input type="text" size="5" name="p149importancia_4"></td>#}
+					<td><input type="text" size="5" name="p149importancia_4" tabindex="230" value={{estudiantes[3].p149Importancia }}></td>
+					{#<th><input type="checkbox" name="p149reprobacion2016_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p149importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p149reprobacion2016_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p149importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p149reprobacion2016_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p149importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p149reprobacion2016_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p149importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>10. Se inscribió a un Centro de Educación Alternativa (CEA)</td>
                     {% if(estudiantes[0].p1410InscricioCea==true) %}
-						<td><input type="checkbox" name="p1410inscriciocea_1" checked="true"></td>
+						<td><input type="checkbox" name="p1410inscriciocea_1" tabindex="48" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1410inscriciocea_1"></th>
+						<th><input type="checkbox" name="p1410inscriciocea_1" tabindex="48"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1410importancia_1"  value={{estudiantes[0].p1410Importancia }}></td>
+					<td><input type="text" size="5" name="p1410importancia_1" tabindex="49"  value={{estudiantes[0].p1410Importancia }}></td>
 
                     {% if(estudiantes[1].p1410InscricioCea==true) %}
-						<td><input type="checkbox" name="p1410inscriciocea_2" checked="true"></td>
+						<td><input type="checkbox" name="p1410inscriciocea_2" tabindex="109" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1410inscriciocea_2"></th>
+						<th><input type="checkbox" name="p1410inscriciocea_2" tabindex="109"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1410importancia_2" value={{estudiantes[1].p1410Importancia }}></td>
+					<td><input type="text" size="5" name="p1410importancia_2" tabindex="110" value={{estudiantes[1].p1410Importancia }}></td>
 
                     {% if(estudiantes[2].p1410InscricioCea==true) %}
-						<td><input type="checkbox" name="p1410inscriciocea_3" checked="true"></td>
+						<td><input type="checkbox" name="p1410inscriciocea_3" tabindex="170" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1410inscriciocea_3"></th>
+						<th><input type="checkbox" name="p1410inscriciocea_3" tabindex="170"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1410importancia_3" value={{estudiantes[2].p1410Importancia }}></td>
+					<td><input type="text" size="5" name="p1410importancia_3" tabindex="171" value={{estudiantes[2].p1410Importancia }}></td>
 
                     {% if(estudiantes[3].p1410InscricioCea==true) %}
-						<td><input type="checkbox" name="p1410inscriciocea_4" checked="true"></td>
+						<td><input type="checkbox" name="p1410inscriciocea_4" tabindex="231" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1410inscriciocea_4"></th>
+						<th><input type="checkbox" name="p1410inscriciocea_4" tabindex="231"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1410importancia_4" value={{estudiantes[3].p1410Importancia }}></td>
-					{#<th><input type="checkbox" name="p1410inscriciocea_1"></th>#}
-					{#<td><input type="text" size="5" name="p1410importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p1410inscriciocea_2"></th>#}
-					{#<td><input type="text" size="5" name="p1410importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p1410inscriciocea_3"></th>#}
-					{#<td><input type="text" size="5" name="p1410importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p1410inscriciocea_4"></th>#}
-					{#<td><input type="text" size="5" name="p1410importancia_4"></td>#}
+					<td><input type="text" size="5" name="p1410importancia_4" tabindex="232" value={{estudiantes[3].p1410Importancia }}></td>
+					{#<th><input type="checkbox" name="p1410inscriciocea_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1410importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1410inscriciocea_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1410importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1410inscriciocea_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1410importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1410inscriciocea_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1410importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>11. Bullyng</td>
                     {% if(estudiantes[0].p1411Bulling==true) %}
-						<td><input type="checkbox" name="p1411bulling_1" checked="true"></td>
+						<td><input type="checkbox" name="p1411bulling_1" tabindex="50" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1411bulling_1"></th>
+						<th><input type="checkbox" name="p1411bulling_1" tabindex="50"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1411importancia_1"  value={{estudiantes[0].p1411Importancia }}></td>
+					<td><input type="text" size="5" name="p1411importancia_1" tabindex="51"  value={{estudiantes[0].p1411Importancia }}></td>
 
                     {% if(estudiantes[1].p1411Bulling==true) %}
-						<td><input type="checkbox" name="p1411bulling_2" checked="true"></td>
+						<td><input type="checkbox" name="p1411bulling_2" tabindex="111" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1411bulling_2"></th>
+						<th><input type="checkbox" name="p1411bulling_2" tabindex="111"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1411importancia_2" value={{estudiantes[1].p1411Importancia }}></td>
+					<td><input type="text" size="5" name="p1411importancia_2" tabindex="112" value={{estudiantes[1].p1411Importancia }}></td>
 
                     {% if(estudiantes[2].p1411Bulling==true) %}
-						<td><input type="checkbox" name="p1411bulling_3" checked="true"></td>
+						<td><input type="checkbox" name="p1411bulling_3" tabindex="172" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1411bulling_3"></th>
+						<th><input type="checkbox" name="p1411bulling_3" tabindex="172"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1411importancia_3" value={{estudiantes[2].p1411Importancia }}></td>
+					<td><input type="text" size="5" name="p1411importancia_3" tabindex="173" value={{estudiantes[2].p1411Importancia }}></td>
 
                     {% if(estudiantes[3].p1411Bulling==true) %}
-						<td><input type="checkbox" name="p1411bulling_4" checked="true"></td>
+						<td><input type="checkbox" name="p1411bulling_4" tabindex="233" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1411bulling_4"></th>
+						<th><input type="checkbox" name="p1411bulling_4" tabindex="233"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1411importancia_4" value={{estudiantes[3].p1411Importancia }}></td>
-					{#<th><input type="checkbox" name="p1411bulling_1"></th>#}
-					{#<td><input type="text" size="5" name="p1411importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p1411bulling_2"></th>#}
-					{#<td><input type="text" size="5" name="p1411importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p1411bulling_3"></th>#}
-					{#<td><input type="text" size="5" name="p1411importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p1411bulling_4"></th>#}
-					{#<td><input type="text" size="5" name="p1411importancia_4"></td>#}
+					<td><input type="text" size="5" name="p1411importancia_4" tabindex="234" value={{estudiantes[3].p1411Importancia }}></td>
+					{#<th><input type="checkbox" name="p1411bulling_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1411importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1411bulling_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1411importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1411bulling_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1411importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1411bulling_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1411importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>12. La Unidad Educativa es distante</td>
                     {% if(estudiantes[0].p1412UnidadDistante==true) %}
-						<td><input type="checkbox" name="p1412unidaddistante_1" checked="true"></td>
+						<td><input type="checkbox" name="p1412unidaddistante_1" tabindex="52" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1412unidaddistante_1"></th>
+						<th><input type="checkbox" name="p1412unidaddistante_1" tabindex="52"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1412importancia_1"  value={{estudiantes[0].p1412Importancia }}></td>
+					<td><input type="text" size="5" name="p1412importancia_1" tabindex="53"  value={{estudiantes[0].p1412Importancia }}></td>
 
                     {% if(estudiantes[1].p1412UnidadDistante==true) %}
-						<td><input type="checkbox" name="p1412unidaddistante_2" checked="true"></td>
+						<td><input type="checkbox" name="p1412unidaddistante_2" tabindex="113" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1412unidaddistante_2"></th>
+						<th><input type="checkbox" name="p1412unidaddistante_2" tabindex="113"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1412importancia_2" value={{estudiantes[1].p1412Importancia }}></td>
+					<td><input type="text" size="5" name="p1412importancia_2" tabindex="114" value={{estudiantes[1].p1412Importancia }}></td>
 
                     {% if(estudiantes[2].p1412UnidadDistante==true) %}
-						<td><input type="checkbox" name="p1412unidaddistante_3" checked="true"></td>
+						<td><input type="checkbox" name="p1412unidaddistante_3" tabindex="174" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1412unidaddistante_3"></th>
+						<th><input type="checkbox" name="p1412unidaddistante_3" tabindex="174"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1412importancia_3" value={{estudiantes[2].p1412Importancia }}></td>
+					<td><input type="text" size="5" name="p1412importancia_3" tabindex="175" value={{estudiantes[2].p1412Importancia }}></td>
 
                     {% if(estudiantes[3].p1412UnidadDistante==true) %}
-						<td><input type="checkbox" name="p1412unidaddistante_4" checked="true"></td>
+						<td><input type="checkbox" name="p1412unidaddistante_4" tabindex="235" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1412unidaddistante_4"></th>
+						<th><input type="checkbox" name="p1412unidaddistante_4" tabindex="235"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1412importancia_4" value={{estudiantes[3].p1412Importancia }}></td>
-					{#<th><input type="checkbox" name="p1412unidaddistante_1"></th>#}
-					{#<td><input type="text" size="5" name="p1412importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p1412unidaddistante_2"></th>#}
-					{#<td><input type="text" size="5" name="p1412importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p1412unidaddistante_3"></th>#}
-					{#<td><input type="text" size="5" name="p1412importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p1412unidaddistante_4"></th>#}
-					{#<td><input type="text" size="5" name="p1412importancia_4"></td>#}
+					<td><input type="text" size="5" name="p1412importancia_4" tabindex="236" value={{estudiantes[3].p1412Importancia }}></td>
+					{#<th><input type="checkbox" name="p1412unidaddistante_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1412importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1412unidaddistante_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1412importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1412unidaddistante_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1412importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1412unidaddistante_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1412importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>13. La Unidad Educativa no oferta el turno requerido por algunos estudiantes</td>
                     {% if(estudiantes[0].p1413UnidadNoOferta==true) %}
-						<td><input type="checkbox" name="p1413unidadnooferta_1" checked="true"></td>
+						<td><input type="checkbox" name="p1413unidadnooferta_1" tabindex="54" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1413unidadnooferta_1"></th>
+						<th><input type="checkbox" name="p1413unidadnooferta_1" tabindex="54"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1413importancia_1"  value={{estudiantes[0].p1413Importancia }}></td>
+					<td><input type="text" size="5" name="p1413importancia_1" tabindex="55"  value={{estudiantes[0].p1413Importancia }}></td>
 
                     {% if(estudiantes[1].p1413UnidadNoOferta==true) %}
-						<td><input type="checkbox" name="p1413unidadnooferta_2" checked="true"></td>
+						<td><input type="checkbox" name="p1413unidadnooferta_2" tabindex="115" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1413unidadnooferta_2"></th>
+						<th><input type="checkbox" name="p1413unidadnooferta_2" tabindex="115"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1413importancia_2" value={{estudiantes[1].p1413Importancia }}></td>
+					<td><input type="text" size="5" name="p1413importancia_2" tabindex="116" value={{estudiantes[1].p1413Importancia }}></td>
 
                     {% if(estudiantes[2].p1413UnidadNoOferta==true) %}
-						<td><input type="checkbox" name="p1413unidadnooferta_3" checked="true"></td>
+						<td><input type="checkbox" name="p1413unidadnooferta_3" tabindex="176" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1413unidadnooferta_3"></th>
+						<th><input type="checkbox" name="p1413unidadnooferta_3" tabindex="176"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1413importancia_3" value={{estudiantes[2].p1413Importancia }}></td>
+					<td><input type="text" size="5" name="p1413importancia_3" tabindex="177" value={{estudiantes[2].p1413Importancia }}></td>
 
                     {% if(estudiantes[3].p1413UnidadNoOferta==true) %}
-						<td><input type="checkbox" name="p1413unidadnooferta_4" checked="true"></td>
+						<td><input type="checkbox" name="p1413unidadnooferta_4" tabindex="237" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1413unidadnooferta_4"></th>
+						<th><input type="checkbox" name="p1413unidadnooferta_4" tabindex="237"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1413importancia_4" value={{estudiantes[3].p1413Importancia }}></td>
-					{#<th><input type="checkbox" name="p1413unidadnooferta_1"></th>#}
-					{#<td><input type="text" size="5" name="p1413importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p1413unidadnooferta_2"></th>#}
-					{#<td><input type="text" size="5" name="p1413importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p1413unidadnooferta_3"></th>#}
-					{#<td><input type="text" size="5" name="p1413importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p1413unidadnooferta_4"></th>#}
-					{#<td><input type="text" size="5" name="p1413importancia_4"></td>#}
+					<td><input type="text" size="5" name="p1413importancia_4" tabindex="238" value={{estudiantes[3].p1413Importancia }}></td>
+					{#<th><input type="checkbox" name="p1413unidadnooferta_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1413importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1413unidadnooferta_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1413importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1413unidadnooferta_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1413importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1413unidadnooferta_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1413importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>14. Responsabilidades en el hogar: Quehaceres domésticos (cocinar, lavar, planchar), atención a niños, a ancianos, a personas enfermas o con discapacidad</td>
                     {% if(estudiantes[0].p1414ResponsabilidadesHogar==true) %}
-						<td><input type="checkbox" name="p1414responsabilidadeshogar_1" checked="true"></td>
+						<td><input type="checkbox" name="p1414responsabilidadeshogar_1" tabindex="56" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1414responsabilidadeshogar_1"></th>
+						<th><input type="checkbox" name="p1414responsabilidadeshogar_1" tabindex="56"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1414importancia_1"  value={{estudiantes[0].p1414Importancia }}></td>
+					<td><input type="text" size="5" name="p1414importancia_1" tabindex="57"  value={{estudiantes[0].p1414Importancia }}></td>
 
                     {% if(estudiantes[1].p1414ResponsabilidadesHogar==true) %}
-						<td><input type="checkbox" name="p1414responsabilidadeshogar_2" checked="true"></td>
+						<td><input type="checkbox" name="p1414responsabilidadeshogar_2" tabindex="117" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1414responsabilidadeshogar_2"></th>
+						<th><input type="checkbox" name="p1414responsabilidadeshogar_2" tabindex="117"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1414importancia_2" value={{estudiantes[1].p1414Importancia }}></td>
+					<td><input type="text" size="5" name="p1414importancia_2" tabindex="118" value={{estudiantes[1].p1414Importancia }}></td>
 
                     {% if(estudiantes[2].p1414ResponsabilidadesHogar==true) %}
-						<td><input type="checkbox" name="p1414responsabilidadeshogar_3" checked="true"></td>
+						<td><input type="checkbox" name="p1414responsabilidadeshogar_3" tabindex="178" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1414responsabilidadeshogar_3"></th>
+						<th><input type="checkbox" name="p1414responsabilidadeshogar_3" tabindex="178"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1414importancia_3" value={{estudiantes[2].p1414Importancia }}></td>
+					<td><input type="text" size="5" name="p1414importancia_3" tabindex="179" value={{estudiantes[2].p1414Importancia }}></td>
 
                     {% if(estudiantes[3].p1414ResponsabilidadesHogar==true) %}
-						<td><input type="checkbox" name="p1414responsabilidadeshogar_4" checked="true"></td>
+						<td><input type="checkbox" name="p1414responsabilidadeshogar_4" tabindex="239" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1414responsabilidadeshogar_4"></th>
+						<th><input type="checkbox" name="p1414responsabilidadeshogar_4" tabindex="239"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1414importancia_4" value={{estudiantes[3].p1414Importancia }}></td>
-					{#<th><input type="checkbox" name="p1414responsabilidadeshogar_1"></th>#}
-					{#<td><input type="text" size="5" name="p1414importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p1414responsabilidadeshogar_2"></th>#}
-					{#<td><input type="text" size="5" name="p1414importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p1414responsabilidadeshogar_3"></th>#}
-					{#<td><input type="text" size="5" name="p1414importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p1414responsabilidadeshogar_4"></th>#}
-					{#<td><input type="text" size="5" name="p1414importancia_4"></td>#}
+					<td><input type="text" size="5" name="p1414importancia_4" tabindex="240" value={{estudiantes[3].p1414Importancia }}></td>
+					{#<th><input type="checkbox" name="p1414responsabilidadeshogar_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1414importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1414responsabilidadeshogar_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1414importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1414responsabilidadeshogar_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1414importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1414responsabilidadeshogar_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1414importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>15. Traslado de la familia a otros: Departamentos, Provincias, Municipios, Barrios, Paises</td>
                     {% if(estudiantes[0].p1415TrasladoFamilia==true) %}
-						<td><input type="checkbox" name="p1415trasladofamilia_1" checked="true"></td>
+						<td><input type="checkbox" name="p1415trasladofamilia_1" tabindex="58" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1415trasladofamilia_1"></th>
+						<th><input type="checkbox" name="p1415trasladofamilia_1" tabindex="58"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1415importancia_1"  value={{estudiantes[0].p1415Importancia }}></td>
+					<td><input type="text" size="5" name="p1415importancia_1" tabindex="59"  value={{estudiantes[0].p1415Importancia }}></td>
 
                     {% if(estudiantes[1].p1415TrasladoFamilia==true) %}
-						<td><input type="checkbox" name="p1415trasladofamilia_2" checked="true"></td>
+						<td><input type="checkbox" name="p1415trasladofamilia_2" tabindex="119" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1415trasladofamilia_2"></th>
+						<th><input type="checkbox" name="p1415trasladofamilia_2" tabindex="119"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1415importancia_2" value={{estudiantes[1].p1415Importancia }}></td>
+					<td><input type="text" size="5" name="p1415importancia_2" tabindex="120" value={{estudiantes[1].p1415Importancia }}></td>
 
                     {% if(estudiantes[2].p1415TrasladoFamilia==true) %}
-						<td><input type="checkbox" name="p1415trasladofamilia_3" checked="true"></td>
+						<td><input type="checkbox" name="p1415trasladofamilia_3" tabindex="180" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1415trasladofamilia_3"></th>
+						<th><input type="checkbox" name="p1415trasladofamilia_3" tabindex="180"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1415importancia_3" value={{estudiantes[2].p1415Importancia }}></td>
+					<td><input type="text" size="5" name="p1415importancia_3" tabindex="181" value={{estudiantes[2].p1415Importancia }}></td>
 
                     {% if(estudiantes[3].p1415TrasladoFamilia==true) %}
-						<td><input type="checkbox" name="p1415trasladofamilia_4" checked="true"></td>
+						<td><input type="checkbox" name="p1415trasladofamilia_4" tabindex="241" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1415trasladofamilia_4"></th>
+						<th><input type="checkbox" name="p1415trasladofamilia_4" tabindex="241"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1415importancia_4" value={{estudiantes[3].p1415Importancia }}></td>
-					{#<th><input type="checkbox" name="p1415trasladofamilia_1"></th>#}
-					{#<td><input type="text" size="5" name="p1415importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p1415trasladofamilia_2"></th>#}
-					{#<td><input type="text" size="5" name="p1415importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p1415trasladofamilia_3"></th>#}
-					{#<td><input type="text" size="5" name="p1415importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p1415trasladofamilia_4"></th>#}
-					{#<td><input type="text" size="5" name="p1415importancia_4"></td>#}
+					<td><input type="text" size="5" name="p1415importancia_4" tabindex="242" value={{estudiantes[3].p1415Importancia }}></td>
+					{#<th><input type="checkbox" name="p1415trasladofamilia_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1415importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1415trasladofamilia_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1415importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1415trasladofamilia_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1415importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1415trasladofamilia_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1415importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>16. Falta de apoyo de los familiares para la continuación de sus estudios</td>
                     {% if(estudiantes[0].p1416FaltaApoyo==true) %}
-						<td><input type="checkbox" name="p1416faltaapoyo_1" checked="true"></td>
+						<td><input type="checkbox" name="p1416faltaapoyo_1" tabindex="60" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1416faltaapoyo_1"></th>
+						<th><input type="checkbox" name="p1416faltaapoyo_1" tabindex="60"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1416importancia_1"  value={{estudiantes[0].p1416Importancia }}></td>
+					<td><input type="text" size="5" name="p1416importancia_1" tabindex="61"  value={{estudiantes[0].p1416Importancia }}></td>
 
                     {% if(estudiantes[1].p1416FaltaApoyo==true) %}
-						<td><input type="checkbox" name="p1416faltaapoyo_2" checked="true"></td>
+						<td><input type="checkbox" name="p1416faltaapoyo_2" tabindex="121" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1416faltaapoyo_2"></th>
+						<th><input type="checkbox" name="p1416faltaapoyo_2" tabindex="121"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1416importancia_2" value={{estudiantes[1].p1416Importancia }}></td>
+					<td><input type="text" size="5" name="p1416importancia_2" tabindex="122" value={{estudiantes[1].p1416Importancia }}></td>
 
                     {% if(estudiantes[2].p1416FaltaApoyo==true) %}
-						<td><input type="checkbox" name="p1416faltaapoyo_3" checked="true"></td>
+						<td><input type="checkbox" name="p1416faltaapoyo_3" tabindex="182" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1416faltaapoyo_3"></th>
+						<th><input type="checkbox" name="p1416faltaapoyo_3" tabindex="182"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1416importancia_3" value={{estudiantes[2].p1416Importancia }}></td>
+					<td><input type="text" size="5" name="p1416importancia_3" tabindex="183" value={{estudiantes[2].p1416Importancia }}></td>
 
                     {% if(estudiantes[3].p1416FaltaApoyo==true) %}
-						<td><input type="checkbox" name="p1416faltaapoyo_4" checked="true"></td>
+						<td><input type="checkbox" name="p1416faltaapoyo_4" tabindex="243" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1416faltaapoyo_4"></th>
+						<th><input type="checkbox" name="p1416faltaapoyo_4" tabindex="243"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1416importancia_4" value={{estudiantes[3].p1416Importancia }}></td>
-					{#<th><input type="checkbox" name="p1416faltaapoyo_1"></th>#}
-					{#<td><input type="text" size="5" name="p1416importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p1416faltaapoyo_2"></th>#}
-					{#<td><input type="text" size="5" name="p1416importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p1416faltaapoyo_3"></th>#}
-					{#<td><input type="text" size="5" name="p1416importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p1416faltaapoyo_4"></th>#}
-					{#<td><input type="text" size="5" name="p1416importancia_4"></td>#}
+					<td><input type="text" size="5" name="p1416importancia_4" tabindex="244" value={{estudiantes[3].p1416Importancia }}></td>
+					{#<th><input type="checkbox" name="p1416faltaapoyo_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1416importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1416faltaapoyo_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1416importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1416faltaapoyo_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1416importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1416faltaapoyo_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1416importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>17. No vive en un hogar nuclear completo (Su Padre y/o su Madre no viven con el)</td>
                     {% if(estudiantes[0].p1417NoViveHogarCompleto==true) %}
-						<td><input type="checkbox" name="p1417novivehogarcompleto_1" checked="true"></td>
+						<td><input type="checkbox" name="p1417novivehogarcompleto_1" tabindex="62" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1417novivehogarcompleto_1"></th>
+						<th><input type="checkbox" name="p1417novivehogarcompleto_1" tabindex="62"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1417importancia_1"  value={{estudiantes[0].p1417Importancia }}></td>
+					<td><input type="text" size="5" name="p1417importancia_1" tabindex="63"  value={{estudiantes[0].p1417Importancia }}></td>
 
                     {% if(estudiantes[1].p1417NoViveHogarCompleto==true) %}
-						<td><input type="checkbox" name="p1417novivehogarcompleto_2" checked="true"></td>
+						<td><input type="checkbox" name="p1417novivehogarcompleto_2" tabindex="123" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1417novivehogarcompleto_2"></th>
+						<th><input type="checkbox" name="p1417novivehogarcompleto_2" tabindex="123"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1417importancia_2" value={{estudiantes[1].p1417Importancia }}></td>
+					<td><input type="text" size="5" name="p1417importancia_2" tabindex="124" value={{estudiantes[1].p1417Importancia }}></td>
 
                     {% if(estudiantes[2].p1417NoViveHogarCompleto==true) %}
-						<td><input type="checkbox" name="p1417novivehogarcompleto_3" checked="true"></td>
+						<td><input type="checkbox" name="p1417novivehogarcompleto_3" tabindex="184" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1417novivehogarcompleto_3"></th>
+						<th><input type="checkbox" name="p1417novivehogarcompleto_3" tabindex="184"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1417importancia_3" value={{estudiantes[2].p1417Importancia }}></td>
+					<td><input type="text" size="5" name="p1417importancia_3" tabindex="185" value={{estudiantes[2].p1417Importancia }}></td>
 
                     {% if(estudiantes[3].p1417NoViveHogarCompleto==true) %}
-						<td><input type="checkbox" name="p1417novivehogarcompleto_4" checked="true"></td>
+						<td><input type="checkbox" name="p1417novivehogarcompleto_4" tabindex="245" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1417novivehogarcompleto_4"></th>
+						<th><input type="checkbox" name="p1417novivehogarcompleto_4" tabindex="245"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1417importancia_4" value={{estudiantes[3].p1417Importancia }}></td>
+					<td><input type="text" size="5" name="p1417importancia_4" tabindex="246" value={{estudiantes[3].p1417Importancia }}></td>
 
-					{#<td><input type="text" size="5" name="p1417importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p1417novivehogarcompleto_2"></th>#}
-					{#<td><input type="text" size="5" name="p1417importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p1417novivehogarcompleto_3"></th>#}
-					{#<td><input type="text" size="5" name="p1417importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p1417novivehogarcompleto_4"></th>#}
-					{#<td><input type="text" size="5" name="p1417importancia_4"></td>#}
+					{#<td><input type="text" size="5" name="p1417importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1417novivehogarcompleto_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1417importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1417novivehogarcompleto_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1417importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1417novivehogarcompleto_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1417importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>18. Separación de los miembros del hogar (Padres, hermanos, parientes cercanos, etc)</td>
                     {% if(estudiantes[0].p1418SeparacionHogar==true) %}
-						<td><input type="checkbox" name="p1418separacionhogar_1" checked="true"></td>
+						<td><input type="checkbox" name="p1418separacionhogar_1" tabindex="64" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1418separacionhogar_1"></th>
+						<th><input type="checkbox" name="p1418separacionhogar_1" tabindex="64"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1418importancia_1"  value={{estudiantes[0].p1418Importancia }}></td>
+					<td><input type="text" size="5" name="p1418importancia_1" tabindex="65"  value={{estudiantes[0].p1418Importancia }}></td>
 
                     {% if(estudiantes[1].p1418SeparacionHogar==true) %}
-						<td><input type="checkbox" name="p1418separacionhogar_2" checked="true"></td>
+						<td><input type="checkbox" name="p1418separacionhogar_2" tabindex="125" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1418separacionhogar_2"></th>
+						<th><input type="checkbox" name="p1418separacionhogar_2" tabindex="125"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1418importancia_2" value={{estudiantes[1].p1418Importancia }}></td>
+					<td><input type="text" size="5" name="p1418importancia_2" tabindex="126" value={{estudiantes[1].p1418Importancia }}></td>
 
                     {% if(estudiantes[2].p1418SeparacionHogar==true) %}
-						<td><input type="checkbox" name="p1418separacionhogar_3" checked="true"></td>
+						<td><input type="checkbox" name="p1418separacionhogar_3" tabindex="186" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1418separacionhogar_3"></th>
+						<th><input type="checkbox" name="p1418separacionhogar_3" tabindex="186"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1418importancia_3" value={{estudiantes[2].p1418Importancia }}></td>
+					<td><input type="text" size="5" name="p1418importancia_3" tabindex="187" value={{estudiantes[2].p1418Importancia }}></td>
 
                     {% if(estudiantes[3].p1418SeparacionHogar==true) %}
-						<td><input type="checkbox" name="p1418separacionhogar_4" checked="true"></td>
+						<td><input type="checkbox" name="p1418separacionhogar_4" tabindex="247" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1418separacionhogar_4"></th>
+						<th><input type="checkbox" name="p1418separacionhogar_4" tabindex="247"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1418importancia_4" value={{estudiantes[3].p1418Importancia }}></td>
-					{#<th><input type="checkbox" name="p1418separacionhogar_1"></th>#}
-					{#<td><input type="text" size="5" name="p1418importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p1418separacionhogar_2"></th>#}
-					{#<td><input type="text" size="5" name="p1418importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p1418separacionhogar_3"></th>#}
-					{#<td><input type="text" size="5" name="p1418importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p1418separacionhogar_4"></th>#}
-					{#<td><input type="text" size="5" name="p1418importancia_4"></td>#}
+					<td><input type="text" size="5" name="p1418importancia_4" tabindex="248" value={{estudiantes[3].p1418Importancia }}></td>
+					{#<th><input type="checkbox" name="p1418separacionhogar_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1418importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1418separacionhogar_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1418importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1418separacionhogar_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1418importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1418separacionhogar_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1418importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>19. Violencia familiar</td>
                     {% if(estudiantes[0].p1419ViolenciaFamiliar==true) %}
-						<td><input type="checkbox" name="p1419violenciafamiliar_1" checked="true"></td>
+						<td><input type="checkbox" name="p1419violenciafamiliar_1" tabindex="66" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1419violenciafamiliar_1"></th>
+						<th><input type="checkbox" name="p1419violenciafamiliar_1" tabindex="66"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1419importancia_1"  value={{estudiantes[0].p1419Importancia }}></td>
+					<td><input type="text" size="5" name="p1419importancia_1" tabindex="67"  value={{estudiantes[0].p1419Importancia }}></td>
 
                     {% if(estudiantes[1].p1419ViolenciaFamiliar==true) %}
-						<td><input type="checkbox" name="p1419violenciafamiliar_2" checked="true"></td>
+						<td><input type="checkbox" name="p1419violenciafamiliar_2" tabindex="127" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1419violenciafamiliar_2"></th>
+						<th><input type="checkbox" name="p1419violenciafamiliar_2" tabindex="127"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1419importancia_2" value={{estudiantes[1].p1419Importancia }}></td>
+					<td><input type="text" size="5" name="p1419importancia_2" tabindex="128" value={{estudiantes[1].p1419Importancia }}></td>
 
                     {% if(estudiantes[2].p1419ViolenciaFamiliar==true) %}
-						<td><input type="checkbox" name="p1419violenciafamiliar_3" checked="true"></td>
+						<td><input type="checkbox" name="p1419violenciafamiliar_3" tabindex="188" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1419violenciafamiliar_3"></th>
+						<th><input type="checkbox" name="p1419violenciafamiliar_3" tabindex="188"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1419importancia_3" value={{estudiantes[2].p1419Importancia }}></td>
+					<td><input type="text" size="5" name="p1419importancia_3" tabindex="189" value={{estudiantes[2].p1419Importancia }}></td>
 
                     {% if(estudiantes[3].p1419ViolenciaFamiliar==true) %}
-						<td><input type="checkbox" name="p1419violenciafamiliar_4" checked="true"></td>
+						<td><input type="checkbox" name="p1419violenciafamiliar_4" tabindex="249" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1419violenciafamiliar_4"></th>
+						<th><input type="checkbox" name="p1419violenciafamiliar_4" tabindex="249"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1419importancia_4" value={{estudiantes[3].p1419Importancia }}></td>
-					{#<th><input type="checkbox" name="p1419violenciafamiliar_1"></th>#}
-					{#<td><input type="text" size="5" name="p1419importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p1419violenciafamiliar_2"></th>#}
-					{#<td><input type="text" size="5" name="p1419importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p1419violenciafamiliar_3"></th>#}
-					{#<td><input type="text" size="5" name="p1419importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p1419violenciafamiliar_4"></th>#}
-					{#<td><input type="text" size="5" name="p1419importancia_4"></td>#}
+					<td><input type="text" size="5" name="p1419importancia_4" tabindex="250" value={{estudiantes[3].p1419Importancia }}></td>
+					{#<th><input type="checkbox" name="p1419violenciafamiliar_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1419importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1419violenciafamiliar_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1419importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1419violenciafamiliar_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1419importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1419violenciafamiliar_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1419importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>20. Fallecimiento o accidente de algún familiar</td>
                     {% if(estudiantes[0].p1420FallecimientoFamiliar==true) %}
-						<td><input type="checkbox" name="p1420fallecimientofamiliar_1" checked="true"></td>
+						<td><input type="checkbox" name="p1420fallecimientofamiliar_1" tabindex="68" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1420fallecimientofamiliar_1"></th>
+						<th><input type="checkbox" name="p1420fallecimientofamiliar_1" tabindex="68"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1420importancia_1"  value={{estudiantes[0].p1420Importancia }}></td>
+					<td><input type="text" size="5" name="p1420importancia_1" tabindex="69"  value={{estudiantes[0].p1420Importancia }}></td>
 
                     {% if(estudiantes[1].p1420FallecimientoFamiliar==true) %}
-						<td><input type="checkbox" name="p1420fallecimientofamiliar_2" checked="true"></td>
+						<td><input type="checkbox" name="p1420fallecimientofamiliar_2" tabindex="129" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1420fallecimientofamiliar_2"></th>
+						<th><input type="checkbox" name="p1420fallecimientofamiliar_2" tabindex="129"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1420importancia_2" value={{estudiantes[1].p1420Importancia }}></td>
+					<td><input type="text" size="5" name="p1420importancia_2" tabindex="130" value={{estudiantes[1].p1420Importancia }}></td>
 
                     {% if(estudiantes[2].p1420FallecimientoFamiliar==true) %}
-						<td><input type="checkbox" name="p1420fallecimientofamiliar_3" checked="true"></td>
+						<td><input type="checkbox" name="p1420fallecimientofamiliar_3" tabindex="190" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1420fallecimientofamiliar_3"></th>
+						<th><input type="checkbox" name="p1420fallecimientofamiliar_3" tabindex="190"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1420importancia_3" value={{estudiantes[2].p1420Importancia }}></td>
+					<td><input type="text" size="5" name="p1420importancia_3" tabindex="191" value={{estudiantes[2].p1420Importancia }}></td>
 
                     {% if(estudiantes[3].p1420FallecimientoFamiliar==true) %}
-						<td><input type="checkbox" name="p1420fallecimientofamiliar_4" checked="true"></td>
+						<td><input type="checkbox" name="p1420fallecimientofamiliar_4" tabindex="251" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1420fallecimientofamiliar_4"></th>
+						<th><input type="checkbox" name="p1420fallecimientofamiliar_4" tabindex="251"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1420importancia_4" value={{estudiantes[3].p1420Importancia }}></td>
-					{#<th><input type="checkbox" name="p1420fallecimientofamiliar_1"></th>#}
-					{#<td><input type="text" size="5" name="p1420importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p1420fallecimientofamiliar_2"></th>#}
-					{#<td><input type="text" size="5" name="p1420importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p1420fallecimientofamiliar_3"></th>#}
-					{#<td><input type="text" size="5" name="p1420importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p1420fallecimientofamiliar_4"></th>#}
-					{#<td><input type="text" size="5" name="p1420importancia_4"></td>#}
+					<td><input type="text" size="5" name="p1420importancia_4" tabindex="252" value={{estudiantes[3].p1420Importancia }}></td>
+					{#<th><input type="checkbox" name="p1420fallecimientofamiliar_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1420importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1420fallecimientofamiliar_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1420importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1420fallecimientofamiliar_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1420importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1420fallecimientofamiliar_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1420importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>21. Falta de dinero</td>
                     {% if(estudiantes[0].p1421FaltaDinero==true) %}
-						<td><input type="checkbox" name="p1421faltadinero_1" checked="true"></td>
+						<td><input type="checkbox" name="p1421faltadinero_1" tabindex="70" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1421faltadinero_1"></th>
+						<th><input type="checkbox" name="p1421faltadinero_1" tabindex="70"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1421importancia_1"  value={{estudiantes[0].p1421Importancia }}></td>
+					<td><input type="text" size="5" name="p1421importancia_1" tabindex="71"  value={{estudiantes[0].p1421Importancia }}></td>
 
                     {% if(estudiantes[1].p1421FaltaDinero==true) %}
-						<td><input type="checkbox" name="p1421faltadinero_2" checked="true"></td>
+						<td><input type="checkbox" name="p1421faltadinero_2" tabindex="131" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1421faltadinero_2"></th>
+						<th><input type="checkbox" name="p1421faltadinero_2" tabindex="131"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1421importancia_2" value={{estudiantes[1].p1421Importancia }}></td>
+					<td><input type="text" size="5" name="p1421importancia_2" tabindex="132" value={{estudiantes[1].p1421Importancia }}></td>
 
                     {% if(estudiantes[2].p1421FaltaDinero==true) %}
-						<td><input type="checkbox" name="p1421faltadinero_3" checked="true"></td>
+						<td><input type="checkbox" name="p1421faltadinero_3" tabindex="192" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1421faltadinero_3"></th>
+						<th><input type="checkbox" name="p1421faltadinero_3" tabindex="192"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1421importancia_3" value={{estudiantes[2].p1421Importancia }}></td>
+					<td><input type="text" size="5" name="p1421importancia_3" tabindex="193" value={{estudiantes[2].p1421Importancia }}></td>
 
                     {% if(estudiantes[3].p1421FaltaDinero==true) %}
-						<td><input type="checkbox" name="p1421faltadinero_4" checked="true"></td>
+						<td><input type="checkbox" name="p1421faltadinero_4" tabindex="253" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1421faltadinero_4"></th>
+						<th><input type="checkbox" name="p1421faltadinero_4" tabindex="253"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1421importancia_4" value={{estudiantes[3].p1421Importancia }}></td>
-					{#<th><input type="checkbox" name="p1421faltadinero_1"></th>#}
-					{#<td><input type="text" size="5" name="p1421importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p1421faltadinero_2"></th>#}
-					{#<td><input type="text" size="5" name="p1421importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p1421faltadinero_3"></th>#}
-					{#<td><input type="text" size="5" name="p1421importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p1421faltadinero_4"></th>#}
-					{#<td><input type="text" size="5" name="p1421importancia_4"></td>#}
+					<td><input type="text" size="5" name="p1421importancia_4" tabindex="254" value={{estudiantes[3].p1421Importancia }}></td>
+					{#<th><input type="checkbox" name="p1421faltadinero_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1421importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1421faltadinero_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1421importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1421faltadinero_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1421importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1421faltadinero_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1421importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>22. Trabajo de los estudiantes</td>
                     {% if(estudiantes[0].p1422Trabajo==true) %}
-						<td><input type="checkbox" name="p1422trabajo_1" checked="true"></td>
+						<td><input type="checkbox" name="p1422trabajo_1" tabindex="72" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1422trabajo_1"></th>
+						<th><input type="checkbox" name="p1422trabajo_1" tabindex="72"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1422importancia_1"  value={{estudiantes[0].p1422Importancia }}></td>
+					<td><input type="text" size="5" name="p1422importancia_1" tabindex="73"  value={{estudiantes[0].p1422Importancia }}></td>
 
                     {% if(estudiantes[1].p1422Trabajo==true) %}
-						<td><input type="checkbox" name="p1422trabajo_2" checked="true"></td>
+						<td><input type="checkbox" name="p1422trabajo_2" tabindex="133" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1422trabajo_2"></th>
+						<th><input type="checkbox" name="p1422trabajo_2" tabindex="133"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1422importancia_2" value={{estudiantes[1].p1422Importancia }}></td>
+					<td><input type="text" size="5" name="p1422importancia_2" tabindex="134" value={{estudiantes[1].p1422Importancia }}></td>
 
                     {% if(estudiantes[2].p1422Trabajo==true) %}
-						<td><input type="checkbox" name="p1422trabajo_3" checked="true"></td>
+						<td><input type="checkbox" name="p1422trabajo_3" tabindex="194" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1422trabajo_3"></th>
+						<th><input type="checkbox" name="p1422trabajo_3" tabindex="194"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1422importancia_3" value={{estudiantes[2].p1422Importancia }}></td>
+					<td><input type="text" size="5" name="p1422importancia_3" tabindex="195" value={{estudiantes[2].p1422Importancia }}></td>
 
                     {% if(estudiantes[3].p1422Trabajo==true) %}
-						<td><input type="checkbox" name="p1422trabajo_4" checked="true"></td>
+						<td><input type="checkbox" name="p1422trabajo_4" tabindex="255" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1422trabajo_4"></th>
+						<th><input type="checkbox" name="p1422trabajo_4" tabindex="255"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1422importancia_4" value={{estudiantes[3].p1422Importancia }}></td>
-					{#<th><input type="checkbox" name="p1422trabajo_1"></th>#}
-					{#<td><input type="text" size="5" name="p1422importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p1422trabajo_2"></th>#}
-					{#<td><input type="text" size="5" name="p1422importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p1422trabajo_3"></th>#}
-					{#<td><input type="text" size="5" name="p1422importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p1422trabajo_4"></th>#}
-					{#<td><input type="text" size="5" name="p1422importancia_4"></td>#}
+					<td><input type="text" size="5" name="p1422importancia_4" tabindex="256" value={{estudiantes[3].p1422Importancia }}></td>
+					{#<th><input type="checkbox" name="p1422trabajo_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1422importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1422trabajo_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1422importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1422trabajo_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1422importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1422trabajo_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1422importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>23. Por trabajo de los padres</td>
                     {% if(estudiantes[0].p1423TrabajoPadres==true) %}
-						<td><input type="checkbox" name="p1423trabajopadres_1" checked="true"></td>
+						<td><input type="checkbox" name="p1423trabajopadres_1" tabindex="74" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1423trabajopadres_1"></th>
+						<th><input type="checkbox" name="p1423trabajopadres_1" tabindex="74"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1423importancia_1"  value={{estudiantes[0].p1423Importancia }}></td>
+					<td><input type="text" size="5" name="p1423importancia_1" tabindex="75"  value={{estudiantes[0].p1423Importancia }}></td>
 
                     {% if(estudiantes[1].p1423TrabajoPadres==true) %}
-						<td><input type="checkbox" name="p1423trabajopadres_2" checked="true"></td>
+						<td><input type="checkbox" name="p1423trabajopadres_2" tabindex="135" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1423trabajopadres_2"></th>
+						<th><input type="checkbox" name="p1423trabajopadres_2" tabindex="135"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1423importancia_2" value={{estudiantes[1].p1423Importancia }}></td>
+					<td><input type="text" size="5" name="p1423importancia_2" tabindex="136" value={{estudiantes[1].p1423Importancia }}></td>
 
                     {% if(estudiantes[2].p1423TrabajoPadres==true) %}
-						<td><input type="checkbox" name="p1423trabajopadres_3" checked="true"></td>
+						<td><input type="checkbox" name="p1423trabajopadres_3" tabindex="196" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1423trabajopadres_3"></th>
+						<th><input type="checkbox" name="p1423trabajopadres_3" tabindex="196"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1423importancia_3" value={{estudiantes[2].p1423Importancia }}></td>
+					<td><input type="text" size="5" name="p1423importancia_3" tabindex="197" value={{estudiantes[2].p1423Importancia }}></td>
 
                     {% if(estudiantes[3].p1423TrabajoPadres==true) %}
-						<td><input type="checkbox" name="p1423trabajopadres_4" checked="true"></td>
+						<td><input type="checkbox" name="p1423trabajopadres_4" tabindex="257" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1423trabajopadres_4"></th>
+						<th><input type="checkbox" name="p1423trabajopadres_4" tabindex="257"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1423importancia_4" value={{estudiantes[3].p1423Importancia }}></td>
-					{#<th><input type="checkbox" name="p1423trabajopadres_1"></th>#}
-					{#<td><input type="text" size="5" name="p1423importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p1423trabajopadres_2"></th>#}
-					{#<td><input type="text" size="5" name="p1423importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p1423trabajopadres_3"></th>#}
-					{#<td><input type="text" size="5" name="p1423importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p1423trabajopadres_4"></th>#}
-					{#<td><input type="text" size="5" name="p1423importancia_4"></td>#}
+					<td><input type="text" size="5" name="p1423importancia_4" tabindex="258" value={{estudiantes[3].p1423Importancia }}></td>
+					{#<th><input type="checkbox" name="p1423trabajopadres_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1423importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1423trabajopadres_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1423importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1423trabajopadres_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1423importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1423trabajopadres_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1423importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>24. Pandillas</td>
                     {% if(estudiantes[0].p1424Pandillas==true) %}
-						<td><input type="checkbox" name="p1424pandillas_1" checked="true"></td>
+						<td><input type="checkbox" name="p1424pandillas_1" tabindex="76" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1424pandillas_1"></th>
+						<th><input type="checkbox" name="p1424pandillas_1" tabindex="76"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1424importancia_1"  value={{estudiantes[0].p1424Importancia }}></td>
+					<td><input type="text" size="5" name="p1424importancia_1" tabindex="77"  value={{estudiantes[0].p1424Importancia }}></td>
 
                     {% if(estudiantes[1].p1424Pandillas==true) %}
-						<td><input type="checkbox" name="p1424pandillas_2" checked="true"></td>
+						<td><input type="checkbox" name="p1424pandillas_2" tabindex="137" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1424pandillas_2"></th>
+						<th><input type="checkbox" name="p1424pandillas_2" tabindex="137"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1424importancia_2" value={{estudiantes[1].p1424Importancia }}></td>
+					<td><input type="text" size="5" name="p1424importancia_2" tabindex="138" value={{estudiantes[1].p1424Importancia }}></td>
 
                     {% if(estudiantes[2].p1424Pandillas==true) %}
-						<td><input type="checkbox" name="p1424pandillas_3" checked="true"></td>
+						<td><input type="checkbox" name="p1424pandillas_3" tabindex="198" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1424pandillas_3"></th>
+						<th><input type="checkbox" name="p1424pandillas_3" tabindex="198"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1424importancia_3" value={{estudiantes[2].p1424Importancia }}></td>
+					<td><input type="text" size="5" name="p1424importancia_3" tabindex="199" value={{estudiantes[2].p1424Importancia }}></td>
 
                     {% if(estudiantes[3].p1424Pandillas==true) %}
-						<td><input type="checkbox" name="p1424pandillas_4" checked="true"></td>
+						<td><input type="checkbox" name="p1424pandillas_4" tabindex="259" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1424pandillas_4"></th>
+						<th><input type="checkbox" name="p1424pandillas_4" tabindex="259"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1424importancia_4" value={{estudiantes[3].p1424Importancia }}></td>
-					{#<th><input type="checkbox" name="p1424pandillas_1"></th>#}
-					{#<td><input type="text" size="5" name="p1424importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p1424pandillas_2"></th>#}
-					{#<td><input type="text" size="5" name="p1424importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p1424pandillas_3"></th>#}
-					{#<td><input type="text" size="5" name="p1424importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p1424pandillas_4"></th>#}
-					{#<td><input type="text" size="5" name="p1424importancia_4"></td>#}
+					<td><input type="text" size="5" name="p1424importancia_4" tabindex="260" value={{estudiantes[3].p1424Importancia }}></td>
+					{#<th><input type="checkbox" name="p1424pandillas_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1424importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1424pandillas_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1424importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1424pandillas_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1424importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1424pandillas_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1424importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>25. Drogas</td>
                     {% if(estudiantes[0].p1425Drogas==true) %}
-						<td><input type="checkbox" name="p1425drogas_1" checked="true"></td>
+						<td><input type="checkbox" name="p1425drogas_1" tabindex="78" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1425drogas_1"></th>
+						<th><input type="checkbox" name="p1425drogas_1" tabindex="78"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1425importancia_1"  value={{estudiantes[0].p1425Importancia }}></td>
+					<td><input type="text" size="5" name="p1425importancia_1" tabindex="79"  value={{estudiantes[0].p1425Importancia }}></td>
 
                     {% if(estudiantes[1].p1425Drogas==true) %}
-						<td><input type="checkbox" name="p1425drogas_2" checked="true"></td>
+						<td><input type="checkbox" name="p1425drogas_2" tabindex="139" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1425drogas_2"></th>
+						<th><input type="checkbox" name="p1425drogas_2" tabindex="139"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1425importancia_2" value={{estudiantes[1].p1425Importancia }}></td>
+					<td><input type="text" size="5" name="p1425importancia_2" tabindex="140" value={{estudiantes[1].p1425Importancia }}></td>
 
                     {% if(estudiantes[2].p1425Drogas==true) %}
-						<td><input type="checkbox" name="p1425drogas_3" checked="true"></td>
+						<td><input type="checkbox" name="p1425drogas_3" tabindex="200" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1425drogas_3"></th>
+						<th><input type="checkbox" name="p1425drogas_3" tabindex="200"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1425importancia_3" value={{estudiantes[2].p1425Importancia }}></td>
+					<td><input type="text" size="5" name="p1425importancia_3" tabindex="201" value={{estudiantes[2].p1425Importancia }}></td>
 
                     {% if(estudiantes[3].p1425Drogas==true) %}
-						<td><input type="checkbox" name="p1425drogas_4" checked="true"></td>
+						<td><input type="checkbox" name="p1425drogas_4" tabindex="261" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1425drogas_4"></th>
+						<th><input type="checkbox" name="p1425drogas_4" tabindex="261"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1425importancia_4" value={{estudiantes[3].p1425Importancia }}></td>
-					{#<th><input type="checkbox" name="p1425drogas_1"></th>#}
-					{#<td><input type="text" size="5" name="p1425importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p1425drogas_2"></th>#}
-					{#<td><input type="text" size="5" name="p1425importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p1425drogas_3"></th>#}
-					{#<td><input type="text" size="5" name="p1425importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p1425drogas_4"></th>#}
-					{#<td><input type="text" size="5" name="p1425importancia_4"></td>#}
+					<td><input type="text" size="5" name="p1425importancia_4" tabindex="262" value={{estudiantes[3].p1425Importancia }}></td>
+					{#<th><input type="checkbox" name="p1425drogas_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1425importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1425drogas_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1425importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1425drogas_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1425importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1425drogas_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1425importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>26. Alcoholismo</td>
                     {% if(estudiantes[0].p1426Alcoholismo==true) %}
-						<td><input type="checkbox" name="p1426alcoholismo_1" checked="true"></td>
+						<td><input type="checkbox" name="p1426alcoholismo_1" tabindex="80" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1426alcoholismo_1"></th>
+						<th><input type="checkbox" name="p1426alcoholismo_1" tabindex="80"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1426importancia_1"  value={{estudiantes[0].p1426Importancia }}></td>
+					<td><input type="text" size="5" name="p1426importancia_1" tabindex="81"  value={{estudiantes[0].p1426Importancia }}></td>
 
                     {% if(estudiantes[1].p1426Alcoholismo==true) %}
-						<td><input type="checkbox" name="p1426alcoholismo_2" checked="true"></td>
+						<td><input type="checkbox" name="p1426alcoholismo_2" tabindex="141" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1426alcoholismo_2"></th>
+						<th><input type="checkbox" name="p1426alcoholismo_2" tabindex="141"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1426importancia_2" value={{estudiantes[1].p1426Importancia }}></td>
+					<td><input type="text" size="5" name="p1426importancia_2" tabindex="142" value={{estudiantes[1].p1426Importancia }}></td>
 
                     {% if(estudiantes[2].p1426Alcoholismo==true) %}
-						<td><input type="checkbox" name="p1426alcoholismo_3" checked="true"></td>
+						<td><input type="checkbox" name="p1426alcoholismo_3" tabindex="202" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1426alcoholismo_3"></th>
+						<th><input type="checkbox" name="p1426alcoholismo_3" tabindex="202"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1426importancia_3" value={{estudiantes[2].p1426Importancia }}></td>
+					<td><input type="text" size="5" name="p1426importancia_3" tabindex="203" value={{estudiantes[2].p1426Importancia }}></td>
 
                     {% if(estudiantes[3].p1426Alcoholismo==true) %}
-						<td><input type="checkbox" name="p1426alcoholismo_4" checked="true"></td>
+						<td><input type="checkbox" name="p1426alcoholismo_4" tabindex="263" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1426alcoholismo_4"></th>
+						<th><input type="checkbox" name="p1426alcoholismo_4" tabindex="263"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1426importancia_4" value={{estudiantes[3].p1426Importancia }}></td>
-					{#<th><input type="checkbox" name="p1426alcoholismo_1"></th>#}
-					{#<td><input type="text" size="5" name="p1426importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p1426alcoholismo_2"></th>#}
-					{#<td><input type="text" size="5" name="p1426importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p1426alcoholismo_3"></th>#}
-					{#<td><input type="text" size="5" name="p1426importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p1426alcoholismo_4"></th>#}
-					{#<td><input type="text" size="5" name="p1426importancia_4"></td>#}
+					<td><input type="text" size="5" name="p1426importancia_4" tabindex="264" value={{estudiantes[3].p1426Importancia }}></td>
+					{#<th><input type="checkbox" name="p1426alcoholismo_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1426importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1426alcoholismo_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1426importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1426alcoholismo_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1426importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1426alcoholismo_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1426importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>27. Otra (especifique)</td>
                     {% if(estudiantes[0].p1427Otra==true) %}
-						<td><input type="checkbox" name="p1427otra_1" checked="true"></td>
+						<td><input type="checkbox" name="p1427otra_1" tabindex="82" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1427otra_1"></th>
+						<th><input type="checkbox" name="p1427otra_1" tabindex="82"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1427importancia_1"  value={{estudiantes[0].p1427Importancia }}></td>
+					<td><input type="text" size="5" name="p1427importancia_1" tabindex="83"  value={{estudiantes[0].p1427Importancia }}></td>
 
                     {% if(estudiantes[1].p1427Otra==true) %}
-						<td><input type="checkbox" name="p1427otra_2" checked="true"></td>
+						<td><input type="checkbox" name="p1427otra_2" tabindex="143" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1427otra_2"></th>
+						<th><input type="checkbox" name="p1427otra_2" tabindex="143"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1427importancia_2" value={{estudiantes[1].p1427Importancia }}></td>
+					<td><input type="text" size="5" name="p1427importancia_2" tabindex="144" value={{estudiantes[1].p1427Importancia }}></td>
 
                     {% if(estudiantes[2].p1427Otra==true) %}
-						<td><input type="checkbox" name="p1427otra_3" checked="true"></td>
+						<td><input type="checkbox" name="p1427otra_3" tabindex="204" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1427otra_3"></th>
+						<th><input type="checkbox" name="p1427otra_3" tabindex="204"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1427importancia_3" value={{estudiantes[2].p1427Importancia }}></td>
+					<td><input type="text" size="5" name="p1427importancia_3" tabindex="205" value={{estudiantes[2].p1427Importancia }}></td>
 
                     {% if(estudiantes[3].p1427Otra==true) %}
-						<td><input type="checkbox" name="p1427otra_4" checked="true"></td>
+						<td><input type="checkbox" name="p1427otra_4" tabindex="265" checked="true"></td>
                     {% else%}
-						<th><input type="checkbox" name="p1427otra_4"></th>
+						<th><input type="checkbox" name="p1427otra_4" tabindex="265"></th>
                     {% endif%}
-					<td><input type="text" size="5" name="p1427importancia_4" value={{estudiantes[3].p1427Importancia }}></td>
-					{#<th><input type="checkbox" name="p1427otra_1"></th>#}
-					{#<td><input type="text" size="5" name="p1427importancia_1"></td>#}
-					{#<th><input type="checkbox" name="p1427otra_2"></th>#}
-					{#<td><input type="text" size="5" name="p1427importancia_2"></td>#}
-					{#<th><input type="checkbox" name="p1427otra_3"></th>#}
-					{#<td><input type="text" size="5" name="p1427importancia_3"></td>#}
-					{#<th><input type="checkbox" name="p1427otra_4"></th>#}
-					{#<td><input type="text" size="5" name="p1427importancia_4"></td>#}
+					<td><input type="text" size="5" name="p1427importancia_4" tabindex="266" value={{estudiantes[3].p1427Importancia }}></td>
+					{#<th><input type="checkbox" name="p1427otra_1" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1427importancia_1" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1427otra_2" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1427importancia_2" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1427otra_3" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1427importancia_3" tabindex=""></td>#}
+					{#<th><input type="checkbox" name="p1427otra_4" tabindex=""></th>#}
+					{#<td><input type="text" size="5" name="p1427importancia_4" tabindex=""></td>#}
 				</tr>
 				<tr class="borbot">
 					<td>Especifique la razón de cada estudiante</td>
-					<td colspan="2"><input type="text" name="p1427razon_1" value={{estudiantes[0].p1427Razon }}></td>
-					<td colspan="2"><input type="text" name="p1427razon_2" value={{estudiantes[1].p1427Razon }}></td>
-					<td colspan="2"><input type="text" name="p1427razon_3" value={{estudiantes[2].p1427Razon }}></td>
-					<td colspan="2"><input type="text" name="p1427razon_4" value={{estudiantes[3].p1427Razon }}></td>
+					{# <td colspan="2"><input type="text" name="p1427razon_1" tabindex="84" class="jupper" value={{estudiantes[0].p1427Razon }}></td>
+					<td colspan="2"><input type="text" name="p1427razon_2" tabindex="145" class="jupper" value={{estudiantes[1].p1427Razon }}></td>
+					<td colspan="2"><input type="text" name="p1427razon_3" tabindex="206" class="jupper" value={{estudiantes[2].p1427Razon }}></td> #}
+					{# <td colspan="2"><input type="text" name="p1427razon_4" class="jupper" value={{estudiantes[3].p1427Razon }}></td> #}
+					<td colspan="2"><textarea name="p1427razon_1" id="" cols="30" rows="3" class="jupper" tabindex="84">{{estudiantes[0].p1427Razon }}</textarea></td>
+					<td colspan="2"><textarea name="p1427razon_2" id="" cols="30" rows="3" class="jupper" tabindex="145">{{estudiantes[1].p1427Razon }}</textarea></td>
+					<td colspan="2"><textarea name="p1427razon_3" id="" cols="30" rows="3" class="jupper" tabindex="206">{{estudiantes[2].p1427Razon }}</textarea></td>
+					<td colspan="2"><textarea name="p1427razon_4" id="" cols="30" rows="3" class="jupper" tabindex="267">{{estudiantes[3].p1427Razon }}</textarea></td>
 				</tr>
 			</table>
 
@@ -1356,7 +1363,7 @@
 				</tr>
 				<tr>
 					<td>
-						<textarea name="p15medidasantedisminucion" id="" cols="30" rows="10">{{docentes.p15MedidasAnteDisminucion}}</textarea>
+						<textarea name="p15medidasantedisminucion" id="" cols="30" rows="10" class="jupper" tabindex="268">{{docentes.p15MedidasAnteDisminucion}}</textarea>
 					</td>
 				</tr>
 				<tr>
@@ -1364,7 +1371,7 @@
 				</tr>
 				<tr>
 					<td>
-						<textarea name="p16medidasquetomaria" id="" cols="30" rows="10">{{docentes.p16MedidasQueTomaria}}</textarea>
+						<textarea name="p16medidasquetomaria" id="" cols="30" rows="10" class="jupper" tabindex="269">{{docentes.p16MedidasQueTomaria}}</textarea>
 					</td>
 				</tr>
 			</table>
@@ -1374,24 +1381,24 @@
 			<table>
 				<tr>
 					<td>CÓDIGO RUDE ESTUDIANTE 1</td>
-					<td><input type="text" name="codigorude_1" value={{estudiantes[0].codigoRude}}></td>
+					<td><input type="text" name="codigorude_1" class="jupper" tabindex="270" value={{estudiantes[0].codigoRude}}></td>
 				</tr>
 				<tr>
 					<td>CÓDIGO RUDE ESTUDIANTE 2</td>
-					<td><input type="text" name="codigorude_2" value={{estudiantes[1].codigoRude}}></td>
+					<td><input type="text" name="codigorude_2" class="jupper" tabindex="271" value={{estudiantes[1].codigoRude}}></td>
 				</tr>
 				<tr>
 					<td>CÓDIGO RUDE ESTUDIANTE 3</td>
-					<td><input type="text" name="codigorude_3" value={{estudiantes[2].codigoRude}}></td>
+					<td><input type="text" name="codigorude_3" class="jupper" tabindex="272" value={{estudiantes[2].codigoRude}}></td>
 				</tr>
 				<tr>
 					<td>CÓDIGO RUDE ESTUDIANTE 4</td>
-					<td><input type="text" name="codigorude_4" value={{estudiantes[3].codigoRude}}></td>
+					<td><input type="text" name="codigorude_4" class="jupper" tabindex="273" value={{estudiantes[3].codigoRude}}></td>
 				</tr>
 				<tr>
 					<td colspan="2">
 						<br>
-						<button type="submit" class="btn btn-primary btn-block">Guardar</button>
+						<button type="submit" class="btn btn-primary btn-block" tabindex="274">Guardar</button>
 					</td>
 				</tr>
 			</table>

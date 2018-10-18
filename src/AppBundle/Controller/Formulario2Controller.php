@@ -44,10 +44,10 @@ class Formulario2Controller extends Controller
                 $docente->setDepartamento($request->get('departamento'));
                 $docente->setCodigoUnidadEducativa($request->get('codigounidadeducativa'));
                 $docente->setNumeroBoleta($request->get('numeroboleta'));
-                $docente->setP1Unidadeducativa($request->get('p1unidadeducativa'));
-                $docente->setP2Nombres($request->get('p2nombres'));
-                $docente->setP3Paterno($request->get('p3paterno'));
-                $docente->setP4Materno($request->get('p4materno'));
+                $docente->setP1Unidadeducativa(mb_strtoupper($request->get('p1unidadeducativa'),'utf-8'));
+                $docente->setP2Nombres(mb_strtoupper($request->get('p2nombres'),'utf-8'));
+                $docente->setP3Paterno(mb_strtoupper($request->get('p3paterno'),'utf-8'));
+                $docente->setP4Materno(mb_strtoupper($request->get('p4materno'),'utf-8'));
                 $docente->setP5Sexo($request->get('p5sexo'));
                 $docente->setP6Telefono($request->get('p6telefono'));
                 $docente->setP7Primero(($request->get('p7primero'))?1:0);
@@ -62,9 +62,9 @@ class Formulario2Controller extends Controller
                 $docente->setP8Cuarto(($request->get('p8cuarto'))?1:0);
                 $docente->setP8Quinto(($request->get('p8quinto'))?1:0);
                 $docente->setP8Sexto(($request->get('p8sexto'))?1:0);
-                $docente->setP9Materias($request->get('p9materias'));
-                $docente->setP15MedidasAnteDisminucion($request->get('p15medidasantedisminucion'));
-                $docente->setP16MedidasQueTomaria($request->get('p16medidasquetomaria'));
+                $docente->setP9Materias(mb_strtoupper($request->get('p9materias'),'utf-8'));
+                $docente->setP15MedidasAnteDisminucion(mb_strtoupper($request->get('p15medidasantedisminucion'),'utf-8'));
+                $docente->setP16MedidasQueTomaria(mb_strtoupper($request->get('p16medidasquetomaria'),'utf-8'));
                 $em->persist($docente);
                 $em->flush();
 
@@ -73,9 +73,9 @@ class Formulario2Controller extends Controller
                  */
                 for ($i = 1; $i <= 4 ; $i++) {
                     $estudiante = new Form2Estudiante();
-                    $estudiante->setP9Nombres($request->get('p9nombres_'.$i));
-                    $estudiante->setP10Paterno($request->get('p10paterno_'.$i));
-                    $estudiante->setP11Materno($request->get('p11materno_'.$i));
+                    $estudiante->setP9Nombres(mb_strtoupper($request->get('p9nombres_'.$i),'utf-8'));
+                    $estudiante->setP10Paterno(mb_strtoupper($request->get('p10paterno_'.$i),'utf-8'));
+                    $estudiante->setP11Materno(mb_strtoupper($request->get('p11materno_'.$i),'utf-8'));
                     $estudiante->setP12Sexo($request->get('p12sexo_'.$i));
                     $estudiante->setP13AnioEscolaridad($request->get('p13anioescolaridad_'.$i));
                     $estudiante->setP141Enfermedad(($request->get('p141enfermedad_'.$i))?1:0);
@@ -133,7 +133,7 @@ class Formulario2Controller extends Controller
                     $estudiante->setP1427Otra(($request->get('p1427otra_'.$i))?1:0);
                     $estudiante->setP1427Importancia($request->get('p1427importancia_'.$i));
                     $estudiante->setP1427Razon($request->get('p1427razon_'.$i));
-                    $estudiante->setCodigoRude($request->get('codigorude_'.$i));
+                    $estudiante->setCodigoRude(mb_strtoupper($request->get('codigorude_'.$i),'utf-8'));
                     $estudiante->setForm2Docente($docente);
                     $em->persist($estudiante);
                     $em->flush();
@@ -193,10 +193,10 @@ class Formulario2Controller extends Controller
                 $docente->setDepartamento($request->get('departamento'));
                 $docente->setCodigoUnidadEducativa($request->get('codigounidadeducativa'));
                 $docente->setNumeroBoleta($request->get('numeroboleta'));
-                $docente->setP1Unidadeducativa($request->get('p1unidadeducativa'));
-                $docente->setP2Nombres($request->get('p2nombres'));
-                $docente->setP3Paterno($request->get('p3paterno'));
-                $docente->setP4Materno($request->get('p4materno'));
+                $docente->setP1Unidadeducativa(mb_strtoupper($request->get('p1unidadeducativa'),'utf-8'));
+                $docente->setP2Nombres(mb_strtoupper($request->get('p2nombres'),'utf-8'));
+                $docente->setP3Paterno(mb_strtoupper($request->get('p3paterno'),'utf-8'));
+                $docente->setP4Materno(mb_strtoupper($request->get('p4materno'),'utf-8'));
                 $docente->setP5Sexo($request->get('p5sexo'));
                 $docente->setP6Telefono($request->get('p6telefono'));
                 $docente->setP7Primero(($request->get('p7primero'))?1:0);
@@ -211,9 +211,9 @@ class Formulario2Controller extends Controller
                 $docente->setP8Cuarto(($request->get('p8cuarto'))?1:0);
                 $docente->setP8Quinto(($request->get('p8quinto'))?1:0);
                 $docente->setP8Sexto(($request->get('p8sexto'))?1:0);
-                $docente->setP9Materias($request->get('p9materias'));
-                $docente->setP15MedidasAnteDisminucion($request->get('p15medidasantedisminucion'));
-                $docente->setP16MedidasQueTomaria($request->get('p16medidasquetomaria'));
+                $docente->setP9Materias(mb_strtoupper($request->get('p9materias'),'utf-8'));
+                $docente->setP15MedidasAnteDisminucion(mb_strtoupper($request->get('p15medidasantedisminucion'),'utf-8'));
+                $docente->setP16MedidasQueTomaria(mb_strtoupper($request->get('p16medidasquetomaria'),'utf-8'));
                 $em->persist($docente);
                 $em->flush();
 
@@ -225,9 +225,9 @@ class Formulario2Controller extends Controller
                 for ($i = 1; $i <= 4 ; $i++) {
                     $est=$i-1;
 
-                    $estudiante[$est]->setP9Nombres($request->get('p9nombres_'.$i));
-                    $estudiante[$est]->setP10Paterno($request->get('p10paterno_'.$i));
-                    $estudiante[$est]->setP11Materno($request->get('p11materno_'.$i));
+                    $estudiante[$est]->setP9Nombres(mb_strtoupper($request->get('p9nombres_'.$i),'utf-8'));
+                    $estudiante[$est]->setP10Paterno(mb_strtoupper($request->get('p10paterno_'.$i),'utf-8'));
+                    $estudiante[$est]->setP11Materno(mb_strtoupper($request->get('p11materno_'.$i),'utf-8'));
                     $estudiante[$est]->setP12Sexo($request->get('p12sexo_'.$i));
                     $estudiante[$est]->setP13AnioEscolaridad($request->get('p13anioescolaridad_'.$i));
                     $estudiante[$est]->setP141Enfermedad(($request->get('p141enfermedad_'.$i))?1:0);
@@ -285,7 +285,7 @@ class Formulario2Controller extends Controller
                     $estudiante[$est]->setP1427Otra(($request->get('p1427otra_'.$i))?1:0);
                     $estudiante[$est]->setP1427Importancia($request->get('p1427importancia_'.$i));
                     $estudiante[$est]->setP1427Razon($request->get('p1427razon_'.$i));
-                    $estudiante[$est]->setCodigoRude($request->get('codigorude_'.$i));
+                    $estudiante[$est]->setCodigoRude(mb_strtoupper($request->get('codigorude_'.$i),'utf-8'));
                     $estudiante[$est]->setForm2Docente($docente);
                     $em->persist($estudiante[$est]);
                     $em->flush();

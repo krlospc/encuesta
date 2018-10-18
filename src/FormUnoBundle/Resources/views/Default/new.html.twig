@@ -57,9 +57,9 @@
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                     <table>
                                         <tr>
-                                            <td><input type="text" class="textval" name="dep" value="{{po_index[0].dep}}"></td>
-                                            <td><input type="text" class="textval" name="cod_unidad_educativa" value="{{po_index[0].cod_unidad_educativa}}"></td>
-                                            <td><input type="text" class="numberval" name="nboleta" value="{{po_index[0].nboleta}}"></td>
+                                            <td><input type="text" class="textval" name="dep" value="{{po_index[0].dep}}" maxlength="1"></td>
+                                            <td><input type="text" class="textval" name="cod_unidad_educativa" value="{{po_index[0].cod_unidad_educativa}}" maxlength="8"></td>
+                                            <td><input type="text" class="numberval" name="nboleta" value="{{po_index[0].nboleta}}" maxlength="1"></td>
                                         </tr>
                                         <tr>
                                             <td>DEP</td>
@@ -318,7 +318,7 @@ $(document).ready(function(){
 
     $('.textval').keypress (function(e){
         var name = this.name;
-        var regex = new RegExp("^[a-zA-Z0-9 /. /á/Á/é/É/í/Í/ó/Ó/ú/U/ñ/Ñ]+$");
+        var regex = new RegExp("^[a-zA-Z0-9 /. /_/-/,/(/)/á/Á/é/É/í/Í/ó/Ó/ú/U/ñ/Ñ]+$");
         var str = String.fromCharCode(!e.charCode ? e.which : e.charCode); 
         var key = e.keyCode || e.which;
         
@@ -331,9 +331,12 @@ $(document).ready(function(){
             return true;
         }
         e.preventDefault();
-        return false;
-                
+        return false;                
     });
+
+    $('.textval').keyup(function() {
+            this.value = this.value.toUpperCase();
+        });
 
     $('.numberval').keypress (function(e){
         var name = this.name;
