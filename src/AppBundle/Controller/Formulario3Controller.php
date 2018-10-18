@@ -268,7 +268,7 @@ class Formulario3Controller extends Controller
                         $estudiante->setp1226Importancia($request->get('p1426alcoholismo'));
                         $estudiante->setp1227Otra(($request->get('p1426otra_1'))?1:0);
                         $estudiante->setp1227Importancia($request->get('p1426otra'));
-                        $estudiante->setp1227Razon($request->get('p1426otra_1_text'));
+                        $estudiante->setp1227Razon(strtoupper($request->get('p1426otra_1_text')));
                         $estudiante->setp131TrabajaOtros($request->get('p131')?1:0);
                         $estudiante->setp132TrbajaPtopio($request->get('p132')?1:0);
                         $estudiante->setp133Ayuda($request->get('p133')?1:0);
