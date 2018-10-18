@@ -43,7 +43,7 @@
         
     </div>
     
-        <a href="{{path('form_uno_new')}}" class="btn btn-success">Nuevo formulario</a>
+        <a href="{{path('form_uno_new_display')}}" class="btn btn-success">Nuevo formulario</a>
     <div class="body-content animated fadeIn">
         <div class="row">
             <div class="panel-body" style="width:900px; margin:0 auto;">
@@ -80,7 +80,7 @@
                                             <td>  
                                                 {{data.materno}}
                                             </td>
-                                            <td class="text-center">
+                                            <td class="text-center">                                                    
                                                 {% if ((data.dep == "") or (data.cod_unidad_educativa == "") or (data.nboleta == "") or (data.nombre == "") ) %}
                                                     <p class="text-danger">Formulario incompleto</p>
                                                 {% endif %}
@@ -88,7 +88,7 @@
                                                     <p class="text-danger">Folio duplicado</p>
                                                 {% endif %}
                                                 <a href="{{ path('form_uno_update', { 'idfactor': data.id }) }}" class="btn btn-primary">Editar</a>
-                                                <a href="{{ path('form_uno_delete', { 'idfactor': data.id }) }}" class="btn btn-danger" onclick="return confirm('Esta seguro de que desea eliminar el registro?')">Eliminar</a>                                                
+                                                <a href="{{ path('form_uno_delete', { 'idfactor': data.id }) }}" class="btn btn-danger" onclick="return confirm('Esta seguro de que desea eliminar el registro?')">Eliminar</a>
                                             </td>
                                         </tr>
                                     {% endfor %}
