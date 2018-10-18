@@ -1,5 +1,5 @@
 {% extends 'base.html.twig' %}
-
+{% block title %}OPERATIVO ESCOLAR - 2018{% endblock %}
 {% block body %}
      {% include 'AdmMaster/menuforms.html.twig' %}
     <div class="container">
@@ -20,7 +20,7 @@
             </div>
         {% endfor %}
 
-        <table class="table table-border table-striped table-hover">
+        <table class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
                     <th>Folio (Dep-SIE-N°Boleta)</th>
@@ -35,7 +35,7 @@
             <tbody>
             {% for form4validacionRegistro in form4validacionRegistros %}
                 <tr>
-                    <td>{{ form4validacionRegistro.dep }} - {{ form4validacionRegistro.sie }} - {{ form4validacionRegistro.numBoleta }}</td>
+                    <td><strong>{{ form4validacionRegistro.dep }} - {{ form4validacionRegistro.sie }} - {{ form4validacionRegistro.numBoleta }}</strong></td>
                     <td>{{ form4validacionRegistro.nomInstitucioneducativa }}</td>
                     <td>{{ form4validacionRegistro.nombres }}</td>
                     <td>{{ form4validacionRegistro.paterno }}</td>
