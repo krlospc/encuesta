@@ -16,4 +16,12 @@ form_uno_update:
 
 form_uno_delete:
     path:     /formunodelete/{idfactor}
-    defaults: { _controller: FormUnoBundle:Default:delete }    
+    defaults: { _controller: FormUnoBundle:Default:delete }
+    
+form_uno_new_display:
+    path:     /formunonewdisplay
+    defaults: { _controller: FormUnoBundle:Default:newdisplay } 
+    
+form_uno_insert_display:
+    path:     /formunoinsertdisplay
+    defaults: { _controller: FormUnoBundle:Default:insertdisplay }    
