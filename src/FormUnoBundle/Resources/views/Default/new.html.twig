@@ -247,11 +247,13 @@
                                         <input type="text" class="numberval" name="orden_{{loop.index}}" id="orden_{{loop.index}}" value="{{data.orden_importancia}}"  disabled>                                        
                                     {% endif %}                                    
                                 </td>
-                                <td>
+                                <td style="width: 400px;">
                                     {% if data.seleccion == 1 %}
-                                        <input type="text" class="textval" name="porque_{{loop.index}}" id="porque_{{loop.index}}" value="{{data.por_que}}">
+                                        <textarea class="textval" name="porque_{{loop.index}}" id="porque_{{loop.index}}" cols="15" rows="5">{{data.por_que}}</textarea>
+                                        {# <input type="text" class="textval" name="porque_{{loop.index}}" id="porque_{{loop.index}}" value="{{data.por_que}}"> #}
                                     {% else %}
-                                        <input type="text" class="textval" name="porque_{{loop.index}}" id="porque_{{loop.index}}" value="{{data.por_que}}" disabled>
+                                        {# <input type="text" class="textval" name="porque_{{loop.index}}" id="porque_{{loop.index}}" value="{{data.por_que}}" disabled> #}
+                                        <textarea class="textval" name="porque_{{loop.index}}" id="porque_{{loop.index}}" cols="15" rows="5" disabled>{{data.por_que}}</textarea>
                                     {% endif %}                                    
                                 </td>
                                 <td style="display:none;">

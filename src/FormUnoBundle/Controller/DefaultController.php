@@ -248,7 +248,12 @@ class DefaultController extends Controller
                     $params = array($sel, $orden, $porque, $idfac);
                     $stmt->execute($params);
                 }
-            }
+            } else {
+                $query = "UPDATE formulario_uno_factores SET seleccion = ?, orden_importancia = ?, por_que = ? where id = ?";            
+                $stmt = $db->prepare($query);
+                $params = array($sel, $orden, $porque, $idfac);
+                $stmt->execute($params);
+            } 
             
             //$orden = $_REQUEST['orden_'.$i];  
             //$porque = $_REQUEST['porque_'.$i];
@@ -389,6 +394,8 @@ class DefaultController extends Controller
         $p10 = strtoupper($_REQUEST['p10']);
         $p12 = strtoupper($_REQUEST['p12']);
         $p13 = strtoupper($_REQUEST['p13']);
+
+        //dump($p12);dump($p13);die;
 
         $query = "INSERT INTO formulario_uno_index (dep, cod_unidad_educativa, nboleta, nombre, paterno, materno, unidad_educativa, sexo, telefono, cargo, p8, p9_1, p10, p12, p13, p9_2, p9_3, p9_4, p9_5, p9_6) ";
         $query = $query."VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";          

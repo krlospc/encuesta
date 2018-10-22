@@ -201,9 +201,9 @@
                                 <td>
                                     <input type="text" class="numberval" name="orden_{{loop.index}}" id="orden_{{loop.index}}" value=""  disabled>
                                 </td>
-                                <td>
-                                    <input type="text" class="textval" name="porque_{{loop.index}}" id="porque_{{loop.index}}" value="" disabled>                                    
-                                </td>                                
+                                <td style="width: 400px;">
+                                    <textarea class="textval" name="porque_{{loop.index}}" id="porque_{{loop.index}}" cols="15" rows="5" disabled></textarea>
+                                </td>
                             </tr>
                             {% endfor %}
                         </tbody>
