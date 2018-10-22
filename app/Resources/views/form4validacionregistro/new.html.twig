@@ -223,67 +223,71 @@
                         <tbody>
                             <tr>
                                 <th>1°</th>
-                                <td>{{form_widget(form.promovidos20171, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.reprobados20171, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.abandono20171, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.traslado20171, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.noincorporados20171, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.matricula20171, {'attr': {'size': 4}})}}</td>                    
+                                <td>{{form_widget(form.promovidos20171, {'attr': {'size': 2, 'onchange':'plusNumber1_2017(this.value)','class':'kfpc column1','onblur':'pluscol1(this.value,"kfpc1")' }})}}</td>                    
+                                <td>{{form_widget(form.reprobados20171, {'attr': {'size': 2, 'onchange':'plusNumber1_2017(this.value)','class':'kfpc column2','onblur':'pluscol2(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.abandono20171, {'attr': {'size': 2, 'onchange':'plusNumber1_2017(this.value)','class':'kfpc column3', 'onblur':'pluscol3(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.traslado20171, {'attr': {'size': 2, 'onchange':'plusNumber1_2017(this.value)','class':'kfpc column4', 'onblur':'pluscol4(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.noincorporados20171, {'attr': {'size': 2, 'onchange':'plusNumber1_2017(this.value)','class':'kfpc column5', 'onblur':'pluscol5(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.matricula20171, {'attr': {'size': 4, 'readonly':'true','class':'column6', 'onfocus':'pluscol6(this.value,"kfpc6")'}})}}</td>                    
+                                
+                                
                             </tr> 
                             <tr>
                                 <th>2°</th>
-                                <td>{{form_widget(form.promovidos20172, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.reprobados20172, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.abandono20172, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.traslado20172, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.noincorporados20172, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.matricula20172, {'attr': {'size': 4}})}}</td>                    
+                                <td>{{form_widget(form.promovidos20172, {'attr': {'size': 2, 'onchange':'plusNumber2_2017(this.value)','class':'kfpc2 column1','onblur':'pluscol1(this.value,"kfpc2")'}})}}</td>                    
+                                <td>{{form_widget(form.reprobados20172, {'attr': {'size': 2, 'onchange':'plusNumber2_2017(this.value)','class':'kfpc2 column2','onblur':'pluscol2(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.abandono20172, {'attr': {'size': 2, 'onchange':'plusNumber2_2017(this.value)','class':'kfpc2 column3', 'onblur':'pluscol3(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.traslado20172, {'attr': {'size': 2, 'onchange':'plusNumber2_2017(this.value)','class':'kfpc2 column4', 'onblur':'pluscol4(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.noincorporados20172, {'attr': {'size': 2, 'onchange':'plusNumber2_2017(this.value)','class':'kfpc2 column5', 'onblur':'pluscol5(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.matricula20172, {'attr': {'size': 4, 'readonly':'true','class':'column6', 'onfocus':'pluscol6(this.value,"kfpc6")'}})}}</td>                    
+                                
+                                
                             </tr> 
                             <tr>
                                 <th>3°</th>
-                                <td>{{form_widget(form.promovidos20173, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.reprobados20173, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.abandono20173, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.traslado20173, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.noincorporados20173, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.matricula20173, {'attr': {'size': 4}})}}</td>                    
+                                <td>{{form_widget(form.promovidos20173, {'attr': {'size': 2, 'onchange':'plusNumber3_2017(this.value)','class':'kfpc3 column1','onblur':'pluscol1(this.value,"kfpc3")'}})}}</td>                    
+                                <td>{{form_widget(form.reprobados20173, {'attr': {'size': 2, 'onchange':'plusNumber3_2017(this.value)','class':'kfpc3 column2','onblur':'pluscol2(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.abandono20173, {'attr': {'size': 2, 'onchange':'plusNumber3_2017(this.value)','class':'kfpc3 column3', 'onblur':'pluscol3(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.traslado20173, {'attr': {'size': 2, 'onchange':'plusNumber3_2017(this.value)','class':'kfpc3 column4', 'onblur':'pluscol4(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.noincorporados20173, {'attr': {'size': 2, 'onchange':'plusNumber3_2017(this.value)','class':'kfpc3 column5', 'onblur':'pluscol5(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.matricula20173, {'attr': {'size': 4, 'readonly':'true','class':'column6', 'onfocus':'pluscol6(this.value,"kfpc6")'}})}}</td>
                             </tr> 
                             <tr>
                                 <th>4°</th>
-                                <td>{{form_widget(form.promovidos20174, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.reprobados20174, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.abandono20174, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.traslado20174, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.noincorporados20174, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.matricula20174, {'attr': {'size': 4}})}}</td>                    
+                                <td>{{form_widget(form.promovidos20174, {'attr': {'size': 2, 'onchange':'plusNumber4_2017(this.value)','class':'kfpc4 column1','onblur':'pluscol1(this.value,"kfpc4")'}})}}</td>                    
+                                <td>{{form_widget(form.reprobados20174, {'attr': {'size': 2, 'onchange':'plusNumber4_2017(this.value)','class':'kfpc4 column2','onblur':'pluscol2(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.abandono20174, {'attr': {'size': 2, 'onchange':'plusNumber4_2017(this.value)','class':'kfpc4 column3', 'onblur':'pluscol3(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.traslado20174, {'attr': {'size': 2, 'onchange':'plusNumber4_2017(this.value)','class':'kfpc4 column4', 'onblur':'pluscol4(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.noincorporados20174, {'attr': {'size': 2, 'onchange':'plusNumber4_2017(this.value)','class':'kfpc4 column5', 'onblur':'pluscol5(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.matricula20174, {'attr': {'size': 4, 'readonly':'true','class':'column6', 'onfocus':'pluscol6(this.value,"kfpc6")'}})}}</td>
                             </tr> 
                             <tr>
                                 <th>5°</th>
-                                <td>{{form_widget(form.promovidos20175, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.reprobados20175, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.abandono20175, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.traslado20175, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.noincorporados20175, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.matricula20175, {'attr': {'size': 4}})}}</td>                    
+                                <td>{{form_widget(form.promovidos20175, {'attr': {'size': 2, 'onchange':'plusNumber5_2017(this.value)','class':'kfpc5 column1','onblur':'pluscol1(this.value,"kfpc5")'}})}}</td>                    
+                                <td>{{form_widget(form.reprobados20175, {'attr': {'size': 2, 'onchange':'plusNumber5_2017(this.value)','class':'kfpc5 column2','onblur':'pluscol2(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.abandono20175, {'attr': {'size': 2, 'onchange':'plusNumber5_2017(this.value)','class':'kfpc5 column3', 'onblur':'pluscol3(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.traslado20175, {'attr': {'size': 2, 'onchange':'plusNumber5_2017(this.value)','class':'kfpc5 column4', 'onblur':'pluscol4(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.noincorporados20175, {'attr': {'size': 2, 'onchange':'plusNumber5_2017(this.value)','class':'kfpc5 column5', 'onblur':'pluscol5(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.matricula20175, {'attr': {'size': 4, 'readonly':'true','class':'column6', 'onfocus':'pluscol6(this.value,"kfpc6")'}})}}</td>
                             </tr> 
                             <tr>
                                 <th>6°</th>
-                                <td>{{form_widget(form.promovidos20176, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.reprobados20176, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.abandono20176, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.traslado20176, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.noincorporados20176, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.matricula20176, {'attr': {'size': 4}})}}</td>                    
+                                <td>{{form_widget(form.promovidos20176, {'attr': {'size': 2, 'onchange':'plusNumber6_2017(this.value)','class':'kfpc6 column1','onblur':'pluscol1(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.reprobados20176, {'attr': {'size': 2, 'onchange':'plusNumber6_2017(this.value)','class':'kfpc6 column2','onblur':'pluscol2(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.abandono20176, {'attr': {'size': 2, 'onchange':'plusNumber6_2017(this.value)','class':'kfpc6 column3', 'onblur':'pluscol3(this.value,"kfpc6")'}})}}</td>                    
+                                <td>{{form_widget(form.traslado20176, {'attr': {'size': 2, 'onchange':'plusNumber6_2017(this.value)','class':'kfpc6 column4', 'onblur':'pluscol4(this.value,"kfpc6")'}})}}</td>
+                                <td>{{form_widget(form.noincorporados20176, {'attr': {'size': 2, 'onchange':'plusNumber6_2017(this.value)','class':'kfpc6 column5', 'onblur':'pluscol5(this.value,"kfpc6")'}})}}</td>
+                                <td>{{form_widget(form.matricula20176, {'attr': {'size': 4, 'readonly':'true','class':'column6', 'onfocus':'pluscol6(this.value,"kfpc6")'}})}}</td> 
                             </tr> 
                             <tr>
                                 <th>TOTAL</th>
-                                <td>{{form_widget(form.promovidos2017Total, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.reprobados2017Total, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.abandono2017Total, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.traslado2017Total, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.noincorporados2017Total, {'attr': {'size': 4}})}}</td>                    
-                                <td>{{form_widget(form.matricula2017Total, {'attr': {'size': 4}})}}</td>                    
-                            </tr>
+                                <td>{{form_widget(form.promovidos2017Total, {'attr': {'size': 4, 'readonly':'true'}})}}</td>                    
+                                <td>{{form_widget(form.reprobados2017Total, {'attr': {'size': 4, 'readonly':'true'}})}}</td>                    
+                                <td>{{form_widget(form.abandono2017Total, {'attr': {'size': 4, 'readonly':'true'}})}}</td>                    
+                                <td>{{form_widget(form.traslado2017Total, {'attr': {'size': 4, 'readonly':'true'}})}}</td>                    
+                                <td>{{form_widget(form.noincorporados2017Total, {'attr': {'size': 4, 'readonly':'true'}})}}</td>                    
+                                <td>{{form_widget(form.matricula2017Total, {'attr': {'size': 4, 'readonly':'true'}})}}</td>
+                            </tr>        
                         </tbody>
                     </table>
                     <div class="row">
@@ -318,4 +322,5 @@
 </script>
 
 <script type="text/javascript" src="{{ asset('operations2016.js') }}"></script>
+<script type="text/javascript" src="{{ asset('operations2017.js') }}"></script>
 {% endblock %}
